@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3669.33 228">
+  <defs>
+    <style>
+      .cls-1 {
+        mask: url(#mask);
+      }
+
+      .cls-2 {
+        font-family: Poppins-Medium, Poppins;
+        font-size: 201.98px;
+        font-weight: 500;
+      }
+
+      .cls-3 {
+        filter: url(#luminosity-invert);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <filter id="luminosity-invert" x="-4.89" y="-3.55" width="3674.22" height="289.94" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feColorMatrix result="cm" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/>
+    </filter>
+    <mask id="mask" x="-4.89" y="-3.55" width="3674.22" height="289.94" maskUnits="userSpaceOnUse">
+      <g class="cls-3">
+        <text class="cls-2" transform="translate(21.42 168.84) scale(1.03 1)"><tspan x="0" y="0">Japón &amp; Dubái Total: Del Zen al Lujo</tspan></text>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient" x1="3669.33" y1="114" x2="-4.89" y2="114" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#eac476"/>
+      <stop offset=".5" stop-color="#fef0ad"/>
+      <stop offset="1" stop-color="#eac476"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-1">
+    <rect class="cls-4" x="-4.89" y="-.54" width="3674.22" height="229.09"/>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+.containerStyle {
+    display: flex;
+    flex-direction: column;
+    background-color: #111111;
+    color: white;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 8px;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconStyle {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.contentStyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleStyle {
+  font-family: nohemi;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+  .underlineStyle {
+    width: 130px;
+    height: 2px;
+    background-color: #482215;
+    margin-bottom: 8px;
+  }
+
+  .descriptionStyle {
+    font-family: nohemi;
+    font-size: 16px;
+    color: white;
+    line-height: 1.5;
+    max-width: 300px;
+    text-align: center;
+  }

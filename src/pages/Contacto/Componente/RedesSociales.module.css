@@ -1,0 +1,250 @@
+.sectionContenedor{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  align-items: center;
+}
+
+  .letrasDoradasDesktop{
+    display: none;
+  }
+
+.textWhiteSmall {
+  color: white;
+  font-family: nohemi;
+  font-size: 12px;
+  text-align: center;
+}
+
+.flexColumnGap15 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+    .flexColumnGap20, .flexColumnGap15, .PremiumJapanFooterLogo {
+      padding: 15px;
+    }
+
+@media only screen and (min-width: 360px){
+
+    .subtituloResponsive{
+        display: none;
+    }
+
+    .redesSocialesContainer{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .iconsFooter{
+      width: 40px;
+    }
+}
+
+@media only screen and (min-width: 550px){
+/* customizando */  
+
+.textWhiteSmall {
+  font-size: 14px;
+}
+
+.iconsFooter{
+  width: 45px;
+}
+
+  .flexColumnGap20, .flexColumnGap15 {
+    min-width: 350px;
+  }
+
+}
+
+@media (min-width: 800px){
+
+  .flexColumnGap20, .flexColumnGap15{
+    width: 350px;
+  }
+
+  .sectionContenedor{
+    padding: 40px;
+    gap: 20px;
+  }
+
+}
+
+  @media(min-width: 920px){
+
+    .letrasDoradasDesktop{
+      width: 520px;
+      height: auto;
+      margin-bottom: 15px;
+      align-self: center;
+    }
+  }
+
+
+@media (min-width: 1020px){
+
+  .containerFooterStyle{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    flex-direction: column;
+    max-width: 1600px;
+  }
+
+  .flexColumnGap20, .flexColumnGap15 {
+    min-width: 420px;
+  }
+
+
+}
+
+
+@media only screen and (min-width: 1201px) and (max-width: 1550px){
+  
+  .PremiumJapanFooterLogo{
+    min-width: 1000px;
+  }
+
+  .flexColumnGap15, .flexColumnGap20{
+    padding: 0;
+  }
+}
+
+.titleWhite {
+  font-family: nohemi;
+  font-size: 16px;
+  color: white;
+  align-self: center;
+}
+
+.redesSocialesContainer{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-evenly;
+}
+
+.rowStart {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: flex-start;
+}
+
+.iconsFooter{
+    display: flex;
+    width: 40px;
+    height: auto;
+    margin: 0 5px;
+}
+
+.iconsContacto{
+    display: flex;
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
+}
+
+.optionalContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 50px;
+}
+
+@media (min-width: 400px){
+
+  .optionalContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 180px;
+  }
+
+}
+
+.contenedorMsg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.elementosDisplay{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+  .letrasDoradasResponsive{
+      height: 60px;
+  }
+
+
+@media (min-width: 500px ){
+
+  .contenedorMsg{
+    gap: 20px;
+  }
+
+}
+
+@media (min-width: 550px){
+
+    .letrasDoradasResponsive{
+      height: 80px;
+    }
+}
+
+@media (min-width: 839.99px){
+
+  .optionalContainer{
+    min-width: 120px;
+  }
+
+  .letrasDoradasResponsive{
+      height: 90px;
+  }
+}
+
+@media(min-width: 1400px){
+    
+  .letrasDoradasDesktop{
+      height: 45px;
+  }
+
+}
+
+@media(min-width: 1600px){
+
+      .letrasDoradasResponsive{
+      display: none;
+    }
+
+    .letrasDoradasDesktop{
+      display: block;
+      width: auto;
+      height: 35px;
+      margin-bottom: 15px;
+      align-self: center;
+    }
+
+}
+
+@media (min-width: 1620px){
+  
+  .letrasDoradasDesktop{
+    height: 60px;
+  }
+
+}

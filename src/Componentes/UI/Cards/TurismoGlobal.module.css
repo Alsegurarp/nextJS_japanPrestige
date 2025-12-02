@@ -1,0 +1,68 @@
+.logoStyle{
+    width: 200px;
+    height: auto;
+    padding: 20px 40px;
+}
+
+.contenedorCard{
+    color: white;
+    font-family: 'nohemi';
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+    width: 260px;
+    margin: 0 auto;
+    display: flex;
+    place-content: center;
+    flex-wrap: wrap;
+}
+
+.subtituloCard{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0px 25px 0px;
+}
+
+
+.containerConfiar{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.sectionConfiarNosotros{
+    background-color: rgb(17, 17, 17);
+    padding-bottom: 60px;
+}
+
+.titleContainer{
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.titleStyle{
+    font-family: nohemi;
+    font-size: 24px;
+    padding: 20px;
+    color: white;
+}
+
+@media (min-width: 720px){
+
+    .logoStyle{
+        width: 300px;
+        height: auto;
+        padding: 20px 40px;
+    }
+}
+
+@media (min-width: 1200px){
+
+    .logoStyle{
+        width: 400px;
+        height: auto;
+        padding: 20px 40px;
+    }
+}

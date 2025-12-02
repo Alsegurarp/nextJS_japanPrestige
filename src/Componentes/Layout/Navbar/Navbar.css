@@ -1,0 +1,38 @@
+.navbarDiv{
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    position: sticky; 
+    z-index: 10;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.redesStyle{
+    display: none;
+}
+
+
+
+@media only screen and (min-width: 1020px) {
+  .redesStyle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 300px;
+    padding-right: 20px;
+  }
+
+  .redesStyle > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+  

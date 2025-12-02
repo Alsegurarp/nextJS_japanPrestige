@@ -1,0 +1,147 @@
+/* CSS Grid-based card container */
+.caracteristicasCards{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 280px;
+    height: 280px;
+    margin: 20px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.caracteristicasCardsStepsContainerStyle{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+@media (min-width: 1200px) {
+    .caracteristicasCardsStepsContainerStyle{
+    gap: 10px;
+    flex-direction: row;
+}
+}
+
+
+/* Overlay content positioned on the same grid area */
+.caracteristicasCardsTexto{
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 2;
+    
+    /* Flexbox for internal layout */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+    /* Positioning within the grid cell */
+    align-self: end;
+    justify-self: center;
+    
+    /* Styling */
+    width: calc(100% - 30px);
+    max-width: 240px;
+    margin-bottom: 5px;
+    padding: 12px 15px;
+    
+    /* Glass morphism effect */
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.textoEstilo{
+    font-size: 14px;
+    color: white;
+    line-height: 1.3;
+    font-family: nohemi;
+    text-align: center;
+    margin: 0 0 8px 0;
+}
+
+.buttonCATcaracteristicas{
+    background: #D8AA3E;
+    background: linear-gradient(90deg,rgba(216, 170, 62, 1) 0%, rgba(232, 202, 110, 1) 12%, rgba(249, 231, 160, 1) 28%, rgba(236, 211, 124, 1) 50%, rgba(223, 180, 78, 1) 63%, rgba(217, 171, 62, 1) 100%);
+    color: #290f04;
+    border: none;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 6px;
+    align-self: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: nohemi;
+}
+
+.buttonCATcaracteristicas:hover:not(:disabled) {
+  background: linear-gradient(90deg,
+  rgba(173, 136, 45, 1) 0%,
+  rgba(193, 166, 90, 1) 12%,
+  rgba(217, 195, 130, 1) 28%,
+  rgba(200, 175, 98, 1) 50%,
+  rgba(179, 144, 56, 1) 63%,
+  rgba(170, 134, 46, 1) 100%
+);
+  transform: translateY(-1px);
+  text-transform: uppercase;
+}
+
+/* Image that fills the entire grid area */
+.caracteristicasCardscardImage{
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Responsive breakpoints for grid-based layout */
+@media (min-width: 340px){
+    .caracteristicasCards{
+        width: 300px;
+        height: 280px;
+    }
+    
+    .caracteristicasCardsTexto {
+        max-width: 280px;
+        padding: 14px 18px;
+    }
+    
+}
+
+@media (min-width: 380px){
+    .caracteristicasCards{
+        width: 340px;
+        height: 320px;
+    }
+    
+    .caracteristicasCardsTexto {
+        max-width: 300px;
+        padding: 15px 20px;
+    }
+    
+    .textoEstilo {
+        font-size: 14px;
+    }
+    
+    .buttonCATcaracteristicas {
+        padding: 12px 18px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}

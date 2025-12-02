@@ -1,0 +1,221 @@
+.flying_button {
+  position: fixed;
+  bottom: 240px;
+  right: 20px;
+  z-index: 99;
+  background-color: #25D366; /* or your theme color */
+  padding: 10px 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  color: white;
+  font-family: nohemi;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.flying_button:hover {
+  transform: scale(1.1);
+}
+
+
+.wa_modal {
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  width: 280px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  z-index: 10000;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wa_input_row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  position: relative;
+  z-index: 20;
+}
+
+.wa_input {
+  flex: 1;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.wa_send {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #25D366; /* WA green */
+}
+
+.wa_send:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.wa_send img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.wa_header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  background-color: white;
+}
+
+.wa_avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.wa_info {
+  flex-grow: 1;
+}
+
+.wa_info strong {
+  display: block;
+  font-size: 14px;
+}
+
+.wa_info p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.wa_close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+}
+
+.wa_body {
+  padding: 15px;
+  padding-top: 20px;
+  text-align: left;
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.wa_time {
+  font-size: 10px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+
+.wa_bubble {
+  display: inline-block;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 7.5px;
+  font-size: 14px;
+  max-width: 80%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+}
+
+.wa_bubble_response{
+    display: inline-block;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 7.5px;
+  font-size: 14px;
+  max-width: 80%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  left: 20px;
+}
+
+.wa_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    top: 80%;
+    align-self: center;
+    border-radius: 15px;
+}
+
+.wa_button img {
+  width: 20px;
+}
+
+.wa_body_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none; /* para que no interfiera con los clics */
+}
+
+.wa_time,
+.wa_bubble {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+.fade-out {
+  animation: fadeOutDown 0.3s ease forwards;
+}

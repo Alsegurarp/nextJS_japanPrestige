@@ -1,0 +1,351 @@
+.sectionContenedor{
+  padding:10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.diaStyle{
+  font-family: nohemi;
+  text-transform: uppercase;
+}
+
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.textoDivider{
+  font-family: nohemi;
+  font-size: 24px;
+  color: white;
+}
+
+.contenidoDividerCard{
+    width: 70%;
+    height: 2px;
+    background-color:  #FEF0AD;
+    display: flex;
+}
+
+.titleContenidoDividerDos{
+      width: 70%;
+      height: 1px;
+      background-color:  white;
+      display: flex;
+}
+
+.cardContainer {
+  display: flex;
+  width: 100%;
+  min-height: 140vh;
+  box-sizing: border-box; 
+  overflow: hidden; 
+  align-items: stretch;
+}
+
+.buttonCATcaracteristicas{
+    background: #D8AA3E;
+    background: linear-gradient(90deg,rgba(216, 170, 62, 1) 0%, rgba(232, 202, 110, 1) 12%, rgba(249, 231, 160, 1) 28%, rgba(236, 211, 124, 1) 50%, rgba(223, 180, 78, 1) 63%, rgba(217, 171, 62, 1) 100%);
+    color: #290f04;
+    border: 1px solid #290f04;
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: nohemi;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: center;
+    text-decoration: none;
+    justify-self: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-width: 160px;
+    box-shadow: 0 4px 15px rgba(72 34 21, 0.3);
+    text-transform: uppercase;
+}
+
+.buttonCATcaracteristicas:hover {
+  background: linear-gradient(90deg,
+  rgba(173, 136, 45, 1) 0%,
+  rgba(193, 166, 90, 1) 12%,
+  rgba(217, 195, 130, 1) 28%,
+  rgba(200, 175, 98, 1) 50%,
+  rgba(179, 144, 56, 1) 63%,
+  rgba(170, 134, 46, 1) 100%
+);
+    transform: translateY(-2px);
+    text-transform: uppercase;
+}
+
+
+.contendorAdicional{
+  display: flex;
+}
+
+.cardContainer.reverse {
+  flex-direction: row-reverse;
+}
+
+.diaPlusImage{
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.numerosImg{
+    height:50px;
+    padding-left: 5px;
+}
+
+.cardText {
+    flex: 1; 
+    color: white;
+    padding: 30px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start;
+    text-align: left; 
+}
+
+.floatingButton{
+  display: none;
+}
+
+.floatingText{
+  color: #FEF0AD;
+  font-family: nohemi;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.cardContenidoStyle{
+  width: 80%;
+  align-self: center;
+  border: 2px solid #FEF0AD;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.cardContainerh2{
+  font-size: 24px;
+  line-height: 1.2;
+  font-family: nohemi;
+  text-align: left;
+  margin: 0;
+}
+.cardContainerP{
+  font-family: nohemi;
+  font-size: 14px;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  margin-top: 10px;
+}
+
+.cardText button {
+  background: #482215;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cardText button:hover {
+    background-color: #f40612; 
+}
+
+.cardImage {
+  flex: 1; 
+  position: relative; 
+  overflow: hidden;
+}
+
+.cardImage img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block;
+    border-radius: 20px;
+}
+
+@media(min-width: 440px){
+  
+  .numerosImg{
+      height:70px;
+  }
+
+  .diaStyle{
+    font-size: 22px;
+  }
+
+}
+
+@media(min-width: 640px){
+
+  .mainContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+
+  .titleContenidoDividerUno{
+    width: 20%;
+    height: 1px;
+    background-color:  white;
+    display: flex;
+  }
+
+  .titleContenidoDividerDos{
+  width: 20%;
+  height: 1px;
+  background-color:  white;
+  display: flex;
+  }
+
+  .mainContainer h2{
+    padding: 10px;
+  }
+
+  .numerosImg{
+      height:80px;
+  }
+
+
+}
+
+
+@media (max-width: 768px) {
+    .cardContainer,
+    .cardContainer.reverse {
+        flex-direction: column-reverse;
+        min-height: 65vh;
+        align-items: center;
+        justify-self: center;
+        width: 90%;
+    }
+
+    .cardText {
+        padding: 30px 20px; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .cardText p {
+        font-size: 1em; 
+    }
+
+    .cardImage {
+        height: 300px;
+        padding: 5px;
+    }
+
+}
+
+@media (min-width: 769px) {
+
+    .cardContenidoStyle{
+      width: 80%;
+      align-self: center;
+    }
+
+    .cardContainer{
+        justify-self: center;
+        width: 90%;
+        min-height: 45vh;
+        margin-bottom: 20px;
+        gap: 60px;
+    }
+
+    .floatingButton{
+      display: flex;
+      position: absolute;
+      bottom: 0px;
+      background-color: rgb(0, 0, 0, 0.55);
+      right: 0px;
+      width: auto;
+      min-width: 90px;
+      height: 30px;
+      align-content: center;
+      padding: 10px;
+      border-radius: 10px 10px 20px 0px;
+      align-items: center;
+    }
+
+    .floatingText{
+      color: #FEF0AD;
+      font-family: nohemi;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+}
+
+@media (min-width: 1020px) {
+
+    .cardContenidoStyle{
+    width: 60%;
+    }
+
+    .diaStyle{
+    font-size: 26px;
+  }
+
+}
+
+@media (min-width: 1200px){
+
+    .cardContainer{
+      width: 90%;
+      max-width: 1120px;
+      margin-bottom: 0;
+      gap: 80px;
+    }
+
+    .cardText{
+      padding: 0;
+    }
+
+    .cardContenidoStyle{
+       width: 420px;
+    }
+
+
+    .mainContainer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .titleContenidoDivider{
+      width: 300px;
+      height: 1px;
+      background-color:  white;
+      margin: 0  20px;
+    }
+
+}
+
+
+@media (min-width: 1800px){
+
+    .cardContainer{
+      width: 90%;
+      max-width: 2000px;
+      margin-bottom: 0;
+      gap: 80px;
+    }
+}

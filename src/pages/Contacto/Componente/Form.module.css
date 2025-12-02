@@ -1,0 +1,507 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.popover {
+  position: relative;
+  z-index: 1;
+}
+
+.button {
+  min-width: 150px;
+  padding: 14px 24px;
+  font-size: 14px;
+  max-width: 200px;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(216, 170, 62, 1) 0%,
+    rgba(232, 202, 110, 1) 12%,
+    rgba(249, 231, 160, 1) 28%,
+    rgba(236, 211, 124, 1) 50%,
+    rgba(223, 180, 78, 1) 63%,
+    rgba(217, 171, 62, 1) 100%
+  );
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: center;
+  width: auto;
+  font-family: nohemi;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+}
+
+.contenedorForm {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  border-radius: 26px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  padding: 30px 20px;
+  min-width: 300px;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.4px);
+  -webkit-backdrop-filter: blur(4.4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 768px) {
+  .inputContainerName {
+    gap: 20px;
+  }
+}
+
+/* Desktop responsive */
+@media (min-width: 768px) {
+  .contenedorForm {
+    max-width: 700px;
+    padding: 50px 40px;
+  }
+
+  /* Two-column layout for Name/Apellido on desktop */
+  .inputContainerName {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .inputContainerName .inputNameApellido {
+    flex: 1;
+    max-width: none;
+  }
+}
+
+label {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: nohemi;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+small {
+  font-family: nohemi;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 5px;
+}
+
+small strong {
+  font-family: "nohemi";
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.success,
+.error {
+  font-family: nohemi;
+  font-size: 14px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  min-width: 0; /* Allows flex items to shrink below content size */
+}
+
+.inputContainerName {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  min-width: 0; /* Allows flex items to shrink below content size */
+  justify-content: space-between;
+}
+
+/* reCAPTCHA container styling */
+.recaptchaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+/* reCAPTCHA responsive styling */
+.recaptchaContainer > div {
+  max-width: 100%;
+  transform-origin: 0 0;
+}
+
+/* Mobile reCAPTCHA scaling for devices smaller than form width */
+@media (max-width: 320px) {
+  .recaptchaContainer > div {
+    transform: scale(0.8);
+    transform-origin: center center;
+  }
+}
+
+@media (max-width: 280px) {
+  .recaptchaContainer > div {
+    transform: scale(0.7);
+    transform-origin: center center;
+  }
+}
+
+/* Additional fallback for very small screens */
+@media (max-width: 250px) {
+  .recaptchaContainer > div {
+    transform: scale(0.6);
+    transform-origin: center center;
+  }
+}
+
+.formStyle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .formStyle {
+    gap: 25px;
+  }
+}
+
+.submitBtn {
+  background: linear-gradient(
+    90deg,
+    rgba(216, 170, 62, 1) 0%,
+    rgba(232, 202, 110, 1) 12%,
+    rgba(249, 231, 160, 1) 28%,
+    rgba(236, 211, 124, 1) 50%,
+    rgba(223, 180, 78, 1) 63%,
+    rgba(217, 171, 62, 1) 100%
+  );
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 26px;
+  align-self: center;
+  min-width: 200px;
+  width: auto;
+  max-width: 100%;
+  font-family: nohemi;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Mobile button adjustments */
+@media (max-width: 767px) {
+  .button {
+    min-width: 150px;
+    padding: 14px 24px;
+    font-size: 14px;
+    max-width: 200px;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+    align-self: center;
+  }
+}
+
+.button:hover:not(:disabled) {
+  background: linear-gradient(
+    90deg,
+    rgba(216, 170, 62, 1) 0%,
+    rgba(232, 202, 110, 1) 12%,
+    rgba(249, 231, 160, 1) 28%,
+    rgba(236, 211, 124, 1) 50%,
+    rgba(223, 180, 78, 1) 63%,
+    rgba(217, 171, 62, 1) 100%
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(232, 202, 110, 0.3);
+}
+
+.button:disabled {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+.input {
+  margin: 0;
+  padding: 12px 14px;
+  font-size: 16px;
+  font-family: nohemi;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(40, 40, 40, 0.1);
+  border-radius: 26px;
+  color: white;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.inputNameApellido {
+  margin: 0;
+  padding: 12px 14px;
+  font-size: 16px;
+  font-family: nohemi;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(40, 40, 40, 0.1);
+  border-radius: 26px;
+  color: white;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.inputNameApellido:focus {
+  outline: none;
+  border-color: rgba(249, 231, 160, 1);
+  background: rgba(40, 40, 40, 0.2);
+  box-shadow: 0 4px 20px rgba(232, 202, 110, 0.3);
+}
+
+.inputNameApellido::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 767px) {
+  .input {
+    padding: 14px 16px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgba(249, 231, 160, 1);
+  background: rgba(40, 40, 40, 0.2);
+  box-shadow: 0 4px 20px rgba(232, 202, 110, 0.3);
+}
+
+/* Select dropdown styling */
+select.input {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  appearance: none;
+}
+
+select.input option {
+  background: #2a2a2a;
+  color: white;
+}
+
+/* Phone row styling */
+.phoneRow {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.phoneRow select {
+  flex: 1;
+  min-width: 0;
+}
+
+.phoneRow input {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Mobile phone row adjustments */
+@media (max-width: 767px) {
+  .phoneRow {
+    gap: 10px;
+  }
+
+  /* .phoneRow select {
+    width: 75px;
+  }
+    */
+}
+
+/* Textarea styling */
+textarea.input {
+  min-height: 120px;
+  resize: vertical;
+  font-family: nohemi;
+  line-height: 1.5;
+}
+
+@media (min-width: 1000px) {
+  .contenedorForm {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contenedorForm {
+    max-width: 900px;
+  }
+}
+
+.phoneRow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Desktop phone row - horizontal layout */
+@media (min-width: 768px) {
+  .phoneRow {
+    flex-direction: row;
+    gap: 15px;
+    max-width: none;
+  }
+
+  /* .phoneRow select {
+    width: 240px;
+    flex-shrink: 0;
+  } */
+
+  .phoneRow input {
+    flex: 1;
+  }
+}
+
+@media (min-width: 840px) {
+  .inputContainer input {
+    font-size: 16px;
+  }
+  .inputContainer label {
+    font-size: 16px;
+  }
+
+  small {
+    font-size: 12px;
+  }
+
+  .inputContainer textarea {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contenedorForm {
+    max-width: 1000px;
+  }
+}
+
+.phoneRow select option {
+  color: white;
+  background-color: rgb(56, 56, 56, 0.3);
+}
+
+.phoneRow select option:hover {
+  color: white;
+  background-color: rgb(56, 56, 56, 0.3);
+}
+
+.subHeader {
+  font-family: nohemi;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(249, 231, 160, 1);
+  margin: 5px 0 5px 0;
+  border-bottom: 1px solid rgba(249, 231, 160, 0.3);
+  padding-bottom: 8px;
+}
+
+/* Enhanced error and success styling */
+.error {
+  color: #ff6b6b;
+  font-size: 13px;
+  margin-top: 5px;
+  font-family: nohemi;
+}
+
+.success {
+  color: #51cf66;
+  font-size: 13px;
+  margin-top: 5px;
+  font-family: nohemi;
+}
+
+.muted {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  margin-top: 5px;
+  font-family: nohemi;
+  text-align: end;
+}
+
+/* Golden Letters Container - Positioned above Form */
+.letrasDoradasContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Mobile version - visible by default */
+.letrasDoradasResponsive {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+
+/* Desktop version - hidden by default */
+.letrasDoradasDesktop {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: none;
+}
+
+/* Responsive breakpoint for desktop */
+@media (min-width: 768px) {
+  .letrasDoradasResponsive {
+    display: none;
+  }
+
+  .letrasDoradasDesktop {
+    display: block;
+  }
+
+  .letrasDoradasContainer {
+    margin-bottom: 30px;
+  }
+
+  .inputNameApellido {
+    max-width: 240px;
+  }
+}

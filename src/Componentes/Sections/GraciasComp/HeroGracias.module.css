@@ -1,0 +1,397 @@
+.beneficiosContainerHero{
+  /* UNIVERSAL CSS GRID CENTERING - BULLETPROOF SOLUTION */
+  display: grid;
+  place-items: center;
+  
+  /* Full viewport coverage */
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  top: -60px;
+  
+  /* Background image handling */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Reset any potential margin/padding that could affect centering */
+  margin: 0;
+  padding: 0;
+  
+  /* Prevent overflow */
+  overflow: hidden;
+  
+  /* Ensure consistent rendering */
+  position: relative;
+}
+
+.contenidoBeneficiosHero{
+    /* Perfect centering that works in all scenarios */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* Content sizing */
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    
+    /* CRITICAL: Reset margins that could push content up */
+    margin: 0 !important;
+    
+    /* Prevent content from growing beyond viewport */
+    box-sizing: border-box;
+    
+    /* Ensure proper stacking */
+    position: relative;
+    z-index: 2;
+    
+    /* Content spacing */
+    gap: 5px;
+}
+
+/* Override any child element margins that could affect centering */
+.contenidoBeneficiosHero * {
+    margin-top: 0 !important;
+}
+
+/* Reset first child margin specifically */
+.contenidoBeneficiosHero > *:first-child {
+    margin-top: 0 !important;
+}
+
+.titlePlusSubtitleHero{
+  padding-bottom: 10px;
+  align-self: center;
+  margin: 0;
+}
+
+    .loading {
+        text-align: center;
+        padding: 40px;
+        font-family: nohemi;
+        color: #aaa;
+        font-size: 16px;
+    }
+
+  .styleTitle{
+    font-family: nohemi;
+    font-size: 20px;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .contenedorSubTitle{
+    width: 280px;
+    place-self: center;
+    margin-top: 10px;
+  }
+
+  .textStyle{
+    font-family: nohemi;
+    font-size: 16px;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  h2.textStyle{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  p.textStyle{
+    font-family: nohemi;
+    font-size: 12px;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; 
+    border: 0;
+  }
+
+  .titleWhite {
+  font-family: nohemi;
+  font-size: 16px;
+  color: white;
+  align-self: center;
+}
+
+.redesSocialesContainer{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.contenedorBotones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.buttonStyle{
+    background: linear-gradient(90deg,#d8aa3e,#e8ca6e 12%,#f9e7a0 28%,#ecd37c 50%,#dfb44e 63%,#d9ab3e);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    font-size: 14px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: center;
+}
+
+.buttonStyle:nth-child(1){
+    background: rgb(17,17,17);
+    border: 1px solid white;
+}
+
+.containerSociales{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+  .letrasDoradasDesktop{
+    display: none;
+  }
+
+  @media (min-width: 420px){
+    
+    .buttonStyle{
+        margin: 5px 15px;
+    }
+
+  }
+
+
+  @media (min-width: 640px){
+  
+      .contenidoBeneficiosHero{
+        width: 420px;
+        max-width: 480px;
+        top: 25%;
+      }
+  
+      .contenedorSubTitle{
+        width: 380px;
+      }
+  
+  }
+
+
+  @media(min-width: 920px){
+
+    .letrasDoradasDesktop{
+      width: 520px;
+      height: auto;
+      margin-bottom: 15px;
+      align-self: center;
+    }
+
+    .styleTitle{
+      font-size: 28px;
+    }
+
+    .textStyle{
+      font-size: 18px;
+    }
+
+    .contenedorSubTitle{
+      width: 400px;
+    }
+
+  }
+  
+
+
+
+@media (min-width: 1000px){
+
+
+  .contenidoBeneficiosHero{
+    width: 600px;
+    max-width: 640px;
+    top: 30%;
+  }
+
+  .contenedorSubTitle{
+    width: 480px;
+    font-size: 18px;
+  }
+
+  .letrasDoradasResponsive{
+      display: none;
+    }
+
+    .letrasDoradasDesktop{
+      display: block;
+      width: auto;
+      height: 35px;
+      margin-bottom: 15px;
+      align-self: center;
+    }
+  
+
+}
+
+
+@media (min-width: 1200px){
+
+  .beneficiosContainerHero{
+    height: 95vh;
+  }
+
+  .contenidoBeneficiosHero{
+    top: 30%;
+  }
+
+  p.textStyle{
+    font-size: 16px;
+  }
+
+}
+
+@media (min-width: 1400px){
+
+  .contenidoBeneficiosHero{
+    width: 700px;
+    max-width: 720px;
+    top: 30%;
+  }
+
+  .contenedorSubTitle{
+    width: 600px;
+    font-size: 24px;
+  }
+
+  .letrasDoradasDesktop{
+      height: 45px;
+    }
+
+    .contenedorBotones{
+        margin-top:40px;
+    }
+
+    .buttonStyle{
+        font-size: 18px;
+        margin: 10 40px;
+    }
+
+}
+
+@media (min-width: 1620px){
+
+  .contenidoBeneficiosHero{
+    width: 700px;
+    max-width: 720px;
+    top: 30%;
+  }
+
+  .letrasDoradasDesktop{
+    height: 60px;
+  }
+
+}
+
+.flexColumnGap15 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 10px;
+    max-width: 280px;
+    align-items: center;
+    justify-self: center;
+}
+
+@media only screen and (min-width: 360px) {
+
+    .flexColumnGap15 {
+        padding: 15px;
+    }
+
+    .redesSocialesContainer{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      align-items: flex-start;
+    }
+}
+
+
+@media only screen and (min-width: 550px){
+
+  .flexColumnGap15 {
+    min-width: 350px;
+  }
+
+}
+
+
+@media only screen and (min-width: 800px){
+
+  .flexColumnGap15{
+    min-width: 550px;
+    max-width: 660px;
+  }
+
+    .redesSocialesContainer{
+        gap: 30px;
+    }
+
+
+}
+
+@media (min-width: 1200){
+    
+    .redesSocialesContainer{
+        min-width: -webkit-fill-available;
+        justify-content: space-between;
+    }
+    
+}
+
+
+
+@media only screen and (min-width: 1020px) and (max-width: 1200px){
+
+    .flexColumnGap15 {
+        min-width: 420px;
+    }
+
+    .redesSocialesContainer{
+        gap: 35px;
+    }
+    
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1550px){
+    
+    .flexColumnGap15{
+        padding: 0;
+    }
+
+    .redesSocialesContainer{
+        gap: 40px;
+    }
+
+}

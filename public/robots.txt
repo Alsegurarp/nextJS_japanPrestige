@@ -1,0 +1,8 @@
+# robots.txt for https://japonpremium.com.mx/
+# SEO-friendly: allow full crawl; block sourcemaps; declare sitemap.
+
+User-agent: *
+Allow: /
+Disallow: /*.map$
+
+Sitemap: https://japonpremium.com.mx/sitemap.xml

@@ -1,0 +1,585 @@
+.beneficiosContainerHero{
+  /* UNIVERSAL CSS GRID CENTERING - BULLETPROOF SOLUTION */
+  display: grid;
+  place-items: center;
+  
+  /* Full viewport coverage with iOS fixes */
+  width: 100%;
+  height: 100vh;
+  height: 100dvh; /* Dynamic viewport height for modern browsers */
+  min-height: 600px;
+  top: -60px;
+  
+  /* Background image handling */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Reset any potential margin/padding that could affect centering */
+  margin: 0;
+  padding: 0;
+  
+  /* Prevent overflow */
+  overflow: hidden;
+  
+  /* Ensure consistent rendering */
+  position: relative;
+  
+  /* iOS Safari specific fixes */
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.contenidoBeneficiosHero{
+    /* CSS GRID LAYOUT - 2 rows: SVG title, then text content */
+    display: grid;
+    grid-template-rows: auto ;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: start;
+    align-content: center;
+    
+    /* Content sizing */
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    
+    /* CRITICAL: Reset margins that could push content up */
+    margin: 0 !important;
+    
+    /* Prevent content from growing beyond viewport */
+    box-sizing: border-box;
+    
+    /* Ensure proper stacking */
+    position: relative;
+    z-index: 2;
+    
+    /* Grid content spacing */
+    gap: 20px;
+}
+
+/* Override any child element margins that could affect centering */
+.contenidoBeneficiosHero * {
+    margin-top: 0 !important;
+}
+
+/* Reset first child margin specifically */
+.contenidoBeneficiosHero > *:first-child {
+    margin-top: 0 !important;
+}
+
+.titlePlusSubtitleHero{
+  /* Grid positioning - Row 2 (text content area) */
+  grid-row: 2;
+  grid-column: 1;
+  align-self: start;
+  justify-self: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  
+  /* Content layout within the grid item */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  
+  /* Ensure text stays readable */
+  width: 100%;
+  max-width: 400px;
+  
+  /* Remove positioning that could interfere with grid */
+  position: static;
+  transform: none;
+  -webkit-transform: none;
+  
+  /* Subtle entrance animation without viewport interference */
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.3s forwards;
+}
+
+/* Simple fade-in that doesn't affect scroll behavior */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+    .loading {
+        text-align: center;
+        padding: 40px;
+        font-family: nohemi;
+        color: #aaa;
+        font-size: 16px;
+    }
+
+  .styleTitle{
+    font-family: nohemi;
+    font-size: 20px;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .contenedorSubTitle{
+    width: 280px;
+    place-self: center;
+    margin-top: 10px;
+  }
+
+  .textStyle{
+    font-family: nohemi;
+    font-size: 16px;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .subtitleStyle{
+    font-family: nohemi;
+    font-size: 18px;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  @media (min-width: 720px){
+
+    .subtitleStyle{
+      font-family: nohemi;
+      font-size: 24px;
+      color: white;
+      padding: 0px;
+      margin: 0px;
+      text-align: center;
+    }
+
+  }
+
+  .buttonCATcaracteristicas{
+    background: #D8AA3E;
+    background: linear-gradient(90deg,rgba(216, 170, 62, 1) 0%, rgba(232, 202, 110, 1) 12%, rgba(249, 231, 160, 1) 28%, rgba(236, 211, 124, 1) 50%, rgba(223, 180, 78, 1) 63%, rgba(217, 171, 62, 1) 100%);
+    color: #290f04;
+    border: 1px solid #290f04;
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: nohemi;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: center;
+    text-decoration: none;
+    justify-self: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    min-width: 160px;
+    box-shadow: 0 4px 15px rgba(72 34 21, 0.3);
+    text-transform: uppercase;
+}
+
+.buttonCATcaracteristicas:hover {
+  background: linear-gradient(90deg,
+  rgba(173, 136, 45, 1) 0%,
+  rgba(193, 166, 90, 1) 12%,
+  rgba(217, 195, 130, 1) 28%,
+  rgba(200, 175, 98, 1) 50%,
+  rgba(179, 144, 56, 1) 63%,
+  rgba(170, 134, 46, 1) 100%
+);
+    transform: translateY(-2px);
+    text-transform: uppercase;
+}
+
+
+
+  h2.textStyle{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  p.textStyle{
+    font-family: nohemi;
+    font-size: 12px;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; 
+    border: 0;
+  }
+
+
+
+  .letrasDoradasResponsive{
+    /* Grid positioning - Row 1 (SVG title area) */
+    grid-row: 1;
+    grid-column: 1;
+    width: auto;
+    height: 55px;
+    max-width: 90%;
+    object-fit: contain;
+    margin: 0;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .letrasDoradasDesktop{
+    display: none;
+  }
+  @media (max-width: 400px){
+    .letrasDoradasResponsive {
+      /* Mobile SVG - Row 1 */
+      grid-row: 1;
+      height: 100px;
+      max-width: 85%;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+
+  /* Mobile iOS specific fixes */
+  @media (max-width: 639px) {
+    .beneficiosContainerHero {
+      /* iOS mobile viewport fix */
+      height: 100vh;
+      height: -webkit-fill-available;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+    }
+    
+    .contenidoBeneficiosHero {
+      /* Mobile grid layout - 2 rows for proper hierarchy */
+      grid-template-rows: auto;
+      align-content: center;
+      padding: 30px 20px;
+      gap: 15px;
+      max-width: 350px;
+    }
+    
+    .letrasDoradasResponsive {
+      /* Mobile SVG - Row 1 */
+      grid-row: 1;
+      height: 120px;
+      max-width: 85%;
+      align-self: center;
+      justify-self: center;
+    }
+    
+    .titlePlusSubtitleHero {
+      /* Mobile text content - Row 2 */
+      grid-row: 2;
+      margin: 0;
+      padding: 0;
+      align-self: start;
+      max-width: 300px;
+      position: static;
+    }
+
+    .styleTitle{
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .subtitleStyle{
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  }
+
+  @media (min-width: 640px){
+  
+      .contenidoBeneficiosHero{
+        max-width: 480px;
+      }
+  
+      .contenedorSubTitle{
+        width: 380px;
+      }
+
+      .letrasDoradasResponsive{
+      height: 160px;
+    }
+  
+  }
+  @media(min-width: 920px){
+
+    .contenidoBeneficiosHero{
+      /* Larger content area for desktop */
+      max-width: 700px;
+      gap: 25px;
+    }
+
+    .letrasDoradasResponsive{
+      display: none;
+    }
+
+    .letrasDoradasDesktop{
+      display: block;
+      /* Grid positioning - Row 1 (SVG title area) */
+      grid-row: 1;
+      grid-column: 1;
+      width: auto;
+      height: 160px;
+      max-width: 90%;
+      object-fit: contain;
+      margin: 0;
+      align-self: center;
+      justify-self: center;
+    }
+
+    .titlePlusSubtitleHero{
+      /* Grid positioning - Row 2 (text content area) */
+      grid-row: 2;
+      max-width: 500px;
+    }
+
+    .styleTitle{
+      font-size: 28px;
+    }
+
+    .subtitleStyle{
+      font-size: 24px;
+    }
+
+    .textStyle{
+      font-size: 18px;
+    }
+
+    .contenedorSubTitle{
+      width: 400px;
+    }
+
+  }
+  
+
+
+
+@media (min-width: 1040px){
+
+  .contenidoBeneficiosHero{
+    max-width: 800px;
+    gap: 30px;
+  }
+
+  .contenedorSubTitle{
+    width: 480px;
+    font-size: 18px;
+  }
+
+  .letrasDoradasResponsive{
+      display: none;
+    }
+
+    .letrasDoradasDesktop{
+      display: block;
+      /* Grid positioning - Row 1 for large desktop */
+      grid-row: 1;
+      grid-column: 1;
+      width: auto;
+      height: 50px;
+      max-width: 90%;
+      margin: 0;
+      align-self: center;
+      justify-self: center;
+    }
+
+    .titlePlusSubtitleHero{
+      /* Grid positioning - Row 2 for large desktop */
+      grid-row: 2;
+      max-width: 600px;
+    }
+
+    .styleTitle{
+      font-size: 32px;
+    }
+
+    .subtitleStyle{
+      font-size: 26px;
+    }
+  
+
+}
+
+@media (min-width: 1200px){
+
+  .beneficiosContainerHero{
+    height: 80vh;
+  }
+
+  p.textStyle{
+    font-size: 16px;
+  }
+
+}
+
+@media (min-width: 1400px){
+
+  .contenidoBeneficiosHero{
+    max-width: 900px;
+    gap: 35px;
+  }
+
+  .contenedorSubTitle{
+    width: 600px;
+    font-size: 24px;
+  }
+
+  .letrasDoradasDesktop{
+      height: 55px;
+      max-width: 85%;
+    }
+
+    .titlePlusSubtitleHero{
+      max-width: 700px;
+    }
+
+    .styleTitle{
+      font-size: 36px;
+    }
+
+    .subtitleStyle{
+      font-size: 28px;
+    }
+
+}
+
+@media (min-width: 1620px){
+
+  .contenidoBeneficiosHero{
+    width: 700px;
+    max-width: 720px;
+  }
+
+  .letrasDoradasDesktop{
+    height: 52px;
+  }
+
+}
+
+
+@media (min-width: 1800px){
+
+  .contenidoBeneficiosHero{
+    width: 600px;
+    max-width: 640px;
+  }
+
+  .contenedorSubTitle{
+    width: 480px;
+    font-size: 18px;
+  }
+
+  .letrasDoradasResponsive{
+      display: none;
+    }
+
+    .letrasDoradasDesktop{
+      display: block;
+      width: auto;
+      height: 55px;
+      margin-bottom: 15px;
+      align-self: center;
+    }
+
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .beneficiosContainerHero {
+    /* iOS Safari viewport height fix */
+    height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
+  }
+  
+  .contenidoBeneficiosHero {
+    /* Grid works better than transforms on iOS Safari */
+    position: static;
+    transform: none;
+    -webkit-transform: none;
+    /* Ensure grid centering works on iOS */
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .titlePlusSubtitleHero {
+    /* Grid positioning prevents iOS layout issues */
+    position: static;
+    margin: 0;
+    padding: 0;
+    transform: none;
+    -webkit-transform: none;
+  }
+  
+  .letrasDoradasResponsive,
+  .letrasDoradasDesktop {
+    /* Prevent SVG from affecting title positioning on iOS */
+    position: static;
+    transform: none;
+    -webkit-transform: none;
+  }
+}
+
+/* iOS device specific media query */
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 1024px) {
+  .beneficiosContainerHero {
+    /* Force consistent height on iOS devices */
+    height: 100vh;
+    height: calc(100vh - env(safe-area-inset-top));
+    min-height: calc(100vh - env(safe-area-inset-top));
+    /* iOS Safari address bar compensation */
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .contenidoBeneficiosHero {
+    /* Adjust content positioning for iOS address bar */
+    padding-top: 0;
+    margin-top: 0;
+    /* Ensure proper centering with safe areas */
+    min-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  }
+}
+
+/* iPhone specific adjustments */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3),
+       only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2),
+       only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .beneficiosContainerHero {
+    height: 100vh;
+    height: -webkit-fill-available;
+  }
+  
+  .contenidoBeneficiosHero {
+    /* Grid layout works better than transforms on iPhone */
+    align-content: center;
+    row-gap: 5px;
+  }
+  
+  .titlePlusSubtitleHero {
+    /* No transforms needed with Grid layout */
+    transform: none;
+    -webkit-transform: none;
+    align-self: start;
+  }
+}

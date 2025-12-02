@@ -1,0 +1,139 @@
+.stepsContainerStyle {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 5vh;
+}
+
+.beneficiosContainerHero {
+  /* UNIVERSAL CSS GRID CENTERING - BULLETPROOF SOLUTION */
+  display: grid;
+  place-items: center;
+
+  /* Full viewport coverage */
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+
+  /* Background image handling */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Reset any potential margin/padding that could affect centering */
+  margin: 0;
+  padding: 0;
+
+  /* Prevent overflow */
+  overflow: hidden;
+
+  /* Ensure consistent rendering */
+  position: relative;
+  top: -60px;
+}
+
+.contendorTitulo {
+  display: flex;
+  justify-content: center;
+}
+
+.tituloStyle {
+  font-size: 24px;
+  color: white;
+  align-self: center;
+  justify-self: center;
+}
+
+.estiloDiv {
+  color: white;
+  font-family: nohemi;
+  max-width: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+  margin: 20px;
+  padding: 0;
+  max-height: 450px;
+}
+
+.imageCardStyle {
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  min-height: 300px;
+  max-height: 300.01px;
+}
+
+.textCardStyle {
+  padding: 10px 20px;
+}
+
+.titleCard {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.subTextCard {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ddd;
+  margin: 0;
+}
+
+@media (min-width: 380px) {
+  .beneficiosContainerHero {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .textCardStyle {
+    min-height: 130px;
+  }
+
+  .tituloStyle {
+    font-size: 28px;
+    color: white;
+  }
+}
+
+@media (min-width: 1024px) {
+  .estiloDiv {
+    max-width: 400px;
+    max-height: 550px;
+  }
+
+  .imageCardStyle {
+    min-height: 300px;
+    max-height: 300.01px;
+  }
+
+  .textCardStyle {
+    min-height: 110px;
+  }
+
+  .tituloStyle {
+    font-size: 32px;
+    color: white;
+  }
+}
+
+@media (min-width: 1200px) {
+  .stepsContainerStyle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1300px;
+    margin: 5vh auto;
+    gap: 20px;
+    justify-items: center;
+    align-items: start;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .tituloStyle {
+    font-size: 40px;
+    color: white;
+  }
+}

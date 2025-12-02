@@ -1,0 +1,160 @@
+/* ---------- Base / fonts ---------- */
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-family: nohemi, system-ui, sans-serif;
+  color: #aaa;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: 'nohemi';
+  src: url('/assets/fonts/nohemi-regular-webfont.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Loading dots with reduced-motion fallback */
+.loadingDots {
+  text-align: center;
+  padding: 40px;
+  font-family: nohemi, system-ui, sans-serif;
+  color: #888;
+  font-size: 16px;
+}
+.loadingDots::after {
+  content: "…";
+  animation: dots 1.2s steps(4, end) infinite;
+  display: inline-block;
+  width: 1.5em;
+  text-align: left;
+}
+@media (prefers-reduced-motion: reduce) {
+  .loadingDots::after { animation: none; }
+}
+@keyframes dots {
+  0% { content: ""; }
+  25% { content: "."; }
+  50% { content: ".."; }
+  75% { content: "..."; }
+  100% { content: ""; }
+}
+
+/* ---------- FAQ layout ---------- */
+.sectionRespuestasContainer {
+  padding-block: 24px;
+}
+
+.containerTitle {
+  width: min(100%, 720px);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.titleStyle {
+  font-family: nohemi, system-ui, sans-serif;
+  font-size: 24px;
+  padding: 20px;
+  color: white;
+}
+
+/* The list container */
+.respuestasContainerStyle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  /* start at top (no vertical centering) */
+  justify-content: flex-start;
+
+  /* each child fills container width */
+  align-items: stretch;
+
+  /* modern spacing */
+  gap: 10px;
+
+  /* center the whole column and cap line length */
+  margin-top: 24px;
+  width: min(100%, 720px);
+  margin-inline: auto;
+
+  /* prevent overflow with long content */
+  min-width: 0;
+}
+
+/* Fallback for browsers without flex-gap */
+.respuestasContainerStyle > * + * { margin-block-start: 10px; }
+@supports (gap: 10px) {
+  .respuestasContainerStyle > * + * { margin-block-start: 0; }
+}
+
+/* ensure children expand properly */
+.respuestasContainerStyle > * {
+  width: 100%;
+  min-width: 0;
+}
+
+/* ---------- FAQ item (PreguntaObjeciones root) ---------- */
+.cadaPregunta {
+  text-align: start;
+  color: #FEF0AD;
+  margin: 0;                  /* spacing comes from gap/fallback */
+  padding: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #1A1919;
+  border-radius: 20px;
+  min-height: 80px;
+  /* let the container decide max width; item is 100% */
+}
+
+/* header inside each card */
+.preguntaHeader {
+  display: flex;
+  align-items: center;    
+  justify-content: space-between;
+}
+
+/* ---------- Responsive container widths ---------- */
+@media (min-width: 400px) {
+  .cadaPregunta {
+    align-self: center;
+  }
+}
+
+/* Tablet+ */
+@media (min-width: 768px) {
+  .respuestasContainerStyle {
+    width: min(100%, 820px);
+    margin-top: 40px;
+  }
+}
+
+/* Desktop small */
+@media (min-width: 1020px) {
+  .respuestasContainerStyle {
+    width: min(100%, 960px);
+  }
+}
+
+/* Desktop medium */
+@media (min-width: 1200px) {
+  .respuestasContainerStyle {
+    width: min(100%, 1100px);
+  }
+}
+
+/* Desktop large */
+@media (min-width: 1300px) {
+  .respuestasContainerStyle {
+    width: min(100%, 1200px);
+  }
+}
+
+/* Very wide screens */
+@media (min-width: 1600px) {
+  .respuestasContainerStyle {
+    width: min(100%, 1200px); /* keep a readable line length */
+  }
+}

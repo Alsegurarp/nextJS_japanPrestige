@@ -1,0 +1,30 @@
+section.sectionContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+.card img{
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cardOverlay{
+    width: calc(100% - 15%);
+    align-items: flex-start;
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 5%;
+    gap: 5px;
+    background: rgba(000, 000, 000, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}

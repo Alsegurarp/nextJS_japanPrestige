@@ -1,0 +1,56 @@
+.number{
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.text{
+    font-size: 16px;
+    margin-top: 8px;
+    font-weight: 200;
+}
+
+
+.itinerarioCardStyleContainer{
+    background-color: rgb(0,0,0,0.01);
+    color: white;
+    width: 180px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+@media (min-width: 380px){
+
+    .itinerarioCardStyleContainer{
+      width: 245px;
+    }
+
+}
+
+@media (min-width: 500px){
+
+    .itinerarioCardStyleContainer{
+      width: 280px;
+      justify-content: space-evenly;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    
+    .itinerarioCardStyleContainer {
+        width: 250px;
+        justify-content: space-evenly;
+    }
+}
+
+@media (min-width: 1500px) {
+    
+    .itinerarioCardStyleContainer {
+        width: 280px;
+        justify-content: space-evenly;
+    }
+}

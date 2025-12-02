@@ -1,0 +1,120 @@
+.stepsContainerStyle {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5vh;
+}
+
+
+.cardsContainerStyle {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 15px;
+    align-items: center;
+    gap: 20px;
+}
+
+.contenidoCardsTextoItinerario {
+    width: calc(100% - 15%);
+    align-items: flex-start;
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    gap: 5px;
+    background: rgba(000, 000, 000, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    min-width: 280px;
+    min-height: 150px;
+}
+
+.textoEstilo {
+    font-size: 14px;
+    color: white;
+    line-height: 1.2;
+    font-family: nohemi;
+}
+
+.cardStyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+.cardImage {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.caracteristicasConteinerMain {
+    margin-top: 25vh
+}
+
+
+@media (min-width: 340px) {
+
+    .cardStyle {
+        width: 320px;
+        margin-bottom: 20px;
+    }
+
+    .cardImage {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+}
+
+@media (min-width: 380px) {
+
+    .cardImage {
+        width: 340px;
+        height: 340px;
+        object-fit: cover;
+    }
+
+}
+
+.buttonCATcaracteristicas {
+    background: #D8AA3E;
+    background: linear-gradient(90deg, rgba(216, 170, 62, 1) 0%, rgba(232, 202, 110, 1) 12%, rgba(249, 231, 160, 1) 28%, rgba(236, 211, 124, 1) 50%, rgba(223, 180, 78, 1) 63%, rgba(217, 171, 62, 1) 100%);
+    color: #290f04;
+    border: none;
+    padding: 12px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.buttonCATcaracteristicas:hover:not(:disabled) {
+    background: linear-gradient(90deg,
+            rgba(173, 136, 45, 1) 0%,
+            rgba(193, 166, 90, 1) 12%,
+            rgba(217, 195, 130, 1) 28%,
+            rgba(200, 175, 98, 1) 50%,
+            rgba(179, 144, 56, 1) 63%,
+            rgba(170, 134, 46, 1) 100%);
+    text-transform: uppercase;
+    transform: translateY(-1px);
+}
+
+@media (min-width: 560px) {
+
+    .caracteristicasConteinerMain {
+        margin-top: 5vh
+    }
+}

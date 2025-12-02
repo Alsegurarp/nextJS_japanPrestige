@@ -1,0 +1,47 @@
+.textoHeroAcompana{
+    font-family: nohemi;
+    font-size: 16px;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 400px;
+    justify-self: anchor-center;
+}
+
+.buttonCATcaracteristicas{
+    background: #D8AA3E;
+    background: linear-gradient(90deg,rgba(216, 170, 62, 1) 0%, rgba(232, 202, 110, 1) 12%, rgba(249, 231, 160, 1) 28%, rgba(236, 211, 124, 1) 50%, rgba(223, 180, 78, 1) 63%, rgba(217, 171, 62, 1) 100%);
+    color: #290f04;
+    border: none;
+    padding: 12px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: center;
+    font-weight: 400;
+    font-family: nohemi;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.buttonNegro{
+    background: rgb(17, 17, 17);
+    color: white;
+    font-family: nohemi;
+    border: 1px solid white;
+}
+
+.stepsContainerStyle{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+@media (min-width: 700px) {
+    .textoHeroAcompana {
+        max-width: 700px;
+    }
+}

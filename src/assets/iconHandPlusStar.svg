@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      .cls-1 {
+        mask: url(#mask-1);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3.15px;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #fff;
+      }
+
+      .cls-4 {
+        mask: url(#mask);
+      }
+
+      .cls-3 {
+        fill: #fff;
+        stroke-width: 1.38px;
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <mask id="mask-1" x="3.73" y="3.25" width="69.2" height="72.56" maskUnits="userSpaceOnUse">
+      <g id="mask1_360_151" data-name="mask1 360 151">
+        <path class="cls-3" d="M72.24,3.94v70.71H4.66V3.94h67.58Z"/>
+      </g>
+    </mask>
+    <mask id="mask" x="-2.96" y="-4.56" width="85.93" height="100.06" maskUnits="userSpaceOnUse">
+      <g id="mask0_360_151" data-name="mask0 360 151">
+        <g class="cls-1">
+          <g>
+            <path class="cls-2" d="M5.3,53.85l3.46-1.16c.75-.25,1.46-.64,2.05-1.14,1.94-1.66,7.13-5.53,13.29-5.53,5.45,0,9.39,3.02,11.27,4.87.96.94,2.21,1.5,3.54,1.68l5.6.71c2.66.33,4.67,2.6,4.67,5.28,0,1.72-1.41,3.13-3.13,3.13h-11.33c-.8,0-1.58-.16-2.33-.45l-6.71-2.68"/>
+            <path class="cls-2" d="M54.54,54.1l8.54-2.99c3.12-1.1,6.57.39,7.8,3.37.16.38.24.77.24,1.16,0,1.07-.56,2.08-1.54,2.66-7.1,4.17-28.96,15.92-32.17,15.92-5.11,0-16.31-2.98-20.69-4.18-1.18-.34-2.43-.31-3.6.08l-7.82,2.54"/>
+            <path class="cls-2" d="M45.83,6.04l4.45,7.54c.22.38.58.64,1,.74l8.54,1.9c1.16.27,1.63,1.68.83,2.57l-5.8,6.57c-.28.33-.42.75-.39,1.19l.83,8.71c.11,1.19-1.08,2.07-2.18,1.58l-8.04-3.48c-.39-.17-.85-.17-1.25,0l-8.04,3.48c-1.1.47-2.3-.39-2.18-1.58l.83-8.71c.05-.44-.09-.86-.39-1.19l-5.8-6.57c-.78-.89-.33-2.3.83-2.57l8.54-1.9c.42-.09.78-.36,1-.74l4.45-7.54c.61-1.03,2.1-1.03,2.7,0h.06Z"/>
+            <path class="cls-2" d="M44.49,43.67v-3.13"/>
+            <path class="cls-2" d="M56.68,8.41l2.21-2.21"/>
+            <path class="cls-2" d="M24.11,30.22l2.95-1.07"/>
+            <path class="cls-2" d="M61.91,29.16l2.95,1.07"/>
+            <path class="cls-2" d="M30.08,6.2l2.21,2.21"/>
+          </g>
+        </g>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient" x1="82.96" y1="45.48" x2="-2.96" y2="45.48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#eac476"/>
+      <stop offset=".5" stop-color="#fef0ad"/>
+      <stop offset="1" stop-color="#eac476"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-4">
+    <rect class="cls-5" x="-2.96" y="-4.56" width="85.93" height="100.06"/>
+  </g>
+</svg>

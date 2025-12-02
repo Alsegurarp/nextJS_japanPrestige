@@ -1,0 +1,33 @@
+.logoStyle {
+  width: auto;
+  height: 60px;
+  padding: 20px 40px;
+}
+
+.contenedorCard {
+  color: white;
+  font-family: "nohemi";
+  text-align: center;
+  padding: 30px;
+  border-radius: 8px;
+  width: 260px;
+  margin: 0 auto;
+  /* Prevent any unexpected animations or viewport interference */
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+}
+
+.subtituloCard {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0px 25px 0px;
+}
+
+.textoStyle {
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0 auto 15px auto;
+  max-width: 260px;
+}

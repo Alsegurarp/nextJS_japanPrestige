@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <path class="cls-1" d="M22.89,23.09c-2.72,0-4.73,1.35-6.02,4.06-1.29,2.7-1.93,6.97-1.93,12.8s.65,10.16,1.96,12.87c1.31,2.75,3.32,4.12,6.05,4.12s4.72-1.37,5.99-4.12c1.27-2.75,1.91-7.04,1.91-12.87s-.64-10.1-1.93-12.8c-1.29-2.7-3.3-4.06-6.02-4.06M42.88,24.42v-6.97h28.06v6.21c-4.83,5.49-8.43,11.28-10.79,17.37-2.4,6.13-3.83,13.31-4.3,21.55h-7.25c.84-14.79,5.72-27.51,14.66-38.16h-20.38M22.89,63.47c-4.79,0-8.44-2.01-10.92-6.02-2.49-4.01-3.73-9.87-3.73-17.56s1.25-13.45,3.76-17.4c2.51-3.95,6.16-5.93,10.95-5.93s8.38,1.98,10.87,5.93c2.49,3.95,3.73,9.75,3.73,17.4s-1.25,13.54-3.76,17.56c-2.51,4.02-6.14,6.02-10.9,6.02M73.68,15.87H6.32v48.27h67.35V15.87"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <polyline class="cls-1" points="5.18 8.32 74.64 8.32 74.64 84.64 5.18 84.64 5.18 8.32"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <path class="cls-1" d="M70.94,17.45h-28.06v6.97h20.38c-8.93,10.65-13.82,23.37-14.66,38.16h7.25c.47-8.24,1.91-15.42,4.3-21.55,2.36-6.08,5.96-11.87,10.79-17.37v-6.21M22.94,56.94c-2.72,0-4.74-1.37-6.05-4.12-1.31-2.7-1.96-6.99-1.96-12.87s.64-10.1,1.93-12.8c1.29-2.7,3.3-4.06,6.02-4.06s4.73,1.35,6.02,4.06c1.29,2.7,1.93,6.97,1.93,12.8s-.64,10.12-1.91,12.87c-1.27,2.75-3.27,4.12-5.99,4.12M22.94,16.56c-4.79,0-8.45,1.98-10.95,5.93-2.51,3.95-3.76,9.75-3.76,17.4s1.24,13.54,3.73,17.56c2.49,4.02,6.13,6.02,10.92,6.02s8.39-2.01,10.9-6.02c2.51-4.01,3.76-9.87,3.76-17.56s-1.24-13.45-3.73-17.4c-2.49-3.95-6.11-5.93-10.87-5.93"/>
+    </clipPath>
+  </defs>
+  <g class="cls-4">
+    <image width="143" height="103" transform="translate(5.79 64.8) scale(.48 -.48)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI4AAABnCAYAAADWtnpCAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAUElEQVR4nO3BgQAAAADDoPlTX+EAVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcB5O8AARTUI40AAAAASUVORK5CYII="/>
+  </g>
+  <g class="cls-2">
+    <g class="cls-3">
+      <image width="133" height="101" transform="translate(7.71 64.32) scale(.48 -.48)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAABkCAYAAABHAJglAAAACXBIWXMAABcRAAAXEQHKJvM/AAABYklEQVR4nO3SwUHDMBAAwRNd0yDNUIR4xMFeE1LBzCOccU7KY9f31+eetWatNTMz57xmjv+t9ZzX8ed8v46d8/2bveeZ/+3NOr5yOf+69+r+697b8+/3P+fL3uzZe+b4mNnH8zE/3j/nucy37+09j8f73pzzHM97z36193v/465zvp1zvf+69/L8+/1/f/fHwIUgCEEQgiAEQQiCEAQhCEIQhCAIQRCCIARBCIIQBCEIQhCEIAhBEIIgBEEIghAEIQhCEIQgCEEQgiAEQQiCEAQhCEIQhCAIQRCCIARBCIIQBCEIQhCEIAhBEIIgBEEIghAEIQhCEIQgCEEQgiAEQQiCEAQhCEIQhCAIQRCCIARBCIIQBCEIQhCEIAhBEIIgBEEIghAEIQhCEIQgCEEQgiAEQQiCEAQhCEIQhCAIQRCCIARBCIIQBCEIQhCEIAhBEIIgBEEIghAEIQhCEIQgCEEQP6a/cfR5Z6gxAAAAAElFTkSuQmCC"/>
+    </g>
+  </g>
+</svg>

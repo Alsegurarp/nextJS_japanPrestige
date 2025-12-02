@@ -1,0 +1,64 @@
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container {
+  perspective: 800px;
+  display: flex;
+  gap: clamp(10px, 2vw, 30px);
+  justify-content: start;
+}
+
+.letter {
+  font-size: clamp(36px, 14vw, 300px);
+  font-family: "Nohemi", Arial, sans-serif;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 4px #f0c051;
+  text-stroke: 4px #f0c051;
+  transform-style: preserve-3d;
+  display: inline-block;
+  cursor: default;
+}
+
+.letterr {
+  font-size: clamp(5px, 2vw, 20px);
+  cursor: default;
+  font-weight: unset;
+  color: #f0c051;
+}
+
+.japon-container {
+  opacity: 0;
+  margin-bottom: 0px;
+}
+
+.japon-letter {
+  font-size: clamp(12px, 4vw, 65px);
+  cursor: default;
+  font-family: "Nohemi", Arial, sans-serif;
+  font-weight: 400;
+  color: #f0c051;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+@media (max-width: 1024px) {
+  .letter {
+    -webkit-text-stroke: 2px #f0c051;
+    text-stroke: 2px #f0c051;
+  }
+  .letterr {
+    font-size: clamp(5px, 2vw, 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .letter {
+    -webkit-text-stroke: 1px #f0c051;
+    text-stroke: 1px #f0c051;
+  }
+}

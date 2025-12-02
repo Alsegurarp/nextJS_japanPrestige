@@ -1,0 +1,20 @@
+.stepsContainerStyle{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.sectionStyle {
+    background-color: #111;
+    padding: 100px 40px;
+    color: white;
+}
+
+.headingStyle{
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    font-family: nohemi;
+    justify-self: center;
+}

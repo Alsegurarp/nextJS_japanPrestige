@@ -1,0 +1,28 @@
+.containerConfiar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  /* Prevent any viewport interference from container */
+  transform: none !important;
+  transition: none !important;
+}
+
+.sectionConfiarNosotros {
+  background-color: rgb(17, 17, 17);
+  padding-bottom: 60px;
+  padding-top: 40px;
+}
+
+.titleContainer {
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.titleStyle {
+  font-family: nohemi;
+  font-size: 24px;
+  padding: 20px;
+  color: white;
+}

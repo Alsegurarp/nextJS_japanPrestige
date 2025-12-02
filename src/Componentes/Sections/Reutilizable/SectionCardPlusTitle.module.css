@@ -1,0 +1,126 @@
+.cardContainer {
+  display: flex;
+  width: 100%;
+  height: 85vh;
+  box-sizing: border-box; 
+  overflow: hidden; 
+  align-items: stretch;
+}
+
+.cardContainer.reverse {
+  flex-direction: row-reverse;
+}
+
+.cardText {
+    flex: 1; 
+    color: white;
+    padding: 30px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start;
+    text-align: left; 
+}
+
+.cardContenidoStyle{
+  width: 80%;
+  align-self: center;
+}
+
+.cardContainerh2{
+  font-size: 24px;
+  line-height: 1.2;
+  font-family: 'nohemi';
+  text-align: left;
+  margin: 0;
+}
+.cardContainerP{
+  font-family: 'nohemi';
+  font-size: 14px;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  margin-top: 10px;
+}
+
+.cardText button {
+  background: #482215;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cardText button:hover {
+    background-color: #f40612; 
+}
+
+.cardImage {
+  flex: 1; 
+  position: relative; 
+  overflow: hidden;
+}
+
+.cardImage img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .cardContainer,
+    .cardContainer.reverse {
+        flex-direction: column-reverse;
+        min-height: 75vh;
+        align-items: center;
+        justify-self: center;
+        width: 80%;
+    }
+
+    .cardText {
+        padding: 30px 20px; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .cardText p {
+        font-size: 1em; 
+    }
+
+    .cardImage {
+        height: 300px;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .cardContenidoStyle{
+    width: 50%;
+    align-self: center;
+    }
+
+    .cardContainer{
+        justify-self: center;
+        width: 90%;
+        height: 60vh;
+    }
+
+}
+
+@media (min-width: 1020px) {
+
+    .cardContenidoStyle{
+    width: 60%;
+    }
+
+    .cardContainer{
+        align-items: center;
+        justify-self: center;
+        width: 80%;
+    }
+
+}

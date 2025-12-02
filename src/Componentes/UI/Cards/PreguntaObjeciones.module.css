@@ -1,0 +1,25 @@
+.cadaPregunta{
+    text-align: start;
+    align-self: flex-start;  
+    color: #FEF0AD;
+    padding: 20px;
+    min-width: 276px;
+    max-width: 400px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #1A1919;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 400px) {
+    .cadaPregunta {
+      align-self: center;
+    }
+  }
+
+.preguntaHeader{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}

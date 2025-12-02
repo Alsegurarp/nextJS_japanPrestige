@@ -1,0 +1,41 @@
+/* Loading Spinner Styles */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 120px;
+  background: rgba(17, 17, 17, 0.02);
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.loadingText {
+  margin-top: 15px;
+  font-family: nohemi, system-ui, sans-serif;
+  color: #666;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Dark theme variant */
+.loadingContainer.dark {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.loadingContainer.dark .loadingText {
+  color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .loadingContainer {
+    padding: 30px 15px;
+    min-height: 100px;
+  }
+  
+  .loadingText {
+    font-size: 14px;
+  }
+}

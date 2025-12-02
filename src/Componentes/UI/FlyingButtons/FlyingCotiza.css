@@ -1,0 +1,196 @@
+.flying-buttonCotiza {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  background-color: red;
+  padding: 10px 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.flying-buttonCotiza:hover {
+  transform: scale(1.1);
+}
+
+.flyingCotizaResponsive{
+  display: none;
+}
+
+@media (min-width: 550px){
+
+  .flying-buttonCotiza{
+    padding: 10px 40px;
+    border-radius: 10px;
+  }
+
+
+
+
+  .flyingCotizaResponsive{
+  display: flex;
+  margin-left: 5px;
+  text-align: center;
+  text-transform: none;
+  font-size: 16px;
+  }
+
+}
+
+
+.formulario-modal {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 280px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  z-index: 10000;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.formulario-modal-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  justify-content: space-between;
+}
+
+.formulario-modal-body{
+  padding: 15px;
+  padding-top: 30px;
+  text-align: left;
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+
+.quote-form {
+    width: 260px;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quote-form input {
+    background-color: white;
+    color: #000000;
+    padding: 15px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.quote-form input::placeholder {
+  color: #2e2e2e;
+}
+
+.quote-form button.submitButton {
+  background-color: red;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.quote-form button.submitButton:hover {
+  background-color: #cc0000;
+}
+
+.quote-form button{
+color: rgb(92 92 92);
+padding: 15px 5px;
+font-size: 16px;
+border: none;
+border-radius: 0 5px 5px 0;
+cursor: pointer;
+background-color: rgb(255 255 255);
+}
+
+
+.quote-form-modal{
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    border: 2px solid #EAC577;
+    border-radius: 20px;
+    background-color: rgb(17 17 17);
+    border-radius: 15px;
+    z-index: 10000;
+}
+
+.form-modal-close{
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #d4d4d4;
+    cursor: pointer;
+}
+
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  align-self: center;
+  display: flex;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* espacio para el botón */
+  background-color: white;
+  color: #000;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.clear-button-inside {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border: 1px solid red;
+  box-shadow: 1px 1px 10px red;
+}
+
+input:valid {
+  border: 1px solid green;
+}

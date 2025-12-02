@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      .cls-1 {
+        mask: url(#mask-1);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        mask: url(#mask);
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3.09px;
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <mask id="mask-1" x="4.42" y="3.03" width="71.16" height="71.16" maskUnits="userSpaceOnUse">
+      <g id="mask0_360_176" data-name="mask0 360 176">
+        <path class="cls-4" d="M11.89,64.63h57.99M49.38,30.02l15.56-4.17c.82-.24,1.69-.31,2.54-.21.85.1,1.67.37,2.42.79.75.42,1.4.99,1.93,1.66.52.68.91,1.45,1.13,2.28.22.83.28,1.69.16,2.54-.12.85-.4,1.67-.84,2.4-.44.74-1.01,1.38-1.7,1.89-.69.51-1.47.88-2.3,1.09l-46.68,12.51-14.34-16.17,9.33-2.5,7.89,4.56,9.33-2.5-12.06-20.12,9.34-2.5,18.28,18.45Z"/>
+      </g>
+    </mask>
+    <mask id="mask" x="-8.17" y="-12.04" width="96.35" height="112.2" maskUnits="userSpaceOnUse">
+      <g class="cls-1">
+        <rect class="cls-2" x="4.42" y="3.03" width="71.16" height="71.16"/>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient" x1="88.17" y1="44.06" x2="-8.17" y2="44.06" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#eac476"/>
+      <stop offset=".5" stop-color="#fef0ad"/>
+      <stop offset="1" stop-color="#eac476"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-3">
+    <rect class="cls-5" x="-8.17" y="-12.04" width="96.35" height="112.2"/>
+  </g>
+</svg>

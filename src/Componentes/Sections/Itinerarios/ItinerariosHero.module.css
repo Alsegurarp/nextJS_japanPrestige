@@ -1,0 +1,187 @@
+.numeros{
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.textos{
+    font-size: 16px;
+    margin-top: 8px;
+    font-weight: 200;
+}
+
+/* .beneficiosContainerHero */
+
+.beneficiosContainerHero{
+    /* UNIVERSAL CSS GRID CENTERING - BULLETPROOF SOLUTION */
+    display: grid;
+    place-items: center;
+    
+    /* Full viewport coverage */
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    
+    /* Background image handling */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Reset any potential margin/padding that could affect centering */
+    margin: 0;
+    padding: 0;
+    
+    /* Prevent overflow */
+    overflow: hidden;
+    
+    /* Ensure consistent rendering */
+    position: relative;
+    top: -60px;
+}
+
+.contenidoBeneficiosItinerarios{
+    /* Perfect centering that works in all scenarios */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* Content sizing */
+    width: 100%;
+    max-width: 1600px;
+    padding: 20px;
+    text-align: center;
+    
+    /* CRITICAL: Reset margins that could push content up */
+    margin: 0 !important;
+    
+    /* Prevent content from growing beyond viewport */
+    box-sizing: border-box;
+    
+    /* Ensure proper stacking */
+    position: relative;
+    z-index: 2;
+    
+    /* Content spacing */
+    gap: 5px;
+}
+
+/* Override any child element margins that could affect centering */
+.contenidoBeneficiosItinerarios * {
+    margin-top: 0 !important;
+}
+
+/* Reset first child margin specifically */
+.contenidoBeneficiosItinerarios > *:first-child {
+    margin-top: 0 !important;
+}
+
+.itinerarioCardStyleContainer{
+    background-color: rgb(0,0,0,0.01);
+    color: #FEF0AD;
+    width: 180px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.itinerarioCardStyleContainer p {
+    color: white;
+}
+
+.itinerariosImagenHero{
+    width: 280px;
+    height: 100px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.stepsContainerStyleHero{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 380px){
+
+    .itinerarioCardStyleContainer{
+        width: 245px;
+    }
+
+
+    .itinerariosImagenHero{
+      width: 350px;
+    }
+
+}
+
+@media (min-width: 500px){
+
+    .itinerarioCardStyleContainer{
+        width: 280px;
+        justify-content: space-evenly;
+    }
+
+    .itinerariosImagenHero {
+        width: 420px;
+    }
+
+}
+
+@media (min-width: 1000px) {
+
+    .itinerarioCardStyleContainer {
+        width: 250px;
+        justify-content: space-evenly;
+    }
+
+    .itinerariosImagenHero {
+      width: 720px;
+    }
+
+}
+
+@media (min-width: 1500px) {
+
+    .itinerarioCardStyleContainer {
+        width: 280px;
+        justify-content: space-evenly;
+    }
+
+    .itinerariosImagenHero {
+      width: 1020px;
+    }
+
+}
+
+.stepsContainerStyleHero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* From 600px up: switch to grid (2x2) */
+@media (min-width: 600px) {
+  .stepsContainerStyleHero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 30px;
+  }
+}
+
+/* From 1200px up: flex row */
+@media (min-width: 1200px) {
+  .stepsContainerStyleHero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: nowrap; /* prevents wrapping on large screens */
+  }
+}

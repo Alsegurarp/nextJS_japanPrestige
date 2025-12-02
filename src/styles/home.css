@@ -1,0 +1,200 @@
+/* Screen reader only class - accessibility helper */
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.beneficiosContainerHero{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    flex-direction: column;
+    background-size: cover;
+    align-items: center;
+    position: relative;
+    top: -60px;
+    background-position: 50%;
+    padding-bottom: 10vh;
+}
+
+.contenidoBeneficiosItinerariosItinerariosHeroItinerario{
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    gap: 5px;
+    max-width: 1600px;
+}
+
+.subParrafoHero{
+  position: relative;
+  top: 60%;
+  width: calc(100% - 20%);
+  place-self: center;
+}
+
+
+.heroSectionSVG{
+    position: relative;
+    top: -100px;
+    width: calc(100%);
+    display: flex;
+    justify-self: center;
+
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-family: nohemi;
+  color: #aaa;
+  font-size: 16px;
+}
+
+.parrafoBeneficioHero{
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  line-height: 1.2;
+
+}
+
+  .itinerariosImagenHero{
+    position: relative;
+    top: 100px;
+    width: 280px;
+    display: flex;
+    justify-self: center;
+  }
+
+  .catHeroSection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+
+  .catHeroSection button p{
+    color: white;
+  }
+
+  .buttonHeroSectionImpact{
+    padding: 6px 20px;
+    border: none;
+    background-color: rgb(206, 0, 0);
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    width: 160px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+    .buttonHeroSectionNonImpact{
+    padding: 6px 20px;
+    border: 1px solid white;
+    background-color: rgb(255, 255, 255, 0.05);
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    width: 160px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  .itinerarioCardStyleContainer{
+    background-color: rgb(0,0,0,0.01);
+    color: white;
+    width: 180px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .stepsContainerStyleHero{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 25vh;
+  }
+
+  @media (min-width: 380px){
+
+    .beneficiosContainerHero{
+      height: 100vh;
+    }
+
+    .itinerariosImagenHero{
+      width: 350px;
+    }
+
+    .stepsContainerStyleHero{
+    margin-top: 40vh;
+    }
+
+    .itinerarioCardStyleContainer{
+      width: 245px;
+    }
+  }
+
+    @media (min-width: 500px){
+    
+      .itinerariosImagenHero {
+        width: 420px;
+        top: 200px;
+    }
+
+      .itinerarioCardStyleContainer{
+      width: 280px;
+      justify-content: space-evenly;
+    }
+
+
+    }
+
+    @media (min-width: 1000px) {
+
+    .itinerariosImagenHero {
+      width: 720px;
+    }
+
+    .stepsContainerStyleHero{
+      margin-top: 40vh;
+    } 
+
+    .itinerarioCardStyleContainer {
+        width: 250px;
+        justify-content: space-evenly;
+    }
+}
+
+    @media (min-width: 1500px) {
+
+    .itinerariosImagenHero {
+      width: 1020px;
+    }
+
+    .stepsContainerStyleHero{
+      margin-top: 38vh;
+    } 
+
+    .itinerarioCardStyleContainer {
+        width: 280px;
+        justify-content: space-evenly;
+    }
+}
