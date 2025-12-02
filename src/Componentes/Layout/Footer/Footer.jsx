@@ -39,7 +39,6 @@ const Footer = React.memo(function Footer() {
     const setWidths = () => {
       if (animatedTextRef.current && contactAndSocialsRef.current && subFooterRef.current && separatorRef.current) {
         const width = animatedTextRef.current.offsetWidth;
-        console.log('PREMIUM width:', width);
         contactAndSocialsRef.current.style.maxWidth = `${width}px`;
         subFooterRef.current.style.maxWidth = `${width}px`;
         separatorRef.current.style.maxWidth = `${width}px`;

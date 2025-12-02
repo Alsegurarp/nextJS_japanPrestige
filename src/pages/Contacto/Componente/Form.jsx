@@ -93,7 +93,7 @@ export function Form() {
   const isFormValid = isFirstNameValid && isLastNameValid && isEmailValid && isPhoneValid && validCaptcha;
 
   // captcha key
-  const reCaptchaKey = import.meta?.env?.VITE_RECAPTCHA_SITE_KEY
+  const reCaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
 
   const router = useRouter();
 
@@ -160,7 +160,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
       `;
 
       // POST to your backend
-      const resp = await axios.post(`${import.meta.env.VITE_API_BASE}/send-email`, {
+      const resp = await axios.post(`${process.env.NEXT_PUBLIC_API_BASE}/send-email`, {
         to,
         cc,
         subject,

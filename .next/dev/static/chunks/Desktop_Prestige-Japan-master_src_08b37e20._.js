@@ -1409,7 +1409,6 @@ const Footer = /*#__PURE__*/ _s(__TURBOPACK__imported__module__$5b$project$5d2f$
                 "Footer.Footer.useEffect.setWidths": ()=>{
                     if (animatedTextRef.current && contactAndSocialsRef.current && subFooterRef.current && separatorRef.current) {
                         const width = animatedTextRef.current.offsetWidth;
-                        console.log('PREMIUM width:', width);
                         contactAndSocialsRef.current.style.maxWidth = `${width}px`;
                         subFooterRef.current.style.maxWidth = `${width}px`;
                         separatorRef.current.style.maxWidth = `${width}px`;
@@ -1432,34 +1431,34 @@ const Footer = /*#__PURE__*/ _s(__TURBOPACK__imported__module__$5b$project$5d2f$
                 ref: animatedTextRef
             }, void 0, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-                lineNumber: 60,
+                lineNumber: 59,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ContactAndSocials, {
                 ref: contactAndSocialsRef
             }, void 0, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-                lineNumber: 61,
+                lineNumber: 60,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Separator, {
                 ref: separatorRef
             }, void 0, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-                lineNumber: 62,
+                lineNumber: 61,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SubFooter, {
                 ref: subFooterRef
             }, void 0, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-                lineNumber: 63,
+                lineNumber: 62,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-        lineNumber: 59,
+        lineNumber: 58,
         columnNumber: 5
     }, this);
 }, "nifmE+HRxEXSDuNs8Gs9GGd52oU=")), "nifmE+HRxEXSDuNs8Gs9GGd52oU=");
@@ -1471,18 +1470,18 @@ const ContactAndSocials = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$proje
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Contactos, {}, void 0, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-                lineNumber: 71,
+                lineNumber: 70,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(RedesSociales, {}, void 0, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-                lineNumber: 72,
+                lineNumber: 71,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-        lineNumber: 70,
+        lineNumber: 69,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 });
@@ -1540,7 +1539,7 @@ function Contactos() {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$Componentes$2f$Layout$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].iconsContacto
                     }, void 0, false, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-                        lineNumber: 127,
+                        lineNumber: 126,
                         columnNumber: 23
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1548,19 +1547,19 @@ function Contactos() {
                         children: r.text
                     }, void 0, false, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-                        lineNumber: 134,
+                        lineNumber: 133,
                         columnNumber: 13
                     }, this)
                 ]
             }, r.id, true, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-                lineNumber: 126,
+                lineNumber: 125,
                 columnNumber: 11
             }, this);
         })
     }, void 0, false, {
         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-        lineNumber: 122,
+        lineNumber: 121,
         columnNumber: 5
     }, this);
 }
@@ -1612,17 +1611,17 @@ function RedesSociales() {
                     className: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$Componentes$2f$Layout$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].iconsFooter
                 }, void 0, false, {
                     fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-                    lineNumber: 155,
+                    lineNumber: 154,
                     columnNumber: 21
                 }, this)
             }, r.id, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-                lineNumber: 154,
+                lineNumber: 153,
                 columnNumber: 9
             }, this))
     }, void 0, false, {
         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-        lineNumber: 152,
+        lineNumber: 151,
         columnNumber: 5
     }, this);
 }
@@ -1633,7 +1632,7 @@ const Separator = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$
         ref: ref
     }, void 0, false, {
         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-        lineNumber: 163,
+        lineNumber: 162,
         columnNumber: 10
     }, ("TURBOPACK compile-time value", void 0));
 });
@@ -1649,7 +1648,7 @@ const SubFooter = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$
                 children: "Aviso de Privacidad"
             }, void 0, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-                lineNumber: 169,
+                lineNumber: 168,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1663,20 +1662,20 @@ const SubFooter = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$
                         children: "BARRANCAS PREMIUM®"
                     }, void 0, false, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-                        lineNumber: 175,
+                        lineNumber: 174,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     "Consulte Términos y Condiciones en el Contrato de Adhesión ante PROFECO con número 7735-2015 & 7180-2015"
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-                lineNumber: 172,
+                lineNumber: 171,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.jsx",
-        lineNumber: 168,
+        lineNumber: 167,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 });

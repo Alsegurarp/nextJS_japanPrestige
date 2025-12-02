@@ -133,10 +133,10 @@ function Hero({ image, altImg, title, subtitle, bgPosition = "50%", letrasDorada
                 src: image,
                 alt: altImg,
                 fill: true,
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$Componentes$2f$Sections$2f$HeroSection$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].visuallyHidden,
                 priority: true,
                 style: {
-                    objectPosition: bgPosition
+                    objectPosition: bgPosition,
+                    objectFit: 'cover'
                 }
             }, void 0, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/HeroSection.jsx",

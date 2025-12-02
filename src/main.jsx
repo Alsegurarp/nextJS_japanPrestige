@@ -12,8 +12,8 @@ import "./App.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider 
-      router={router} 
+    <RouterProvider
+      router={router}
       fallbackElement={<LoadingFallback />}
     />
   </StrictMode>
@@ -22,13 +22,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 // Network optimizer will auto-initialize when imported
 
 // Silence console output in production
-if (import.meta.env.PROD) {
-  console.error = () => {};
-  console.warn = () => {};
+if (process.env.NODE_ENV === 'production') {
+  console.error = () => { };
+  console.warn = () => { };
 }
 
 // Register service worker for critical resource caching
-if ('serviceWorker' in navigator && import.meta.env.PROD) {
+if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {

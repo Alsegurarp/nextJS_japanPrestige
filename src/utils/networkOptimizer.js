@@ -13,7 +13,7 @@ class NetworkOptimizer {
     const criticalResourcesConfig = [
       // Critical fonts
       { href: '/assets/fonts/nohemi-regular-webfont.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous', priority: 'high' },
-      
+
       // Critical images (only mobile and desktop for LCP)
       { href: '/Movil-Experiencia-cultural-con-kimono-tradicional.webp', as: 'image', media: '(max-width: 768px)', priority: 'high' },
       { href: '/Experiencia-cultural-con-kimono-tradicional.webp', as: 'image', media: '(min-width: 769px)', priority: 'high' },
@@ -35,7 +35,7 @@ class NetworkOptimizer {
     link.rel = 'preload';
     link.href = resource.href;
     link.as = resource.as;
-    
+
     if (resource.type) link.type = resource.type;
     if (resource.crossOrigin) link.crossOrigin = resource.crossOrigin;
     if (resource.media) link.media = resource.media;
@@ -77,10 +77,10 @@ class NetworkOptimizer {
   // Optimize module preloading strategy (production only)
   optimizeModulePreloading() {
     // Only run in production where modules have correct paths
-    if (typeof import.meta === 'undefined' || !import.meta.env.PROD) {
+    if (process.env.NODE_ENV !== 'production') {
       return;
     }
-    
+
     // In production, Vite will generate the correct module paths
     // This method can be enhanced after build to use actual chunk names
     console.log('Module preloading optimization ready for production');
@@ -91,7 +91,7 @@ class NetworkOptimizer {
     // Run immediately for critical resources
     this.preloadCriticalResources();
     this.optimizeModulePreloading();
-    
+
     // Defer non-critical optimizations
     this.deferNonCriticalModules();
   }

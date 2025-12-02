@@ -1,0 +1,11 @@
+__turbopack_load_page_chunks__("/ContenidoItinerarios/Esenciales/JaponIncreible", [
+  "static/chunks/a937b995041fefd4.js",
+  "static/chunks/1eb02aa6b7958e78.js",
+  "static/chunks/889dc661983502b7.js",
+  "static/chunks/f91b2af79bb88a22.js",
+  "static/chunks/695889175ab30413.js",
+  "static/chunks/c228b7e4c6ebebb9.css",
+  "static/chunks/8137fa7eb18ca0c9.css",
+  "static/chunks/dcb865ed185a865c.css",
+  "static/chunks/turbopack-15c39a8935bd69c1.js"
+])

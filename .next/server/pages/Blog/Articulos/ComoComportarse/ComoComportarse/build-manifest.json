@@ -7,12 +7,12 @@
   "pages": {
     "/Blog/Articulos/ComoComportarse/ComoComportarse": [
       "static/chunks/1eb02aa6b7958e78.js",
-      "static/chunks/9748cc567ec95b29.js",
+      "static/chunks/fbfbf0453bd3e623.js",
       "static/chunks/889dc661983502b7.js",
       "static/chunks/f91b2af79bb88a22.js",
       "static/chunks/dcb865ed185a865c.css",
       "static/chunks/8137fa7eb18ca0c9.css",
-      "static/chunks/turbopack-36f2f9ab5ba6b944.js"
+      "static/chunks/turbopack-5f93b018f99fdcc8.js"
     ]
   },
   "ampFirstPages": []

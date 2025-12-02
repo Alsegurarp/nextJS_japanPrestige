@@ -13,8 +13,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
-      <body>
+    <html lang="es" suppressHydrationWarning={true}>
+      <body suppressHydrationWarning={true}>
         <ResourceHints />
         <ScrollToTop />
         <Suspense fallback={null}>

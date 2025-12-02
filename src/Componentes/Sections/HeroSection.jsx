@@ -32,7 +32,7 @@ function Hero({ image, altImg, title, subtitle, bgPosition = "50%", letrasDorada
         position: 'relative'
       }}
     >
-      {image && <Image src={image} alt={altImg} fill className={styles.visuallyHidden} priority={true} style={{objectPosition: bgPosition}} />}
+      {image && <Image src={image} alt={altImg} fill priority={true} style={{ objectPosition: bgPosition, objectFit: 'cover' }} />}
 
       <div className={styles.contenidoBeneficiosHero}>
         {/* Grid Item 1: Responsive SVG (mobile/tablet) */}
