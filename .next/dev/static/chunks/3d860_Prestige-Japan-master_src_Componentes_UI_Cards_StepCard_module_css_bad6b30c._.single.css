@@ -1,0 +1,37 @@
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/UI/Cards/StepCard.module.css [app-client] (css) */
+.StepCard-module__oBjcZq__containerStyle {
+  text-align: center;
+  color: #fff;
+  border: 2px solid #eac577;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 30px;
+}
+
+.StepCard-module__oBjcZq__titleStyle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: nohemi;
+  font-size: 14px;
+}
+
+.StepCard-module__oBjcZq__descriptionStyle {
+  color: #c5c5c5;
+  justify-self: center;
+  font-family: nohemi;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.StepCard-module__oBjcZq__numberContainer {
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  display: flex;
+}
+
+.StepCard-module__oBjcZq__titleContainer, .StepCard-module__oBjcZq__paragraphContainer {
+  width: 250px;
+}
+
+/*# sourceMappingURL=3d860_Prestige-Japan-master_src_Componentes_UI_Cards_StepCard_module_css_bad6b30c._.single.css.map*/

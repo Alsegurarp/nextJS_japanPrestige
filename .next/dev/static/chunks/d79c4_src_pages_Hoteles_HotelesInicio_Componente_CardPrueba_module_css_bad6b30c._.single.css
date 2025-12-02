@@ -1,0 +1,244 @@
+/* [project]/Desktop/Prestige-Japan-master/src/pages/Hoteles/HotelesInicio/Componente/CardPrueba.module.css [app-client] (css) */
+:root {
+  --background: 220 13% 9%;
+  --foreground: 48 96% 89%;
+  --card: 220 13% 12%;
+  --card-foreground: 48 96% 89%;
+  --popover: 220 13% 12%;
+  --popover-foreground: 48 96% 89%;
+  --primary: 48 96% 89%;
+  --primary-foreground: 220 13% 9%;
+  --secondary: 220 13% 15%;
+  --secondary-foreground: 48 96% 89%;
+  --muted: 220 13% 15%;
+  --muted-foreground: 220 9% 55%;
+  --accent: 45 93% 58%;
+  --accent-foreground: 220 13% 9%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 48 96% 89%;
+  --border: 220 13% 20%;
+  --input: 220 13% 15%;
+  --ring: 45 93% 58%;
+  --radius: .75rem;
+  --gradient-hero: linear-gradient(135deg, #14161af2, #1b1d23e6);
+  --gradient-card: linear-gradient(145deg, #14161acc, #21252b99);
+  --gradient-golden: linear-gradient(135deg, #f8c630, #fce173);
+  --gradient-overlay: linear-gradient(to bottom, transparent 0%, #14161acc 100%);
+  --shadow-premium: 0 20px 40px -10px #07070966;
+  --shadow-golden: 0 10px 30px -5px #f8c6304d;
+  --shadow-card: 0 8px 24px -8px #07070999;
+  --transition-smooth: all .4s cubic-bezier(.4, 0, .2, 1);
+  --transition-hover: all .3s cubic-bezier(.2, 0, .1, 1);
+}
+
+@keyframes CardPrueba-module__A1fQsW__fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes CardPrueba-module__A1fQsW__glow {
+  0% {
+    box-shadow: 0 0 20px #f8c6304d;
+  }
+
+  50% {
+    box-shadow: 0 0 40px #f8c63080;
+  }
+
+  100% {
+    box-shadow: 0 0 20px #f8c6304d;
+  }
+}
+
+@keyframes CardPrueba-module__A1fQsW__bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%, 43% {
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.CardPrueba-module__A1fQsW__card {
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-card);
+  border-radius: 12px;
+  min-width: 280px;
+  max-width: 320px;
+  margin: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.CardPrueba-module__A1fQsW__card:hover {
+  box-shadow: var(--shadow-golden);
+}
+
+.CardPrueba-module__A1fQsW__imageContainer {
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+}
+
+.CardPrueba-module__A1fQsW__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform .7s cubic-bezier(.2, 0, .1, 1);
+}
+
+.CardPrueba-module__A1fQsW__card:hover .CardPrueba-module__A1fQsW__image {
+  transform: scale(1.1);
+}
+
+.CardPrueba-module__A1fQsW__overlay {
+  background: var(--gradient-overlay);
+  position: absolute;
+  inset: 0;
+}
+
+.CardPrueba-module__A1fQsW__hoverBorder {
+  opacity: 0;
+  transition: opacity .5s;
+  position: absolute;
+  inset: 0;
+}
+
+.CardPrueba-module__A1fQsW__card:hover .CardPrueba-module__A1fQsW__hoverBorder {
+  opacity: 1;
+}
+
+.CardPrueba-module__A1fQsW__borderGlow {
+  border: 2px solid hsl(var(--accent));
+  border-radius: 12px;
+  animation: 2s ease-in-out infinite CardPrueba-module__A1fQsW__glow;
+  position: absolute;
+  inset: 0;
+}
+
+.CardPrueba-module__A1fQsW__content {
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+
+.CardPrueba-module__A1fQsW__titleContainer {
+  transition: var(--transition-smooth);
+  transform: translateY(0);
+}
+
+.CardPrueba-module__A1fQsW__card:hover .CardPrueba-module__A1fQsW__titleContainer {
+  transform: translateY(-16px);
+}
+
+.CardPrueba-module__A1fQsW__title {
+  color: hsl(var(--primary));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color .3s;
+}
+
+.CardPrueba-module__A1fQsW__card:hover .CardPrueba-module__A1fQsW__title {
+  color: hsl(var(--accent));
+}
+
+.CardPrueba-module__A1fQsW__description {
+  transition: var(--transition-smooth);
+  opacity: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-height: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow: hidden;
+  transform: translateY(16px);
+}
+
+.CardPrueba-module__A1fQsW__card:hover .CardPrueba-module__A1fQsW__description {
+  opacity: 1;
+  max-height: 128px;
+  transform: translateY(0);
+}
+
+.CardPrueba-module__A1fQsW__descriptionText {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.CardPrueba-module__A1fQsW__exploreContainer {
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  display: flex;
+}
+
+.CardPrueba-module__A1fQsW__exploreText {
+  color: hsl(var(--accent));
+  font-size: 14px;
+  font-weight: 500;
+  transition: color .3s;
+}
+
+.CardPrueba-module__A1fQsW__exploreText:hover {
+  color: hsl(var(--primary));
+}
+
+.CardPrueba-module__A1fQsW__exploreIcon {
+  width: 16px;
+  height: 16px;
+  color: hsl(var(--accent));
+  transition: transform .3s;
+  transform: translateX(0);
+}
+
+.CardPrueba-module__A1fQsW__card:hover .CardPrueba-module__A1fQsW__exploreIcon {
+  transform: translateX(4px);
+}
+
+.CardPrueba-module__A1fQsW__scaleBackground {
+  background: var(--gradient-card);
+  opacity: 0;
+  transition: opacity .5s;
+  position: absolute;
+  inset: 0;
+}
+
+.CardPrueba-module__A1fQsW__card:hover .CardPrueba-module__A1fQsW__scaleBackground {
+  opacity: .2;
+}
+
+.CardPrueba-module__A1fQsW__fadeIn {
+  animation: .6s ease-out CardPrueba-module__A1fQsW__fade-in;
+}
+
+@media (min-width: 640px) {
+  .CardPrueba-module__A1fQsW__card {
+    margin: 50px 20px;
+  }
+}
+
+/*# sourceMappingURL=d79c4_src_pages_Hoteles_HotelesInicio_Componente_CardPrueba_module_css_bad6b30c._.single.css.map*/

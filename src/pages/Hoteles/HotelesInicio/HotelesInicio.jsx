@@ -1,6 +1,6 @@
 import React from 'react';
-import CardsComponent from './Componente/CardsComponent.jsx';
-import Prueba from './Componente/Prueba.jsx';
+import CardsComponent from '../../../Componentes/Hoteles/HotelesInicio/Componente/CardsComponent.jsx';
+import Prueba from '../../../Componentes/Hoteles/HotelesInicio/Componente/Prueba.jsx';
 
 import HeroSection from '../../../Componentes/Sections/HeroSection.jsx';
 import HeroImage from '../../../assets/portadas-nuevas-19-sep/hotelesPortadas/portada_hoteles_en_japon.webp';

@@ -1,4 +1,6 @@
-import React, {useEffect} from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 import { Suspense } from 'react';
 import styles from './ImperioDelSol.module.css';
 
@@ -65,107 +67,118 @@ import Hotel12 from '../../../assets/Itinerarios/HotelesDeItinerarios/nuevosHote
 import Hotel13 from '../../../assets/Itinerarios/HotelesDeItinerarios/nuevosHotelesItinerarios/Japon/tokio/Hotel_Villa_Fontaine_Shiodome.webp';
 import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx';
 
-    const data = [
-      {
-        title: "12 Días - 10 Noches",
-        subtitle: "Tokio - Hiroshima - Itsukushima - Matsuyama - Kotohira - Takamatsu - Naruto - Kobe - Osaka - Kioto - Tsumago - Matsumoto - Nagano - Kusatsu - Ikaho - Nikko",
-        text: "Un recorrido fascinante que combina tradición, modernidad y paisajes únicos. Desde los  templos milenarios hasta las ciudades más vibrantes, este viaje es una verdadera inmersión  en el alma de Japón.",
-        image: HeroImage,
-        altImg:"Vista frontal del Templo Yasukuni en Tokio, Japón, con cielo nublado al atardecer.",
-        letrasDoradasResponsive: LetrasDoradasResponsive,
-        LetrasDoradasDesktop: LetrasDoradasDesktop, 
-    }];
+const data = [
+  {
+    title: "12 Días - 10 Noches",
+    subtitle: "Tokio - Hiroshima - Itsukushima - Matsuyama - Kotohira - Takamatsu - Naruto - Kobe - Osaka - Kioto - Tsumago - Matsumoto - Nagano - Kusatsu - Ikaho - Nikko",
+    text: "Un recorrido fascinante que combina tradición, modernidad y paisajes únicos. Desde los  templos milenarios hasta las ciudades más vibrantes, este viaje es una verdadera inmersión  en el alma de Japón.",
+    image: HeroImage,
+    altImg: "Vista frontal del Templo Yasukuni en Tokio, Japón, con cielo nublado al atardecer.",
+    letrasDoradasResponsive: LetrasDoradasResponsive,
+    LetrasDoradasDesktop: LetrasDoradasDesktop,
+  }];
 
-    const dataSectionCard = [
-        {
-          title: 'México - Tokio',
-          subtitle: NumeroUno,
-          subtitleAltText: "ilustracion-de-los-numeros-13-y-14-en-formato-svg-diseno-grafico-japan-Premium",
-          text: "Salida en vuelo intercontinental con destino a Japón.",
-          image: LlegadaAeropuerto,
-          altText: 'pasajero-observando-el-ala-del-avion-y-el-oceano-desde-la-ventana-durante-vuelo-internacional-hacia-japon-con-japan-Premium.',
-        },
-        {
-          title: 'Tokio',
-          subtitle: NumeroDos,
-          text: 'Llegada y recepción en el aeropuerto. Traslado al hotel en shuttle bus. Por la tarde, paseo por Shinjuku y cena de bienvenida en restaurante local. Alojamiento.',
-          image: LlegadaKansai,
-          altText: 'turista-llegando-al-aeropuerto-de-kioto-japon-siendo-recibida-por-guia-de-japan-Premium-en-la-zona-de-arribos.',
-        },
-        {
-          title: 'Tokio',
-          subtitle: NumeroTres,
-          text: 'Desayuno. Tour panorámico por la capital: Santuario Meiji, el Cruce de Shibuya, la avenida Omotesando, el Puente Nijubashi del Palacio Imperial, el barrio tecnológico Akihabara, el estadio de sumo Kokugikan y el tradicional Templo Sensoji en Asakusa con la calle Nakamise. Almuerzo incluido. Alojamiento.',
-          image: VueloEjecutivo,
-          altText: 'turista-con-kimono-tradicional-japones-posando-en-el-bosque-de-bambu-de-kioto-con-japan-Premium.',
-        },{
-          title: 'Tokio - Hiroshima - Itsukushima - Hiroshima',
-          subtitle: NumeroCuatro,
-          text: 'Desayuno. Viaje en tren bala hacia Hiroshima. Visita al Memorial de la Paz, la Cúpula de la Bomba Atómica y el Museo de la Paz. Ferry hacia la isla de Miyajima, con el icónico Santuario Itsukushima, construido sobre el mar. Cena incluida. Alojamiento en Hiroshima.',
-        image: VistaAvion,
-          altText: 'viajera-en-mirador-con-vista-a-la-torre-de-tokio-y-el-paisaje-urbano-de-la-capital-de-japon-con-japan-Premium',
-        },{
-          title: 'Hiroshima - Matsuyama',
-          subtitle: NumeroCinco,
-          text: 'Desayuno. Ferry a la isla de Shikoku. En Matsuyama, visita al Castillo de Matsuyama y al templo Ishiteji. Ingreso a Dogo Onsen, un histórico baño japonés del siglo XIX. Alojamiento.',
-          image: EncantoJapan,
-          altText: 'viajera-frente-al-torii-flotante-de-miyajima-en-hiroshima-durante-el-atardecer-con-japan-Premium.',
-        },{
-          title: 'Matsuyama - Kotohira - Takamatsu - Naruto - Kobe',
-          subtitle: NumeroSeis,
-          text: 'Desayuno. Visita al Santuario Kotohira, dedicado al dios de los marineros, y a los espectaculares Jardines Ritsurin. Continuación a Naruto, famoso por sus puentes y vistas al mar. Llegada a Kobe. Alojamiento.',
-          image: MiradorTorre,
-          altText: 'pareja-de-turistas-viajando-en-tren-bala-shinkansen-en-japon-con-japan-Premium-disfrutando-del-paisaje-desde-la-ventana.',
-        },{
-          title: 'Kobe - osaka - monte koya',
-          subtitle: NumeroSiete,
-          text: 'Desayuno. Visita al Museo Memorial del Terremoto de Kobe. Continuación hacia Tsumago, pueblo histórico de madera, y luego a Matsumoto para visitar su imponente castillo del siglo XVI. Llegada a Nagano. Alojamiento',
-          image: ToriiFlotante,
-          altText: 'pareja-de-turistas-en-el-templo-nachisan-con-pagoda-roja-y-montanas-de-fondo-en-japon-con-japan-Premium.',
-        },{
-          title: 'Monte Koya - Kioto',
-          subtitle: NumeroOcho,
-          text: 'Desayuno. Traslado al Monte Koya para vivir una experiencia espiritual: alojamiento en monasterio budista, práctica de meditación zen (Ajikan) y cena vegetariana tradicional. Alojamiento.',
-          image: TemploNachisan,
-          altText: 'pareja-de-turistas-en-dotonbori-osaka-con-los-carteles-luminosos-iconicos-al-fondo-con-japan-Premium.',
-        },{
-          title: 'Kioto - Tsumago - Matsumoto - Nagano',
-          subtitle: NumeroNueve,
-          text: 'Desayuno. Tour completo en Kioto: el Santuario Fushimi Inari, el Palacio Imperial, el Pabellón Dorado (Kinkakuji) y el barrio de Gion, famoso por sus geishas. Alojamiento.',
-          image: TurismoDotonbori,
-          altText: 'pareja-de-viajeros-disfrutando-del-jardin-kenrokuen-en-kanazawa-japon-con-japan-Premium.',
-        },{
-          title: 'Nagano - Parque de los Monos - Kusatsu - Ikaho Onsen',
-          subtitle: NumeroDiez,
-          text: 'Desayuno. Visita al Templo Zenkoji, ceremonia de Gomakuyo y excursión al Parque de los Monos de  Jigokudani, donde los macacos se bañan en aguas termales. Continuación a Kusatsu para presenciar el espectáculo Yumomi y traslado a Ikaho Onsen, con alojamiento en ryokan tradicional y cena japonesa incluida',
-          image: JardinKenrokuen,
-          altText: 'grupo-de-viajeros-posando-en-la-aldea-tradicional-de-shirakawago-en-kanazawa-japon-con-japan-Premium.',
-        },{
-          title: 'Ikaho - Nikko - Tokio',
-          subtitle: NumeroOnce,
-          text: 'Desayuno. Excursión a Nikko para visitar el Santuario Toshogu, el Mausoleo Taiyuinbyo y el paseo de Kanmangafuchi con sus estatuas Jizo. Regreso a Tokio. Alojamiento',
-          image: GrupoTuristas,
-          altText: 'pareja-navegando-en-barca-sobre-lago-con-cerezos-en-flor-y-barco-tradicional-al-fondo-en-takayama-con-japan-Premium.',
-        },{
-          title: 'Tokio - México',
-          subtitle: NumeroDoce,
-          text: 'Desayuno. Traslado al aeropuerto para tomar el vuelo de regreso. Fin de nuestros servicios.',
-          image: PaseoEnBarca,
-          altText: 'viajera-frente-al-castillo-de-himeji-en-japon-disfrutando-de-su-arquitectura-tradicional-con-japan-Premium.',
-        }
-    ];
+const dataSectionCard = [
+  {
+    title: 'México - Tokio',
+    subtitle: NumeroUno,
+    subtitleAltText: "Número 1",
+    text: "Salida en vuelo intercontinental con destino a Japón.",
+    image: LlegadaAeropuerto,
+    altText: 'pasajero-observando-el-ala-del-avion-y-el-oceano-desde-la-ventana-durante-vuelo-internacional-hacia-japon-con-japan-Premium.',
+  },
+  {
+    title: 'Tokio',
+    subtitle: NumeroDos,
+    subtitleAltText: "Número 2",
+    text: 'Llegada y recepción en el aeropuerto. Traslado al hotel en shuttle bus. Por la tarde, paseo por Shinjuku y cena de bienvenida en restaurante local. Alojamiento.',
+    image: LlegadaKansai,
+    altText: 'turista-llegando-al-aeropuerto-de-kioto-japon-siendo-recibida-por-guia-de-japan-Premium-en-la-zona-de-arribos.',
+  },
+  {
+    title: 'Tokio',
+    subtitle: NumeroTres,
+    subtitleAltText: "Número 3",
+    text: 'Desayuno. Tour panorámico por la capital: Santuario Meiji, el Cruce de Shibuya, la avenida Omotesando, el Puente Nijubashi del Palacio Imperial, el barrio tecnológico Akihabara, el estadio de sumo Kokugikan y el tradicional Templo Sensoji en Asakusa con la calle Nakamise. Almuerzo incluido. Alojamiento.',
+    image: VueloEjecutivo,
+    altText: 'turista-con-kimono-tradicional-japones-posando-en-el-bosque-de-bambu-de-kioto-con-japan-Premium.',
+  }, {
+    title: 'Tokio - Hiroshima - Itsukushima - Hiroshima',
+    subtitle: NumeroCuatro,
+    subtitleAltText: "Número 4",
+    text: 'Desayuno. Viaje en tren bala hacia Hiroshima. Visita al Memorial de la Paz, la Cúpula de la Bomba Atómica y el Museo de la Paz. Ferry hacia la isla de Miyajima, con el icónico Santuario Itsukushima, construido sobre el mar. Cena incluida. Alojamiento en Hiroshima.',
+    image: VistaAvion,
+    altText: 'viajera-en-mirador-con-vista-a-la-torre-de-tokio-y-el-paisaje-urbano-de-la-capital-de-japon-con-japan-Premium',
+  }, {
+    title: 'Hiroshima - Matsuyama',
+    subtitle: NumeroCinco,
+    subtitleAltText: "Número 5",
+    text: 'Desayuno. Ferry a la isla de Shikoku. En Matsuyama, visita al Castillo de Matsuyama y al templo Ishiteji. Ingreso a Dogo Onsen, un histórico baño japonés del siglo XIX. Alojamiento.',
+    image: EncantoJapan,
+    altText: 'viajera-frente-al-torii-flotante-de-miyajima-en-hiroshima-durante-el-atardecer-con-japan-Premium.',
+  }, {
+    title: 'Matsuyama - Kotohira - Takamatsu - Naruto - Kobe',
+    subtitle: NumeroSeis,
+    subtitleAltText: "Número 6",
+    text: 'Desayuno. Visita al Santuario Kotohira, dedicado al dios de los marineros, y a los espectaculares Jardines Ritsurin. Continuación a Naruto, famoso por sus puentes y vistas al mar. Llegada a Kobe. Alojamiento.',
+    image: MiradorTorre,
+    altText: 'pareja-de-turistas-viajando-en-tren-bala-shinkansen-en-japon-con-japan-Premium-disfrutando-del-paisaje-desde-la-ventana.',
+  }, {
+    title: 'Kobe - osaka - monte koya',
+    subtitle: NumeroSiete,
+    subtitleAltText: "Número 7",
+    text: 'Desayuno. Visita al Museo Memorial del Terremoto de Kobe. Continuación hacia Tsumago, pueblo histórico de madera, y luego a Matsumoto para visitar su imponente castillo del siglo XVI. Llegada a Nagano. Alojamiento',
+    image: ToriiFlotante,
+    altText: 'pareja-de-turistas-en-el-templo-nachisan-con-pagoda-roja-y-montanas-de-fondo-en-japon-con-japan-Premium.',
+  }, {
+    title: 'Monte Koya - Kioto',
+    subtitle: NumeroOcho,
+    subtitleAltText: "Número 8",
+    text: 'Desayuno. Traslado al Monte Koya para vivir una experiencia espiritual: alojamiento en monasterio budista, práctica de meditación zen (Ajikan) y cena vegetariana tradicional. Alojamiento.',
+    image: TemploNachisan,
+    altText: 'pareja-de-turistas-en-dotonbori-osaka-con-los-carteles-luminosos-iconicos-al-fondo-con-japan-Premium.',
+  }, {
+    title: 'Kioto - Tsumago - Matsumoto - Nagano',
+    subtitle: NumeroNueve,
+    subtitleAltText: "Número 9",
+    text: 'Desayuno. Tour completo en Kioto: el Santuario Fushimi Inari, el Palacio Imperial, el Pabellón Dorado (Kinkakuji) y el barrio de Gion, famoso por sus geishas. Alojamiento.',
+    image: TurismoDotonbori,
+    altText: 'pareja-de-viajeros-disfrutando-del-jardin-kenrokuen-en-kanazawa-japon-con-japan-Premium.',
+  }, {
+    title: 'Nagano - Parque de los Monos - Kusatsu - Ikaho Onsen',
+    subtitle: NumeroDiez,
+    subtitleAltText: "Número 10",
+    text: 'Desayuno. Visita al Templo Zenkoji, ceremonia de Gomakuyo y excursión al Parque de los Monos de  Jigokudani, donde los macacos se bañan en aguas termales. Continuación a Kusatsu para presenciar el espectáculo Yumomi y traslado a Ikaho Onsen, con alojamiento en ryokan tradicional y cena japonesa incluida',
+    image: JardinKenrokuen,
+    altText: 'grupo-de-viajeros-posando-en-la-aldea-tradicional-de-shirakawago-en-kanazawa-japon-con-japan-Premium.',
+  }, {
+    title: 'Ikaho - Nikko - Tokio',
+    subtitle: NumeroOnce,
+    subtitleAltText: "Número 11",
+    text: 'Desayuno. Excursión a Nikko para visitar el Santuario Toshogu, el Mausoleo Taiyuinbyo y el paseo de Kanmangafuchi con sus estatuas Jizo. Regreso a Tokio. Alojamiento',
+    image: GrupoTuristas,
+    altText: 'pareja-navegando-en-barca-sobre-lago-con-cerezos-en-flor-y-barco-tradicional-al-fondo-en-takayama-con-japan-Premium.',
+  }, {
+    title: 'Tokio - México',
+    subtitle: NumeroDoce,
+    subtitleAltText: "Número 12",
+    text: 'Desayuno. Traslado al aeropuerto para tomar el vuelo de regreso. Fin de nuestros servicios.',
+    image: PaseoEnBarca,
+    altText: 'viajera-frente-al-castillo-de-himeji-en-japon-disfrutando-de-su-arquitectura-tradicional-con-japan-Premium.',
+  }
+];
 
-    const downloadData = [
-    {
-      id: "01",
-      title: "japón premium",
-      subtitle: "Imperio del Sol Naciente",
-      dias: "12 Días - 10 Noches",
-      urlDescargar: "https://japonpremium.com/pdf/itinerario-japon-premium-imperio-sol-naciente.pdf"
-    }];
-    
-    const dataPrecios = [
-{
+const downloadData = [
+  {
+    id: "01",
+    title: "japón premium",
+    subtitle: "Imperio del Sol Naciente",
+    dias: "12 Días - 10 Noches",
+    urlDescargar: "https://japonpremium.com/pdf/itinerario-japon-premium-imperio-sol-naciente.pdf"
+  }];
+
+const dataPrecios = [
+  {
     title: 'Temporada A',
     prices: [
       { type: 'DOBLE', category: 'ESTÁNDAR', amount: '8,749' },
@@ -201,66 +214,69 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
       { type: 'SENCILLA', category: 'SUPERIOR', amount: '15,115' },
     ],
   },
-    ];
+];
 
-    const lista = [
-        {id: "01",
-        icon: avion,
-        title: "No incluye: Impuestos aéreos aproximados de 595 USD.",
-        },
-        {id: "02",
-        icon: calendario,
-        title: "Temporada B y C: Aplica suplemento (Verano - Fin de año) 450 USD.",
-        },
-        {id: "03",
-        icon: user,
-        title: "Los precios: Son por persona, sujetos a cambios sin previo aviso.",
-        }
-    ];
+const lista = [
+  {
+    id: "01",
+    icon: avion,
+    title: "No incluye: Impuestos aéreos aproximados de 595 USD.",
+  },
+  {
+    id: "02",
+    icon: calendario,
+    title: "Temporada B y C: Aplica suplemento (Verano - Fin de año) 450 USD.",
+  },
+  {
+    id: "03",
+    icon: user,
+    title: "Los precios: Son por persona, sujetos a cambios sin previo aviso.",
+  }
+];
 
-    const Travelinfo = [
-      {
-      id: "01",
-      title: "EL VIAJE A JAPÓN INCLUYE",
-      description: [
-        "Vuelo redondo México - Japón - México.",
-        "Traslados aeropuerto-hotel-aeropuerto.",
-        "10 noches de alojamiento en hoteles previstos.",
-        "9 comidas incluidas (almuerzos o cenas).",
-        "Traslados nocturnos a Shinjuku (Tokio) y Gion (Kioto).",
-        "Trayectos en tren bala (Shinkansen): Tokio-Hiroshima.",
-        "Ferries: Hiroshima-Miyajima y Hiroshima-Matsuyama.",
-        "Funicular: acceso al Castillo de Matsuyama.",
-        "Entradas a templos, santuarios y sitios destacados: Zojoji, Meiji, Sensoji, Museo de la Paz en Hiroshima, Dogo Onsen, Ishiteji, Kotohira, Jardines Ritsurin, Puente de Naruto, Museo del Terremoto en Kobe, Mausoleo de Okuno, Kongobuji, Fushimi Inari, Palacio Imperial, Kinkakuji, Castillo de Matsumoto, Zenkoji, ceremonia de Gomakuyo, Parque de los Monos de Jigokudani, espectáculo Yumomi, Toshogu y Taiyuinbyo en Nikko."
-        ],
-      }, {
-      id: "02",
-      title: "EL VIAJE A JAPÓN NO INCLUYE",
-      description: [
-        "Comidas y bebidas no mencionadas.",
-        "Actividades opcionales.",
-        "Propinas.",
-        "Gastos personales.",
-        "Seguro de cancelación.",
-        'Lo que no esté indicado en el apartado "El Viaje a … incluye".'
-      ],
-      },   {
-      id: "03",
-      title: "NOTAS IMPORTANTES",
-      description: [
-        "Precios en dólares estadounidenses, pagaderos al tipo de cambio vigente.",
-        "Tarifas por persona según el tipo de habitación y sujetas a disponibilidad.",
-        "Tarifas sujetas a cambios sin previo aviso debido a la temporada o la disponibilidad.",
-        "En categoría de lujo no se permite habitación triple.",
-        "Algunos traslados podrán realizarse en transporte público dependiendo del número de participantes.",
-        "Es responsabilidad del pasajero contar con un pasaporte con una vigencia mínima de seis meses al momento del viaje.",
-        "Cada viajero es responsable de tramitar visas, ETAs, vacunas o requisitos migratorios en caso de ser necesarios. La agencia no asume responsabilidad si no se cumple con los documentos requeridos.",
-        "Las excursiones opcionales tienen costo adicional."
-        ],
-      },
-    ];
+const Travelinfo = [
+  {
+    id: "01",
+    title: "EL VIAJE A JAPÓN INCLUYE",
+    description: [
+      "Vuelo redondo México - Japón - México.",
+      "Traslados aeropuerto-hotel-aeropuerto.",
+      "10 noches de alojamiento en hoteles previstos.",
+      "9 comidas incluidas (almuerzos o cenas).",
+      "Traslados nocturnos a Shinjuku (Tokio) y Gion (Kioto).",
+      "Trayectos en tren bala (Shinkansen): Tokio-Hiroshima.",
+      "Ferries: Hiroshima-Miyajima y Hiroshima-Matsuyama.",
+      "Funicular: acceso al Castillo de Matsuyama.",
+      "Entradas a templos, santuarios y sitios destacados: Zojoji, Meiji, Sensoji, Museo de la Paz en Hiroshima, Dogo Onsen, Ishiteji, Kotohira, Jardines Ritsurin, Puente de Naruto, Museo del Terremoto en Kobe, Mausoleo de Okuno, Kongobuji, Fushimi Inari, Palacio Imperial, Kinkakuji, Castillo de Matsumoto, Zenkoji, ceremonia de Gomakuyo, Parque de los Monos de Jigokudani, espectáculo Yumomi, Toshogu y Taiyuinbyo en Nikko."
+    ],
+  }, {
+    id: "02",
+    title: "EL VIAJE A JAPÓN NO INCLUYE",
+    description: [
+      "Comidas y bebidas no mencionadas.",
+      "Actividades opcionales.",
+      "Propinas.",
+      "Gastos personales.",
+      "Seguro de cancelación.",
+      'Lo que no esté indicado en el apartado "El Viaje a … incluye".'
+    ],
+  }, {
+    id: "03",
+    title: "NOTAS IMPORTANTES",
+    description: [
+      "Precios en dólares estadounidenses, pagaderos al tipo de cambio vigente.",
+      "Tarifas por persona según el tipo de habitación y sujetas a disponibilidad.",
+      "Tarifas sujetas a cambios sin previo aviso debido a la temporada o la disponibilidad.",
+      "En categoría de lujo no se permite habitación triple.",
+      "Algunos traslados podrán realizarse en transporte público dependiendo del número de participantes.",
+      "Es responsabilidad del pasajero contar con un pasaporte con una vigencia mínima de seis meses al momento del viaje.",
+      "Cada viajero es responsable de tramitar visas, ETAs, vacunas o requisitos migratorios en caso de ser necesarios. La agencia no asume responsabilidad si no se cumple con los documentos requeridos.",
+      "Las excursiones opcionales tienen costo adicional."
+    ],
+  },
+];
 
-    const hotels = [
+const hotels = [
   {
     id: '1',
     imageUrl: Hotel1,
@@ -344,17 +360,17 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
 
 export default function ImperioDelSol() {
   useEffect(() => {
-      document.title = `Itinerario Imperio del Sol | Japón PREMIUM®`; 
-    }, []);
+    document.title = `Itinerario Imperio del Sol | Japón PREMIUM®`;
+  }, []);
 
 
   return (
     <>
-    <FlyingButton />
-    <HeroSection data={data}/>
-    <Suspense fallback={<div className={styles.loading}>Cargando contenido...</div>}>
+      <FlyingButton />
+      <HeroSection data={data} />
+      <Suspense fallback={<div className={styles.loading}>Cargando contenido...</div>}>
         <ItinerariosTemplate data={dataSectionCard} />
-        
+
         {downloadData.map(item => (
           <DownloadSection key={item.id} title={item.title} subtitle={item.subtitle} dias={item.dias} urlDescargar={item.urlDescargar} />
         ))}
@@ -367,7 +383,7 @@ export default function ImperioDelSol() {
           />
         ))}
         <div className={styles.stepsContainerStyle}>
-          {lista.map((l, index) => <DetallesNoContiene key={l.id} icon={l.icon} title={l.title} index={index}/>)}
+          {lista.map((l, index) => <DetallesNoContiene key={l.id} icon={l.icon} title={l.title} index={index} />)}
         </div>
 
         <TripDetails Travelinfo={Travelinfo} />

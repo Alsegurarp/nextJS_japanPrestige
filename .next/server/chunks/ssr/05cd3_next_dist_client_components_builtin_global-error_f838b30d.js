@@ -1,0 +1,3 @@
+module.exports=[436959,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(304238);a.n(d("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},84239,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(304238);a.n(d("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/client/components/builtin/global-error.js"))},838860,a=>{"use strict";a.i(436959);var b=a.i(84239);a.n(b)}];
+
+//# sourceMappingURL=05cd3_next_dist_client_components_builtin_global-error_f838b30d.js.map

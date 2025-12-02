@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/blog/layout,_N_T_/blog/visado-japon/layout,_N_T_/blog/visado-japon/page,_N_T_/blog/visado-japon"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/blog/visado-japon/__PAGE__",
+    "/blog/visado-japon",
+    "/blog",
+    "/_index",
+    "/_head"
+  ]
+}

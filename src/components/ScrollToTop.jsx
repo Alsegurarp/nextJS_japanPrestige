@@ -1,13 +1,15 @@
+'use client';
+
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
 
 function ScrollToTop() {
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
-    // Instant scroll to top on route change - no smooth behavior to avoid viewport pulling
+    // Instant scroll to top on route change
     window.scrollTo(0, 0);
-  }, [location.pathname]);
+  }, [pathname]);
 
   return null;
 }

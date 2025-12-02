@@ -1,0 +1,109 @@
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/Itinerarios/CaracteristicasItinerarios.module.css [app-client] (css) */
+.CaracteristicasItinerarios-module__5-fEwq__stepsContainerStyle {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5vh;
+  display: flex;
+}
+
+.CaracteristicasItinerarios-module__5-fEwq__cardsContainerStyle {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 60px;
+  padding: 15px;
+  display: flex;
+}
+
+.CaracteristicasItinerarios-module__5-fEwq__contenidoCardsTextoItinerario {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background: #0006;
+  border-radius: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  width: 85%;
+  min-width: 280px;
+  min-height: 150px;
+  padding: 10px;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  box-shadow: 0 4px 30px #0000001a;
+}
+
+.CaracteristicasItinerarios-module__5-fEwq__textoEstilo {
+  color: #fff;
+  font-family: nohemi;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.CaracteristicasItinerarios-module__5-fEwq__cardStyle {
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+}
+
+.CaracteristicasItinerarios-module__5-fEwq__cardImage {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 280px;
+  height: 280px;
+}
+
+.CaracteristicasItinerarios-module__5-fEwq__caracteristicasConteinerMain {
+  margin-top: 25vh;
+}
+
+@media (min-width: 340px) {
+  .CaracteristicasItinerarios-module__5-fEwq__cardStyle {
+    width: 320px;
+    margin-bottom: 20px;
+  }
+
+  .CaracteristicasItinerarios-module__5-fEwq__cardImage {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 380px) {
+  .CaracteristicasItinerarios-module__5-fEwq__cardImage {
+    object-fit: cover;
+    width: 340px;
+    height: 340px;
+  }
+}
+
+.CaracteristicasItinerarios-module__5-fEwq__buttonCATcaracteristicas {
+  color: #290f04;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #d8aa3e 0%, #e8ca6e 12%, #f9e7a0 28%, #ecd37c 50%, #dfb44e 63%, #d9ab3e 100%);
+  border: none;
+  border-radius: 5px;
+  align-self: center;
+  padding: 12px 15px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.CaracteristicasItinerarios-module__5-fEwq__buttonCATcaracteristicas:hover:not(:disabled) {
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ad882d 0%, #c1a65a 12%, #d9c382 28%, #c8af62 50%, #b39038 63%, #aa862e 100%);
+  transform: translateY(-1px);
+}
+
+@media (min-width: 560px) {
+  .CaracteristicasItinerarios-module__5-fEwq__caracteristicasConteinerMain {
+    margin-top: 5vh;
+  }
+}
+
+/*# sourceMappingURL=d79c4_src_Componentes_Sections_Itinerarios_CaracteristicasItinerarios_module_76d4fa31.css.map*/

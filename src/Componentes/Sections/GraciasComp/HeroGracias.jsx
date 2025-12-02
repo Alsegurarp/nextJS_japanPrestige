@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import Image from 'next/image';
 import styles from './HeroGracias.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -30,6 +31,21 @@ const HeroSection = React.memo(function HeroSection({data}) {
 
 
 function Hero({image, altImg, title, subtitle, bgPosition = "50%", letrasDoradasResponsive, LetrasDoradasDesktop}) {
+  // Extract src from imported image object or use as-is if it's already a string
+  const getSrcValue = (img) => {
+    if (!img) return null;
+    if (typeof img === 'object' && img.src) {
+      return img.src;
+    }
+    if (typeof img === 'string') {
+      return img;
+    }
+    return null;
+  };
+
+  const imageSrc = getSrcValue(image);
+  const letrasResponsiveSrc = getSrcValue(letrasDoradasResponsive);
+  const letrasDesktopSrc = getSrcValue(LetrasDoradasDesktop);
 
   useEffect(() => {
       AOS.init({
@@ -39,17 +55,14 @@ function Hero({image, altImg, title, subtitle, bgPosition = "50%", letrasDoradas
       }, []);
 
    return(
-    <div className={styles.beneficiosContainerHero} 
-        style={{backgroundImage: `url(${image})`, 
-          backgroundPosition: bgPosition}}
-        >
+    <div className={styles.beneficiosContainerHero} style={{ position: 'relative' }}>
       
-      {/* imagen visualmente oculta, pero para ayudar a nuestra accesibilidad */}
-      <img src={image} alt={altImg} className={styles.visuallyHidden} />
+      {/* Next.js Image for optimized rendering */}
+      {imageSrc && <Image src={imageSrc} alt={altImg} fill className={styles.visuallyHidden} priority={true} style={{objectPosition: bgPosition}} />}
 
       <div className={styles.contenidoBeneficiosHero}>
-        <img src={letrasDoradasResponsive} alt="" className={styles.letrasDoradasResponsive} loading='lazy'/>
-        <img src={LetrasDoradasDesktop} alt="" className={styles.letrasDoradasDesktop} loading='lazy'/>
+        {letrasResponsiveSrc && <Image src={letrasResponsiveSrc} alt="" className={styles.letrasDoradasResponsive} width={300} height={100} priority={false} />}
+        {letrasDesktopSrc && <Image src={letrasDesktopSrc} alt="" className={styles.letrasDoradasDesktop} width={500} height={150} priority={false} />}
         <div className={styles.titlePlusSubtitleHero} data-aos="fade-right">         
             <h2 className={styles.textStyle}>{title}</h2>
             <h2 className={styles.textStyle}>{subtitle}</h2>

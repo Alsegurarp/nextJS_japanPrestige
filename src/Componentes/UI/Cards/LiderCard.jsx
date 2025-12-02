@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "./LiderCard.module.css";
 
 
@@ -61,11 +62,13 @@ function LiderCard({item, i}) {
           {/* Image card */}
           <figure className={styles.photoCard}>
             <div className={styles.aspectWrapper}>
-              <img
-                src={item.photo}
-                alt={`${item.name} - ${item.role}`}
-                className={styles.photo}
-                loading="lazy"
+              <Image
+                  src={item.photo}
+                  alt={`${item.name} - ${item.role}`}
+                  className={styles.photo}
+                  width={400}
+                  height={500}
+                  priority={false}
               />
             </div>
           </figure>

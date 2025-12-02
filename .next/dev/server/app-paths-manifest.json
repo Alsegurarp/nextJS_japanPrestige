@@ -1,0 +1,20 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/contacto/page": "app/contacto/page.js",
+  "/faqs/page": "app/faqs/page.js",
+  "/hoteles/page": "app/hoteles/page.js",
+  "/itinerarios/art-oriental/page": "app/itinerarios/art-oriental/page.js",
+  "/itinerarios/imperio-del-sol/page": "app/itinerarios/imperio-del-sol/page.js",
+  "/itinerarios/japon-express/page": "app/itinerarios/japon-express/page.js",
+  "/itinerarios/japon-increible/page": "app/itinerarios/japon-increible/page.js",
+  "/itinerarios/japon-y-china/page": "app/itinerarios/japon-y-china/page.js",
+  "/itinerarios/japon-y-dubai-maravilloso/page": "app/itinerarios/japon-y-dubai-maravilloso/page.js",
+  "/itinerarios/japon-y-tailandia-lo-mejor/page": "app/itinerarios/japon-y-tailandia-lo-mejor/page.js",
+  "/itinerarios/origen-del-sol/page": "app/itinerarios/origen-del-sol/page.js",
+  "/itinerarios/page": "app/itinerarios/page.js",
+  "/itinerarios/titanes-del-pacifico/page": "app/itinerarios/titanes-del-pacifico/page.js",
+  "/itinerarios/ultimo-samurai/page": "app/itinerarios/ultimo-samurai/page.js",
+  "/nosotros/page": "app/nosotros/page.js",
+  "/page": "app/page.js"
+}

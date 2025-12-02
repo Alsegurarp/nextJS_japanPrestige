@@ -1,4 +1,6 @@
-import React, {useEffect, useState} from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import { lazy, Suspense } from 'react';
 import PreguntaObjeciones from '../../Componentes/UI/Cards/PreguntaObjeciones.jsx';
 import AOS from 'aos';
@@ -11,47 +13,47 @@ import LetrasDoradasResponsive from '../../assets/titulosDorados/GRANDEFAQS.svg'
 import LetrasDoradasDesktop from '../../assets/titulosDorados/GRANDEFAQS.svg';
 import FlyingButton from '../../Componentes/UI/FlyingButtons/FlyingButton.jsx';
 
-const HeroSection = lazy(() => import ('../../Componentes/Sections/HeroSection.jsx'));
+const HeroSection = lazy(() => import('../../Componentes/Sections/HeroSection.jsx'));
 
 const data = [
-  {
-    text: "Prepárate para viajar con total confianza a Japón. En nuestras Preguntas Frecuentes encontrarás respuestas claras sobre requisitos de visa, uso de tarjetas y efectivo, conectividad, enchufes, aduanas, salud, seguros y costumbres locales. Toda la información esencial en un solo lugar para que disfrutes tu experiencia sin preocupaciones y aproveches cada instante en el país del sol naciente.",
-    image: HeroImage,
-    altImg:"Barca tradicional en un río rodeado de cerezos en flor durante la primavera en Japón",
-    bgPosition: "50% 80%",
-    letrasDoradasResponsive: LetrasDoradasResponsive,
-    LetrasDoradasDesktop: LetrasDoradasDesktop, 
-  }]
+    {
+        text: "Prepárate para viajar con total confianza a Japón. En nuestras Preguntas Frecuentes encontrarás respuestas claras sobre requisitos de visa, uso de tarjetas y efectivo, conectividad, enchufes, aduanas, salud, seguros y costumbres locales. Toda la información esencial en un solo lugar para que disfrutes tu experiencia sin preocupaciones y aproveches cada instante en el país del sol naciente.",
+        image: HeroImage,
+        altImg: "Barca tradicional en un río rodeado de cerezos en flor durante la primavera en Japón",
+        bgPosition: "50% 80%",
+        letrasDoradasResponsive: LetrasDoradasResponsive,
+        LetrasDoradasDesktop: LetrasDoradasDesktop,
+    }]
 
 
 function Faqs() {
 
     useEffect(() => {
-      document.title = "Conoce Japón PREMIUM® | Viajes desde México a Japón"; 
+        document.title = "Conoce Japón PREMIUM® | Viajes desde México a Japón";
     }, []);
 
 
     useEffect(() => {
-    AOS.init({
-      duration: 1000, // duración de animaciones
-      once: true      // Se anima solo una vez
-    });
+        AOS.init({
+            duration: 1000, // duración de animaciones
+            once: true      // Se anima solo una vez
+        });
     }, []);
 
-  return (
-    <>
-    <FlyingButton/>
-    <HeroSection data={data}/>
-    <Suspense fallback={<LoadingSpinner label="Cargando preguntas frecuentes..." />}>
-        <RespuestasObjeciones />
-    </Suspense>
-    </>
-  )
+    return (
+        <>
+            <FlyingButton />
+            <HeroSection data={data} />
+            <Suspense fallback={<LoadingSpinner label="Cargando preguntas frecuentes..." />}>
+                <RespuestasObjeciones />
+            </Suspense>
+        </>
+    )
 }
 
 
 const RespuestasObjeciones = React.memo(function RespuestasObjeciones() {
-const [openQuestions, setOpenQuestions] = useState([]);
+    const [openQuestions, setOpenQuestions] = useState([]);
 
     const FAQs = [
         {
@@ -70,15 +72,15 @@ const [openQuestions, setOpenQuestions] = useState([]);
             id: 4,
             pregunta: "¿Qué tipo de enchufe y voltaje se utiliza en Japón?",
             respuesta: "Japón utiliza los enchufes de tipo A y B y opera con un voltaje de 100 V (50 Hz en el este 60 Hz en el oeste). Si tus dispositivos no son compatibles, necesitarás un adaptador o, en algunos casos, un convertidor de voltaje.",
-        },  {
+        }, {
             id: 5,
             pregunta: "¿Qué productos están prohibidos o restringidos por la aduana en Japón?",
             respuesta: "Japón tiene leyes muy estrictas en aduanas. Medicamentos comunes (como los que contienen pseudoefedrina o codeína) requieren autorización previa. Además, alimentos como frutas, carne o plantas están prohibidos sin certificación fitosanitaria. También debes declarar efectivo por encima de 1 000 000 JPY (~6000 €) y evitar llevar falsificaciones o artículos que infrinjan derechos de autor.",
-        },  {
+        }, {
             id: 6,
             pregunta: "¿Hay requisitos de salud o vacunas para viajar a Japón?",
             respuesta: "No se requiere ningún tipo de vacunación obligatoria para ingresar a Japón como turista.",
-        },{
+        }, {
             id: 7,
             pregunta: "¿Necesito seguro médico o de viaje?",
             respuesta: "Si bien no es obligatorio, tener un seguro de viaje o médico es altamente recomendable. Los servicios de salud en Japón son de alta calidad, pero muy costosos para visitantes sin cobertura.",
@@ -87,11 +89,11 @@ const [openQuestions, setOpenQuestions] = useState([]);
             id: 8,
             pregunta: "¿La etiqueta y costumbres en Japón son difíciles de seguir sin hablar japonés?",
             respuesta: "Aunque el idioma puede ser una barrera, tecnologías como Google Translate, etiquetado en inglés en zonas turísticas y la presencia de un guía privado pueden facilitar enormemente tu experiencia cultural.",
-        },{
+        }, {
             id: 9,
             pregunta: "¿Debo registrarme en Visit Japan Web antes de viajar?",
             respuesta: "En Japón, los números de emergencia son: \n ● 110: Policía \n ● 119: Bomberos o ambulancia",
-        },{
+        }, {
             id: 10,
             pregunta: "¿Qué número debo marcar en caso de emergencia?",
             respuesta: "Para agilizar trámites migratorios y acceder a beneficios como compras libres de impuestos, se recomienda registrarse en la plataforma Visit Japan Web previo al viaje.",

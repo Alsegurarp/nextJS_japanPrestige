@@ -1,0 +1,29 @@
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/Home/ConfiarEnNosotros.module.css [app-client] (css) */
+.ConfiarEnNosotros-module__vCy8ta__containerConfiar {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  display: flex;
+  transition: none !important;
+  transform: none !important;
+}
+
+.ConfiarEnNosotros-module__vCy8ta__sectionConfiarNosotros {
+  background-color: #111;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.ConfiarEnNosotros-module__vCy8ta__titleContainer {
+  text-align: center;
+  place-items: center;
+}
+
+.ConfiarEnNosotros-module__vCy8ta__titleStyle {
+  color: #fff;
+  padding: 20px;
+  font-family: nohemi;
+  font-size: 24px;
+}
+
+/*# sourceMappingURL=d79c4_src_Componentes_Sections_Home_ConfiarEnNosotros_module_css_bad6b30c._.single.css.map*/

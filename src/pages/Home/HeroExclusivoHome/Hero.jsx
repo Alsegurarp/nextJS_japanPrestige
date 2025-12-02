@@ -1,6 +1,9 @@
+'use client';
+
 import React, { useMemo } from "react";
+import Image from "next/image";
 import styles from "./Hero.module.css";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import TitleSVG from "./TitleSVG.jsx";
 
 
@@ -9,53 +12,50 @@ const Hero = React.memo(function Hero({
   bigTitle = null,
   subtitle,
   altImg = "",
-  imgMobile,   // { webp: mujerKimonoMovil }     // 768w
-  imgTablet,   // { webp: mujerKimonoTablet }    // 1280w
-  imgDesktop,  // { webp: mujerKimono }          // 1920w
-  imgDesktopXL, // { webp: mujerKimonoXL }       // 1440w+
+  imgMobile,   // imported image object for 768w OR string path
+  imgTablet,   // imported image object for 1280w OR string path
+  imgDesktop,  // imported image object for 1920w OR string path
+  imgDesktopXL, // imported image object for 1440w+ OR string path
   bgPosition = "50% 50%",
 }) {
-  // Memoize srcset computation to prevent recalculation on re-renders
-  const srcsetWebp = useMemo(() => [
-    imgMobile?.webp && `${imgMobile.webp} 768w`,
-    imgTablet?.webp && `${imgTablet.webp} 1280w`,
-    imgDesktop?.webp && `${imgDesktop.webp} 1440w`,
-    imgDesktopXL?.webp && `${imgDesktopXL.webp} 1920w`,
-  ]
-    .filter(Boolean)
-    .join(", "), [imgMobile?.webp, imgTablet?.webp, imgDesktop?.webp, imgDesktopXL?.webp]);
+  // Handle both imported images (objects) and string paths (public folder)
+  const getSrcValue = (img) => {
+    if (!img) return null;
+    // If it's an imported image object, it has a src property
+    if (typeof img === 'object' && img.src) {
+      return img.src;
+    }
+    // If it's an object with webp property (Next.js format)
+    if (typeof img === 'object' && img.webp) {
+      return img.webp;
+    }
+    // If it's a string path, return it directly
+    if (typeof img === 'string') {
+      return img;
+    }
+    return null;
+  };
 
-  // Memoize fallback src to prevent unnecessary recalculation
-  const fallbackSrc = useMemo(() => 
-    imgMobile?.webp || imgTablet?.webp || imgDesktop?.webp || "", 
-    [imgMobile?.webp, imgTablet?.webp, imgDesktop?.webp]
-  );
+  // Determine which image to use based on viewport (fallback to largest available)
+  const fallbackSrc = useMemo(() => {
+    const src = getSrcValue(imgDesktop) || getSrcValue(imgTablet) || getSrcValue(imgMobile);
+    return src || null;
+  }, [imgDesktop, imgTablet, imgMobile]);
 
   return (
     <section className={styles.hero} aria-label={title}>
-      <picture>
-        
-        {srcsetWebp && (
-          <source 
-            srcSet={srcsetWebp} 
-            sizes="100vw" 
-            type="image/webp"
-          />
-        )}
-        
-        <img
-          className={styles.heroImg}
-          decoding="async"
-          fetchPriority="high"
-          loading="eager"
+      {fallbackSrc && (
+        <Image
           src={fallbackSrc}
           alt={altImg}
+          fill
+          className={styles.heroImg}
+          decoding="async"
+          priority
           sizes="100vw"
-          width={1920} 
-          height={1080}          
+          style={{ objectPosition: bgPosition }}
         />
-      </picture>
-
+      )}
 
       <div className={styles.content} style={{ "--bgPos": bgPosition }}>
         <div >
@@ -72,8 +72,8 @@ const Hero = React.memo(function Hero({
 
 
         {subtitle && <h2 className={styles.subtitle}>{subtitle}</h2>}
-        
-        <Link to="/contacto" rel="noopener noreferrer" className={styles.buttonCATcaracteristicas}>
+
+        <Link href="/contacto" rel="noopener noreferrer" className={styles.buttonCATcaracteristicas}>
           Diseña tu viaje ahora
         </Link>
       </div>

@@ -1,0 +1,219 @@
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.module.css [app-client] (css) */
+.FlyingButton-module__oes-Ea__flying_button {
+  z-index: 99;
+  text-align: center;
+  background: none;
+  border: none;
+  text-decoration: none;
+  transition: transform .3s;
+  position: fixed;
+  bottom: 280px;
+  right: 10px;
+}
+
+.FlyingButton-module__oes-Ea__flying_button:hover {
+  transform: scale(1.1);
+}
+
+.FlyingButton-module__oes-Ea__wa_modal {
+  z-index: 10000;
+  background: #fff;
+  border-radius: 15px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 280px;
+  height: 340px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px #00000040;
+}
+
+.FlyingButton-module__oes-Ea__wa_input_row {
+  z-index: 20;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  display: flex;
+  position: relative;
+}
+
+.FlyingButton-module__oes-Ea__wa_input {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  flex: 1;
+  height: 40px;
+  padding: 0 12px;
+}
+
+.FlyingButton-module__oes-Ea__wa_send {
+  cursor: pointer;
+  background: #00ff5e;
+  border: none;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+}
+
+.FlyingButton-module__oes-Ea__wa_send:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.FlyingButton-module__oes-Ea__wa_send img {
+  width: 20px;
+  height: 20px;
+}
+
+.FlyingButton-module__oes-Ea__wa_header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  padding: 10px;
+  display: flex;
+  position: relative;
+}
+
+.FlyingButton-module__oes-Ea__wa_avatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.FlyingButton-module__oes-Ea__wa_info {
+  flex-grow: 1;
+}
+
+.FlyingButton-module__oes-Ea__wa_info strong {
+  font-size: 14px;
+  display: block;
+}
+
+.FlyingButton-module__oes-Ea__wa_info p {
+  color: #666;
+  margin: 0;
+  font-size: 12px;
+}
+
+.FlyingButton-module__oes-Ea__wa_close {
+  color: #999;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 28px;
+}
+
+.FlyingButton-module__oes-Ea__wa_body {
+  text-align: left;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+  padding: 20px 5px 5px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.FlyingButton-module__oes-Ea__wa_time {
+  color: #999;
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+
+.FlyingButton-module__oes-Ea__wa_bubble {
+  border-radius: 7.5px;
+  max-width: 80%;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.FlyingButton-module__oes-Ea__wa_bubble img {
+  max-width: 250px;
+}
+
+.FlyingButton-module__oes-Ea__wa_bubble_response {
+  z-index: 1;
+  background: #fff;
+  border-radius: 7.5px;
+  max-width: 80%;
+  padding: 8px 12px;
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+  left: 20px;
+  box-shadow: 0 1px 1px #0000001a;
+}
+
+.FlyingButton-module__oes-Ea__wa_button {
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+  background: #25d366;
+  border-top: 1px solid #ddd;
+  border-radius: 15px;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  position: absolute;
+  top: 80%;
+}
+
+.FlyingButton-module__oes-Ea__wa_button img {
+  width: 20px;
+}
+
+.FlyingButton-module__oes-Ea__wa_body_bg {
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.FlyingButton-module__oes-Ea__wa_time, .FlyingButton-module__oes-Ea__wa_bubble {
+  z-index: 1;
+  position: relative;
+}
+
+@keyframes FlyingButton-module__oes-Ea__fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+.FlyingButton-module__oes-Ea__fade-out {
+  animation: .3s forwards FlyingButton-module__oes-Ea__fadeOutDown;
+}
+
+@media (min-width: 768px) {
+  .FlyingButton-module__oes-Ea__flying_button {
+    bottom: 20px;
+  }
+}
+
+/*# sourceMappingURL=d79c4_src_Componentes_UI_FlyingButtons_FlyingButton_module_css_bad6b30c._.single.css.map*/

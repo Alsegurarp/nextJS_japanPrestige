@@ -1,8 +1,23 @@
+'use client';
+
 import React from 'react'
+import Image from 'next/image';
 import itinerariosViajeRutas from '../../../assets/icono-itinerarios-viaje-rutas.svg';
 
 import japanPremium from '../../../assets/templo-yasukuni-tokio-japon-atardecer.webp';
 import styles from './ItinerariosHero.module.css';
+
+// Helper to extract src from imported images
+const getSrcValue = (img) => {
+  if (!img) return null;
+  if (typeof img === 'object' && img.src) {
+    return img.src;
+  }
+  if (typeof img === 'string') {
+    return img;
+  }
+  return null;
+};
 
 const data = [
   {title: itinerariosViajeRutas,
@@ -25,14 +40,27 @@ export default function ItinerarioHero(){
 }
 
 function Hero(props){
+  const imageSrc = getSrcValue(props.image);
+  const iconSrc = getSrcValue(itinerariosViajeRutas);
 
-   return(
+  return(
     <>
-      <div className={styles.beneficiosContainerHero} style={{backgroundImage: `url(${props.image})`}} 
-        alt="Mujer japonesa con kimono, participando en ceremonia tradicional, ideal para viajeros que buscan inmersión cultural">
-        <div className={styles.contenidoBeneficiosItinerariosHeroItinerario}>
+      <div className={styles.beneficiosContainerHero} style={{position: 'relative'}}
+        role="img"
+        aria-label="Mujer japonesa con kimono, participando en ceremonia tradicional, ideal para viajeros que buscan inmersión cultural">
+        {imageSrc && (
+          <Image 
+            src={imageSrc}
+            alt="Mujer japonesa con kimono, participando en ceremonia tradicional, ideal para viajeros que buscan inmersión cultural"
+            fill
+            priority
+            style={{objectFit: 'cover'}}
+            className={styles.heroImg}
+          />
+        )}
+        <div className={styles.contenidoBeneficiosItinerariosHeroItinerario} style={{position: 'relative', zIndex: 2}}>
             <div className={styles.titlePlusSubtitleHero} data-aos="fade-right">
-              <img className={styles.itinerariosImagenHero} src={itinerariosViajeRutas} alt="Ícono de Itinerarios de Viaje - Rutas y Experiencias Turísticas" />
+              {iconSrc && <Image className={styles.itinerariosImagenHero} src={iconSrc} alt="Ícono de Itinerarios de Viaje - Rutas y Experiencias Turísticas" width={80} height={80} />}
             </div>
         </div>
       </div>

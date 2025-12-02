@@ -1,4 +1,7 @@
+'use client';
+
 import React, { useMemo, useState } from 'react';
+import Image from 'next/image';
 
 import TuristaJapon from '../../../assets/indexImagenes/eduardo_reyes_cliente.webp';
 import FamiliaJapon from '../../../assets/indexImagenes/arantza_iriarte_clienta.webp';
@@ -6,7 +9,7 @@ import ParejaJapon from '../../../assets/indexImagenes/ana_laura_montes_cliente.
 
 import EstrellaGold from '../../../assets/estrellaGold.svg';
 // import LogoJapon from '/FAVICON.svg'
-import LogoJapon from '/mobile_logo_japon.svg';
+const LogoJapon = '/mobile_logo_japon.svg';
 
 
 import styles from "./Testimonios.module.css";
@@ -76,15 +79,17 @@ const Testimonios = React.memo(function Testimonios() {
             key={selectedId}
             className={styles.panelContent}
           >
-            <img
+            <Image
               src={selected.src}
               alt={selected.alt}
               className={styles.panelImage}
-              loading="lazy"
+              width={450}
+              height={450}
+              priority={false}
             />
             <div className={styles.panelText}>
-              <img 
-                loading="lazy" 
+              <img
+                loading="lazy"
                 alt="Logo oficial de Japón Premium, agencia especializada en experiencias de lujo en Japón para viajeros latinoamericanos"
                 src={LogoJapon}
                 className={styles.logoJapon}

@@ -1,0 +1,28 @@
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/UI/Cards/PreguntaObjeciones.module.css [app-client] (css) */
+.PreguntaObjeciones-module__hleE0G__cadaPregunta {
+  text-align: start;
+  color: #fef0ad;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #1a1919;
+  border-radius: 20px;
+  align-self: flex-start;
+  min-width: 276px;
+  max-width: 400px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+@media (min-width: 400px) {
+  .PreguntaObjeciones-module__hleE0G__cadaPregunta {
+    align-self: center;
+  }
+}
+
+.PreguntaObjeciones-module__hleE0G__preguntaHeader {
+  justify-content: space-between;
+  align-items: start;
+  display: flex;
+}
+
+/*# sourceMappingURL=d79c4_src_Componentes_UI_Cards_PreguntaObjeciones_module_css_bad6b30c._.single.css.map*/

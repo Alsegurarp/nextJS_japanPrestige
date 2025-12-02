@@ -1,0 +1,68 @@
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/FooterAnimation.css [app-client] (css) */
+.text-wrapper {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+}
+
+.container {
+  perspective: 800px;
+  justify-content: start;
+  gap: clamp(10px, 2vw, 30px);
+  display: flex;
+}
+
+.letter {
+  color: #0000;
+  -webkit-text-stroke: 4px #f0c051;
+  text-stroke: 4px #f0c051;
+  transform-style: preserve-3d;
+  cursor: default;
+  font-family: Nohemi, Arial, sans-serif;
+  font-size: clamp(36px, 14vw, 300px);
+  font-weight: bold;
+  display: inline-block;
+}
+
+.letterr {
+  cursor: default;
+  font-size: clamp(5px, 2vw, 20px);
+  font-weight: unset;
+  color: #f0c051;
+}
+
+.japon-container {
+  opacity: 0;
+  margin-bottom: 0;
+}
+
+.japon-letter {
+  cursor: default;
+  color: #f0c051;
+  opacity: 0;
+  font-family: Nohemi, Arial, sans-serif;
+  font-size: clamp(12px, 4vw, 65px);
+  font-weight: 400;
+  display: inline-block;
+  transform: translateY(-30px);
+}
+
+@media (max-width: 1024px) {
+  .letter {
+    -webkit-text-stroke: 2px #f0c051;
+    text-stroke: 2px #f0c051;
+  }
+
+  .letterr {
+    font-size: clamp(5px, 2vw, 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .letter {
+    -webkit-text-stroke: 1px #f0c051;
+    text-stroke: 1px #f0c051;
+  }
+}
+
+/*# sourceMappingURL=3d860_Prestige-Japan-master_src_Componentes_Layout_Footer_FooterAnimation_css_bad6b30c._.single.css.map*/

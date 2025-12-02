@@ -1,8 +1,11 @@
+'use client';
+
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { usePathname, useSearchParams } from "next/navigation";
 
 export default function useGTMPageView() {
-  const location = useLocation();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     // Wait until window and dataLayer are available
@@ -10,7 +13,7 @@ export default function useGTMPageView() {
 
     // Define standard GA4 pageview data
     const page_location = window.location.href;
-    const page_path = location.pathname + location.search;
+    const page_path = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '');
     const page_title = document.title;
     const page_referrer = document.referrer;
 
@@ -25,5 +28,5 @@ export default function useGTMPageView() {
       page_title,
       page_referrer,
     });
-  }, [location]);
+  }, [pathname, searchParams]);
 }

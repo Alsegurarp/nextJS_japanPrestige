@@ -1,6 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from "./CardBlog.module.css";
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 
 const CardBlog = React.memo(function CardBlog({ infoCards }) {
@@ -33,12 +34,15 @@ function TravelCard({ title, image, imageAlt, subText, to, index }) {
 
 
   return (
-    <Link to={to} style={{ textDecoration: 'none' }} data-aos="fade-up" data-aos-delay={10 * (index)} >
+    <Link href={to} style={{ textDecoration: 'none' }} data-aos="fade-up" data-aos-delay={10 * (index)} >
       <div className={styles.estiloDiv}>
-        <img
-          className={styles.imageCardStyle}
-          src={image}
-          alt={imageAlt}
+        <Image
+            className={styles.imageCardStyle}
+            src={image}
+            alt={imageAlt}
+            width={400}
+            height={250}
+            priority={false}
         />
         <div className={styles.textCardStyle}>
           <h2

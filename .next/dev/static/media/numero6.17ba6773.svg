@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <path class="cls-1" d="M58.78,38.62c-2.25,0-4.09.84-5.5,2.5-1.42,1.67-2.13,3.86-2.13,6.56s.71,5.11,2.13,6.85c1.42,1.73,3.27,2.6,5.56,2.6s4.1-.86,5.45-2.57c1.34-1.71,2.02-3.96,2.02-6.75s-.69-5.02-2.07-6.69c-1.38-1.67-3.2-2.5-5.45-2.5M22.94,23.09c-2.72,0-4.73,1.35-6.02,4.06-1.29,2.7-1.93,6.97-1.93,12.8s.65,10.16,1.96,12.87c1.31,2.75,3.32,4.12,6.05,4.12s4.72-1.37,5.99-4.12c1.27-2.75,1.91-7.04,1.91-12.87s-.65-10.1-1.93-12.8c-1.29-2.7-3.3-4.06-6.02-4.06M22.94,63.47c-4.79,0-8.44-2.01-10.92-6.02-2.49-4.01-3.73-9.87-3.73-17.56s1.25-13.45,3.76-17.4c2.51-3.95,6.16-5.93,10.95-5.93s8.38,1.98,10.87,5.93c2.49,3.95,3.73,9.75,3.73,17.4s-1.25,13.54-3.76,17.56c-2.51,4.02-6.14,6.02-10.9,6.02M58.84,63.53c-4.69,0-8.33-1.84-10.95-5.52-2.72-3.89-4.09-9.61-4.09-17.18s1.29-13.89,3.87-18.1c2.58-4.2,6.3-6.31,11.17-6.31,3.63,0,6.6,1.1,8.91,3.3,2.31,2.2,3.62,5.16,3.95,8.87h-6.32c-.29-1.82-1.03-3.26-2.21-4.34-1.18-1.08-2.64-1.62-4.39-1.62-5.48,0-8.37,5.18-8.66,15.53,2.25-3.8,5.54-5.7,9.86-5.7,3.92,0,7.05,1.39,9.37,4.18,2.36,2.87,3.54,6.55,3.54,11.03,0,4.73-1.29,8.56-3.87,11.47-2.61,2.92-6.01,4.37-10.19,4.37M73.63,15.87H6.37v48.27h67.25V15.87"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <polyline class="cls-1" points="5.23 8.32 76.05 8.32 76.05 84.64 5.23 84.64 5.23 8.32"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <path class="cls-1" d="M22.99,56.94c-2.72,0-4.74-1.37-6.05-4.12-1.31-2.7-1.96-6.99-1.96-12.87s.64-10.1,1.93-12.8c1.29-2.7,3.3-4.06,6.02-4.06s4.73,1.35,6.02,4.06c1.29,2.7,1.93,6.97,1.93,12.8s-.64,10.12-1.91,12.87c-1.27,2.75-3.27,4.12-5.99,4.12M22.99,16.56c-4.79,0-8.44,1.98-10.95,5.93-2.51,3.95-3.76,9.75-3.76,17.4s1.24,13.54,3.73,17.56c2.49,4.02,6.13,6.02,10.92,6.02s8.39-2.01,10.9-6.02c2.51-4.01,3.76-9.87,3.76-17.56s-1.24-13.45-3.73-17.4c-2.49-3.95-6.11-5.93-10.87-5.93M58.84,57.13c-2.29,0-4.14-.87-5.56-2.6-1.42-1.73-2.13-4.01-2.13-6.85s.71-4.89,2.13-6.56c1.42-1.67,3.25-2.5,5.5-2.5s4.07.84,5.45,2.5c1.38,1.67,2.07,3.9,2.07,6.69s-.67,5.04-2.02,6.75c-1.34,1.71-3.16,2.57-5.45,2.57M58.84,16.43c-4.87,0-8.59,2.1-11.17,6.31-2.58,4.21-3.87,10.24-3.87,18.1s1.36,13.29,4.09,17.18c2.61,3.68,6.26,5.52,10.95,5.52,4.18,0,7.57-1.46,10.19-4.37,2.58-2.92,3.87-6.74,3.87-11.47,0-4.48-1.18-8.16-3.54-11.03-2.32-2.79-5.45-4.18-9.37-4.18-4.32,0-7.61,1.9-9.86,5.7.29-10.35,3.18-15.53,8.66-15.53,1.74,0,3.21.54,4.39,1.62,1.18,1.08,1.92,2.53,2.21,4.34h6.32c-.33-3.72-1.64-6.68-3.95-8.87-2.31-2.2-5.28-3.3-8.91-3.3"/>
+    </clipPath>
+  </defs>
+  <g class="cls-4">
+    <image width="143" height="103" transform="translate(5.63 64.8) scale(.48 -.48)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI4AAABnCAYAAADWtnpCAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAUElEQVR4nO3BgQAAAADDoPlTX+EAVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcB5O8AARTUI40AAAAASUVORK5CYII="/>
+  </g>
+  <g class="cls-2">
+    <g class="cls-3">
+      <image width="138" height="101" transform="translate(7.55 64.32) scale(.48 -.48)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAABkCAYAAACy/hOVAAAACXBIWXMAABcRAAAXEQHKJvM/AAABgklEQVR4nO3Swa3bMBQAwccUkWrSWFpIY7+YFMEcRH8JhoE95DoDGKItPkoGdv39+r3XrJl1PrPO5bW+rnN+u/fOvT7Xa+881mfudc65v9b73Nzrx/kf5x7vus6z7rl5e5fzns+5T//vNbf37Nkze5/1fK9n9nU59/f15bH3P+de+8762vuYmz3zuL+/z59z5ofnv+27n3/O+nTO29zPX3/Wj4EgEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISP8A7M97yPkBZxkAAAAASUVORK5CYII="/>
+    </g>
+  </g>
+</svg>

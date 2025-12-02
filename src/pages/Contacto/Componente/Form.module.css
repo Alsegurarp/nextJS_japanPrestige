@@ -14,15 +14,13 @@
   font-size: 14px;
   max-width: 200px;
   border-radius: 20px;
-  background: linear-gradient(
-    90deg,
-    rgba(216, 170, 62, 1) 0%,
-    rgba(232, 202, 110, 1) 12%,
-    rgba(249, 231, 160, 1) 28%,
-    rgba(236, 211, 124, 1) 50%,
-    rgba(223, 180, 78, 1) 63%,
-    rgba(217, 171, 62, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(216, 170, 62, 1) 0%,
+      rgba(232, 202, 110, 1) 12%,
+      rgba(249, 231, 160, 1) 28%,
+      rgba(236, 211, 124, 1) 50%,
+      rgba(223, 180, 78, 1) 63%,
+      rgba(217, 171, 62, 1) 100%);
   color: white;
   border: none;
   font-weight: 600;
@@ -59,6 +57,7 @@
   -webkit-backdrop-filter: blur(4.4px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 @media (max-width: 768px) {
   .inputContainerName {
     gap: 20px;
@@ -84,7 +83,7 @@
   }
 }
 
-label {
+:global(label) {
   color: rgba(255, 255, 255, 0.9);
   font-family: nohemi;
   font-size: 14px;
@@ -93,14 +92,14 @@ label {
   display: block;
 }
 
-small {
+:global(small) {
   font-family: nohemi;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.7);
   margin-top: 5px;
 }
 
-small strong {
+:global(small strong) {
   font-family: "nohemi";
   font-size: 12px;
   font-weight: 400;
@@ -118,7 +117,8 @@ small strong {
   width: 100%;
   margin-bottom: 15px;
   position: relative;
-  min-width: 0; /* Allows flex items to shrink below content size */
+  min-width: 0;
+  /* Allows flex items to shrink below content size */
 }
 
 .inputContainerName {
@@ -127,7 +127,8 @@ small strong {
   flex-wrap: wrap;
   width: 100%;
   position: relative;
-  min-width: 0; /* Allows flex items to shrink below content size */
+  min-width: 0;
+  /* Allows flex items to shrink below content size */
   justify-content: space-between;
 }
 
@@ -142,21 +143,21 @@ small strong {
 }
 
 /* reCAPTCHA responsive styling */
-.recaptchaContainer > div {
+.recaptchaContainer>div {
   max-width: 100%;
   transform-origin: 0 0;
 }
 
 /* Mobile reCAPTCHA scaling for devices smaller than form width */
 @media (max-width: 320px) {
-  .recaptchaContainer > div {
+  .recaptchaContainer>div {
     transform: scale(0.8);
     transform-origin: center center;
   }
 }
 
 @media (max-width: 280px) {
-  .recaptchaContainer > div {
+  .recaptchaContainer>div {
     transform: scale(0.7);
     transform-origin: center center;
   }
@@ -164,7 +165,7 @@ small strong {
 
 /* Additional fallback for very small screens */
 @media (max-width: 250px) {
-  .recaptchaContainer > div {
+  .recaptchaContainer>div {
     transform: scale(0.6);
     transform-origin: center center;
   }
@@ -184,15 +185,13 @@ small strong {
 }
 
 .submitBtn {
-  background: linear-gradient(
-    90deg,
-    rgba(216, 170, 62, 1) 0%,
-    rgba(232, 202, 110, 1) 12%,
-    rgba(249, 231, 160, 1) 28%,
-    rgba(236, 211, 124, 1) 50%,
-    rgba(223, 180, 78, 1) 63%,
-    rgba(217, 171, 62, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(216, 170, 62, 1) 0%,
+      rgba(232, 202, 110, 1) 12%,
+      rgba(249, 231, 160, 1) 28%,
+      rgba(236, 211, 124, 1) 50%,
+      rgba(223, 180, 78, 1) 63%,
+      rgba(217, 171, 62, 1) 100%);
   color: white;
   border: none;
   padding: 16px 32px;
@@ -226,15 +225,13 @@ small strong {
 }
 
 .button:hover:not(:disabled) {
-  background: linear-gradient(
-    90deg,
-    rgba(216, 170, 62, 1) 0%,
-    rgba(232, 202, 110, 1) 12%,
-    rgba(249, 231, 160, 1) 28%,
-    rgba(236, 211, 124, 1) 50%,
-    rgba(223, 180, 78, 1) 63%,
-    rgba(217, 171, 62, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(216, 170, 62, 1) 0%,
+      rgba(232, 202, 110, 1) 12%,
+      rgba(249, 231, 160, 1) 28%,
+      rgba(236, 211, 124, 1) 50%,
+      rgba(223, 180, 78, 1) 63%,
+      rgba(217, 171, 62, 1) 100%);
   transform: translateY(-2px);
   box-shadow: 0 4px 20px rgba(232, 202, 110, 0.3);
 }
@@ -297,7 +294,8 @@ small strong {
 @media (max-width: 767px) {
   .input {
     padding: 14px 16px;
-    font-size: 16px; /* Prevents zoom on iOS */
+    font-size: 16px;
+    /* Prevents zoom on iOS */
   }
 }
 
@@ -400,11 +398,12 @@ textarea.input {
   .inputContainer input {
     font-size: 16px;
   }
+
   .inputContainer label {
     font-size: 16px;
   }
 
-  small {
+  :global(small) {
     font-size: 12px;
   }
 

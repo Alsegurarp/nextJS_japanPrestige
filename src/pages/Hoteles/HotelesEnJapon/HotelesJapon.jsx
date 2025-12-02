@@ -1,13 +1,15 @@
-import React, {useState, useEffect, Suspense, lazy} from 'react';
+'use client';
+
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import HeroSection from '../../../Componentes/Sections/HeroSection.jsx';
 import HeroImage from '../../../assets/portadas-nuevas-19-sep/hotelesPortadas/portada_hoteles_en_japon.webp';
-const Buscador = lazy(() => import ('../../../Componentes/Hoteles/Carrucel/Buscador.jsx'));
+const Buscador = lazy(() => import('../../../Componentes/Hoteles/Carrucel/Buscador.jsx'));
 
 
 import LetrasDoradasResponsive from '../../../assets/titulosDorados/hotelesSection/hotelesjaponmovil.svg';
 import LetrasDoradasDesktop from '../../../assets/titulosDorados/hotelesSection/hotelesjapon.svg';
 
-import NoNavegaSection from '../HotelesInicio/Componente/NoNavegaSection.jsx';
+import NoNavegaSection from '../../../Componentes/Hoteles/HotelesInicio/Componente/NoNavegaSection.jsx';
 
 // atami
 import hotel1 from '../../../assets/Itinerarios/HotelesItinerariosNuevos/Japon/atami/hotel_resorpia_atami_japon.webp';
@@ -131,16 +133,16 @@ import InView from '../../../Componentes/Layout/InView/InView.jsx';
 import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx';
 
 
-    const data = [
-      {
-        text: "Explora nuestra selección exclusiva de alojamientos en ciudades emblemáticas como Tokio, Kioto, Osaka, Hiroshima y más. Estos hoteles no solo ofrecen comodidad superior y diseño elegante, sino que también se encuentran ubicados en puntos estratégicos para que vivas cada ciudad en su máxima expresión",
-        image: HeroImage,
-        altImg:"Vista frontal del Templo Yasukuni en Tokio, Japón, con cielo nublado al atardecer.",
-        letrasDoradasResponsive: LetrasDoradasResponsive,
-        LetrasDoradasDesktop: LetrasDoradasDesktop, 
-    }];
+const data = [
+  {
+    text: "Explora nuestra selección exclusiva de alojamientos en ciudades emblemáticas como Tokio, Kioto, Osaka, Hiroshima y más. Estos hoteles no solo ofrecen comodidad superior y diseño elegante, sino que también se encuentran ubicados en puntos estratégicos para que vivas cada ciudad en su máxima expresión",
+    image: HeroImage,
+    altImg: "Vista frontal del Templo Yasukuni en Tokio, Japón, con cielo nublado al atardecer.",
+    letrasDoradasResponsive: LetrasDoradasResponsive,
+    LetrasDoradasDesktop: LetrasDoradasDesktop,
+  }];
 
-    const destinations = [
+const destinations = [
   {
     titulo: "Atami",
     card: [
@@ -151,7 +153,7 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
       }
     ]
   },
-    {
+  {
     titulo: "Gero",
     card: [
       {
@@ -211,7 +213,7 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
       }
     ]
   },
-    {
+  {
     titulo: "Kawaguchiko",
     card: [
       {
@@ -299,7 +301,7 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
         image: hotel11j,
         description: "Vive el lujo en el corazón de una de las ciudades más dinámicas de Japón."
       },
-      
+
     ]
   },
   {
@@ -553,9 +555,9 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
     ]
   },
 
-    ];
+];
 
-    const cardsJapon = [
+const cardsJapon = [
   {
     title: 'Atami',
     image: AtamiImagen
@@ -628,21 +630,21 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
     title: 'wakayama',
     image: wakayamaImagen
   },
-    ];
+];
 
 function HotelesJapon() {
   const [mode, setMode] = useState("allHotels"); // "allHotels" | "destinations"
   const [selectedCiudad, setSelectedCiudad] = useState(null);
 
   // Normalizar nombres 
-  const CANON = { Tokyo: 'Tokio', nachikatsura: 'nachikatsuura'};
+  const CANON = { Tokyo: 'Tokio', nachikatsura: 'nachikatsuura' };
   const canon = (name) => CANON[name] || name;
 
   const handleCardClick = (title) => {
     const normalizado = canon(title);
     setSelectedCiudad(normalizado);
     setMode("destinations");
-    
+
     // Removed forced scroll/focus - let user maintain current viewport position
     // Screen readers will announce content changes via aria-live region
   };
@@ -666,61 +668,61 @@ function HotelesJapon() {
       <HeroSection data={data} />
       <InView>
         <Suspense>
-            <Buscador
-              cards={cardsJapon}
-              onCardClick={handleCardClick}
-              active={selectedCiudad}
-            />
-        {/* Screen reader status announcements */}
-        <div aria-live="polite" aria-atomic="true" className="sr-only">
-          {selectedCiudad && `Mostrando hoteles en ${selectedCiudad}`}
-          {mode === "allHotels"}
-        </div>
-        
-        <div id="resultados-hoteles">
-          {mode === "allHotels" ? (
-            // Show all destinations
-            destinations.map((d) => <NoNavegaSection destinations={d} key={d.titulo} />)
-          ) : (
-            // Show selected destination or empty state
-            <>
-              <div style={{ marginBottom: "20px", textAlign: "center" }}>
-                <button 
-                  onClick={clearSelection}
-                  style={{
-                    padding: "10px 20px",
-                    backgroundColor: "rgba(212, 175, 55, 0.95)",
-                    color: "#111",
-                    border: "none",
-                    borderRadius: "5px",
-                    cursor: "pointer",
-                    fontFamily: "nohemi",
-                    fontSize: "14px",
-                    textTransform: "uppercase"
-                  }}
-                >
-                  ← Volver a todos los hoteles
-                </button>
-              </div>
-              {destinoSeleccionado ? (
-                <NoNavegaSection destinations={destinoSeleccionado} key={destinoSeleccionado.titulo} />
-              ) : (
-                <div style={{ 
-                  textAlign: "center", 
-                  color: "white", 
-                  padding: "40px 20px",
-                  fontFamily: "nohemi"
-                }}>
-                  <h2>No se encontraron destinos</h2>
-                  <p>No hay hoteles disponibles para "{selectedCiudad}"</p>
+          <Buscador
+            cards={cardsJapon}
+            onCardClick={handleCardClick}
+            active={selectedCiudad}
+          />
+          {/* Screen reader status announcements */}
+          <div aria-live="polite" aria-atomic="true" className="sr-only">
+            {selectedCiudad && `Mostrando hoteles en ${selectedCiudad}`}
+            {mode === "allHotels"}
+          </div>
+
+          <div id="resultados-hoteles">
+            {mode === "allHotels" ? (
+              // Show all destinations
+              destinations.map((d) => <NoNavegaSection destinations={d} key={d.titulo} />)
+            ) : (
+              // Show selected destination or empty state
+              <>
+                <div style={{ marginBottom: "20px", textAlign: "center" }}>
+                  <button
+                    onClick={clearSelection}
+                    style={{
+                      padding: "10px 20px",
+                      backgroundColor: "rgba(212, 175, 55, 0.95)",
+                      color: "#111",
+                      border: "none",
+                      borderRadius: "5px",
+                      cursor: "pointer",
+                      fontFamily: "nohemi",
+                      fontSize: "14px",
+                      textTransform: "uppercase"
+                    }}
+                  >
+                    ← Volver a todos los hoteles
+                  </button>
                 </div>
-              )}
-            </>
-          )}
-        </div>
+                {destinoSeleccionado ? (
+                  <NoNavegaSection destinations={destinoSeleccionado} key={destinoSeleccionado.titulo} />
+                ) : (
+                  <div style={{
+                    textAlign: "center",
+                    color: "white",
+                    padding: "40px 20px",
+                    fontFamily: "nohemi"
+                  }}>
+                    <h2>No se encontraron destinos</h2>
+                    <p>No hay hoteles disponibles para "{selectedCiudad}"</p>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
         </Suspense>
       </InView>
-      
+
     </>
   );
 }

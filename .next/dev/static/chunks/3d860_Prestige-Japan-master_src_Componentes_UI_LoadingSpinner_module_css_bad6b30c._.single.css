@@ -1,0 +1,41 @@
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/UI/LoadingSpinner.module.css [app-client] (css) */
+.LoadingSpinner-module__sky-FW__loadingContainer {
+  background: #11111105;
+  border-radius: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+  margin: 20px 0;
+  padding: 40px 20px;
+  display: flex;
+}
+
+.LoadingSpinner-module__sky-FW__loadingText {
+  color: #666;
+  text-align: center;
+  margin-top: 15px;
+  font-family: nohemi, system-ui, sans-serif;
+  font-size: 16px;
+}
+
+.LoadingSpinner-module__sky-FW__loadingContainer.LoadingSpinner-module__sky-FW__dark {
+  background: #ffffff05;
+}
+
+.LoadingSpinner-module__sky-FW__loadingContainer.LoadingSpinner-module__sky-FW__dark .LoadingSpinner-module__sky-FW__loadingText {
+  color: #ccc;
+}
+
+@media (max-width: 640px) {
+  .LoadingSpinner-module__sky-FW__loadingContainer {
+    min-height: 100px;
+    padding: 30px 15px;
+  }
+
+  .LoadingSpinner-module__sky-FW__loadingText {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=3d860_Prestige-Japan-master_src_Componentes_UI_LoadingSpinner_module_css_bad6b30c._.single.css.map*/

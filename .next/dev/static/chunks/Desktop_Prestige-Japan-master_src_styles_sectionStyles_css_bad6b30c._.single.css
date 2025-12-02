@@ -1,0 +1,48 @@
+/* [project]/Desktop/Prestige-Japan-master/src/styles/sectionStyles.css [app-client] (css) */
+.textoHeroAcompana {
+  color: #fff;
+  text-align: center;
+  justify-self: anchor-center;
+  max-width: 400px;
+  margin: 0 0 40px;
+  padding: 0;
+  font-family: nohemi;
+  font-size: 16px;
+}
+
+.buttonCATcaracteristicas {
+  color: #290f04;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #d8aa3e 0%, #e8ca6e 12%, #f9e7a0 28%, #ecd37c 50%, #dfb44e 63%, #d9ab3e 100%);
+  border: none;
+  border-radius: 5px;
+  align-self: center;
+  padding: 12px 15px;
+  font-family: nohemi;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.buttonNegro {
+  color: #fff;
+  background: #111;
+  border: 1px solid #fff;
+  font-family: nohemi;
+}
+
+.stepsContainerStyle {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  display: flex;
+}
+
+@media (min-width: 700px) {
+  .textoHeroAcompana {
+    max-width: 700px;
+  }
+}
+
+/*# sourceMappingURL=Desktop_Prestige-Japan-master_src_styles_sectionStyles_css_bad6b30c._.single.css.map*/

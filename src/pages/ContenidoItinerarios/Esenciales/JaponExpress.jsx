@@ -1,4 +1,6 @@
-import React, {useEffect} from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 import { Suspense, lazy } from 'react';
 import styles from './JaponExpress.module.css';
 import LoadingSpinner from '../../../Componentes/UI/LoadingSpinner.jsx';
@@ -8,12 +10,12 @@ import HeroSection from '../../../Componentes/Sections/HeroSection.jsx';
 import HeroImage from '../../../assets/Itinerarios/PortadasItinerarios/Japon_Express_Portada_Japon_Premium_Santuario_Meiji.webp';
 
 // Itinerarios - Se declara toda la info aqui
-const ItinerariosTemplate = lazy(() => import ('../../../Componentes/Sections/Reutilizable/ItinerariosTemplate.jsx'));
-const DownloadSection = lazy(() => import ('../../../Componentes/Sections/Reutilizable/DownloadSection.jsx'));
-const CardPrecio = lazy(() => import ('../../../Componentes/Sections/Reutilizable/CardPrecioPrueba.jsx'));
-const DetallesNoContiene = lazy(() => import ('../../../Componentes/Sections/Reutilizable/DetallesNoContiene.jsx'));
-const TripDetails = lazy(() => import ('../../../Componentes/Sections/Reutilizable/TripDetails.jsx'));
-const HotelesJapon = lazy(() => import ('../../../Componentes/Sections/Reutilizable/HotelesJapon.jsx'));
+const ItinerariosTemplate = lazy(() => import('../../../Componentes/Sections/Reutilizable/ItinerariosTemplate.jsx'));
+const DownloadSection = lazy(() => import('../../../Componentes/Sections/Reutilizable/DownloadSection.jsx'));
+const CardPrecio = lazy(() => import('../../../Componentes/Sections/Reutilizable/CardPrecioPrueba.jsx'));
+const DetallesNoContiene = lazy(() => import('../../../Componentes/Sections/Reutilizable/DetallesNoContiene.jsx'));
+const TripDetails = lazy(() => import('../../../Componentes/Sections/Reutilizable/TripDetails.jsx'));
+const HotelesJapon = lazy(() => import('../../../Componentes/Sections/Reutilizable/HotelesJapon.jsx'));
 
 /*
 import ItinerariosTemplate from '../../../Componentes/Sections/Reutilizable/ItinerariosTemplate.jsx';
@@ -65,84 +67,91 @@ import Hotel7 from '../../../assets/Itinerarios/HotelesDeItinerarios/nuevosHotel
 import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx';
 
 
-    const data = [
-      {
-        title: "8 Días - 6 Noches",
-        subtitle: "Osaka - Nara - Kioto - Hakone - Tokio",
-        text: "Un recorrido diseñado para quienes desean descubrir lo mejor de Japón en  poco tiempo, combinando tradición, modernidad y paisajes inolvidables.",
-        image: HeroImage,
-        altImg:"Un recorrido diseñado para quienes desean descubrir lo mejor de Japón en  poco tiempo, combinando tradición, modernidad y paisajes inolvidables.",
-        letrasDoradasResponsive: LetrasDoradasResponsive,
-        LetrasDoradasDesktop: LetrasDoradasDesktop, 
-    }];
+const data = [
+  {
+    title: "8 Días - 6 Noches",
+    subtitle: "Osaka - Nara - Kioto - Hakone - Tokio",
+    text: "Un recorrido diseñado para quienes desean descubrir lo mejor de Japón en  poco tiempo, combinando tradición, modernidad y paisajes inolvidables.",
+    image: HeroImage,
+    altImg: "Un recorrido diseñado para quienes desean descubrir lo mejor de Japón en  poco tiempo, combinando tradición, modernidad y paisajes inolvidables.",
+    letrasDoradasResponsive: LetrasDoradasResponsive,
+    LetrasDoradasDesktop: LetrasDoradasDesktop,
+  }];
 
-    const dataSectionCard = [
-        {
-          title: 'México - Osaka',
-          subtitle: NumeroUno,
-          subtitleAltText: "ilustracion-de-los-numeros-13-y-14-en-formato-svg-diseno-grafico-japan-Premium",
-          text: "Salida en vuelo intercontinental con destino a Japón.",
-          image: LlegadaAeropuerto,
-          altText: 'pasajero-observando-el-ala-del-avion-y-el-oceano-desde-la-ventana-durante-vuelo-internacional-hacia-japon-con-japan-Premium.',
-        },
-        {
-          title: 'Osaka',
-          subtitle: NumeroDos,
-          text: 'Llegada al Aeropuerto Internacional de Osaka y traslado al hotel.  Alojamiento.',
-          image: LlegadaKansai,
-          altText: 'turista-llegando-al-aeropuerto-de-kioto-japon-siendo-recibida-por-guia-de-japan-Premium-en-la-zona-de-arribos.',
-        },
-        {
-          title: 'Osaka - Nara - Kioto',
-          subtitle: NumeroTres,
-          text: 'Visita al Castillo de Osaka y traslado a Nara para conocer el Gran Buda en el Templo Todaiji y el Parque de los Ciervos Sagrados. Almuerzo incluido. Por la tarde llegada a Kioto con parada en el Santuario Fushimi Inari, famoso por sus miles de torii rojos que conforman uno de los paisajes más emblemáticos de Japón. Alojamiento en Kioto.',
-          image: VueloEjecutivo,
-          altText: 'turista-con-kimono-tradicional-japones-posando-en-el-bosque-de-bambu-de-kioto-con-japan-Premium.',
-        },{
-          title: 'Kioto',
-          subtitle: NumeroCuatro,
-          text: 'Desayuno. Visita completa de la antigua capital imperial: el Jardín Zen del Templo Tenryuji, el mágico Bosque de Bambú de Arashiyama, el reluciente Pabellón Dorado (Kinkakuji) y el majestuoso Castillo de Nijo. Almuerzo incluido. Tarde libre para explorar la ciudad a tu ritmo.  Alojamiento.',
-        image: VistaAvion,
-          altText: 'viajera-en-mirador-con-vista-a-la-torre-de-tokio-y-el-paisaje-urbano-de-la-capital-de-japon-con-japan-Premium',
-        },{
-          title: 'Kioto - Hakone',
-          subtitle: NumeroCinco,
-          text: 'Desayuno. Traslado en tren bala hasta Odawara. Desde allí iniciaremos la excursión al Parque Nacional de Hakone, donde disfrutaremos un Minicrucero por el Lago Ashi y un ascenso en teleférico con vistas espectaculares del Monte Fuji (si el clima lo permite). Almuerzo incluido. Por la noche, cena típica japonesa en un Ryokan de lujo (o cena en hotel según categoría elegida). Alojamiento en Hakone.',
-          image: EncantoJapan,
-          altText: 'viajera-frente-al-torii-flotante-de-miyajima-en-hiroshima-durante-el-atardecer-con-japan-Premium.',
-        },{
-          title: 'Hakone - Tokio',
-          subtitle: NumeroSeis,
-          text: 'Desayuno. Salida hacia Tokio. A la llegada, visita guiada por la capital japonesa: el Santuario Meiji, la Torre de Tokio y el vibrante Templo Asakusa Kannon con su tradicional calle comercial Nakamise. Almuerzo incluido. Tarde libre para compras o actividades personales. Alojamiento.',
-          image: MiradorTorre,
-          altText: 'pareja-de-turistas-viajando-en-tren-bala-shinkansen-en-japon-con-japan-Premium-disfrutando-del-paisaje-desde-la-ventana.',
-        },{
-          title: 'Tokio',
-          subtitle: NumeroSiete,
-          text: 'Desayuno. Día libre para recorrer Tokio a tu manera: desde la modernidad de Shibuya y Shinjuku hasta los barrios tradicionales como Yanaka.  Alojamiento.',
-          image: ToriiFlotante,
-          altText: 'pareja-de-turistas-en-el-templo-nachisan-con-pagoda-roja-y-montanas-de-fondo-en-japon-con-japan-Premium.',
-        },{
-          title: ' Tokio - México',
-          subtitle: NumeroOcho,
-          text: 'Desayuno. Traslado al aeropuerto para tomar el vuelo de regreso. Fin de nuestros servicios.',
-          image: TemploNachisan,
-          altText: 'pareja-de-turistas-en-dotonbori-osaka-con-los-carteles-luminosos-iconicos-al-fondo-con-japan-Premium.',
-        }
-    ];
+const dataSectionCard = [
+  {
+    title: 'México - Osaka',
+    subtitle: NumeroUno,
+    subtitleAltText: "Número 1",
+    text: "Salida en vuelo intercontinental con destino a Japón.",
+    image: LlegadaAeropuerto,
+    altText: 'pasajero-observando-el-ala-del-avion-y-el-oceano-desde-la-ventana-durante-vuelo-internacional-hacia-japon-con-japan-Premium.',
+  },
+  {
+    title: 'Osaka',
+    subtitle: NumeroDos,
+    subtitleAltText: "Número 2",
+    text: 'Llegada al Aeropuerto Internacional de Osaka y traslado al hotel.  Alojamiento.',
+    image: LlegadaKansai,
+    altText: 'turista-llegando-al-aeropuerto-de-kioto-japon-siendo-recibida-por-guia-de-japan-Premium-en-la-zona-de-arribos.',
+  },
+  {
+    title: 'Osaka - Nara - Kioto',
+    subtitle: NumeroTres,
+    subtitleAltText: "Número 3",
+    text: 'Visita al Castillo de Osaka y traslado a Nara para conocer el Gran Buda en el Templo Todaiji y el Parque de los Ciervos Sagrados. Almuerzo incluido. Por la tarde llegada a Kioto con parada en el Santuario Fushimi Inari, famoso por sus miles de torii rojos que conforman uno de los paisajes más emblemáticos de Japón. Alojamiento en Kioto.',
+    image: VueloEjecutivo,
+    altText: 'turista-con-kimono-tradicional-japones-posando-en-el-bosque-de-bambu-de-kioto-con-japan-Premium.',
+  }, {
+    title: 'Kioto',
+    subtitle: NumeroCuatro,
+    subtitleAltText: "Número 4",
+    text: 'Desayuno. Visita completa de la antigua capital imperial: el Jardín Zen del Templo Tenryuji, el mágico Bosque de Bambú de Arashiyama, el reluciente Pabellón Dorado (Kinkakuji) y el majestuoso Castillo de Nijo. Almuerzo incluido. Tarde libre para explorar la ciudad a tu ritmo.  Alojamiento.',
+    image: VistaAvion,
+    altText: 'viajera-en-mirador-con-vista-a-la-torre-de-tokio-y-el-paisaje-urbano-de-la-capital-de-japon-con-japan-Premium',
+  }, {
+    title: 'Kioto - Hakone',
+    subtitle: NumeroCinco,
+    subtitleAltText: "Número 5",
+    text: 'Desayuno. Traslado en tren bala hasta Odawara. Desde allí iniciaremos la excursión al Parque Nacional de Hakone, donde disfrutaremos un Minicrucero por el Lago Ashi y un ascenso en teleférico con vistas espectaculares del Monte Fuji (si el clima lo permite). Almuerzo incluido. Por la noche, cena típica japonesa en un Ryokan de lujo (o cena en hotel según categoría elegida). Alojamiento en Hakone.',
+    image: EncantoJapan,
+    altText: 'viajera-frente-al-torii-flotante-de-miyajima-en-hiroshima-durante-el-atardecer-con-japan-Premium.',
+  }, {
+    title: 'Hakone - Tokio',
+    subtitle: NumeroSeis,
+    subtitleAltText: "Número 6",
+    text: 'Desayuno. Salida hacia Tokio. A la llegada, visita guiada por la capital japonesa: el Santuario Meiji, la Torre de Tokio y el vibrante Templo Asakusa Kannon con su tradicional calle comercial Nakamise. Almuerzo incluido. Tarde libre para compras o actividades personales. Alojamiento.',
+    image: MiradorTorre,
+    altText: 'pareja-de-turistas-viajando-en-tren-bala-shinkansen-en-japon-con-japan-Premium-disfrutando-del-paisaje-desde-la-ventana.',
+  }, {
+    title: 'Tokio',
+    subtitle: NumeroSiete,
+    subtitleAltText: "Número 7",
+    text: 'Desayuno. Día libre para recorrer Tokio a tu manera: desde la modernidad de Shibuya y Shinjuku hasta los barrios tradicionales como Yanaka.  Alojamiento.',
+    image: ToriiFlotante,
+    altText: 'pareja-de-turistas-en-el-templo-nachisan-con-pagoda-roja-y-montanas-de-fondo-en-japon-con-japan-Premium.',
+  }, {
+    title: ' Tokio - México',
+    subtitle: NumeroOcho,
+    subtitleAltText: "Número 8",
+    text: 'Desayuno. Traslado al aeropuerto para tomar el vuelo de regreso. Fin de nuestros servicios.',
+    image: TemploNachisan,
+    altText: 'pareja-de-turistas-en-dotonbori-osaka-con-los-carteles-luminosos-iconicos-al-fondo-con-japan-Premium.',
+  }
+];
 
-    const downloadData = [
-        {
-            id: "01",
-            title: "japón premium",
-            subtitle: "Japon express",
-            dias: "8 Días - 6 Noches",
-            urlDescargar: "https://japonpremium.com/pdf/itinerario-japon-8-dias-express.pdf"
-        }
-    ]
-    
-    const dataPrecios = [
-{
+const downloadData = [
+  {
+    id: "01",
+    title: "japón premium",
+    subtitle: "Japon express",
+    dias: "8 Días - 6 Noches",
+    urlDescargar: "https://japonpremium.com/pdf/itinerario-japon-8-dias-express.pdf"
+  }
+]
+
+const dataPrecios = [
+  {
     title: 'Temporada A',
     prices: [
       { type: 'DOBLE', category: 'ESTÁNDAR', amount: '7,512' },
@@ -178,9 +187,9 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
       { type: 'SENCILLA', category: 'SUPERIOR', amount: '12,684' },
     ],
   },
-    ];
+];
 
-    const Travelinfo = [
+const Travelinfo = [
   {
     title: "EL VIAJE A JAPÓN INCLUYE",
     description: [
@@ -191,8 +200,8 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
       "Viajes en tren bala (Nozomi) clase turista según itinerario.",
       "Excursiones y visitas con guías en español.",
       "Entradas a templos, santuarios y sitios mencionados."
-      ],
-    }, {
+    ],
+  }, {
     title: "EL VIAJE A JAPÓN NO INCLUYE",
     description: [
       "Comidas y bebidas no mencionadas.",
@@ -201,8 +210,8 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
       "Gastos personales.",
       "Seguro de cancelación.",
       'Lo que no esté indicado en el apartado "El Viaje a … incluye".'
-      ],
-    },   {
+    ],
+  }, {
     title: "NOTAS IMPORTANTES",
     description: [
       "Para este viaje no se requiere visa estadounidense.",
@@ -212,82 +221,85 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
       "Pasaporte con una vigencia mínima de seis meses al momento del viaje.",
       "Precios sujetos a cambios sin previo aviso debido a la temporada o la disponibilidad",
       "Actividades opcionales tienen costo adicional."
-      ],
-    },
-    ];
+    ],
+  },
+];
 
-    const lista = [
-        {id: "01",
-        icon: avion,
-        title: "No incluye: Impuestos aéreos aproximados de 595 USD.",
-        },
-        {id: "02",
-        icon: calendario,
-        title: "Temporada B y C: Aplica suplemento (Verano - Fin de año) 450 USD.",
-        },
-        {id: "03",
-        icon: user,
-        title: "Los precios: Son por persona, sujetos a cambios sin previo aviso.",
-        }
-    ];
+const lista = [
+  {
+    id: "01",
+    icon: avion,
+    title: "No incluye: Impuestos aéreos aproximados de 595 USD.",
+  },
+  {
+    id: "02",
+    icon: calendario,
+    title: "Temporada B y C: Aplica suplemento (Verano - Fin de año) 450 USD.",
+  },
+  {
+    id: "03",
+    icon: user,
+    title: "Los precios: Son por persona, sujetos a cambios sin previo aviso.",
+  }
+];
 
-    const hotels = [
-            {
-            id: '1',
-            imageUrl: Hotel1,
-            location: 'TOKIO',
-            hotelName: 'HOTEL SHINAGAWA PRINCE'
-          },
-          {
-            id: '2',
-            imageUrl: Hotel2,
-            location: 'TOKIO',
-            hotelName: 'HOTEL VILLA FONTAINE SHIODOME'
-          },
-          {
-            id: '3',
-            imageUrl: Hotel3,
-            location: 'TOKIO',
-            hotelName: 'HOTEL VILLA FONTAINE ROPPONGI'
-          },
-          {
-            id: '4',
-            imageUrl: Hotel4,
-            location: 'KAWAGUCHIKO',
-            hotelName: 'HOTEL FUJI VIEW'
-          },
-          {
-            id: '5',
-            imageUrl: Hotel5,
-            location: 'KAWAGUCHIKO',
-            hotelName: 'HOTEL ONSEN MIFUJIEN'
-          },
-          {
-            id: '6',
-            imageUrl: Hotel6,
-            location: 'KAWAGUCHIKO',
-            hotelName: 'HOTEL OIKE RYOKAN'
-          },
-          {
-            id: '7',
-            imageUrl: Hotel7,
-            location: 'KIOTO',
-            hotelName: 'HOTEL MIYAKO KYOTO HACHIJŌ'
-          },
-          
-                ];
+const hotels = [
+  {
+    id: '1',
+    imageUrl: Hotel1,
+    location: 'TOKIO',
+    hotelName: 'HOTEL SHINAGAWA PRINCE'
+  },
+  {
+    id: '2',
+    imageUrl: Hotel2,
+    location: 'TOKIO',
+    hotelName: 'HOTEL VILLA FONTAINE SHIODOME'
+  },
+  {
+    id: '3',
+    imageUrl: Hotel3,
+    location: 'TOKIO',
+    hotelName: 'HOTEL VILLA FONTAINE ROPPONGI'
+  },
+  {
+    id: '4',
+    imageUrl: Hotel4,
+    location: 'KAWAGUCHIKO',
+    hotelName: 'HOTEL FUJI VIEW'
+  },
+  {
+    id: '5',
+    imageUrl: Hotel5,
+    location: 'KAWAGUCHIKO',
+    hotelName: 'HOTEL ONSEN MIFUJIEN'
+  },
+  {
+    id: '6',
+    imageUrl: Hotel6,
+    location: 'KAWAGUCHIKO',
+    hotelName: 'HOTEL OIKE RYOKAN'
+  },
+  {
+    id: '7',
+    imageUrl: Hotel7,
+    location: 'KIOTO',
+    hotelName: 'HOTEL MIYAKO KYOTO HACHIJŌ'
+  },
+
+];
 
 export default function JaponExpress() {
 
   useEffect(() => {
-    document.title = `Itinerario Japón Express | Japón PREMIUM®`; 
+    document.title = `Itinerario Japón Express | Japón PREMIUM®`;
   }, []);
 
   return (
     <>
-    <FlyingButton />
-    <HeroSection data={data}/>
-    <Suspense fallback={<LoadingSpinner label="Cargando Japón Express..." />}>
+      <FlyingButton />
+      <HeroSection data={data} />
+      <Suspense fallback={<LoadingSpinner label="Cargando Japón Express..." />}>
         <ItinerariosTemplate data={dataSectionCard} />
         {downloadData.map(item => (
           <DownloadSection key={item.id} title={item.title} subtitle={item.subtitle} dias={item.dias} urlDescargar={item.urlDescargar} />
@@ -301,7 +313,7 @@ export default function JaponExpress() {
           />
         ))}
         <div className={styles.stepsContainerStyle}>
-          {lista.map((l, index) => <DetallesNoContiene key={l.id} icon={l.icon} title={l.title} index={index}/>)}
+          {lista.map((l, index) => <DetallesNoContiene key={l.id} icon={l.icon} title={l.title} index={index} />)}
         </div>
         <TripDetails Travelinfo={Travelinfo} />
         <HotelesJapon hotels={hotels} />

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/Cards/PreguntaObjeciones.module.css"],"sourcesContent":[".cadaPregunta{\n    text-align: start;\n    align-self: flex-start;  \n    color: #FEF0AD;\n    padding: 20px;\n    min-width: 276px;\n    max-width: 400px;\n    box-sizing: border-box;\n    cursor: pointer;\n    background-color: #1A1919;\n    border-radius: 20px;\n    margin-bottom: 20px;\n}\n\n@media (min-width: 400px) {\n    .cadaPregunta {\n      align-self: center;\n    }\n  }\n\n.preguntaHeader{\n    display: flex;\n    align-items: start;\n    justify-content: space-between;\n}"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;AAcA;EACI;;;;;AAKJ"}}]
+}

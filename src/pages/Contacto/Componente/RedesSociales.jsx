@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './RedesSociales.module.css'
 
 import Youtube from '../../../assets/icono-youtube.svg';
@@ -68,11 +69,13 @@ function Contactos() {
           return (
             <div key={r.id} className={styles.rowStart}>
               <a href={href} aria-label={r.ariaLabel} className={styles.elementosDisplay}>
-                <img
+                <Image
                   src={r.src}
                   alt={r.alt}
                   className={styles.iconsContacto}
-                  loading="lazy"
+                  width={40}
+                  height={40}
+                  priority={false}
                 />
               <div className={styles.optionalContainer}>
                 <p className={styles.textWhiteSmall}>{r.text}</p>
@@ -137,7 +140,7 @@ function Redes() {
         {redes.map((r) => (
           <div key={r.id} className={styles.rowStart}>
             <a href={r.link} target="_blank" rel="noopener noreferrer">
-              <img src={r.src} alt={r.alt} className={styles.iconsFooter} loading='lazy' />
+              <Image src={r.src} alt={r.alt} className={styles.iconsFooter} width={40} height={40} priority={false} />
             </a>
             {/*<span className="subtituloResponsive subtitle">{r.subtitulo}</span> */}
           </div>

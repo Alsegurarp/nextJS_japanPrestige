@@ -1,0 +1,35 @@
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/UI/Cards/ConfiarNosotrosCard.module.css [app-client] (css) */
+.ConfiarNosotrosCard-module__QZrB9q__logoStyle {
+  width: auto;
+  height: 60px;
+  padding: 20px 40px;
+}
+
+.ConfiarNosotrosCard-module__QZrB9q__contenedorCard {
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  width: 260px;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: nohemi;
+  opacity: 1 !important;
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+.ConfiarNosotrosCard-module__QZrB9q__subtituloCard {
+  margin: 5px 0 25px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ConfiarNosotrosCard-module__QZrB9q__textoStyle {
+  max-width: 260px;
+  margin: 0 auto 15px;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/*# sourceMappingURL=d79c4_src_Componentes_UI_Cards_ConfiarNosotrosCard_module_css_bad6b30c._.single.css.map*/

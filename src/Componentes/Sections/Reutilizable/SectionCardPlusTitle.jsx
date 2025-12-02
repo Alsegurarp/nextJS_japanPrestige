@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './SectionCardPlusTitle.module.css';
 
 
@@ -56,7 +57,7 @@ function Card({ image, index, altText, title, subtitle, dias, text}) {
      </div>
       </div>
       <div className={styles.cardImage}>
-          <img src={image} alt={altText} loading="lazy"/>
+          <Image src={image} alt={altText} loading="lazy" width={600} height={450} priority={false}/>
         </div>
     </div>
   );

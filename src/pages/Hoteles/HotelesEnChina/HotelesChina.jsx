@@ -1,8 +1,10 @@
-import React, {useState, useEffect, Suspense, lazy} from 'react';
+'use client';
+
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import HeroSection from '../../../Componentes/Sections/HeroSection.jsx';
 import HeroImage from '../../../assets/portadas-nuevas-19-sep/hotelesPortadas/portada_hoteles_en_china.webp';
 import InView from '../../../Componentes/Layout/InView/InView.jsx';
-const Buscador = lazy(() => import ('../../../Componentes/Hoteles/Carrucel/Buscador.jsx'));
+const Buscador = lazy(() => import('../../../Componentes/Hoteles/Carrucel/Buscador.jsx'));
 
 import LetrasDoradasResponsive from '../../../assets/titulosDorados/hotelesSection/hoteleschinamovil.svg';
 import LetrasDoradasDesktop from '../../../assets/titulosDorados/hotelesSection/hoteleschina.svg';
@@ -24,20 +26,20 @@ import imagen3 from '../../../assets/Itinerarios/buscadorImagenes/china/xian_chi
 
 //Itinerarios/HotelesDeItinerarios/Japon-y-China/
 
-import NoNavegaSection from '../HotelesInicio/Componente/NoNavegaSection.jsx';
+import NoNavegaSection from '../../../Componentes/Hoteles/HotelesInicio/Componente/NoNavegaSection.jsx';
 import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx';
 
 
-    const data = [
-      {
-        text: 'Explora nuestra selección exclusiva de alojamientos en ciudades emblemáticas como Pekín, Shangái, Xi\'an. Estos hoteles no solo ofrecen comodidad superior y diseño elegante, sino que también se encuentran ubicados en puntos estratégicos para que vivas cada ciudad en su máxima expresión',
-        image: HeroImage,
-        altImg:"Vista frontal del Templo Yasukuni en Tokio, Japón, con cielo nublado al atardecer.",
-        letrasDoradasResponsive: LetrasDoradasResponsive,
-        LetrasDoradasDesktop: LetrasDoradasDesktop, 
-    }];
+const data = [
+  {
+    text: 'Explora nuestra selección exclusiva de alojamientos en ciudades emblemáticas como Pekín, Shangái, Xi\'an. Estos hoteles no solo ofrecen comodidad superior y diseño elegante, sino que también se encuentran ubicados en puntos estratégicos para que vivas cada ciudad en su máxima expresión',
+    image: HeroImage,
+    altImg: "Vista frontal del Templo Yasukuni en Tokio, Japón, con cielo nublado al atardecer.",
+    letrasDoradasResponsive: LetrasDoradasResponsive,
+    LetrasDoradasDesktop: LetrasDoradasDesktop,
+  }];
 
-    const destinations = [
+const destinations = [
   {
     titulo: "Pekín",
     card: [
@@ -88,25 +90,25 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
       }
     ]
   }
-    ];
+];
 
-    const cardsJapon = [
-      {
-        title: 'Pekín',
-        country: "China",
-        image: imagen1
-      },
-      {
-        title: 'Shanghái',
-        country: "China",
-        image: imagen2
-      },
-      {
-        title: 'Xi\'an',
-        country: "China",
-        image: imagen3
-      }
-      ];
+const cardsJapon = [
+  {
+    title: 'Pekín',
+    country: "China",
+    image: imagen1
+  },
+  {
+    title: 'Shanghái',
+    country: "China",
+    image: imagen2
+  },
+  {
+    title: 'Xi\'an',
+    country: "China",
+    image: imagen3
+  }
+];
 
 
 
@@ -115,7 +117,7 @@ function HotelesChina() {
   const [selectedCiudad, setSelectedCiudad] = useState(null);
 
   // Normalizar nombres 
-  const CANON = { Tokyo: 'Tokio', nachikatsura: 'nachikatsuura'};
+  const CANON = { Tokyo: 'Tokio', nachikatsura: 'nachikatsuura' };
   const canon = (name) => CANON[name] || name;
 
   const handleCardClick = (title) => {
@@ -129,29 +131,29 @@ function HotelesChina() {
     ? destinations.find((d) => d.titulo.toLowerCase() === selectedCiudad.toLowerCase())
     : null;
 
-        useEffect(() => {
-            document.title = `Hoteles China | Japón PREMIUM®`; 
-        }, []);
+  useEffect(() => {
+    document.title = `Hoteles China | Japón PREMIUM®`;
+  }, []);
 
   return (
     <>
-        <FlyingButton />
-        <HeroSection data={data}/>
-        <InView>
+      <FlyingButton />
+      <HeroSection data={data} />
+      <InView>
         <Suspense>
-            <Buscador
-              cards={cardsJapon}
-              onCardClick={handleCardClick}
-              active={selectedCiudad}
-              onClear={clearSelection}
-            />
-        <div id="resultados-hoteles">
-          {destinoSeleccionado ? (
-            <NoNavegaSection destinations={destinoSeleccionado} key={destinoSeleccionado.titulo} />
-          ) : (
-            destinations.map((d) => <NoNavegaSection destinations={d} key={d.titulo} />)
-          )}
-        </div>
+          <Buscador
+            cards={cardsJapon}
+            onCardClick={handleCardClick}
+            active={selectedCiudad}
+            onClear={clearSelection}
+          />
+          <div id="resultados-hoteles">
+            {destinoSeleccionado ? (
+              <NoNavegaSection destinations={destinoSeleccionado} key={destinoSeleccionado.titulo} />
+            ) : (
+              destinations.map((d) => <NoNavegaSection destinations={d} key={d.titulo} />)
+            )}
+          </div>
         </Suspense>
       </InView>
     </>

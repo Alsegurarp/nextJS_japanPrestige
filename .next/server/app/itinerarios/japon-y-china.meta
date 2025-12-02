@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/itinerarios/layout,_N_T_/itinerarios/japon-y-china/layout,_N_T_/itinerarios/japon-y-china/page,_N_T_/itinerarios/japon-y-china"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/itinerarios/japon-y-china/__PAGE__",
+    "/itinerarios/japon-y-china",
+    "/itinerarios",
+    "/_index",
+    "/_head"
+  ]
+}

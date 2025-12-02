@@ -1,6 +1,9 @@
 
+'use client';
+
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import Image from 'next/image';
+import Link from 'next/link';
 import Youtube from '../../../assets/icono-youtube.svg';
 import Facebook from '../../../assets/icono-facebook.svg';
 import Instagram from '../../../assets/icono-instagram.svg';
@@ -13,6 +16,18 @@ import iconoCelularBlanco from '../../../assets/iconoCelularBlanco.svg';
 
 import styles from './Footer.module.css';
 import FooterAnimation from './FooterAnimation';
+
+// Helper to extract src from imported images
+const getSrcValue = (img) => {
+  if (!img) return null;
+  if (typeof img === 'object' && img.src) {
+    return img.src;
+  }
+  if (typeof img === 'string') {
+    return img;
+  }
+  return null;
+};
 
 const Footer = React.memo(function Footer() {
   const animatedTextRef = useRef(null);
@@ -80,7 +95,7 @@ function Contactos() {
     {
       id: 1,
       alt: "Ícono de teléfono para contacto vía celular",
-      src: iconoCelularBlanco,
+      src: getSrcValue(iconoCelularBlanco),
       text: "+52 55 5339 0110",
       hrefBuilder: telLink,
       ariaLabel: "Llamar al celular",
@@ -88,7 +103,7 @@ function Contactos() {
     {
       id: 2,
       alt: "Ícono de WhatsApp para contacto directo vía mensajería",
-      src: IconWA,
+      src: getSrcValue(IconWA),
       text: "+52 5572176696",
       hrefBuilder: waLink,
       ariaLabel: "Abrir chat de WhatsApp",
@@ -96,7 +111,7 @@ function Contactos() {
     {
       id: 3,
       alt: "Ícono de correo electrónico para contacto por email",
-      src: CorreoIcon,
+      src: getSrcValue(CorreoIcon),
       text: "reservaciones@viajespremium.com.mx",
       hrefBuilder: mailtoLink,
       ariaLabel: "Enviar correo",
@@ -109,11 +124,13 @@ function Contactos() {
         const href = r.hrefBuilder(r.text);
         return (
           <a href={href} aria-label={r.ariaLabel} key={r.id} className={styles.contactLink}>
-            <img
+            {r.src && <Image
               src={r.src}
               alt={r.alt}
+              width={40}
+              height={40}
               className={styles.iconsContacto}
-            />
+            />}
             <p className={styles.textWhiteSmall}>{r.text}</p>
           </a>
         );
@@ -124,18 +141,18 @@ function Contactos() {
 
 function RedesSociales() {
   const redes = [
-    { id: 1, alt: 'Ícono de Facebook', src: Facebook, link: "https://www.facebook.com/turismosantafeoficial" },
-    { id: 2, alt: 'Ícono de Tiktok', src: Tiktok, link: "https://www.tiktok.com/@viajespremium?is_from_webapp=1&sender_device=pc" },
-    { id: 3, alt: 'Ícono de Instagram', src: Instagram, link: "https://www.instagram.com/viajespremium.oficial/" },
-    { id: 4, alt: 'Ícono de Youtube', src: Youtube, link: "https://www.youtube.com/@viajespremiumelevatuvida" },
-    { id: 5, alt: 'Ícono de Spotify', src: Spotify, link: "https://open.spotify.com/show/4VmUesUcK08SIuxLxsl3dF?si=54ef4be681dd49d2&nd=1&dlsi=d3d1513495834e9a" },
+    { id: 1, alt: 'Ícono de Facebook', src: getSrcValue(Facebook), link: "https://www.facebook.com/turismosantafeoficial" },
+    { id: 2, alt: 'Ícono de Tiktok', src: getSrcValue(Tiktok), link: "https://www.tiktok.com/@viajespremium?is_from_webapp=1&sender_device=pc" },
+    { id: 3, alt: 'Ícono de Instagram', src: getSrcValue(Instagram), link: "https://www.instagram.com/viajespremium.oficial/" },
+    { id: 4, alt: 'Ícono de Youtube', src: getSrcValue(Youtube), link: "https://www.youtube.com/@viajespremiumelevatuvida" },
+    { id: 5, alt: 'Ícono de Spotify', src: getSrcValue(Spotify), link: "https://open.spotify.com/show/4VmUesUcK08SIuxLxsl3dF?si=54ef4be681dd49d2&nd=1&dlsi=d3d1513495834e9a" },
   ];
 
   return (
     <div className={styles.redesSocialesContainer}>
       {redes.map((r) => (
         <a href={r.link} key={r.id} target="_blank" rel="noopener noreferrer">
-          <img src={r.src} alt={r.alt} className={styles.iconsFooter} />
+          {r.src && <Image src={r.src} alt={r.alt} width={40} height={40} className={styles.iconsFooter} />}
         </a>
       ))}
     </div>
@@ -149,7 +166,7 @@ const Separator = React.forwardRef((props, ref) => {
 const SubFooter = React.forwardRef((props, ref) => {
   return (
     <section className={styles.subFooter} ref={ref}>
-      <Link to="/aviso-de-privacidad" className={styles.subFooterText}>
+      <Link href="/aviso-de-privacidad" className={styles.subFooterText}>
         Aviso de Privacidad
       </Link>
       <p className={`${styles.textWhiteSmall} ${styles.copyrightText}`}>

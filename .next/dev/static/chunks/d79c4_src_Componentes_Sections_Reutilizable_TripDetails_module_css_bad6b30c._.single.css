@@ -1,0 +1,106 @@
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/Reutilizable/TripDetails.module.css [app-client] (css) */
+:root {
+  --accent: #482215;
+}
+
+.TripDetails-module__qw3OXa__container {
+  color: #fff;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 100px auto 0;
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+}
+
+.TripDetails-module__qw3OXa__card {
+  background: none;
+  border: 2px solid #2d2d31;
+  border-radius: 20px;
+  justify-content: center;
+  min-width: 240px;
+  max-width: 380px;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+}
+
+.TripDetails-module__qw3OXa__cardTall {
+  min-height: 505px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.TripDetails-module__qw3OXa__inner {
+  flex-direction: column;
+  align-items: center;
+  width: 457px;
+  min-width: 240px;
+  max-width: 100%;
+  display: flex;
+}
+
+.TripDetails-module__qw3OXa__header {
+  text-align: center;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+}
+
+.TripDetails-module__qw3OXa__header h3 {
+  color: #fff;
+  margin: 0;
+  font-family: nohemi;
+}
+
+.TripDetails-module__qw3OXa__divider {
+  background: #482215;
+  border: 1px solid #482215;
+  border-radius: 2px;
+  width: 413px;
+  max-width: 100%;
+  min-height: 2px;
+  margin-top: 30px;
+}
+
+.TripDetails-module__qw3OXa__content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+}
+
+.TripDetails-module__qw3OXa__contenedorInformacion {
+  padding: 0 20px;
+}
+
+.TripDetails-module__qw3OXa__content ul li {
+  color: #fff;
+  margin: 0 0 2px;
+  font-family: nohemi;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .TripDetails-module__qw3OXa__container {
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .TripDetails-module__qw3OXa__cardTall {
+    padding-bottom: 100px;
+  }
+
+  .TripDetails-module__qw3OXa__inner, .TripDetails-module__qw3OXa__header, .TripDetails-module__qw3OXa__content p {
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=d79c4_src_Componentes_Sections_Reutilizable_TripDetails_module_css_bad6b30c._.single.css.map*/

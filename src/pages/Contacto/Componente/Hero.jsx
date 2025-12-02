@@ -1,14 +1,22 @@
 import {lazy} from 'react';
+import Image from 'next/image';
 import styles from './Hero.module.css';
 import japanPremium from '../../../assets/portadas-nuevas-19-sep/hotelesImg/contacto_Portada_Japon_Premium_Templo.webp';
 
+// Helper to extract src from imported images
+const getSrcValue = (img) => {
+  if (!img) return null;
+  if (typeof img === 'object' && img.src) {
+    return img.src;
+  }
+  if (typeof img === 'string') {
+    return img;
+  }
+  return null;
+};
 
 const Form = lazy(() => import('./Form.jsx'));
 const RedesSociales = lazy(() => import('./RedesSociales.jsx'));
-
-
-
-
 
 const data = [
   {
@@ -19,22 +27,33 @@ const data = [
 
 
 function Hero({image}){
-   return(
+  const imageSrc = getSrcValue(image);
+  
+  return(
     <div style={{position: 'relative', top: '-60px'}}>
-    <div className={styles.beneficiosContainerHero} style={{backgroundImage: `url(${image})`}}>
-      <div className={styles.heroContentGrid}>
-        <div className={styles.heroContent}>
-          {/* Hero content will be centered here */}
+      {imageSrc && (
+        <div className={styles.beneficiosContainerHero} style={{position: 'relative', height: '500px'}}>
+          <Image 
+            src={imageSrc}
+            alt="Hero Background"
+            fill
+            priority
+            style={{objectFit: 'cover'}}
+            className={styles.heroImg}
+          />
+          <div className={styles.heroContentGrid}>
+            <div className={styles.heroContent}>
+              {/* Hero content will be centered here */}
+            </div>
+            <section className={styles.FormularioYContenido}>
+              <Form />
+            </section>
+          </div>
         </div>
-        <section className={styles.FormularioYContenido}>
-          <Form />
-        </section>
-      </div>
-    </div>
-        <RedesSociales />
+      )}
+      <RedesSociales />
     </div>
   )
-
 }
 
 

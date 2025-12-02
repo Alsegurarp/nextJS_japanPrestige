@@ -1,0 +1,620 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/aviso-de-privacidad",
+      "regex": "^/aviso\\-de\\-privacidad(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/aviso\\-de\\-privacidad(?:/)?$"
+    },
+    {
+      "page": "/AvisoPrivacidad/AvisoPrivacidad",
+      "regex": "^/AvisoPrivacidad/AvisoPrivacidad(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/AvisoPrivacidad/AvisoPrivacidad(?:/)?$"
+    },
+    {
+      "page": "/blog",
+      "regex": "^/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog(?:/)?$"
+    },
+    {
+      "page": "/blog/como-comportarse",
+      "regex": "^/blog/como\\-comportarse(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/como\\-comportarse(?:/)?$"
+    },
+    {
+      "page": "/blog/comprar-japon",
+      "regex": "^/blog/comprar\\-japon(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/comprar\\-japon(?:/)?$"
+    },
+    {
+      "page": "/blog/epoca-viajar-japon",
+      "regex": "^/blog/epoca\\-viajar\\-japon(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/epoca\\-viajar\\-japon(?:/)?$"
+    },
+    {
+      "page": "/blog/forma-pago",
+      "regex": "^/blog/forma\\-pago(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/forma\\-pago(?:/)?$"
+    },
+    {
+      "page": "/blog/internet-japon",
+      "regex": "^/blog/internet\\-japon(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/internet\\-japon(?:/)?$"
+    },
+    {
+      "page": "/blog/onsen-tatuajes",
+      "regex": "^/blog/onsen\\-tatuajes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/onsen\\-tatuajes(?:/)?$"
+    },
+    {
+      "page": "/blog/saludar-blog",
+      "regex": "^/blog/saludar\\-blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/saludar\\-blog(?:/)?$"
+    },
+    {
+      "page": "/blog/viaje-seguro",
+      "regex": "^/blog/viaje\\-seguro(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/viaje\\-seguro(?:/)?$"
+    },
+    {
+      "page": "/blog/viaje-sin-japones",
+      "regex": "^/blog/viaje\\-sin\\-japones(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/viaje\\-sin\\-japones(?:/)?$"
+    },
+    {
+      "page": "/blog/visado-japon",
+      "regex": "^/blog/visado\\-japon(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/visado\\-japon(?:/)?$"
+    },
+    {
+      "page": "/Blog/Articulos/ComoComportarse/ComoComportarse",
+      "regex": "^/Blog/Articulos/ComoComportarse/ComoComportarse(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Blog/Articulos/ComoComportarse/ComoComportarse(?:/)?$"
+    },
+    {
+      "page": "/Blog/Articulos/ComprarJapon/ComprarJapon",
+      "regex": "^/Blog/Articulos/ComprarJapon/ComprarJapon(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Blog/Articulos/ComprarJapon/ComprarJapon(?:/)?$"
+    },
+    {
+      "page": "/Blog/Articulos/EpocaViajarJapon/EpocaViajarJapon",
+      "regex": "^/Blog/Articulos/EpocaViajarJapon/EpocaViajarJapon(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Blog/Articulos/EpocaViajarJapon/EpocaViajarJapon(?:/)?$"
+    },
+    {
+      "page": "/Blog/Articulos/FormaPago/FormaPago",
+      "regex": "^/Blog/Articulos/FormaPago/FormaPago(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Blog/Articulos/FormaPago/FormaPago(?:/)?$"
+    },
+    {
+      "page": "/Blog/Articulos/InternetJapon/InternetJapon",
+      "regex": "^/Blog/Articulos/InternetJapon/InternetJapon(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Blog/Articulos/InternetJapon/InternetJapon(?:/)?$"
+    },
+    {
+      "page": "/Blog/Articulos/OnsenTatuajes/OnsenTatuajes",
+      "regex": "^/Blog/Articulos/OnsenTatuajes/OnsenTatuajes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Blog/Articulos/OnsenTatuajes/OnsenTatuajes(?:/)?$"
+    },
+    {
+      "page": "/Blog/Articulos/SaludarBlog/SaludarBlog",
+      "regex": "^/Blog/Articulos/SaludarBlog/SaludarBlog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Blog/Articulos/SaludarBlog/SaludarBlog(?:/)?$"
+    },
+    {
+      "page": "/Blog/Articulos/ViajarSeguro/ViajarSeguro",
+      "regex": "^/Blog/Articulos/ViajarSeguro/ViajarSeguro(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Blog/Articulos/ViajarSeguro/ViajarSeguro(?:/)?$"
+    },
+    {
+      "page": "/Blog/Articulos/ViajeSinJapones/ViajeSinJapones",
+      "regex": "^/Blog/Articulos/ViajeSinJapones/ViajeSinJapones(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Blog/Articulos/ViajeSinJapones/ViajeSinJapones(?:/)?$"
+    },
+    {
+      "page": "/Blog/Articulos/VisadoJapon/VisadoJapon",
+      "regex": "^/Blog/Articulos/VisadoJapon/VisadoJapon(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Blog/Articulos/VisadoJapon/VisadoJapon(?:/)?$"
+    },
+    {
+      "page": "/Blog/Blog",
+      "regex": "^/Blog/Blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Blog/Blog(?:/)?$"
+    },
+    {
+      "page": "/contacto",
+      "regex": "^/contacto(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contacto(?:/)?$"
+    },
+    {
+      "page": "/Contacto/Componente/Form",
+      "regex": "^/Contacto/Componente/Form(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Contacto/Componente/Form(?:/)?$"
+    },
+    {
+      "page": "/Contacto/Componente/FormComponents/Calendar",
+      "regex": "^/Contacto/Componente/FormComponents/Calendar(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Contacto/Componente/FormComponents/Calendar(?:/)?$"
+    },
+    {
+      "page": "/Contacto/Componente/Hero",
+      "regex": "^/Contacto/Componente/Hero(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Contacto/Componente/Hero(?:/)?$"
+    },
+    {
+      "page": "/Contacto/Componente/RedesSociales",
+      "regex": "^/Contacto/Componente/RedesSociales(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Contacto/Componente/RedesSociales(?:/)?$"
+    },
+    {
+      "page": "/Contacto/Contacto",
+      "regex": "^/Contacto/Contacto(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Contacto/Contacto(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Combinados/JaponCoreaDelSur",
+      "regex": "^/ContenidoItinerarios/Combinados/JaponCoreaDelSur(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Combinados/JaponCoreaDelSur(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Combinados/JaponTailandia",
+      "regex": "^/ContenidoItinerarios/Combinados/JaponTailandia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Combinados/JaponTailandia(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Combinados/JaponTailandiaLoMejor",
+      "regex": "^/ContenidoItinerarios/Combinados/JaponTailandiaLoMejor(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Combinados/JaponTailandiaLoMejor(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Combinados/JaponYChina",
+      "regex": "^/ContenidoItinerarios/Combinados/JaponYChina(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Combinados/JaponYChina(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Combinados/JaponYDubaiMaravilloso",
+      "regex": "^/ContenidoItinerarios/Combinados/JaponYDubaiMaravilloso(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Combinados/JaponYDubaiMaravilloso(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Combinados/JaponYDubaiTotal",
+      "regex": "^/ContenidoItinerarios/Combinados/JaponYDubaiTotal(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Combinados/JaponYDubaiTotal(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Combinados/SamuraisYShaolines",
+      "regex": "^/ContenidoItinerarios/Combinados/SamuraisYShaolines(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Combinados/SamuraisYShaolines(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Combinados/SeulATokio",
+      "regex": "^/ContenidoItinerarios/Combinados/SeulATokio(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Combinados/SeulATokio(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Esenciales/ArtOriental",
+      "regex": "^/ContenidoItinerarios/Esenciales/ArtOriental(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Esenciales/ArtOriental(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Esenciales/ElOrigenDelSol",
+      "regex": "^/ContenidoItinerarios/Esenciales/ElOrigenDelSol(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Esenciales/ElOrigenDelSol(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Esenciales/ImperioDelSol",
+      "regex": "^/ContenidoItinerarios/Esenciales/ImperioDelSol(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Esenciales/ImperioDelSol(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Esenciales/JaponExpress",
+      "regex": "^/ContenidoItinerarios/Esenciales/JaponExpress(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Esenciales/JaponExpress(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Esenciales/JaponIncreible",
+      "regex": "^/ContenidoItinerarios/Esenciales/JaponIncreible(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Esenciales/JaponIncreible(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Esenciales/TitanesDelPacifico",
+      "regex": "^/ContenidoItinerarios/Esenciales/TitanesDelPacifico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Esenciales/TitanesDelPacifico(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Esenciales/UltimoSamurai",
+      "regex": "^/ContenidoItinerarios/Esenciales/UltimoSamurai(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Esenciales/UltimoSamurai(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Tradicional/CaminoDeKumano",
+      "regex": "^/ContenidoItinerarios/Tradicional/CaminoDeKumano(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Tradicional/CaminoDeKumano(?:/)?$"
+    },
+    {
+      "page": "/ContenidoItinerarios/Tradicional/ImperioJapones",
+      "regex": "^/ContenidoItinerarios/Tradicional/ImperioJapones(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContenidoItinerarios/Tradicional/ImperioJapones(?:/)?$"
+    },
+    {
+      "page": "/faqs",
+      "regex": "^/faqs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/faqs(?:/)?$"
+    },
+    {
+      "page": "/Faqs/Faqs",
+      "regex": "^/Faqs/Faqs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Faqs/Faqs(?:/)?$"
+    },
+    {
+      "page": "/gracias",
+      "regex": "^/gracias(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/gracias(?:/)?$"
+    },
+    {
+      "page": "/Gracias/Gracias",
+      "regex": "^/Gracias/Gracias(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Gracias/Gracias(?:/)?$"
+    },
+    {
+      "page": "/Home/HeroExclusivoHome/Hero",
+      "regex": "^/Home/HeroExclusivoHome/Hero(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Home/HeroExclusivoHome/Hero(?:/)?$"
+    },
+    {
+      "page": "/Home/HeroExclusivoHome/TitleSVG",
+      "regex": "^/Home/HeroExclusivoHome/TitleSVG(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Home/HeroExclusivoHome/TitleSVG(?:/)?$"
+    },
+    {
+      "page": "/Home/Home",
+      "regex": "^/Home/Home(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Home/Home(?:/)?$"
+    },
+    {
+      "page": "/hoteles",
+      "regex": "^/hoteles(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hoteles(?:/)?$"
+    },
+    {
+      "page": "/hoteles/hoteles-china",
+      "regex": "^/hoteles/hoteles\\-china(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hoteles/hoteles\\-china(?:/)?$"
+    },
+    {
+      "page": "/hoteles/hoteles-corea",
+      "regex": "^/hoteles/hoteles\\-corea(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hoteles/hoteles\\-corea(?:/)?$"
+    },
+    {
+      "page": "/hoteles/hoteles-dubai",
+      "regex": "^/hoteles/hoteles\\-dubai(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hoteles/hoteles\\-dubai(?:/)?$"
+    },
+    {
+      "page": "/hoteles/hoteles-japon",
+      "regex": "^/hoteles/hoteles\\-japon(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hoteles/hoteles\\-japon(?:/)?$"
+    },
+    {
+      "page": "/hoteles/hoteles-tailandia",
+      "regex": "^/hoteles/hoteles\\-tailandia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hoteles/hoteles\\-tailandia(?:/)?$"
+    },
+    {
+      "page": "/Hoteles/HotelesEnChina/HotelesChina",
+      "regex": "^/Hoteles/HotelesEnChina/HotelesChina(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Hoteles/HotelesEnChina/HotelesChina(?:/)?$"
+    },
+    {
+      "page": "/Hoteles/HotelesEnCoreaSur/HotelesCorea",
+      "regex": "^/Hoteles/HotelesEnCoreaSur/HotelesCorea(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Hoteles/HotelesEnCoreaSur/HotelesCorea(?:/)?$"
+    },
+    {
+      "page": "/Hoteles/HotelesEnDubai/HotelesDubai",
+      "regex": "^/Hoteles/HotelesEnDubai/HotelesDubai(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Hoteles/HotelesEnDubai/HotelesDubai(?:/)?$"
+    },
+    {
+      "page": "/Hoteles/HotelesEnJapon/HotelesJapon",
+      "regex": "^/Hoteles/HotelesEnJapon/HotelesJapon(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Hoteles/HotelesEnJapon/HotelesJapon(?:/)?$"
+    },
+    {
+      "page": "/Hoteles/HotelesEnTailandia/HotelesTailandia",
+      "regex": "^/Hoteles/HotelesEnTailandia/HotelesTailandia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Hoteles/HotelesEnTailandia/HotelesTailandia(?:/)?$"
+    },
+    {
+      "page": "/Hoteles/HotelesInicio/HotelesInicio",
+      "regex": "^/Hoteles/HotelesInicio/HotelesInicio(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Hoteles/HotelesInicio/HotelesInicio(?:/)?$"
+    },
+    {
+      "page": "/itinerarios",
+      "regex": "^/itinerarios(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/art-oriental",
+      "regex": "^/itinerarios/art\\-oriental(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/art\\-oriental(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/camino-de-kumano",
+      "regex": "^/itinerarios/camino\\-de\\-kumano(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/camino\\-de\\-kumano(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/imperio-del-sol",
+      "regex": "^/itinerarios/imperio\\-del\\-sol(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/imperio\\-del\\-sol(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/imperio-japones",
+      "regex": "^/itinerarios/imperio\\-japones(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/imperio\\-japones(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/japon-corea-del-sur",
+      "regex": "^/itinerarios/japon\\-corea\\-del\\-sur(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/japon\\-corea\\-del\\-sur(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/japon-express",
+      "regex": "^/itinerarios/japon\\-express(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/japon\\-express(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/japon-increible",
+      "regex": "^/itinerarios/japon\\-increible(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/japon\\-increible(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/japon-y-china",
+      "regex": "^/itinerarios/japon\\-y\\-china(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/japon\\-y\\-china(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/japon-y-dubai-maravilloso",
+      "regex": "^/itinerarios/japon\\-y\\-dubai\\-maravilloso(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/japon\\-y\\-dubai\\-maravilloso(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/japon-y-dubai-total",
+      "regex": "^/itinerarios/japon\\-y\\-dubai\\-total(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/japon\\-y\\-dubai\\-total(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/japon-y-tailandia-joyas-lejano-oriente",
+      "regex": "^/itinerarios/japon\\-y\\-tailandia\\-joyas\\-lejano\\-oriente(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/japon\\-y\\-tailandia\\-joyas\\-lejano\\-oriente(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/japon-y-tailandia-lo-mejor",
+      "regex": "^/itinerarios/japon\\-y\\-tailandia\\-lo\\-mejor(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/japon\\-y\\-tailandia\\-lo\\-mejor(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/origen-del-sol",
+      "regex": "^/itinerarios/origen\\-del\\-sol(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/origen\\-del\\-sol(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/samurais-y-shaolines",
+      "regex": "^/itinerarios/samurais\\-y\\-shaolines(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/samurais\\-y\\-shaolines(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/seul-a-tokio",
+      "regex": "^/itinerarios/seul\\-a\\-tokio(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/seul\\-a\\-tokio(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/titanes-del-pacifico",
+      "regex": "^/itinerarios/titanes\\-del\\-pacifico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/titanes\\-del\\-pacifico(?:/)?$"
+    },
+    {
+      "page": "/itinerarios/ultimo-samurai",
+      "regex": "^/itinerarios/ultimo\\-samurai(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/itinerarios/ultimo\\-samurai(?:/)?$"
+    },
+    {
+      "page": "/Itinerarios/Itinerarios",
+      "regex": "^/Itinerarios/Itinerarios(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Itinerarios/Itinerarios(?:/)?$"
+    },
+    {
+      "page": "/LandingKeyword/HomeKeywords",
+      "regex": "^/LandingKeyword/HomeKeywords(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/LandingKeyword/HomeKeywords(?:/)?$"
+    },
+    {
+      "page": "/LandingKeyword/PaquetesJapon",
+      "regex": "^/LandingKeyword/PaquetesJapon(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/LandingKeyword/PaquetesJapon(?:/)?$"
+    },
+    {
+      "page": "/LandingKeyword/ToursJaponKeyword",
+      "regex": "^/LandingKeyword/ToursJaponKeyword(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/LandingKeyword/ToursJaponKeyword(?:/)?$"
+    },
+    {
+      "page": "/nosotros",
+      "regex": "^/nosotros(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/nosotros(?:/)?$"
+    },
+    {
+      "page": "/Nosotros/Nosotros",
+      "regex": "^/Nosotros/Nosotros(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Nosotros/Nosotros(?:/)?$"
+    },
+    {
+      "page": "/NotFound/NotFound",
+      "regex": "^/NotFound/NotFound(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/NotFound/NotFound(?:/)?$"
+    },
+    {
+      "page": "/paquetes-a-japon",
+      "regex": "^/paquetes\\-a\\-japon(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/paquetes\\-a\\-japon(?:/)?$"
+    },
+    {
+      "page": "/tours-a-japon-desde-mexico",
+      "regex": "^/tours\\-a\\-japon\\-desde\\-mexico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tours\\-a\\-japon\\-desde\\-mexico(?:/)?$"
+    },
+    {
+      "page": "/viajes-a-japon-desde-mexico",
+      "regex": "^/viajes\\-a\\-japon\\-desde\\-mexico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/viajes\\-a\\-japon\\-desde\\-mexico(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

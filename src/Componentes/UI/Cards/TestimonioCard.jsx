@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "./TestimonioCard.module.css";
 
 export default function TestimonioCard({
@@ -33,11 +34,13 @@ export default function TestimonioCard({
       aria-label={`Ver testimonio completo de ${nombre}`}
     >
       <div className={styles.imageContainerTestimonio}>
-        <img
-          src={src}
-          alt={alt}
-          className={styles.imagenEstiloTestimonio}
-          loading="lazy"
+        <Image
+            src={src}
+            alt={alt}
+            className={styles.imagenEstiloTestimonio}
+            width={150}
+            height={150}
+            priority={false}
         />
       </div>
       <div className={styles.contendorTestimonioTextos}>

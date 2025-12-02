@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/tours-a-japon-desde-mexico/layout,_N_T_/tours-a-japon-desde-mexico/page,_N_T_/tours-a-japon-desde-mexico"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/tours-a-japon-desde-mexico/__PAGE__",
+    "/tours-a-japon-desde-mexico",
+    "/_index",
+    "/_head"
+  ]
+}

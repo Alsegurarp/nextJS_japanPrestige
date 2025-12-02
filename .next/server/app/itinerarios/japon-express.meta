@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/itinerarios/layout,_N_T_/itinerarios/japon-express/layout,_N_T_/itinerarios/japon-express/page,_N_T_/itinerarios/japon-express"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/itinerarios/japon-express/__PAGE__",
+    "/itinerarios/japon-express",
+    "/itinerarios",
+    "/_index",
+    "/_head"
+  ]
+}

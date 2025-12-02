@@ -1,4 +1,6 @@
-import React, {useEffect} from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 import { Suspense } from 'react';
 import styles from './SamuraisYShaolines.module.css';
 import HeroSection from '../../../Componentes/Sections/HeroSection.jsx';
@@ -63,125 +65,139 @@ import Hotel7 from '../../../assets/Itinerarios/HotelesItinerariosNuevos/China/H
 import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx';
 
 
-    const data = [
-      {
-        title: "15 Días - 13 Noches",
-        subtitle: "Tokio - Hakone - Kioto - Nara - Osaka - Pekin - Xi'an - Shanghái",
-        text: "Un viaje épico que combina lo mejor de Japón y China: templos sagrados, paisajes únicos y la grandeza cultural de dos civilizaciones milenarias.",
-        image: HeroImage,
-        altImg:"Vista frontal del Templo Yasukuni en Tokio, Japón, con cielo nublado al atardecer.",
-        letrasDoradasResponsive: LetrasDoradasResponsive,
-        LetrasDoradasDesktop: LetrasDoradasDesktop, 
-    }];
+const data = [
+  {
+    title: "15 Días - 13 Noches",
+    subtitle: "Tokio - Hakone - Kioto - Nara - Osaka - Pekin - Xi'an - Shanghái",
+    text: "Un viaje épico que combina lo mejor de Japón y China: templos sagrados, paisajes únicos y la grandeza cultural de dos civilizaciones milenarias.",
+    image: HeroImage,
+    altImg: "Vista frontal del Templo Yasukuni en Tokio, Japón, con cielo nublado al atardecer.",
+    letrasDoradasResponsive: LetrasDoradasResponsive,
+    LetrasDoradasDesktop: LetrasDoradasDesktop,
+  }];
 
-    const dataSectionCard = [
-        {
-          title: 'México - Tokio',
-          subtitle: NumeroUno,
-          subtitleAltText: "ilustracion-de-los-numeros-13-y-14-en-formato-svg-diseno-grafico-japan-Premium",
-          text: "Salida en vuelo intercontinental con destino a Japón.",
-          image: LlegadaAeropuerto,
-          altText: 'pasajero-observando-el-ala-del-avion-y-el-oceano-desde-la-ventana-durante-vuelo-internacional-hacia-japon-con-japan-Premium.',
-        },
-        {
-          title: 'Tokio',
-          subtitle: NumeroDos,
-          text: 'Llegada al aeropuerto de Narita o Haneda. Asistencia en español y traslado al hotel. Resto del día libre. Alojamiento.',
-          image: LlegadaKansai,
-          altText: 'turista-llegando-al-aeropuerto-de-kioto-japon-siendo-recibida-por-guia-de-japan-Premium-en-la-zona-de-arribos.',
-        },
-        {
-          title: 'Tokio',
-          subtitle: NumeroTres,
-          text: 'Desayuno. Visita panorámica: Palacio Imperial (exterior), Santuario Meiji, Templo Sensoji en Asakusa, calle comercial Nakamise y barrio de Ginza.  Tarde libre. Alojamiento.',
-          image: VueloEjecutivo,
-          altText: 'turista-con-kimono-tradicional-japones-posando-en-el-bosque-de-bambu-de-kioto-con-japan-Premium.',
-        },{
-          title: 'Tokio - Hakone - Tokio',
-          subtitle: NumeroCuatro,
-          text: 'Desayuno. Excursión al Parque Nacional de Hakone: crucero por el Lago Ashi, teleférico Komagatake y el Valle Owakudani, famoso por sus fumarolas.  Almuerzo incluido. Regreso a Tokio. Alojamiento',
-        image: VistaAvion,
-          altText: 'viajera-en-mirador-con-vista-a-la-torre-de-tokio-y-el-paisaje-urbano-de-la-capital-de-japon-con-japan-Premium',
-        },{
-          title: 'Tokio - Kioto - Nara - Kioto',
-          subtitle: NumeroCinco,
-          text: 'Desayuno. Viaje en tren bala Hikari a Kioto. Excursión a Nara para visitar el Gran Buda del Templo Todaiji y el Parque de los Ciervos Sagrados.  Almuerzo incluido. De regreso, vista panorámica de la Pagoda de Kofukuji. Alojamiento en Kioto.',
-          image: EncantoJapan,
-          altText: 'viajera-frente-al-torii-flotante-de-miyajima-en-hiroshima-durante-el-atardecer-con-japan-Premium.',
-        },{
-          title: 'Kioto',
-          subtitle: NumeroSeis,
-          text: 'Desayuno. Visita al Santuario Heian, el Pabellón Dorado (Kinkakuji) y paseo por el barrio de Gion, hogar de las geishas. Tarde libre. Alojamiento.',
-          image: MiradorTorre,
-          altText: 'pareja-de-turistas-viajando-en-tren-bala-shinkansen-en-japon-con-japan-Premium-disfrutando-del-paisaje-desde-la-ventana.',
-        },{
-          title: 'Kioto',
-          subtitle: NumeroSiete,
-          text: 'Desayuno. Día libre con posibilidad de realizar excursión opcional a Hiroshima. Alojamiento.',
-          image: ToriiFlotante,
-          altText: 'pareja-de-turistas-en-el-templo-nachisan-con-pagoda-roja-y-montanas-de-fondo-en-japon-con-japan-Premium.',
-        },{
-          title: 'Kioto - osaka - Pekín',
-          subtitle: NumeroOcho,
-          text: 'Desayuno. Traslado al aeropuerto de Osaka y vuelo incluido a Pekín. Llegada y traslado al hotel. Alojamiento.',
-          image: TemploNachisan,
-          altText: 'pareja-de-turistas-en-dotonbori-osaka-con-los-carteles-luminosos-iconicos-al-fondo-con-japan-Premium.',
-        },{
-          title: 'Pekín',
-          subtitle: NumeroNueve,
-          text: 'Desayuno. Excursión a la Gran Muralla (Badaling). Almuerzo incluido. Por la tarde, paseo por el moderno barrio de Sanlitun y cena de bienvenida de Pato Laqueado de Pekín. Alojamiento.',
-          image: TurismoDotonbori,
-          altText: 'pareja-de-viajeros-disfrutando-del-jardin-kenrokuen-en-kanazawa-japon-con-japan-Premium.',
-        },{
-          title: 'Pekín',
-          subtitle: NumeroDiez,
-          text: 'Desayuno. Visita de la ciudad: Plaza Tiananmen, Palacio Imperial y el Palacio de Verano. Almuerzo incluido. Alojamiento.',
-          image: JardinKenrokuen,
-          altText: 'grupo-de-viajeros-posando-en-la-aldea-tradicional-de-shirakawago-en-kanazawa-japon-con-japan-Premium.',
-        },{
-          title: 'Pekín - Xi’an',
-          subtitle: NumeroOnce,
-          text: 'Desayuno. Visita al Templo del Cielo. Almuerzo incluido. Traslado en tren de alta velocidad a Xi’an. Alojamiento.',
-          image: GrupoTuristas,
-          altText: 'pareja-navegando-en-barca-sobre-lago-con-cerezos-en-flor-y-barco-tradicional-al-fondo-en-takayama-con-japan-Premium.',
-        },{
-          title: 'Xi’an',
-          subtitle: NumeroDoce,
-          text: 'Desayuno. Excursión al Museo de Guerreros y Corceles de Terracota y la fábrica de terracota. Almuerzo incluido. Por la tarde, visita a la Pagoda de la Oca Silvestre, el Barrio Musulmán y la Gran Mezquita. Alojamiento.',
-          image: PaseoEnBarca,
-          altText: 'viajera-frente-al-castillo-de-himeji-en-japon-disfrutando-de-su-arquitectura-tradicional-con-japan-Premium.',
-        },{
-          title: 'Xi’an - Shanghái',
-          subtitle: NumeroTrece,
-          text: 'Desayuno. Vuelo incluido hacia Shanghái. Llegada y traslado al hotel. Alojamiento.',
-          image: CastilloHimeji,
-          altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',
-        },{
-          title: 'Shanghái',
-          subtitle: NumeroCatorce,
-          text: 'Desayuno. Visita de la ciudad: Jardín Yuyuan, Templo del Buda de Jade y paseo por el Malecón del Bund. Almuerzo incluido. Tarde libre. Alojamiento.',
-          image: CatarataJapon,
-          altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',
-        },{
-          title: 'Shanghái - México',
-          subtitle: NumeroQuince,
-          text: 'Desayuno. Traslado al aeropuerto para el vuelo de regreso. Fin de nuestros servicios.',
-          image: TrasladoMexico,
-          altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',
-        },
-    ];
+const dataSectionCard = [
+  {
+    title: 'México - Tokio',
+    subtitle: NumeroUno,
+    subtitleAltText: "Número 1",
+    text: "Salida en vuelo intercontinental con destino a Japón.",
+    image: LlegadaAeropuerto,
+    altText: 'pasajero-observando-el-ala-del-avion-y-el-oceano-desde-la-ventana-durante-vuelo-internacional-hacia-japon-con-japan-Premium.',
+  },
+  {
+    title: 'Tokio',
+    subtitle: NumeroDos,
+    subtitleAltText: "Número 2",
+    text: 'Llegada al aeropuerto de Narita o Haneda. Asistencia en español y traslado al hotel. Resto del día libre. Alojamiento.',
+    image: LlegadaKansai,
+    altText: 'turista-llegando-al-aeropuerto-de-kioto-japon-siendo-recibida-por-guia-de-japan-Premium-en-la-zona-de-arribos.',
+  },
+  {
+    title: 'Tokio',
+    subtitle: NumeroTres,
+    subtitleAltText: "Número 3",
+    text: 'Desayuno. Visita panorámica: Palacio Imperial (exterior), Santuario Meiji, Templo Sensoji en Asakusa, calle comercial Nakamise y barrio de Ginza.  Tarde libre. Alojamiento.',
+    image: VueloEjecutivo,
+    altText: 'turista-con-kimono-tradicional-japones-posando-en-el-bosque-de-bambu-de-kioto-con-japan-Premium.',
+  }, {
+    title: 'Tokio - Hakone - Tokio',
+    subtitle: NumeroCuatro,
+    subtitleAltText: "Número 4",
+    text: 'Desayuno. Excursión al Parque Nacional de Hakone: crucero por el Lago Ashi, teleférico Komagatake y el Valle Owakudani, famoso por sus fumarolas.  Almuerzo incluido. Regreso a Tokio. Alojamiento',
+    image: VistaAvion,
+    altText: 'viajera-en-mirador-con-vista-a-la-torre-de-tokio-y-el-paisaje-urbano-de-la-capital-de-japon-con-japan-Premium',
+  }, {
+    title: 'Tokio - Kioto - Nara - Kioto',
+    subtitle: NumeroCinco,
+    subtitleAltText: "Número 5",
+    text: 'Desayuno. Viaje en tren bala Hikari a Kioto. Excursión a Nara para visitar el Gran Buda del Templo Todaiji y el Parque de los Ciervos Sagrados.  Almuerzo incluido. De regreso, vista panorámica de la Pagoda de Kofukuji. Alojamiento en Kioto.',
+    image: EncantoJapan,
+    altText: 'viajera-frente-al-torii-flotante-de-miyajima-en-hiroshima-durante-el-atardecer-con-japan-Premium.',
+  }, {
+    title: 'Kioto',
+    subtitle: NumeroSeis,
+    subtitleAltText: "Número 6",
+    text: 'Desayuno. Visita al Santuario Heian, el Pabellón Dorado (Kinkakuji) y paseo por el barrio de Gion, hogar de las geishas. Tarde libre. Alojamiento.',
+    image: MiradorTorre,
+    altText: 'pareja-de-turistas-viajando-en-tren-bala-shinkansen-en-japon-con-japan-Premium-disfrutando-del-paisaje-desde-la-ventana.',
+  }, {
+    title: 'Kioto',
+    subtitle: NumeroSiete,
+    subtitleAltText: "Número 7",
+    text: 'Desayuno. Día libre con posibilidad de realizar excursión opcional a Hiroshima. Alojamiento.',
+    image: ToriiFlotante,
+    altText: 'pareja-de-turistas-en-el-templo-nachisan-con-pagoda-roja-y-montanas-de-fondo-en-japon-con-japan-Premium.',
+  }, {
+    title: 'Kioto - osaka - Pekín',
+    subtitle: NumeroOcho,
+    subtitleAltText: "Número 8",
+    text: 'Desayuno. Traslado al aeropuerto de Osaka y vuelo incluido a Pekín. Llegada y traslado al hotel. Alojamiento.',
+    image: TemploNachisan,
+    altText: 'pareja-de-turistas-en-dotonbori-osaka-con-los-carteles-luminosos-iconicos-al-fondo-con-japan-Premium.',
+  }, {
+    title: 'Pekín',
+    subtitle: NumeroNueve,
+    subtitleAltText: "Número 9",
+    text: 'Desayuno. Excursión a la Gran Muralla (Badaling). Almuerzo incluido. Por la tarde, paseo por el moderno barrio de Sanlitun y cena de bienvenida de Pato Laqueado de Pekín. Alojamiento.',
+    image: TurismoDotonbori,
+    altText: 'pareja-de-viajeros-disfrutando-del-jardin-kenrokuen-en-kanazawa-japon-con-japan-Premium.',
+  }, {
+    title: 'Pekín',
+    subtitle: NumeroDiez,
+    subtitleAltText: "Número 10",
+    text: 'Desayuno. Visita de la ciudad: Plaza Tiananmen, Palacio Imperial y el Palacio de Verano. Almuerzo incluido. Alojamiento.',
+    image: JardinKenrokuen,
+    altText: 'grupo-de-viajeros-posando-en-la-aldea-tradicional-de-shirakawago-en-kanazawa-japon-con-japan-Premium.',
+  }, {
+    title: 'Pekín - Xi’an',
+    subtitle: NumeroOnce,
+    subtitleAltText: "Número 11",
+    text: 'Desayuno. Visita al Templo del Cielo. Almuerzo incluido. Traslado en tren de alta velocidad a Xi’an. Alojamiento.',
+    image: GrupoTuristas,
+    altText: 'pareja-navegando-en-barca-sobre-lago-con-cerezos-en-flor-y-barco-tradicional-al-fondo-en-takayama-con-japan-Premium.',
+  }, {
+    title: 'Xi’an',
+    subtitle: NumeroDoce,
+    subtitleAltText: "Número 12",
+    text: 'Desayuno. Excursión al Museo de Guerreros y Corceles de Terracota y la fábrica de terracota. Almuerzo incluido. Por la tarde, visita a la Pagoda de la Oca Silvestre, el Barrio Musulmán y la Gran Mezquita. Alojamiento.',
+    image: PaseoEnBarca,
+    altText: 'viajera-frente-al-castillo-de-himeji-en-japon-disfrutando-de-su-arquitectura-tradicional-con-japan-Premium.',
+  }, {
+    title: 'Xi’an - Shanghái',
+    subtitle: NumeroTrece,
+    subtitleAltText: "Número 13",
+    text: 'Desayuno. Vuelo incluido hacia Shanghái. Llegada y traslado al hotel. Alojamiento.',
+    image: CastilloHimeji,
+    altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',
+  }, {
+    title: 'Shanghái',
+    subtitle: NumeroCatorce,
+    subtitleAltText: "Número 14",
+    text: 'Desayuno. Visita de la ciudad: Jardín Yuyuan, Templo del Buda de Jade y paseo por el Malecón del Bund. Almuerzo incluido. Tarde libre. Alojamiento.',
+    image: CatarataJapon,
+    altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',
+  }, {
+    title: 'Shanghái - México',
+    subtitle: NumeroQuince,
+    subtitleAltText: "Número 15",
+    text: 'Desayuno. Traslado al aeropuerto para el vuelo de regreso. Fin de nuestros servicios.',
+    image: TrasladoMexico,
+    altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',
+  },
+];
 
-    const downloadData = [
-    {
-      id: "01",
-      title: "japón premium",
-      subtitle: "Samurais & Shaolines",
-      dias: "15 Días - 13 Noches",
-      urlDescargar: "https://japonpremium.com/pdf/itinerario-japon-premium-samurai-shaolines.pdf"
-    }];
-    
-    const dataPrecios = [
-{
+const downloadData = [
+  {
+    id: "01",
+    title: "japón premium",
+    subtitle: "Samurais & Shaolines",
+    dias: "15 Días - 13 Noches",
+    urlDescargar: "https://japonpremium.com/pdf/itinerario-japon-premium-samurai-shaolines.pdf"
+  }];
+
+const dataPrecios = [
+  {
     title: 'Temporada A',
     prices: [
       { type: 'DOBLE', category: 'ESTÁNDAR', amount: '9,563' },
@@ -217,71 +233,74 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
       { type: 'SENCILLA', category: 'SUPERIOR', amount: '14,298' },
     ],
   },
-    ];
+];
 
-    const lista = [
-        {id: "01",
-        icon: avion,
-        title: "No incluye: Impuestos aéreos aproximados de 595 USD.",
-        },
-        {id: "02",
-        icon: calendario,
-        title: "Temporada B y C: Aplica suplemento (Verano - Fin de año) 450 USD.",
-        },
-        {id: "03",
-        icon: user,
-        title: "Los precios: Son por persona, sujetos a cambios sin previo aviso.",
-        }
-    ];
+const lista = [
+  {
+    id: "01",
+    icon: avion,
+    title: "No incluye: Impuestos aéreos aproximados de 595 USD.",
+  },
+  {
+    id: "02",
+    icon: calendario,
+    title: "Temporada B y C: Aplica suplemento (Verano - Fin de año) 450 USD.",
+  },
+  {
+    id: "03",
+    icon: user,
+    title: "Los precios: Son por persona, sujetos a cambios sin previo aviso.",
+  }
+];
 
-    const Travelinfo = [
-      {
-      id: "01",
-      title: "EL VIAJE A JAPÓN INCLUYE",
-      description: [
-        "Vuelo redondo México - Japón - México.",
-        "Vuelo interno Osaka - Pekín.",
-        "6 noches de alojamiento en Japón.",
-        "6 desayunos y 2 almuerzos.",
-        "Viaje en tren bala JR Hikari (Tokio-Kioto) en clase turista.",
-        "Transporte de equipaje Tokio-Kioto (día 6).",
-        "Visitas guiadas en español (excepto traslados aeropuerto-hotel).",
-        "Internet portátil premium ilimitado (velocidad de 187 Mbps).",
-        "Seguro de viaje.",
-        "7 noches de alojamiento en hoteles previstos.",
-        "6 comidas (5 almuerzos + 1 cena).",
-        "Tren de alta velocidad Pekín-Xi’an en clase turista.",
-        "Guía de habla hispana durante todo el recorrido.",
-        "Visitas y entradas según itinerario.",
-        "Seguro de viaje."
-        ],
-      }, {
-      id: "02",
-      title: "EL VIAJE A JAPÓN NO INCLUYE",
-      description: [
-        "Comidas y bebidas no mencionadas.",
-        "Actividades opcionales.",
-        "Propinas.",
-        "Gastos personales.",
-        "Seguro de cancelación.",
-        "Lo que no esté indicado en el apartado “El Viaje a … incluye”."
-        ],
-      },   {
-      id: "03",
-      title: "NOTAS IMPORTANTES",
-      description: [
-        "Para este viaje no se requiere visa estadounidense.",
-        "El traslado de salida no cuenta con asistencia en español.",
-        "Tarifas en dólares estadounidenses, pagaderas al tipo de cambio vigente.",
-        "Precios por persona según habitación, sujetos a disponibilidad.",
-        "El pasajero debe contar con pasaporte vigente mínimo 6 meses al momento del viaje.",
-        "Tarifas sujetas a cambios sin previo aviso por temporada o confirmación.",
-        "Actividades opcionales tienen costo adicional."
-        ],
-      },
-    ];
+const Travelinfo = [
+  {
+    id: "01",
+    title: "EL VIAJE A JAPÓN INCLUYE",
+    description: [
+      "Vuelo redondo México - Japón - México.",
+      "Vuelo interno Osaka - Pekín.",
+      "6 noches de alojamiento en Japón.",
+      "6 desayunos y 2 almuerzos.",
+      "Viaje en tren bala JR Hikari (Tokio-Kioto) en clase turista.",
+      "Transporte de equipaje Tokio-Kioto (día 6).",
+      "Visitas guiadas en español (excepto traslados aeropuerto-hotel).",
+      "Internet portátil premium ilimitado (velocidad de 187 Mbps).",
+      "Seguro de viaje.",
+      "7 noches de alojamiento en hoteles previstos.",
+      "6 comidas (5 almuerzos + 1 cena).",
+      "Tren de alta velocidad Pekín-Xi’an en clase turista.",
+      "Guía de habla hispana durante todo el recorrido.",
+      "Visitas y entradas según itinerario.",
+      "Seguro de viaje."
+    ],
+  }, {
+    id: "02",
+    title: "EL VIAJE A JAPÓN NO INCLUYE",
+    description: [
+      "Comidas y bebidas no mencionadas.",
+      "Actividades opcionales.",
+      "Propinas.",
+      "Gastos personales.",
+      "Seguro de cancelación.",
+      "Lo que no esté indicado en el apartado “El Viaje a … incluye”."
+    ],
+  }, {
+    id: "03",
+    title: "NOTAS IMPORTANTES",
+    description: [
+      "Para este viaje no se requiere visa estadounidense.",
+      "El traslado de salida no cuenta con asistencia en español.",
+      "Tarifas en dólares estadounidenses, pagaderas al tipo de cambio vigente.",
+      "Precios por persona según habitación, sujetos a disponibilidad.",
+      "El pasajero debe contar con pasaporte vigente mínimo 6 meses al momento del viaje.",
+      "Tarifas sujetas a cambios sin previo aviso por temporada o confirmación.",
+      "Actividades opcionales tienen costo adicional."
+    ],
+  },
+];
 
-    const hotels = [
+const hotels = [
   {
     id: '1',
     imageUrl: Hotel1,
@@ -336,18 +355,18 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
 
 export default function SamuraisYShaolines() {
 
-      useEffect(() => {
-          document.title = `Itinerario Samuráis & Shaolines | Japón PREMIUM®`; 
-        }, []);
+  useEffect(() => {
+    document.title = `Itinerario Samuráis & Shaolines | Japón PREMIUM®`;
+  }, []);
 
 
   return (
     <>
-    <FlyingButton />
-    <HeroSection data={data}/>
-    <Suspense fallback={<div className={styles.loading}>Cargando contenido...</div>}>
+      <FlyingButton />
+      <HeroSection data={data} />
+      <Suspense fallback={<div className={styles.loading}>Cargando contenido...</div>}>
         <ItinerariosTemplate data={dataSectionCard} />
-        
+
         {downloadData.map(item => (
           <DownloadSection key={item.id} title={item.title} subtitle={item.subtitle} dias={item.dias} urlDescargar={item.urlDescargar} />
         ))}
@@ -360,7 +379,7 @@ export default function SamuraisYShaolines() {
           />
         ))}
         <div className={styles.stepsContainerStyle}>
-          {lista.map((l, index) => <DetallesNoContiene key={l.id} icon={l.icon} title={l.title} index={index}/>)}
+          {lista.map((l, index) => <DetallesNoContiene key={l.id} icon={l.icon} title={l.title} index={index} />)}
         </div>
 
         <TripDetails Travelinfo={Travelinfo} />

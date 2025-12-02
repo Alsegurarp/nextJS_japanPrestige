@@ -1,9 +1,23 @@
+'use client';
+
 import './HeroSection.css';
+import Image from 'next/image';
+import React from 'react'
 
 import itinerariosViajeRutas from '../../assets/icono-itinerarios-viaje-rutas.svg';
 import japanPrestige from '../../assets/itinerarios-japan-prestige.webp';
 
-
+// Helper to extract src from imported images
+const getSrcValue = (img) => {
+  if (!img) return null;
+  if (typeof img === 'object' && img.src) {
+    return img.src;
+  }
+  if (typeof img === 'string') {
+    return img;
+  }
+  return null;
+};
 
 const data = [
   {title: itinerariosViajeRutas,
@@ -14,14 +28,24 @@ const data = [
 
 
 function Hero(props){
+  const imageSrc = getSrcValue(props.image);
+  const iconSrc = getSrcValue(itinerariosViajeRutas);
 
-
-
-   return(
-    <div className='beneficiosContainerHero' style={{backgroundImage: `url(${props.image})`}} alt="Mujer japonesa con kimono, participando en ceremonia tradicional, ideal para viajeros que buscan inmersión cultural">
-      <div className='contenidoBeneficiosItinerariosHeroItinerario'>
+  return(
+    <div className='beneficiosContainerHero' style={{position: 'relative'}}>
+      {imageSrc && (
+        <Image 
+          src={imageSrc}
+          alt="Mujer japonesa con kimono, participando en ceremonia tradicional, ideal para viajeros que buscan inmersión cultural"
+          fill
+          priority
+          style={{objectFit: 'cover'}}
+          className='heroImg'
+        />
+      )}
+      <div className='contenidoBeneficiosItinerariosHeroItinerario' style={{position: 'relative', zIndex: 2}}>
           <div className="titlePlusSubtitleHero" data-aos="fade-right">
-            <img className='itinerariosImagenHero' src={itinerariosViajeRutas} alt="Ícono de Itinerarios de Viaje - Rutas y Experiencias Turísticas" />
+            {iconSrc && <Image className='itinerariosImagenHero' src={iconSrc} alt="Ícono de Itinerarios de Viaje - Rutas y Experiencias Turísticas" width={80} height={80} />}
           </div>
           <div className='stepsContainerStyleHero'>
             <ItinerariesCard number="+50" titulo="Diferentes Itinerarios" id={1} />
@@ -32,7 +56,6 @@ function Hero(props){
       </div>
     </div>
   )
-
 }
 
 function ItinerariesCard({number, titulo, id}) {
@@ -57,11 +80,7 @@ const styles = {
 };
 
 
-import React from 'react'
-
 const HeroSection = React.memo(function HeroSection() {
-
-
     return (
     <div>
       {data.map((s) => (

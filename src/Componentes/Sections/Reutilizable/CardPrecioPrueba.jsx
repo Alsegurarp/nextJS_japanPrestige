@@ -1,19 +1,19 @@
 // CardPrecio.jsx
 import React from 'react';
 import styles from './CardPrecioPrueba.module.css';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function CardPrecio({ title, prices }) {
   return (
     <section className={styles.section}>
       <div className={styles.titleRow}>
         <div className={styles.divider} />
-          <h2 className={styles.title}>{title}</h2>
+        <h2 className={styles.title}>{title}</h2>
         <div className={styles.divider} />
       </div>
-      
 
-      
+
+
       <div className={styles.cardsRow}>
         {prices.map((p, i) => (
           <div className={styles.card} key={`${p.type}-${p.category}-${i}`}>
@@ -37,9 +37,9 @@ export default function CardPrecio({ title, prices }) {
           </div>
         ))}
       </div>
-          <Link className={styles.buttonCATcaracteristicas} to="/contacto">
-              ¡Cotiza Ahora!
-          </Link>
+      <Link className={styles.buttonCATcaracteristicas} href="/contacto">
+        ¡Cotiza Ahora!
+      </Link>
     </section>
   );
 }

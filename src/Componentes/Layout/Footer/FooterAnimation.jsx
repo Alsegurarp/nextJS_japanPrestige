@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useRef, useEffect } from 'react';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
@@ -99,7 +101,7 @@ const FooterAnimation = React.forwardRef((props, ref) => {
                         duration: 0.5,
                         ease: 'power2.out',
                         stagger: 0.06
-                    }, 
+                    },
                     '-=0.1'
                 );
         };
@@ -144,20 +146,20 @@ const FooterAnimation = React.forwardRef((props, ref) => {
             letter.addEventListener('mouseenter', () => {
                 // Don't trigger hover animation if scroll animation is running
                 if (isScrollTriggered.current) return;
-                
+
                 isHovering = true;
                 // Play animation nonstop
                 if (!tl.isActive()) {
                     tl.play();
                     isHovering = false;
-                } 
+                }
             });
 
 
             letter.addEventListener('mouseleave', () => {
                 // Don't trigger hover animation if scroll animation is running
                 if (isScrollTriggered.current) return;
-                
+
                 isHovering = false;
                 // Once animation is done and mouse leaves, reverse it
                 tl.eventCallback('onComplete', () => {
@@ -174,8 +176,8 @@ const FooterAnimation = React.forwardRef((props, ref) => {
                 }
             });
         });
-        
-        }, []) //termina gsap
+
+    }, []) //termina gsap
 
     // Dynamic refresh for lazy loading
     useEffect(() => {
@@ -227,7 +229,7 @@ const FooterAnimation = React.forwardRef((props, ref) => {
                         </div>
                     ))}
                 </div>
-                
+
                 <div className="container" id="animated-text" ref={ref}>
                     {['P', 'R', 'E', 'M', 'I', 'U', 'M'].map((char, index) => (
                         <div className='div-letter' key={index + 20}>

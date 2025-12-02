@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect } from 'react';
 import { Suspense } from 'react';
 import styles from './SeulATokio.module.css';
@@ -82,7 +84,7 @@ const dataSectionCard = [
   {
     title: 'México - Seúl',
     subtitle: NumeroUno,
-    subtitleAltText: "ilustracion-de-los-numeros-13-y-14-en-formato-svg-diseno-grafico-japan-Premium",
+    subtitleAltText: "Número 1",
     text: "Salida en vuelo intercontinental con destino a Corea del Sur.",
     image: LlegadaAeropuerto,
     altText: 'pasajero-observando-el-ala-del-avion-y-el-oceano-desde-la-ventana-durante-vuelo-internacional-hacia-japon-con-japan-Premium.',
@@ -90,6 +92,7 @@ const dataSectionCard = [
   {
     title: 'Seúl',
     subtitle: NumeroDos,
+    subtitleAltText: "Número 2",
     text: 'Llegada y traslado al hotel. Por la tarde, recorrido en metro hacia el Ayuntamiento y Palacio Deoksugung, iluminado de noche. Paseo por Myeongdong, la zona comercial más vibrante de la ciudad. Cena incluida. Alojamiento.',
     image: LlegadaKansai,
     altText: 'turista-llegando-al-aeropuerto-de-kioto-japon-siendo-recibida-por-guia-de-japan-Premium-en-la-zona-de-arribos.',
@@ -97,72 +100,84 @@ const dataSectionCard = [
   {
     title: 'Seúl',
     subtitle: NumeroTres,
+    subtitleAltText: "Número 3",
     text: 'Desayuno. Visita panorámica: Changdeokgung Palace (Patrimonio de la Humanidad por la UNESCO), el barrio tradicional Bukchon Hanok Village, el Memorial de la Guerra, el moderno Distrito Gangnam y la Lotte World Tower (entrada no incluida). Almuerzo incluido. Tiempo libre. Alojamiento.',
     image: VueloEjecutivo,
     altText: 'turista-con-kimono-tradicional-japones-posando-en-el-bosque-de-bambu-de-kioto-con-japan-Premium.',
   }, {
     title: 'Seúl - Suwon - Jeonju',
     subtitle: NumeroCuatro,
+    subtitleAltText: "Número 4",
     text: 'Desayuno. Visita al Palacio Gyeongbokgung con su ceremonia de cambio de guardia, la Fortaleza de Hwaseong Haenggung y el Samsung Innovation Museum.  Almuerzo incluido. Continuación a Jeonju para conocer su casco histórico y el Hanok Village. Alojamiento.',
     image: VistaAvion,
     altText: 'viajera-en-mirador-con-vista-a-la-torre-de-tokio-y-el-paisaje-urbano-de-la-capital-de-japon-con-japan-Premium',
   }, {
     title: 'Jeonju - Haeinsa - Daegu - Busan',
     subtitle: NumeroCinco,
+    subtitleAltText: "Número 5",
     text: 'Desayuno. Excursión al Templo Haeinsa (Patrimonio de la Humanidad por la UNESCO), donde se conserva el Tripitaka Koreana. Visita al museo de medicina oriental en Daegu. Almuerzo incluido. Continuación a Busan, con recorrido por la playa de Haeundae y su puerto deportivo. Alojamiento.',
     image: EncantoJapan,
     altText: 'viajera-frente-al-torii-flotante-de-miyajima-en-hiroshima-durante-el-atardecer-con-japan-Premium.',
   }, {
     title: 'Busan - Ferry nocturno a Japón',
     subtitle: NumeroSeis,
+    subtitleAltText: "Número 6",
     text: 'Desayuno. Visita al Templo Haedong Yonggung, al Memorial de Naciones Unidas y al Parque Yongdusan. Almuerzo incluido. Por la noche, embarque en ferry hacia Shimonoseki (Japón) en camarotes dobles con baño. Alojamiento a bordo.',
     image: MiradorTorre,
     altText: 'pareja-de-turistas-viajando-en-tren-bala-shinkansen-en-japon-con-japan-Premium-disfrutando-del-paisaje-desde-la-ventana.',
   }, {
     title: 'Shimonoseki - Iwakuni - Itsukushima - Hiroshima',
     subtitle: NumeroSiete,
+    subtitleAltText: "Número 7",
     text: 'Llegada a Japón. Visita a Iwakuni y su puente Kintai-Kyo. Continuación a la isla de Miyajima para conocer el Santuario Itsukushima. En Hiroshima, recorrido por el Memorial de la Paz, la Cúpula de la Bomba y el Museo de la  Paz. Cena incluida. Alojamiento.',
     image: ToriiFlotante,
     altText: 'pareja-de-turistas-en-el-templo-nachisan-con-pagoda-roja-y-montanas-de-fondo-en-japon-con-japan-Premium.',
   }, {
     title: 'Hiroshima - Matsuyama',
     subtitle: NumeroOcho,
+    subtitleAltText: "Número 8",
     text: 'Desayuno. Ferry a Shikoku. Visita al Castillo de Matsuyama, el Templo Ishiteji y el tradicional Dogo Onsen. Almuerzo incluido. Alojamiento.',
     image: TemploNachisan,
     altText: 'pareja-de-turistas-en-dotonbori-osaka-con-los-carteles-luminosos-iconicos-al-fondo-con-japan-Premium.',
   }, {
     title: 'Matsuyama - Kotohira - Takamatsu - Naruto - Kobe',
     subtitle: NumeroNueve,
+    subtitleAltText: "Número 9",
     text: 'Desayuno. Visita al Santuario Kotohira, los jardines de Ritsurin y el puente de Naruto, famoso por sus remolinos marinos. Almuerzo incluido. Llegada a Kobe. Alojamiento.',
     image: TurismoDotonbori,
     altText: 'pareja-de-viajeros-disfrutando-del-jardin-kenrokuen-en-kanazawa-japon-con-japan-Premium.',
   }, {
     title: 'Kobe - Osaka - Monte Koya',
     subtitle: NumeroDiez,
+    subtitleAltText: "Número 10",
     text: 'Desayuno. Visita al Museo Memorial del Terremoto de Kobe. Traslado a Monte Koya, centro espiritual del budismo Shingon. Visita al Mausoleo de  Okuno, el Templo Kongobuji y práctica de meditación zen (Ajikan). Cena vegetariana incluida. Alojamiento en monasterio budista.',
     image: JardinKenrokuen,
     altText: 'grupo-de-viajeros-posando-en-la-aldea-tradicional-de-shirakawago-en-kanazawa-japon-con-japan-Premium.',
   }, {
     title: 'Monte Koya - Kioto',
     subtitle: NumeroOnce,
+    subtitleAltText: "Número 11",
     text: 'Desayuno japonés en el templo. Traslado a Kioto: visita al Santuario Fushimi Inari, el Palacio Imperial, el Pabellón Dorado (Kinkakuji) y paseo por el barrio de Gion. Alojamiento.',
     image: GrupoTuristas,
     altText: 'pareja-navegando-en-barca-sobre-lago-con-cerezos-en-flor-y-barco-tradicional-al-fondo-en-takayama-con-japan-Premium.',
   }, {
     title: ' Kioto - Tokio',
     subtitle: NumeroDoce,
+    subtitleAltText: "Número 12",
     text: 'Desayuno. Viaje en tren bala hacia Tokio. Llegada y recorrido nocturno en metro por la vibrante zona de Shinjuku. Cena incluida. Alojamiento.',
     image: PaseoEnBarca,
     altText: 'viajera-frente-al-castillo-de-himeji-en-japon-disfrutando-de-su-arquitectura-tradicional-con-japan-Premium.',
   }, {
     title: 'Tokio',
     subtitle: NumeroTrece,
+    subtitleAltText: "Número 13",
     text: 'Desayuno. Tour panorámico: Templo Zojoji, el cruce de Shibuya, Santuario Meiji, avenida Omotesando, Palacio Imperial, barrio tecnológico Akihabara, el estadio de sumo Kokugikan y el Templo Sensoji en Asakusa. Almuerzo incluido. Tarde libre. Alojamiento.',
     image: CastilloHimeji,
     altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',
   }, {
     title: 'Tokio - México',
     subtitle: NumeroCatorce,
+    subtitleAltText: "Número 14",
     text: 'Desayuno. Traslado al aeropuerto para el vuelo de regreso. Fin de nuestros servicios.',
     image: CatarataJapon,
     altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',

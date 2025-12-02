@@ -1,6 +1,8 @@
+'use client';
+
 import React, { useState, useEffect, useRef, lazy } from "react";
 import styles from "./Form.module.css";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import axios from "axios";
 
 const ReCAPTCHA = lazy(() => import("react-google-recaptcha"));
@@ -8,54 +10,54 @@ const Calendar = lazy(() => import("./FormComponents/Calendar.jsx"));
 
 export function Form() {
   // --- state ---
-    const [firstName, setFirstName] = useState("");
-    const [lastName,  setLastName]  = useState("");
-    const [email,     setEmail]     = useState("");
-    const [countryCode, setCountryCode] = useState("+52");
-    const [phone,     setPhone]     = useState("");
-    const [comments,  setComments]  = useState("");
-    const [validCaptcha, setValidCaptcha] = useState(null);
-    const [date, setDate]   = useState(null);
-    const [open, setOpen]   = useState(false);
-    // prueba form
-    const [submitting, setSubmitting] = useState(false);
-    const [serverMsg, setServerMsg] = useState(null);
-    const [serverErr, setServerErr] = useState(null);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [countryCode, setCountryCode] = useState("+52");
+  const [phone, setPhone] = useState("");
+  const [comments, setComments] = useState("");
+  const [validCaptcha, setValidCaptcha] = useState(null);
+  const [date, setDate] = useState(null);
+  const [open, setOpen] = useState(false);
+  // prueba form
+  const [submitting, setSubmitting] = useState(false);
+  const [serverMsg, setServerMsg] = useState(null);
+  const [serverErr, setServerErr] = useState(null);
 
 
-    const wrapperRef = useRef(null);
-    const maxDate = new Date(2035, 5, 30); // 30 Jun 2035
+  const wrapperRef = useRef(null);
+  const maxDate = new Date(2035, 5, 30); // 30 Jun 2035
 
-    const countries = [
-        { name: "México", code: "+52" },
-        { name: "Estados Unidos", code: "+1" },
-        { name: "Canadá", code: "+1" },
-        { name: "España", code: "+34" },
-        { name: "Argentina", code: "+54" },
-        { name: "Colombia", code: "+57" },
-        { name: "Chile", code: "+56" },
-        { name: "Perú", code: "+51" },
-        { name: "Guatemala", code: "+502" },
-        { name: "Costa Rica", code: "+506" },
-    ];
+  const countries = [
+    { name: "México", code: "+52" },
+    { name: "Estados Unidos", code: "+1" },
+    { name: "Canadá", code: "+1" },
+    { name: "España", code: "+34" },
+    { name: "Argentina", code: "+54" },
+    { name: "Colombia", code: "+57" },
+    { name: "Chile", code: "+56" },
+    { name: "Perú", code: "+51" },
+    { name: "Guatemala", code: "+502" },
+    { name: "Costa Rica", code: "+506" },
+  ];
 
-    const ccDigitsLen = countryCode.replace("+", "").length;
-    const fullPhone = `${countryCode}${phone}`; // e.g. +52 5512345678
+  const ccDigitsLen = countryCode.replace("+", "").length;
+  const fullPhone = `${countryCode}${phone}`; // e.g. +52 5512345678
 
-    // total digits (country + number)
-    const totalDigits = ccDigitsLen + phone.length;
+  // total digits (country + number)
+  const totalDigits = ccDigitsLen + phone.length;
 
-    const debounce = (func, wait) => {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
+  const debounce = (func, wait) => {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
       clearTimeout(timeout);
-      func(...args);
+      timeout = setTimeout(later, wait);
     };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
   };
-};
 
 
   // --- regex helpers ---
@@ -71,29 +73,29 @@ export function Form() {
 
   // Phone: keep optional leading '+' then digits only; cap to 13 total chars
   const cleanPhone = (v, cc = countryCode) => {
-  let s = v.replace(/[^\d]/g, ""); // only digits
-  const ccLen = cc.replace("+", "").length;
-  const maxTotal = 13;             // total cap (country + number)
-  const maxDigits = Math.max(0, maxTotal - ccLen);
-  return s.slice(0, maxDigits);
-};
+    let s = v.replace(/[^\d]/g, ""); // only digits
+    const ccLen = cc.replace("+", "").length;
+    const maxTotal = 13;             // total cap (country + number)
+    const maxDigits = Math.max(0, maxTotal - ccLen);
+    return s.slice(0, maxDigits);
+  };
 
   // --- validators ---
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
-    const isFirstNameValid = firstName.trim().length > 0;
-    const isLastNameValid  = lastName.trim().length  > 0;
-    const isEmailValid     = emailRegex.test(email);
+  const isFirstNameValid = firstName.trim().length > 0;
+  const isLastNameValid = lastName.trim().length > 0;
+  const isEmailValid = emailRegex.test(email);
 
-    const isPhoneValid = totalDigits >= 10 && totalDigits <= 13;
+  const isPhoneValid = totalDigits >= 10 && totalDigits <= 13;
 
   // Submit only when all required are valid + captcha
   const isFormValid = isFirstNameValid && isLastNameValid && isEmailValid && isPhoneValid && validCaptcha;
 
-    // captcha key
-    const reCaptchaKey = import.meta?.env?.VITE_RECAPTCHA_SITE_KEY
-    
-    const navigate = useNavigate();
+  // captcha key
+  const reCaptchaKey = import.meta?.env?.VITE_RECAPTCHA_SITE_KEY
+
+  const router = useRouter();
 
   // --- calendar wiring (unchanged) ---
   useEffect(() => {
@@ -177,7 +179,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
         setDate(null);
         setValidCaptcha(null);
         // Redirect after a short pause
-        setTimeout(() => navigate("/gracias"), 500);
+        setTimeout(() => router.push("/gracias"), 500);
       } else {
         throw new Error(resp.data?.message || "Error en la respuesta del servidor");
       }
@@ -353,6 +355,6 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
       </div>
     </>
   );
-  }
+}
 
-  export default Form;
+export default Form;

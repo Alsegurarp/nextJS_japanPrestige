@@ -1,0 +1,59 @@
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/Home/RespuestaObjeciones.module.css [app-client] (css) */
+.RespuestaObjeciones-module__ZuQcBq__respuestasContainerStyle {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 60px;
+  display: flex;
+}
+
+.RespuestaObjeciones-module__ZuQcBq__sectionRespuestasContainer {
+  background-color: #111;
+}
+
+.RespuestaObjeciones-module__ZuQcBq__containerTitle {
+  align-items: center;
+  justify-items: items;
+  text-align: center;
+}
+
+.RespuestaObjeciones-module__ZuQcBq__titleStyle {
+  color: #fff;
+  justify-self: center;
+  padding: 20px;
+  font-family: nohemi;
+  font-size: 24px;
+}
+
+@media (min-width: 1300px) {
+  .RespuestaObjeciones-module__ZuQcBq__respuestasContainerStyle {
+    grid-template-columns: repeat(3, 1fr);
+    place-items: start center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 60px auto 0;
+    display: grid;
+  }
+
+  .RespuestaObjeciones-module__ZuQcBq__sectionRespuestasContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+  }
+
+  .RespuestaObjeciones-module__ZuQcBq__containerTitle {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+  }
+
+  .RespuestaObjeciones-module__ZuQcBq__titleStyle {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=d79c4_src_Componentes_Sections_Home_RespuestaObjeciones_module_css_bad6b30c._.single.css.map*/

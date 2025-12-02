@@ -1,0 +1,161 @@
+/* [project]/Desktop/Prestige-Japan-master/src/pages/Faqs/Faqs.module.css [app-client] (css) */
+.Faqs-module__ChlIVW__loading {
+  text-align: center;
+  color: #aaa;
+  padding: 40px;
+  font-family: nohemi, system-ui, sans-serif;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: nohemi;
+  src: url("/assets/fonts/nohemi-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.Faqs-module__ChlIVW__loadingDots {
+  text-align: center;
+  color: #888;
+  padding: 40px;
+  font-family: nohemi, system-ui, sans-serif;
+  font-size: 16px;
+}
+
+.Faqs-module__ChlIVW__loadingDots:after {
+  content: "…";
+  text-align: left;
+  width: 1.5em;
+  animation: 1.2s steps(4, end) infinite Faqs-module__ChlIVW__dots;
+  display: inline-block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Faqs-module__ChlIVW__loadingDots:after {
+    animation: none;
+  }
+}
+
+@keyframes Faqs-module__ChlIVW__dots {
+  0% {
+    content: "";
+  }
+
+  25% {
+    content: ".";
+  }
+
+  50% {
+    content: "..";
+  }
+
+  75% {
+    content: "...";
+  }
+
+  100% {
+    content: "";
+  }
+}
+
+.Faqs-module__ChlIVW__sectionRespuestasContainer {
+  padding-block: 24px;
+}
+
+.Faqs-module__ChlIVW__containerTitle {
+  text-align: center;
+  width: min(100%, 720px);
+  margin-inline: auto;
+}
+
+.Faqs-module__ChlIVW__titleStyle {
+  color: #fff;
+  padding: 20px;
+  font-family: nohemi, system-ui, sans-serif;
+  font-size: 24px;
+}
+
+.Faqs-module__ChlIVW__respuestasContainerStyle {
+  margin-top: 24px;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 10px;
+  width: min(100%, 720px);
+  min-width: 0;
+  margin-inline: auto;
+  display: flex;
+}
+
+.Faqs-module__ChlIVW__respuestasContainerStyle > * + * {
+  margin-block-start: 10px;
+}
+
+@supports (gap: 10px) {
+  .Faqs-module__ChlIVW__respuestasContainerStyle > * + * {
+    margin-block-start: 0;
+  }
+}
+
+.Faqs-module__ChlIVW__respuestasContainerStyle > * {
+  width: 100%;
+  min-width: 0;
+}
+
+.Faqs-module__ChlIVW__cadaPregunta {
+  text-align: start;
+  color: #fef0ad;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #1a1919;
+  border-radius: 20px;
+  min-height: 80px;
+  margin: 0;
+  padding: 20px;
+}
+
+.Faqs-module__ChlIVW__preguntaHeader {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+@media (min-width: 400px) {
+  .Faqs-module__ChlIVW__cadaPregunta {
+    align-self: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .Faqs-module__ChlIVW__respuestasContainerStyle {
+    width: min(100%, 820px);
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1020px) {
+  .Faqs-module__ChlIVW__respuestasContainerStyle {
+    width: min(100%, 960px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .Faqs-module__ChlIVW__respuestasContainerStyle {
+    width: min(100%, 1100px);
+  }
+}
+
+@media (min-width: 1300px) {
+  .Faqs-module__ChlIVW__respuestasContainerStyle {
+    width: min(100%, 1200px);
+  }
+}
+
+@media (min-width: 1600px) {
+  .Faqs-module__ChlIVW__respuestasContainerStyle {
+    width: min(100%, 1200px);
+  }
+}
+
+/*# sourceMappingURL=Desktop_Prestige-Japan-master_src_pages_Faqs_Faqs_module_css_bad6b30c._.single.css.map*/

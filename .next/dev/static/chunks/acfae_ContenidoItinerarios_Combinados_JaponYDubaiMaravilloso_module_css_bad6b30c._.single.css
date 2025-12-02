@@ -1,0 +1,23 @@
+/* [project]/Desktop/Prestige-Japan-master/src/pages/ContenidoItinerarios/Combinados/JaponYDubaiMaravilloso.module.css [app-client] (css) */
+.JaponYDubaiMaravilloso-module__RNtklG__loading {
+  text-align: center;
+  color: #aaa;
+  padding: 40px;
+  font-family: nohemi;
+  font-size: 16px;
+}
+
+.JaponYDubaiMaravilloso-module__RNtklG__stepsContainerStyle {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  display: flex;
+}
+
+@media (min-width: 600px) {
+  .JaponYDubaiMaravilloso-module__RNtklG__stepsContainerStyle {
+    margin-top: 80px;
+  }
+}
+
+/*# sourceMappingURL=acfae_ContenidoItinerarios_Combinados_JaponYDubaiMaravilloso_module_css_bad6b30c._.single.css.map*/

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Image from 'next/image';
 import styles from './HotelCard.module.css';
 
 export default function HotelCard({ country = 'Japón',location, hotelName, imageUrl, className = '', style, alt}) {
@@ -13,10 +14,13 @@ export default function HotelCard({ country = 'Japón',location, hotelName, imag
         >
           
           <div className={styles.imageContainer}>
-            <img
-              src={imageUrl}
-              alt={alt}
-              className={styles.image}
+            <Image
+                src={imageUrl}
+                alt={alt}
+                className={styles.image}
+                width={400}
+                height={300}
+                priority={false}
             />
             
             <div className={styles.overlay} />

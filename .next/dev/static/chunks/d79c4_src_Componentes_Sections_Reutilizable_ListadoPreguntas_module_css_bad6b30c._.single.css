@@ -1,0 +1,114 @@
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/Reutilizable/ListadoPreguntas.module.css [app-client] (css) */
+.ListadoPreguntas-module__WHaUbq__respuestasContainerStyle {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 60px;
+  display: flex;
+}
+
+.ListadoPreguntas-module__WHaUbq__sectionRespuestasContainer {
+  background-color: #111;
+  padding-bottom: 60px;
+}
+
+.ListadoPreguntas-module__WHaUbq__containerTitle {
+  align-items: center;
+  justify-items: items;
+  text-align: center;
+}
+
+.ListadoPreguntas-module__WHaUbq__titleStyle {
+  color: #fff;
+  justify-self: center;
+  padding: 20px;
+  font-family: nohemi;
+  font-size: 24px;
+}
+
+.ListadoPreguntas-module__WHaUbq__cadaPregunta {
+  text-align: start;
+  color: #fef0ad;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #1a1919;
+  border-radius: 20px;
+  align-self: flex-start;
+  min-width: 276px;
+  max-width: 400px;
+  margin: 0 20px 20px;
+  padding: 20px;
+}
+
+.ListadoPreguntas-module__WHaUbq__preguntaHeader {
+  justify-content: space-between;
+  align-items: start;
+  display: flex;
+}
+
+@media (min-width: 1300px) {
+  .ListadoPreguntas-module__WHaUbq__respuestasContainerStyle {
+    max-width: 1300px;
+  }
+
+  .ListadoPreguntas-module__WHaUbq__sectionRespuestasContainer {
+    justify-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .ListadoPreguntas-module__WHaUbq__respuestasContainerStyle {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 60px;
+    display: flex;
+  }
+
+  .ListadoPreguntas-module__WHaUbq__cadaPregunta {
+    align-self: center;
+    min-width: 500px;
+    max-width: 501px;
+    min-height: 80px;
+  }
+}
+
+@media (min-width: 1020px) {
+  .ListadoPreguntas-module__WHaUbq__cadaPregunta {
+    min-width: 600px;
+    max-width: 601px;
+    min-height: 80px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .ListadoPreguntas-module__WHaUbq__respuestasContainerStyle {
+    max-width: 1500px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .ListadoPreguntas-module__WHaUbq__respuestasContainerStyle {
+    box-sizing: border-box;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: start center;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+    display: grid;
+  }
+
+  .ListadoPreguntas-module__WHaUbq__sectionRespuestasContainer {
+    justify-items: center;
+  }
+
+  .ListadoPreguntas-module__WHaUbq__cadaPregunta {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=d79c4_src_Componentes_Sections_Reutilizable_ListadoPreguntas_module_css_bad6b30c._.single.css.map*/

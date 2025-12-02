@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { SyncLoader } from "react-spinners";
 import styles from './LoadingSpinner.module.css';

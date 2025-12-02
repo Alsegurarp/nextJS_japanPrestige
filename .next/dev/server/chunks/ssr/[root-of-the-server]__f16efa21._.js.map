@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/apps1/Desktop/Prestige-Japan-master/src/app/itinerarios/japon-y-dubai-maravilloso/page.jsx"],"sourcesContent":["import JaponDubaiMaravilloso from '../../../pages/ContenidoItinerarios/Combinados/JaponYDubaiMaravilloso.jsx';\r\n\r\nexport default function Page() {\r\n    return <JaponDubaiMaravilloso />;\r\n}\r\n"],"names":[],"mappings":";;;;;;;;;;;;AAEe,SAAS;IACpB,qBAAO,wRAAC;;;;;AACZ"}}]
+}

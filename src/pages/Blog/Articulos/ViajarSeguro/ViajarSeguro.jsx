@@ -1,5 +1,6 @@
 import React from 'react';
 import HeroSection from '../../../../Componentes/Sections/HeroSection.jsx';
+import Image from 'next/image';
 import styles from './ViajarSeguro.module.css';
 
 import HeroImage from '../../../../assets/ImagenesBlogs/PortadasHero/Blog_Seguro_Viajar_Solo_Japon_Premium_Explorar_Solitario_Descubrimiento_Introspeccion.webp';
@@ -163,7 +164,7 @@ function Card({ image, index, altText, title, subtitle, dias, text}) {
      </div>
       </div>
       <div className={styles.card_image}>
-          <img src={image} alt={altText} loading="lazy"/>
+          <Image src={image} alt={altText} loading="lazy" width={600} height={400} priority={false}/>
         </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import HeroSection from '../../../../Componentes/Sections/HeroSection.jsx';
 import styles from './VisadoJapon.module.css';
 
@@ -135,7 +136,7 @@ function Card({ image, index, altText, title, subtitle, dias, text}) {
      </div>
       </div>
       <div className={styles.card_image}>
-          <img src={image} alt={altText} loading="lazy"/>
+          <Image src={image} alt={altText} width={1080} height={810} priority={false}/>
         </div>
     </div>
   );

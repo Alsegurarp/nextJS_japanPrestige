@@ -1,24 +1,25 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './CaracteristicasItinerarios.module.css';
 
 import CaminoKumano from '../../../assets/Itinerarios/PortadasItinerarios/Camino_Kumano_Portada_Templo_Asakusa_Kannon.webp';
 import ViveJapon from '../../../assets/Itinerarios/PortadasItinerarios/Japon_Express_Portada_Japon_Premium_Santuario_Meiji.webp';
 import PaqueCerezos from '../../../assets/Itinerarios/PortadasItinerarios/Japon_Increible_Japon_Premium_Puente_Nijubashi_Palacio.webp';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 
 
 const CaracteristicasItinerarios = React.memo(function CaracteristicasItinerarios() {
-  return (
-    <>
-        <Cards/>
-    </>
-  )
+    return (
+        <>
+            <Cards />
+        </>
+    )
 });
 
 export default CaracteristicasItinerarios;
 
-function Cards(){
+function Cards() {
     const infoCards = [
         {
             id: "01",
@@ -43,15 +44,15 @@ function Cards(){
         },
     ]
 
-    return(
+    return (
         <>
             <div className={styles.caracteristicasConteinerMain}>
-                <div style={{display: "flex", justifyContent: "center"}}>
-                    <h2 style={{fontFamily: "nohemi", fontSize: "24px", color: "white"}}>Lo más vendido</h2>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                    <h2 style={{ fontFamily: "nohemi", fontSize: "24px", color: "white" }}>Lo más vendido</h2>
                 </div>
                 <div className={styles.stepsContainerStyle}>
                     {infoCards.map((card, index) => (
-                        <Card key={card.id} text={card.text} title={card.title} image={card.image} imageAlt={card.imageAlt} index={index}/>
+                        <Card key={card.id} text={card.text} title={card.title} image={card.image} imageAlt={card.imageAlt} index={index} />
                     ))}
                 </div>
             </div>
@@ -62,22 +63,22 @@ function Cards(){
 function Card(props) {
 
     const titleEstilo = {
-    fontSize: "20px",
-    color: "white",
-    lineHeight: "1.2",
-    fontFamily: "nohemi"
+        fontSize: "20px",
+        color: "white",
+        lineHeight: "1.2",
+        fontFamily: "nohemi"
     }
 
-    return(
+    return (
         <>
             <div className={styles.cardStyle} data-aos="fade-up" data-aos-delay={props.index * 10} data-aos-duration="100">
-                <img src={props.image} alt={props.imageAlt} className={styles.cardImage} loading='lazy' />
+                <Image src={props.image} alt={props.imageAlt} className={styles.cardImage} width={1080} height={1350} priority={false} />
                 <div className={styles.contenidoCardsTextoItinerario}>
                     <h2 style={titleEstilo}>{props.title}</h2>
                     <p className={styles.textoEstilo}>
                         {props.text}
                     </p>
-                    <Link to="/contacto" className={styles.buttonCATcaracteristicas}>Solicita tu experiencia</Link>
+                    <Link href="/contacto" className={styles.buttonCATcaracteristicas}>Solicita tu experiencia</Link>
                 </div>
             </div>
         </>

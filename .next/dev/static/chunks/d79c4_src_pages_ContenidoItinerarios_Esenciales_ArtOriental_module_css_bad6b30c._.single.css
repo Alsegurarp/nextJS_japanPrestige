@@ -1,0 +1,23 @@
+/* [project]/Desktop/Prestige-Japan-master/src/pages/ContenidoItinerarios/Esenciales/ArtOriental.module.css [app-client] (css) */
+.ArtOriental-module__Cfl9Vq__loading {
+  text-align: center;
+  color: #aaa;
+  padding: 40px;
+  font-family: nohemi;
+  font-size: 16px;
+}
+
+.ArtOriental-module__Cfl9Vq__stepsContainerStyle {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  display: flex;
+}
+
+@media (min-width: 600px) {
+  .ArtOriental-module__Cfl9Vq__stepsContainerStyle {
+    margin-top: 80px;
+  }
+}
+
+/*# sourceMappingURL=d79c4_src_pages_ContenidoItinerarios_Esenciales_ArtOriental_module_css_bad6b30c._.single.css.map*/

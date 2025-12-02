@@ -1,0 +1,119 @@
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Navbar/MenuOpen.css [app-client] (css) */
+.menu-exit {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.backgroundMenuShadow {
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  z-index: 10;
+  background: #0009;
+  position: fixed;
+  inset: 0;
+}
+
+.menuStyle {
+  z-index: 999;
+  color: #000;
+  background-color: #fff;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 1024px;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 30px #0006;
+}
+
+.closeMenuButton {
+  cursor: pointer;
+  background: none;
+  border: none;
+  align-self: flex-end;
+  margin: 20px;
+  font-size: 24px;
+}
+
+.listaMenuMain {
+  width: 140px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listaSubMenu {
+  cursor: pointer;
+  color: #000;
+  align-items: center;
+  height: 45px;
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  display: flex;
+}
+
+.listadoItinerariosSubMenu {
+  color: #000;
+  flex: 1;
+  margin: 0;
+  padding: 0 30px;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.itinerariosStyleList {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+@media (min-width: 820px) {
+  .menuStyle {
+    z-index: 999;
+    background-color: #fff;
+    flex-direction: column;
+    width: 45vw;
+    max-width: 1024px;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 30px #0006;
+  }
+
+  .itinerariosStyleList {
+    padding: 8px 0;
+    font-size: 16px;
+  }
+
+  .listaSubMenu {
+    height: 50px;
+    padding: 15px 30px;
+    font-size: 24px;
+  }
+
+  .listaMenuMain {
+    width: 200px;
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+.menu-fade-out {
+  animation: .5s forwards fadeOutLeft;
+}
+
+/*# sourceMappingURL=3d860_Prestige-Japan-master_src_Componentes_Layout_Navbar_MenuOpen_css_bad6b30c._.single.css.map*/

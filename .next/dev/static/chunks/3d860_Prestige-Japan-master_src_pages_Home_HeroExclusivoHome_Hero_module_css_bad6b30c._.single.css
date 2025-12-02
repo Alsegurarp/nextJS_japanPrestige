@@ -1,0 +1,135 @@
+/* [project]/Desktop/Prestige-Japan-master/src/pages/Home/HeroExclusivoHome/Hero.module.css [app-client] (css) */
+.Hero-module__zCzKtG__hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: -60px;
+  overflow: hidden;
+}
+
+@media (min-width: 740px) {
+  .Hero-module__zCzKtG__hero {
+    height: 100vh;
+  }
+}
+
+.Hero-module__zCzKtG__heroImg {
+  object-fit: cover;
+  object-position: var(--bgPos, 50% 50%);
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+
+.Hero-module__zCzKtG__overlay {
+  pointer-events: none;
+  background: linear-gradient(to top, #00000073, #00000026);
+  position: absolute;
+  inset: 0;
+}
+
+.Hero-module__zCzKtG__content {
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  align-content: end;
+  justify-items: center;
+  gap: .7rem;
+  width: min(1200px, 92vw);
+  height: 82%;
+  margin: 0 auto;
+  padding: clamp(1rem, 4vw, 2.5rem);
+  display: grid;
+  position: relative;
+}
+
+.Hero-module__zCzKtG__bigTitle {
+  min-width: 180px;
+  max-width: 240px;
+}
+
+@media (min-width: 600px) {
+  .Hero-module__zCzKtG__content {
+    text-align: center;
+    justify-items: center;
+    gap: 1.3rem;
+  }
+
+  .Hero-module__zCzKtG__bigTitle {
+    min-width: 380px;
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Hero-module__zCzKtG__content {
+    gap: .5rem;
+    padding: 3rem 2rem;
+  }
+
+  .Hero-module__zCzKtG__bigTitle {
+    min-width: 420px;
+    max-width: 500px;
+  }
+}
+
+.Hero-module__zCzKtG__title {
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: #fff;
+  text-shadow: 2px 2px 4px #0000004d;
+  margin: 0;
+  font-family: BigCaslon;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.Hero-module__zCzKtG__subtitle {
+  opacity: .95;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 2px #0003;
+  margin: 0;
+  font-family: nohemi;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.Hero-module__zCzKtG__copy {
+  max-width: 65ch;
+  margin: .25rem 0 0;
+  font-size: clamp(.95rem, .7vw + .8rem, 1.2rem);
+}
+
+.Hero-module__zCzKtG__buttonCATcaracteristicas {
+  color: #290f04;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  min-width: 160px;
+  box-shadow: 0 4px 15px rgba(72 34 21, .3);
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #d8aa3e 0%, #e8ca6e 12%, #f9e7a0 28%, #ecd37c 50%, #dfb44e 63%, #d9ab3e 100%);
+  border: 1px solid #290f04;
+  border-radius: 5px;
+  place-self: center;
+  margin-top: 15px;
+  padding: 12px 20px;
+  font-family: nohemi;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.Hero-module__zCzKtG__buttonCATcaracteristicas:hover {
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ad882d 0%, #c1a65a 12%, #d9c382 28%, #c8af62 50%, #b39038 63%, #aa862e 100%);
+  transform: translateY(-2px);
+}
+
+/*# sourceMappingURL=3d860_Prestige-Japan-master_src_pages_Home_HeroExclusivoHome_Hero_module_css_bad6b30c._.single.css.map*/

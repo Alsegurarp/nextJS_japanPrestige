@@ -1,0 +1,11 @@
+__turbopack_load_page_chunks__("/ContenidoItinerarios/Esenciales/TitanesDelPacifico", [
+  "static/chunks/f8852e920a508031.js",
+  "static/chunks/1eb02aa6b7958e78.js",
+  "static/chunks/889dc661983502b7.js",
+  "static/chunks/f91b2af79bb88a22.js",
+  "static/chunks/fb6d69e74d907fe4.js",
+  "static/chunks/479577e60baee72c.css",
+  "static/chunks/8137fa7eb18ca0c9.css",
+  "static/chunks/dcb865ed185a865c.css",
+  "static/chunks/turbopack-1899d1bd2e41a53b.js"
+])

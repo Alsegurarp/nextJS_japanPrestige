@@ -1,4 +1,6 @@
-import React, {useEffect, useMemo} from 'react';
+'use client';
+
+import React, { useEffect, useMemo } from 'react';
 import { lazy, Suspense } from 'react';
 import '../../styles/home.css';
 import styles from "../../Componentes/UI/Cards/StepsCardsHome.module.css";
@@ -7,10 +9,10 @@ import styles from "../../Componentes/UI/Cards/StepsCardsHome.module.css";
 import WhenVisible from '../../components/UI/WhenVisible.jsx';
 import LoadingSpinner from '../../Componentes/UI/LoadingSpinner.jsx';
 // Lazy load each section individually for better bundle splitting
-const CaracteristicasHome = lazy(() => import ('../../Componentes/UI/Cards/CaracteristicasCards.jsx'));
-const StepsCardsHome = lazy(() => import ('../../Componentes/UI/Cards/StepsCardsHome.jsx'));
-const WholeSectionCard = lazy(() => import ('./componentsLanding/WholeSectionCard.jsx'));
-const StepCard = lazy(() => import ('../../Componentes/UI/Cards/StepCard.jsx'));
+const CaracteristicasHome = lazy(() => import('../../Componentes/UI/Cards/CaracteristicasCards.jsx'));
+const StepsCardsHome = lazy(() => import('../../Componentes/UI/Cards/StepsCardsHome.jsx'));
+const WholeSectionCard = lazy(() => import('../../Componentes/LandingKeyword/WholeSectionCard.jsx'));
+const StepCard = lazy(() => import('../../Componentes/UI/Cards/StepCard.jsx'));
 
 
 
@@ -40,48 +42,48 @@ import imagenWeb from '../../assets/landing_viajes_japon/1920_viajes_a_japon_des
 import FlyingButton from '../../Componentes/UI/FlyingButtons/FlyingButton.jsx';
 
 const infoCards = [
-            {
-                id: "01",
-                text: "Itinerario exclusivo en el que combinamos arte, cultura y confort en cada paso. Descubre templos, jardines y experiencias únicas con el respaldo de expertos locales.",
-                image: Geisha,
-                imageAlt: "Geisha con kimono tradicional caminando por las calles de Gion, símbolo de la cultura japonesa"
-            },
-            {
-                id: "02",
-                text: "Crea un tour por Japón con alojamientos boutique, cenas privadas y visitas guiadas a los rincones más emblemáticos del país del sol naciente.",
-                image: Concierge,
-                imageAlt: "Concierge profesional en hotel de lujo japonés, brindando atención personalizada a turistas internacionales"
-            },
-            {
-                id: "03",
-                text: "Cada pausa en Japón está diseñada para reconectar contigo. Disfruta de templos zen, baños termales y rituales ancestrales que elevan cuerpo y mente.",
-                image: Cena,
-                imageAlt: "Exquisita cena japonesa con platos tradicionales servidos en restaurante de alta gama en Japón"
-            },
-        ];
+  {
+    id: "01",
+    text: "Itinerario exclusivo en el que combinamos arte, cultura y confort en cada paso. Descubre templos, jardines y experiencias únicas con el respaldo de expertos locales.",
+    image: Geisha,
+    imageAlt: "Geisha con kimono tradicional caminando por las calles de Gion, símbolo de la cultura japonesa"
+  },
+  {
+    id: "02",
+    text: "Crea un tour por Japón con alojamientos boutique, cenas privadas y visitas guiadas a los rincones más emblemáticos del país del sol naciente.",
+    image: Concierge,
+    imageAlt: "Concierge profesional en hotel de lujo japonés, brindando atención personalizada a turistas internacionales"
+  },
+  {
+    id: "03",
+    text: "Cada pausa en Japón está diseñada para reconectar contigo. Disfruta de templos zen, baños termales y rituales ancestrales que elevan cuerpo y mente.",
+    image: Cena,
+    imageAlt: "Exquisita cena japonesa con platos tradicionales servidos en restaurante de alta gama en Japón"
+  },
+];
 
-        const infoCards2 = [
-            {
-                id: "01",
-                text: "Una guía esencial para quienes viajan desde México a Japón y desean vivir la tradición con respeto, elegancia y autenticidad. Aprende los códigos culturales que transformarán tu experiencia.",
-                image: imgBlog1,
-                imageAlt: "Geisha con kimono tradicional caminando por las calles de Gion, símbolo de la cultura japonesa"
-            },
-            {
-                id: "02",
-                text: "De la moda de lujo a la artesanía tradicional, descubre dónde encontrar los mejores artículos japoneses con estilo y personalidad durante tu viaje desde México.",
-                image: imgBlog2,
-                imageAlt: "Concierge profesional en hotel de lujo japonés, brindando atención personalizada a turistas internacionales"
-            },
-            {
-                id: "03",
-                text: "Desde la floración del sakura hasta el momiji otoñal y la nieve en los templos, cada época del año ofrece un encanto distinto para tus viajes a Japón desde México.",
-                image: imgBlog3,
-                imageAlt: "Exquisita cena japonesa con platos tradicionales servidos en restaurante de alta gama en Japón"
-            },
-        ];
+const infoCards2 = [
+  {
+    id: "01",
+    text: "Una guía esencial para quienes viajan desde México a Japón y desean vivir la tradición con respeto, elegancia y autenticidad. Aprende los códigos culturales que transformarán tu experiencia.",
+    image: imgBlog1,
+    imageAlt: "Geisha con kimono tradicional caminando por las calles de Gion, símbolo de la cultura japonesa"
+  },
+  {
+    id: "02",
+    text: "De la moda de lujo a la artesanía tradicional, descubre dónde encontrar los mejores artículos japoneses con estilo y personalidad durante tu viaje desde México.",
+    image: imgBlog2,
+    imageAlt: "Concierge profesional en hotel de lujo japonés, brindando atención personalizada a turistas internacionales"
+  },
+  {
+    id: "03",
+    text: "Desde la floración del sakura hasta el momiji otoñal y la nieve en los templos, cada época del año ofrece un encanto distinto para tus viajes a Japón desde México.",
+    image: imgBlog3,
+    imageAlt: "Exquisita cena japonesa con platos tradicionales servidos en restaurante de alta gama en Japón"
+  },
+];
 
-      const infoCards3 = [
+const infoCards3 = [
   {
     title: "Lujo con sentido y propósito",
     subtitle: "JAPÓN PREMIUM®",
@@ -119,51 +121,51 @@ const infoCards = [
 
 function HomeKeywords() {
   useEffect(() => {
-        document.title = "Viajes a Japón desde México PREMIUM® | Viajes desde México a Japón"; 
-      }, []);
+    document.title = "Viajes a Japón desde México PREMIUM® | Viajes desde México a Japón";
+  }, []);
 
   return (
     <>
-    <FlyingButton />
+      <FlyingButton />
       <Hero
-            title="VIAJES A JAPÓN DESDE MÉXICO"
-            subtitle="Explora Japón con itinerarios exclusivos, experiencias auténticas y atención personalizada desde México."
-            altImg="Pareja con kimono en calle tradicional de Kioto"
-            imgMobile={{webp: imagenMobile}}      // 768w
-            imgTablet={{webp: imagenTablet}}     // 1280w
-            imgDesktop={{webp: imagenWeb}}          // 1920w
-            bgPosition="50% 40%"
-          />
+        title="VIAJES A JAPÓN DESDE MÉXICO"
+        subtitle="Explora Japón con itinerarios exclusivos, experiencias auténticas y atención personalizada desde México."
+        altImg="Pareja con kimono en calle tradicional de Kioto"
+        imgMobile={imagenMobile}
+        imgTablet={imagenTablet}
+        imgDesktop={imagenWeb}
+        bgPosition="50% 40%"
+      />
       {/* CaracteristicasHome - Load immediately after hero */}
-    <WhenVisible placeholder={<div style={{height: '420px'}} />}>
-      <Suspense fallback={<LoadingSpinner label="Cargando características..." />}>
-        <Title>Itinerarios personalizados para cada viajero</Title>
-        <Subtitle>Itinerario exclusivo en el que combinamos arte, cultura y confort en cada paso. Descubre templos, jardines y experiencias únicas con el respaldo de expertos locales.</Subtitle>
-        <CaracteristicasHome infoCards={infoCards}/>
-      </Suspense>
-    </WhenVisible>
+      <WhenVisible placeholder={<div style={{ height: '420px' }} />}>
+        <Suspense fallback={<LoadingSpinner label="Cargando características..." />}>
+          <Title>Itinerarios personalizados para cada viajero</Title>
+          <Subtitle>Itinerario exclusivo en el que combinamos arte, cultura y confort en cada paso. Descubre templos, jardines y experiencias únicas con el respaldo de expertos locales.</Subtitle>
+          <CaracteristicasHome infoCards={infoCards} />
+        </Suspense>
+      </WhenVisible>
 
-    <WhenVisible placeholder={<div style={{height: '420px'}} />}>
-      <Suspense fallback={<LoadingSpinner label="Cargando características..." />}>
-      <Title>Inspírate para tu próximo viaje a Japón desde México</Title>
-      <Subtitle>Sumérgete en la cultura japonesa con nuestras guías, consejos y artículos exclusivos diseñados para los viajeros que buscan descubrir Japón desde México con lujo, autenticidad y propósito.</Subtitle>
-        <CaracteristicasHome infoCards={infoCards2}/>
-      </Suspense>
-    </WhenVisible>
+      <WhenVisible placeholder={<div style={{ height: '420px' }} />}>
+        <Suspense fallback={<LoadingSpinner label="Cargando características..." />}>
+          <Title>Inspírate para tu próximo viaje a Japón desde México</Title>
+          <Subtitle>Sumérgete en la cultura japonesa con nuestras guías, consejos y artículos exclusivos diseñados para los viajeros que buscan descubrir Japón desde México con lujo, autenticidad y propósito.</Subtitle>
+          <CaracteristicasHome infoCards={infoCards2} />
+        </Suspense>
+      </WhenVisible>
 
-    {/* BeneficiosHome */}
-    <WhenVisible placeholder={<div style={{height: '480px'}} />}>
-      <Suspense fallback={<LoadingSpinner label="Cargando beneficios..." />}>
-        <WholeSectionCard infoCards={infoCards3}/>
-      </Suspense>
-    </WhenVisible>
+      {/* BeneficiosHome */}
+      <WhenVisible placeholder={<div style={{ height: '480px' }} />}>
+        <Suspense fallback={<LoadingSpinner label="Cargando beneficios..." />}>
+          <WholeSectionCard infoCards={infoCards3} />
+        </Suspense>
+      </WhenVisible>
 
-    {/* StepsCardsHome */}
-    <WhenVisible placeholder={<div style={{height: '520px'}} />}>
-      <Suspense fallback={<LoadingSpinner label="Cargando proceso..." />}>
-        <StepCardsList />
-      </Suspense>
-    </WhenVisible>
+      {/* StepsCardsHome */}
+      <WhenVisible placeholder={<div style={{ height: '520px' }} />}>
+        <Suspense fallback={<LoadingSpinner label="Cargando proceso..." />}>
+          <StepCardsList />
+        </Suspense>
+      </WhenVisible>
     </>
   )
 }
@@ -171,87 +173,88 @@ function HomeKeywords() {
 export default HomeKeywords
 
 
-function Title({children}){
-    const headingStyle = {
-        textAlign: 'center',
-        fontSize: '24px',
-        marginTop: '40px',
-        marginBottom: '20px',
-        color: '#ffffff',
-        fontFamily: "nohemi"
-    };
+function Title({ children }) {
+  const headingStyle = {
+    textAlign: 'center',
+    fontSize: '24px',
+    marginTop: '40px',
+    marginBottom: '20px',
+    color: '#ffffff',
+    fontFamily: "nohemi"
+  };
 
-  return(
+  return (
     <p style={headingStyle}>{children}</p>
   )
-    
+
 }
 
-function Subtitle({children}){
-    const containerStyle = {
-          justifyItems: 'center',
-    }
+function Subtitle({ children }) {
+  const containerStyle = {
+    justifyItems: 'center',
+  }
 
 
-    const headingStyle = {
-        textAlign: 'center',
-        fontSize: '16px',
-        marginTop: '20px',
-        marginBottom: '20px',
-        color: '#ffffff',
-        fontFamily: "nohemi",
-        padding: '30px',
-        maxWidth: '500px',
-    };
+  const headingStyle = {
+    textAlign: 'center',
+    fontSize: '16px',
+    marginTop: '20px',
+    marginBottom: '20px',
+    color: '#ffffff',
+    fontFamily: "nohemi",
+    padding: '30px',
+    maxWidth: '500px',
+  };
 
-  return(
+  return (
     <div style={containerStyle}>
       <p style={headingStyle}>{children}</p>
     </div>
   )
-    
+
 }
 
 
 
-const StepCardsList = React.memo(function StepCardsList(){
+const StepCardsList = React.memo(function StepCardsList() {
 
-    // Memoize pasos array to prevent recreation on each render
-    const pasos = useMemo(() => [
-      {number: IconNo1,
-        title: "Inicia tu planeación",
-        text: "Comenzamos con una reunión personalizada para entender tus expectativas, intereses y el tipo de experiencia que deseas vivir en Japón.",
-        id:1,
-        alt: "Paso 1: Conversemos sobre tu sueño"
-      },{
-        number: IconNo2,
-        title: "Recibe tu propuesta personalizada",
-        text: "Creamos un itinerario exclusivo con hoteles boutique, experiencias privadas y actividades que reflejan la esencia japonesa, ideal para viajeros que parten desde México.",
-        id:2,
-        alt: "Paso 2: Creamos tu itinerario ideal"
-      },{
-        number: IconNo3,
-        title: "Viaja a Japón con Japón PREMIUM®",
-        text: "Desde tu llegada a Japón hasta el regreso a México, nuestro equipo te acompaña con atención y excelencia en cada paso de tu viaje.",
-        id:3,
-        alt: "Paso 3: Vive tu viaje con Japón PREMIUM®"
-      } 
-    ], [])
+  // Memoize pasos array to prevent recreation on each render
+  const pasos = useMemo(() => [
+    {
+      number: IconNo1,
+      title: "Inicia tu planeación",
+      text: "Comenzamos con una reunión personalizada para entender tus expectativas, intereses y el tipo de experiencia que deseas vivir en Japón.",
+      id: 1,
+      alt: "Paso 1: Conversemos sobre tu sueño"
+    }, {
+      number: IconNo2,
+      title: "Recibe tu propuesta personalizada",
+      text: "Creamos un itinerario exclusivo con hoteles boutique, experiencias privadas y actividades que reflejan la esencia japonesa, ideal para viajeros que parten desde México.",
+      id: 2,
+      alt: "Paso 2: Creamos tu itinerario ideal"
+    }, {
+      number: IconNo3,
+      title: "Viaja a Japón con Japón PREMIUM®",
+      text: "Desde tu llegada a Japón hasta el regreso a México, nuestro equipo te acompaña con atención y excelencia en cada paso de tu viaje.",
+      id: 3,
+      alt: "Paso 3: Vive tu viaje con Japón PREMIUM®"
+    }
+  ], [])
 
   return (
     <section className={styles.sectionStyle}>
       <div className={styles.headingStyle}>Así comienza tu viaje transformador a Japón</div>
       <div className={styles.stepsContainerStyle}>
-        
-        {pasos.map((pasos, index) => 
-        <StepCard
-          number={pasos.number}
-          title={pasos.title}
-          description={pasos.text}
-          key={pasos.id}
-          index={index}
-          alt={pasos.alt}
-        />)}
+
+        {pasos.map((pasos, index) =>
+          <StepCard
+            number={pasos.number}
+            title={pasos.title}
+            description={pasos.text}
+            key={pasos.id}
+            index={index}
+            alt={pasos.alt}
+          />)}
       </div>
     </section>
   );

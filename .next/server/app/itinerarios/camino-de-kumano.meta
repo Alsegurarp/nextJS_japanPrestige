@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/itinerarios/layout,_N_T_/itinerarios/camino-de-kumano/layout,_N_T_/itinerarios/camino-de-kumano/page,_N_T_/itinerarios/camino-de-kumano"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/itinerarios/camino-de-kumano/__PAGE__",
+    "/itinerarios/camino-de-kumano",
+    "/itinerarios",
+    "/_index",
+    "/_head"
+  ]
+}

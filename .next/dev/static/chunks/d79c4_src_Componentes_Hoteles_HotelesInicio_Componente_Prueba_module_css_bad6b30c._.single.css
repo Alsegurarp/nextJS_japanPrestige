@@ -1,0 +1,116 @@
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/Hoteles/HotelesInicio/Componente/Prueba.module.css [app-client] (css) */
+.Prueba-module__okotNG__page {
+  background-color: hsl(var(--background));
+  min-height: 100vh;
+}
+
+.Prueba-module__okotNG__section {
+  padding: 80px 24px;
+}
+
+.Prueba-module__okotNG__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Prueba-module__okotNG__sectionHeader {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.Prueba-module__okotNG__sectionTitle {
+  color: hsl(var(--primary));
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .Prueba-module__okotNG__sectionTitle {
+    font-size: 48px;
+  }
+}
+
+.Prueba-module__okotNG__sectionDescription {
+  color: hsl(var(--muted-foreground));
+  max-width: 48rem;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.Prueba-module__okotNG__destinationsGrid {
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  display: flex;
+}
+
+@media (min-width: 1200px) {
+  .Prueba-module__okotNG__destinationsGrid {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .Prueba-module__okotNG__destinationsGrid {
+    max-width: 1800px;
+  }
+}
+
+.Prueba-module__okotNG__additionalInfo {
+  text-align: center;
+  margin-top: 64px;
+}
+
+.Prueba-module__okotNG__infoCard {
+  background: var(--gradient-card);
+  max-width: 64rem;
+  box-shadow: var(--shadow-premium);
+  border-radius: 16px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.Prueba-module__okotNG__infoTitle {
+  color: hsl(var(--primary));
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.Prueba-module__okotNG__infoDescription {
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 32px;
+  line-height: 1.75;
+}
+
+.Prueba-module__okotNG__features {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+  display: flex;
+}
+
+.Prueba-module__okotNG__feature {
+  background-color: hsl(var(--secondary));
+  border-radius: 8px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  display: flex;
+}
+
+.Prueba-module__okotNG__featureIcon {
+  color: hsl(var(--accent));
+  font-weight: 400;
+}
+
+.Prueba-module__okotNG__featureText {
+  color: hsl(var(--primary));
+}
+
+/*# sourceMappingURL=d79c4_src_Componentes_Hoteles_HotelesInicio_Componente_Prueba_module_css_bad6b30c._.single.css.map*/

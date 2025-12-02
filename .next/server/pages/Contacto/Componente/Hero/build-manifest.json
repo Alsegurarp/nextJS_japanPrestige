@@ -1,0 +1,18 @@
+{
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [],
+  "pages": {
+    "/Contacto/Componente/Hero": [
+      "static/chunks/73aee8a830d7643b.js",
+      "static/chunks/1eb02aa6b7958e78.js",
+      "static/chunks/889dc661983502b7.js",
+      "static/chunks/f91b2af79bb88a22.js",
+      "static/chunks/d93a6cd61c5c3d22.css",
+      "static/chunks/turbopack-c53f7a70dc17ed18.js"
+    ]
+  },
+  "ampFirstPages": []
+}

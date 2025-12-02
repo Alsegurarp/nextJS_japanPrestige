@@ -1,4 +1,6 @@
-import React, {useEffect, useState, Suspense, lazy} from 'react';
+'use client';
+
+import React, { useEffect, useState, Suspense, lazy } from 'react';
 import HeroSection from '../../../Componentes/Sections/HeroSection.jsx';
 import HeroImage from '../../../assets/portadas-nuevas-19-sep/hotelesPortadas/portada_hoteles_en_corea.webp';
 
@@ -14,8 +16,8 @@ import hotel6 from '../../../assets/Itinerarios/HotelesItinerariosNuevos/CoreaDe
 import hotel7 from '../../../assets/Itinerarios/HotelesItinerariosNuevos/CoreaDelSur/Hotel_Courtyard_By_Marriot_Seoul_Times_Square_Corea_Del_Sur_Japon_Premium_.webp';
 
 //import Buscador from '../../../Componentes/Hoteles/Carrucel/Buscador.jsx';
-const Buscador = lazy(() => import ('../../../Componentes/Hoteles/Carrucel/Buscador.jsx'));
-import NoNavegaSection from '../HotelesInicio/Componente/NoNavegaSection.jsx';
+const Buscador = lazy(() => import('../../../Componentes/Hoteles/Carrucel/Buscador.jsx'));
+import NoNavegaSection from '../../../Componentes/Hoteles/HotelesInicio/Componente/NoNavegaSection.jsx';
 import InView from '../../../Componentes/Layout/InView/InView.jsx';
 
 import imagenCheonju from '../../../assets/Itinerarios/buscadorImagenes/corea/cheonju_corea.webp';
@@ -25,16 +27,16 @@ import imagenSeul from '../../../assets/Itinerarios/buscadorImagenes/corea/seul_
 import imagenAventree from '../../../assets/Itinerarios/buscadorImagenes/corea/busan_corea.webp';
 import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx';
 
-    const data = [
-      {
-        text: "Explora nuestra selección exclusiva de alojamientos en ciudades emblemáticas como Busan, Jeonju, Cyeongju, Cheongju y más. Estos hoteles no solo ofrecen comodidad superior y diseño elegante, sino que también se encuentran ubicados en puntos estratégicos para que vivas cada ciudad en su máxima expresión",
-        image: HeroImage,
-        altImg:"Vista frontal del Templo Yasukuni en Tokio, Japón, con cielo nublado al atardecer.",
-        letrasDoradasResponsive: LetrasDoradasResponsive,
-        LetrasDoradasDesktop: LetrasDoradasDesktop, 
-    }];
+const data = [
+  {
+    text: "Explora nuestra selección exclusiva de alojamientos en ciudades emblemáticas como Busan, Jeonju, Cyeongju, Cheongju y más. Estos hoteles no solo ofrecen comodidad superior y diseño elegante, sino que también se encuentran ubicados en puntos estratégicos para que vivas cada ciudad en su máxima expresión",
+    image: HeroImage,
+    altImg: "Vista frontal del Templo Yasukuni en Tokio, Japón, con cielo nublado al atardecer.",
+    letrasDoradasResponsive: LetrasDoradasResponsive,
+    LetrasDoradasDesktop: LetrasDoradasDesktop,
+  }];
 
-    const destinations = [
+const destinations = [
   {
     titulo: "Busan",
     card: [
@@ -95,78 +97,78 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
       }
     ]
   }
-    ];
+];
 
-      const cardsJapon = [
-    {
-      title: 'Busan',
-      country: "Corea",
-      image: imagenAventree
-    },
-    {
-      title: 'Cheongju',
-      country: "Corea",
-      image: imagenCheonju
-    },
-    {
-      title: 'Gyeongju',
-      country: "Corea",
-      image: imagenGyeongju
-    },
-    {
-      title: 'Jeonju',
-      country: "Corea",
-      image: imagenJeonju
-    },
-    {
-      title: 'Seúl',
-      country: "Corea",
-      image: imagenSeul
-    },
-      ];
+const cardsJapon = [
+  {
+    title: 'Busan',
+    country: "Corea",
+    image: imagenAventree
+  },
+  {
+    title: 'Cheongju',
+    country: "Corea",
+    image: imagenCheonju
+  },
+  {
+    title: 'Gyeongju',
+    country: "Corea",
+    image: imagenGyeongju
+  },
+  {
+    title: 'Jeonju',
+    country: "Corea",
+    image: imagenJeonju
+  },
+  {
+    title: 'Seúl',
+    country: "Corea",
+    image: imagenSeul
+  },
+];
 
 
 function HotelesCorea() {
-    const [selectedCiudad, setSelectedCiudad] = useState(null);
-  
-    // Normalizar nombres 
-    const CANON = { Tokyo: 'Tokio', nachikatsura: 'nachikatsuura'};
-    const canon = (name) => CANON[name] || name;
-  
-    const handleCardClick = (title) => {
-      const normalizado = canon(title);
-      setSelectedCiudad(normalizado);
-    };
-  
-    const clearSelection = () => setSelectedCiudad(null);
-  
-    const destinoSeleccionado = selectedCiudad
-      ? destinations.find((d) => d.titulo.toLowerCase() === selectedCiudad.toLowerCase())
-      : null;
+  const [selectedCiudad, setSelectedCiudad] = useState(null);
 
-    useEffect(() => {
-                document.title = `Hoteles Corea | Japón PREMIUM®`; 
-            }, []);
+  // Normalizar nombres 
+  const CANON = { Tokyo: 'Tokio', nachikatsura: 'nachikatsuura' };
+  const canon = (name) => CANON[name] || name;
+
+  const handleCardClick = (title) => {
+    const normalizado = canon(title);
+    setSelectedCiudad(normalizado);
+  };
+
+  const clearSelection = () => setSelectedCiudad(null);
+
+  const destinoSeleccionado = selectedCiudad
+    ? destinations.find((d) => d.titulo.toLowerCase() === selectedCiudad.toLowerCase())
+    : null;
+
+  useEffect(() => {
+    document.title = `Hoteles Corea | Japón PREMIUM®`;
+  }, []);
 
   return (
     <>
-    <FlyingButton />
+      <FlyingButton />
       <HeroSection data={data} />
       <InView>
         <Suspense>
-            <Buscador
-              cards={cardsJapon}
-              onCardClick={handleCardClick}
-              active={selectedCiudad}
-              onClear={clearSelection}
-            />
-        <div id="resultados-hoteles">
-          {destinoSeleccionado ? (
-            <NoNavegaSection destinations={destinoSeleccionado} key={destinoSeleccionado.titulo} />
-          ) : (
-            destinations.map((d) => <NoNavegaSection destinations={d} key={d.titulo} />)
-          )}
-        </div>
+          <Buscador
+            cards={cardsJapon}
+            onCardClick={handleCardClick}
+            active={selectedCiudad}
+            onClear={clearSelection}
+          />
+          <div id="resultados-hoteles">
+            {destinoSeleccionado ? (
+              <NoNavegaSection destinations={destinoSeleccionado} key={destinoSeleccionado.titulo} />
+            ) : (
+              destinations.map((d) => <NoNavegaSection destinations={d} key={d.titulo} />)
+            )}
+          </div>
         </Suspense>
       </InView>
     </>

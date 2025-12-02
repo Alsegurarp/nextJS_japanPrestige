@@ -1,4 +1,6 @@
-import React, {useEffect} from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 import { Suspense } from 'react';
 import styles from './JaponTailandiaLoMejor.module.css';
 import HeroSection from '../../../Componentes/Sections/HeroSection.jsx';
@@ -74,131 +76,146 @@ import Hotel15 from '../../../assets/Itinerarios/HotelesDeItinerarios/nuevosHote
 import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx';
 
 
-    const data = [
-      {
-        title: "16 Días - 14 Noches",
-        subtitle: "Osaka - Tokio - Kioto - Hakone - Bangkok - Ayatthaya - Chiang Rai - Chiang Mai",
-        text: "Un viaje excepcional que une lo mejor de Japón, con su mezcla de tradición y modernidad, y la riqueza cultural y natural de Tailandia.",
-        image: HeroImage,
-        altImg:"Vista frontal del Templo Yasukuni en Tokio, Japón, con cielo nublado al atardecer.",
-        letrasDoradasResponsive: LetrasDoradasResponsive,
-        LetrasDoradasDesktop: LetrasDoradasDesktop, 
-    }];
+const data = [
+  {
+    title: "16 Días - 14 Noches",
+    subtitle: "Osaka - Tokio - Kioto - Hakone - Bangkok - Ayatthaya - Chiang Rai - Chiang Mai",
+    text: "Un viaje excepcional que une lo mejor de Japón, con su mezcla de tradición y modernidad, y la riqueza cultural y natural de Tailandia.",
+    image: HeroImage,
+    altImg: "Vista frontal del Templo Yasukuni en Tokio, Japón, con cielo nublado al atardecer.",
+    letrasDoradasResponsive: LetrasDoradasResponsive,
+    LetrasDoradasDesktop: LetrasDoradasDesktop,
+  }];
 
-    const dataSectionCard = [
-        {
-          title: 'México - Osaka',
-          subtitle: NumeroUno,
-          subtitleAltText: "ilustracion-de-los-numeros-13-y-14-en-formato-svg-diseno-grafico-japan-Premium",
-          text: "Salida en vuelo intercontinental con destino a Japón.",
-          image: LlegadaAeropuerto,
-          altText: 'pasajero-observando-el-ala-del-avion-y-el-oceano-desde-la-ventana-durante-vuelo-internacional-hacia-japon-con-japan-Premium.',
-        },
-        {
-          title: 'Osaka',
-          subtitle: NumeroDos,
-          text: 'Llegada al aeropuerto y traslado al hotel. Alojamiento.',
-          image: LlegadaKansai,
-          altText: 'turista-llegando-al-aeropuerto-de-kioto-japon-siendo-recibida-por-guia-de-japan-Premium-en-la-zona-de-arribos.',
-        },
-        {
-          title: 'Osaka - Nara - Kioto',
-          subtitle: NumeroTres,
-          text: 'Desayuno. Visita al Castillo de Osaka y continuación hacia Nara: el Gran Buda del Templo Todaiji y el Parque de los Ciervos Sagrados. Almuerzo incluido. Por la tarde, traslado a Kioto con parada en el Santuario Fushimi Inari. Alojamiento.',
-          image: VueloEjecutivo,
-          altText: 'turista-con-kimono-tradicional-japones-posando-en-el-bosque-de-bambu-de-kioto-con-japan-Premium.',
-        },{
-          title: 'Kioto',
-          subtitle: NumeroCuatro,
-          text: 'Desayuno. Tour cultural: el Templo Tenryuji, el Bosque de Bambú de Arashiyama, el Pabellón Dorado (Kinkakuji) y el Castillo de Nijo. Almuerzo incluido. Tiempo libre y regreso por cuenta propia al hotel. Alojamiento.',
-        image: VistaAvion,
-          altText: 'viajera-en-mirador-con-vista-a-la-torre-de-tokio-y-el-paisaje-urbano-de-la-capital-de-japon-con-japan-Premium',
-        },{
-          title: 'Kioto - Hakone',
-          subtitle: NumeroCinco,
-          text: 'Desayuno. Traslado en tren bala Shinkansen a Odawara. Excursión al Parque Nacional de Hakone: mini crucero por el Lago Ashi y subida en teleférico.  Almuerzo incluido. Cena japonesa en Ryokan (categoría lujo) o cena en hotel (categoría estándar/primera). Alojamiento.',
-          image: EncantoJapan,
-          altText: 'viajera-frente-al-torii-flotante-de-miyajima-en-hiroshima-durante-el-atardecer-con-japan-Premium.',
-        },{
-          title: ' Hakone - Tokio',
-          subtitle: NumeroSeis,
-          text: 'Desayuno. Salida hacia Tokio. Visita: Santuario Meiji, la Torre de Tokio y el Templo Sensoji en Asakusa con su calle Nakamise. Almuerzo incluido.  Tarde libre. Alojamiento.',
-          image: MiradorTorre,
-          altText: 'pareja-de-turistas-viajando-en-tren-bala-shinkansen-en-japon-con-japan-Premium-disfrutando-del-paisaje-desde-la-ventana.',
-        },{
-          title: 'Tokio',
-          subtitle: NumeroSiete,
-          text: 'Desayuno. Día libre para compras o actividades personales. Alojamiento.',
-          image: ToriiFlotante,
-          altText: 'pareja-de-turistas-en-el-templo-nachisan-con-pagoda-roja-y-montanas-de-fondo-en-japon-con-japan-Premium.',
-        },{
-          title: 'Tokio - Bangkok',
-          subtitle: NumeroOcho,
-          text: 'Desayuno. Traslado al aeropuerto y vuelo a Bangkok. Llegada y traslado al hotel. Alojamiento.',
-          image: TemploNachisan,
-          altText: 'pareja-de-turistas-en-dotonbori-osaka-con-los-carteles-luminosos-iconicos-al-fondo-con-japan-Premium.',
-        },{
-          title: 'Bangkok',
-          subtitle: NumeroNueve,
-          text: 'Desayuno. City Tour: el Gran Palacio, el Wat Pho (Buda Reclinado), el Wat Benjamabophit (Templo de  Mármol) y el Wat Phra Kaew (Buda Esmeralda).  Visita a una fábrica de piedras preciosas. Alojamiento.',
-          image: TurismoDotonbori,
-          altText: 'pareja-de-viajeros-disfrutando-del-jardin-kenrokuen-en-kanazawa-japon-con-japan-Premium.',
-        },{
-          title: 'Bangkok',
-          subtitle: NumeroDiez,
-          text: 'Desayuno y alojamiento.',
-          image: JardinKenrokuen,
-          altText: 'grupo-de-viajeros-posando-en-la-aldea-tradicional-de-shirakawago-en-kanazawa-japon-con-japan-Premium.',
-        },{
-          title: 'Bangkok - khanchanaburi(rio kwai)',
-          subtitle: NumeroOnce,
-          text: 'Desayuno. Excursión al Río Kwai en Kanchanaburi: cementerio de prisioneros de guerra, Museo de la  Guerra, paseo en barco por el río hasta el puente y recorrido por el famoso tramo ferroviario Hellfire Pass. Almuerzo incluido. Regreso a Bangkok. Alojamiento.',
-          image: GrupoTuristas,
-          altText: 'pareja-navegando-en-barca-sobre-lago-con-cerezos-en-flor-y-barco-tradicional-al-fondo-en-takayama-con-japan-Premium.',
-        },{
-          title: 'Bangkok - Ayutthaya - Lopburi - Phitsanulok',
-          subtitle: NumeroDoce,
-          text: 'Desayuno. Visita a la ciudad arqueológica de Ayutthaya, Patrimonio de la Humanidad UNESCO. Parada en Lopburi, célebre por su Templo de los Monos.  Almuerzo incluido. Llegada a Phitsanulok. Alojamiento.',
-          image: PaseoEnBarca,
-          altText: 'viajera-frente-al-castillo-de-himeji-en-japon-disfrutando-de-su-arquitectura-tradicional-con-japan-Premium.',
-        },{
-          title: 'Phitsanulok - Sukhothai - Chiang Rai',
-          subtitle: NumeroTrece,
-          text: 'Desayuno. Visita a Sukhothai, cuna del reino de Siam y Patrimonio de la Humanidad. Continuación hacia Chiang Rai vía Lampang y el Lago Payao.  Almuerzo incluido. Alojamiento.',
-          image: CastilloHimeji,
-          altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',
-        },{
-          title: 'Chiang Rai - Chiang Mai',
-          subtitle: NumeroCatorce,
-          text: 'Desayuno. Excursión al Triángulo de Oro, donde se unen Tailandia, Birmania y Laos. Visita al Museo del Opio y al espectacular Templo Blanco (Wat Rong Khun). Almuerzo incluido. Traslado a Chiang Mai. Alojamiento',
-          image: CatarataJapon,
-          altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',
-        },{
-          title: 'Chiang Mai',
-          subtitle: NumeroQuince,
-          text: 'Desayuno. Visita a un campamento de elefantes, demostración de habilidades y safari por la jungla a lomos de elefante. Encuentro con tribus locales, incluidas las Mujeres Jirafa. Almuerzo en ruta. Visita al Templo Doi Suthep, con impresionantes vistas de la ciudad. Alojamiento.',
-          image: TrasladoMexico,
-          altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',
-        },{
-          title: 'Chiang Mai - México',
-          subtitle: NumeroDieciseis,
-          text: 'Desayuno. Traslado al aeropuerto para el vuelo de regreso. Fin de nuestros servicios.',
-          image: FinServiciosImage,
-          altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',
-        },
-    ];
+const dataSectionCard = [
+  {
+    title: 'México - Osaka',
+    subtitle: NumeroUno,
+    subtitleAltText: "Número 1",
+    text: "Salida en vuelo intercontinental con destino a Japón.",
+    image: LlegadaAeropuerto,
+    altText: 'pasajero-observando-el-ala-del-avion-y-el-oceano-desde-la-ventana-durante-vuelo-internacional-hacia-japon-con-japan-Premium.',
+  },
+  {
+    title: 'Osaka',
+    subtitle: NumeroDos,
+    subtitleAltText: "Número 2",
+    text: 'Llegada al aeropuerto y traslado al hotel. Alojamiento.',
+    image: LlegadaKansai,
+    altText: 'turista-llegando-al-aeropuerto-de-kioto-japon-siendo-recibida-por-guia-de-japan-Premium-en-la-zona-de-arribos.',
+  },
+  {
+    title: 'Osaka - Nara - Kioto',
+    subtitle: NumeroTres,
+    subtitleAltText: "Número 3",
+    text: 'Desayuno. Visita al Castillo de Osaka y continuación hacia Nara: el Gran Buda del Templo Todaiji y el Parque de los Ciervos Sagrados. Almuerzo incluido. Por la tarde, traslado a Kioto con parada en el Santuario Fushimi Inari. Alojamiento.',
+    image: VueloEjecutivo,
+    altText: 'turista-con-kimono-tradicional-japones-posando-en-el-bosque-de-bambu-de-kioto-con-japan-Premium.',
+  }, {
+    title: 'Kioto',
+    subtitle: NumeroCuatro,
+    subtitleAltText: "Número 4",
+    text: 'Desayuno. Tour cultural: el Templo Tenryuji, el Bosque de Bambú de Arashiyama, el Pabellón Dorado (Kinkakuji) y el Castillo de Nijo. Almuerzo incluido. Tiempo libre y regreso por cuenta propia al hotel. Alojamiento.',
+    image: VistaAvion,
+    altText: 'viajera-en-mirador-con-vista-a-la-torre-de-tokio-y-el-paisaje-urbano-de-la-capital-de-japon-con-japan-Premium',
+  }, {
+    title: 'Kioto - Hakone',
+    subtitle: NumeroCinco,
+    subtitleAltText: "Número 5",
+    text: 'Desayuno. Traslado en tren bala Shinkansen a Odawara. Excursión al Parque Nacional de Hakone: mini crucero por el Lago Ashi y subida en teleférico.  Almuerzo incluido. Cena japonesa en Ryokan (categoría lujo) o cena en hotel (categoría estándar/primera). Alojamiento.',
+    image: EncantoJapan,
+    altText: 'viajera-frente-al-torii-flotante-de-miyajima-en-hiroshima-durante-el-atardecer-con-japan-Premium.',
+  }, {
+    title: ' Hakone - Tokio',
+    subtitle: NumeroSeis,
+    subtitleAltText: "Número 6",
+    text: 'Desayuno. Salida hacia Tokio. Visita: Santuario Meiji, la Torre de Tokio y el Templo Sensoji en Asakusa con su calle Nakamise. Almuerzo incluido.  Tarde libre. Alojamiento.',
+    image: MiradorTorre,
+    altText: 'pareja-de-turistas-viajando-en-tren-bala-shinkansen-en-japon-con-japan-Premium-disfrutando-del-paisaje-desde-la-ventana.',
+  }, {
+    title: 'Tokio',
+    subtitle: NumeroSiete,
+    subtitleAltText: "Número 7",
+    text: 'Desayuno. Día libre para compras o actividades personales. Alojamiento.',
+    image: ToriiFlotante,
+    altText: 'pareja-de-turistas-en-el-templo-nachisan-con-pagoda-roja-y-montanas-de-fondo-en-japon-con-japan-Premium.',
+  }, {
+    title: 'Tokio - Bangkok',
+    subtitle: NumeroOcho,
+    subtitleAltText: "Número 8",
+    text: 'Desayuno. Traslado al aeropuerto y vuelo a Bangkok. Llegada y traslado al hotel. Alojamiento.',
+    image: TemploNachisan,
+    altText: 'pareja-de-turistas-en-dotonbori-osaka-con-los-carteles-luminosos-iconicos-al-fondo-con-japan-Premium.',
+  }, {
+    title: 'Bangkok',
+    subtitle: NumeroNueve,
+    subtitleAltText: "Número 9",
+    text: 'Desayuno. City Tour: el Gran Palacio, el Wat Pho (Buda Reclinado), el Wat Benjamabophit (Templo de  Mármol) y el Wat Phra Kaew (Buda Esmeralda).  Visita a una fábrica de piedras preciosas. Alojamiento.',
+    image: TurismoDotonbori,
+    altText: 'pareja-de-viajeros-disfrutando-del-jardin-kenrokuen-en-kanazawa-japon-con-japan-Premium.',
+  }, {
+    title: 'Bangkok',
+    subtitle: NumeroDiez,
+    subtitleAltText: "Número 10",
+    text: 'Desayuno y alojamiento.',
+    image: JardinKenrokuen,
+    altText: 'grupo-de-viajeros-posando-en-la-aldea-tradicional-de-shirakawago-en-kanazawa-japon-con-japan-Premium.',
+  }, {
+    title: 'Bangkok - khanchanaburi(rio kwai)',
+    subtitle: NumeroOnce,
+    subtitleAltText: "Número 11",
+    text: 'Desayuno. Excursión al Río Kwai en Kanchanaburi: cementerio de prisioneros de guerra, Museo de la  Guerra, paseo en barco por el río hasta el puente y recorrido por el famoso tramo ferroviario Hellfire Pass. Almuerzo incluido. Regreso a Bangkok. Alojamiento.',
+    image: GrupoTuristas,
+    altText: 'pareja-navegando-en-barca-sobre-lago-con-cerezos-en-flor-y-barco-tradicional-al-fondo-en-takayama-con-japan-Premium.',
+  }, {
+    title: 'Bangkok - Ayutthaya - Lopburi - Phitsanulok',
+    subtitle: NumeroDoce,
+    subtitleAltText: "Número 12",
+    text: 'Desayuno. Visita a la ciudad arqueológica de Ayutthaya, Patrimonio de la Humanidad UNESCO. Parada en Lopburi, célebre por su Templo de los Monos.  Almuerzo incluido. Llegada a Phitsanulok. Alojamiento.',
+    image: PaseoEnBarca,
+    altText: 'viajera-frente-al-castillo-de-himeji-en-japon-disfrutando-de-su-arquitectura-tradicional-con-japan-Premium.',
+  }, {
+    title: 'Phitsanulok - Sukhothai - Chiang Rai',
+    subtitle: NumeroTrece,
+    subtitleAltText: "Número 13",
+    text: 'Desayuno. Visita a Sukhothai, cuna del reino de Siam y Patrimonio de la Humanidad. Continuación hacia Chiang Rai vía Lampang y el Lago Payao.  Almuerzo incluido. Alojamiento.',
+    image: CastilloHimeji,
+    altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',
+  }, {
+    title: 'Chiang Rai - Chiang Mai',
+    subtitle: NumeroCatorce,
+    subtitleAltText: "Número 14",
+    text: 'Desayuno. Excursión al Triángulo de Oro, donde se unen Tailandia, Birmania y Laos. Visita al Museo del Opio y al espectacular Templo Blanco (Wat Rong Khun). Almuerzo incluido. Traslado a Chiang Mai. Alojamiento',
+    image: CatarataJapon,
+    altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',
+  }, {
+    title: 'Chiang Mai',
+    subtitle: NumeroQuince,
+    subtitleAltText: "Número 15",
+    text: 'Desayuno. Visita a un campamento de elefantes, demostración de habilidades y safari por la jungla a lomos de elefante. Encuentro con tribus locales, incluidas las Mujeres Jirafa. Almuerzo en ruta. Visita al Templo Doi Suthep, con impresionantes vistas de la ciudad. Alojamiento.',
+    image: TrasladoMexico,
+    altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',
+  }, {
+    title: 'Chiang Mai - México',
+    subtitle: NumeroDieciseis,
+    subtitleAltText: "Número 16",
+    text: 'Desayuno. Traslado al aeropuerto para el vuelo de regreso. Fin de nuestros servicios.',
+    image: FinServiciosImage,
+    altText: 'Turista en avión regresando de Japón a México, en clase ejecutiva con Japan Premium, sosteniendo maleta de viaje.',
+  },
+];
 
-    const downloadData = [
-    {
-      id: "01",
-      title: "japón premium",
-      subtitle: "Japón & Tailandia",
-      dias: "16 Días - 14 Noches",
-      urlDescargar: "https://japonpremium.com/pdf/itinerario-japon-premium-japon-tailandia.pdf"
-    }];
-    
-    const dataPrecios = [
-{
+const downloadData = [
+  {
+    id: "01",
+    title: "japón premium",
+    subtitle: "Japón & Tailandia",
+    dias: "16 Días - 14 Noches",
+    urlDescargar: "https://japonpremium.com/pdf/itinerario-japon-premium-japon-tailandia.pdf"
+  }];
+
+const dataPrecios = [
+  {
     title: 'Temporada A',
     prices: [
       { type: 'DOBLE', category: 'ESTÁNDAR', amount: '9,948' },
@@ -234,72 +251,75 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
       { type: 'SENCILLA', category: 'SUPERIOR', amount: '16,237' },
     ],
   },
-    ];
+];
 
-    const lista = [
-        {id: "01",
-        icon: avion,
-        title: "No incluye: Impuestos aéreos aproximados de 595 USD.",
-        },
-        {id: "02",
-        icon: calendario,
-        title: "Temporada B y C: Aplica suplemento (Verano - Fin de año) 450 USD.",
-        },
-        {id: "03",
-        icon: user,
-        title: "Los precios: Son por persona, sujetos a cambios sin previo aviso.",
-        }
-    ];
+const lista = [
+  {
+    id: "01",
+    icon: avion,
+    title: "No incluye: Impuestos aéreos aproximados de 595 USD.",
+  },
+  {
+    id: "02",
+    icon: calendario,
+    title: "Temporada B y C: Aplica suplemento (Verano - Fin de año) 450 USD.",
+  },
+  {
+    id: "03",
+    icon: user,
+    title: "Los precios: Son por persona, sujetos a cambios sin previo aviso.",
+  }
+];
 
-    const Travelinfo = [
-      {
-      id: "01",
-      title: "EL VIAJE A JAPÓN INCLUYE",
-      description: [
-        "Vuelo redondo México – Japón – México.",
-        "Traslados aeropuerto–hotel–aeropuerto.",
-        "6 noches de alojamiento en hoteles previstos en Japón.",
-        "Desayunos diarios, 4 almuerzos y 1 cena.",
-        "Viaje en tren bala Shinkansen (Kioto–Odawara) en clase turista.",
-        "Visitas y excursiones según programa (bus, minibús o privado según número de pasajeros).",
-        "Entradas a templos, santuarios y sitios destacados.",
-        "Seguro de viaje.",
-        "3 noches en Bangkok + 5 noches en circuito.",
-        "Paseo en barco por el Río Kwai.",
-        "Visita de medio día “Esplendor del Palacio”.",
-        "Alojamiento y desayuno en Bangkok; media pensión en circuito.",
-        "Excursiones y visitas según itinerario.",
-        "Guías locales en español y entradas incluidas.",
-        "Seguro de viaje."
-        ],
-      }, {
-      id: "02",
-      title: "EL VIAJE A JAPÓN NO INCLUYE",
-      description: [
-        "Comidas y bebidas no mencionadas.",
-        "Actividades opcionales.",
-        "Propinas.",
-        "Gastos personales.",
-        "Seguro de cancelación.",
-        'Lo que no esté indicado en el apartado "El Viaje a … incluye".'
-      ],
-      },   {
-      id: "03",
-      title: "NOTAS IMPORTANTES",
-      description: [
-        "Para este viaje no se requiere visa estadounidense.",
-        "El traslado de salida en Japón no cuenta con asistencia en español.",
-        "No es posible habitación triple en categoría lujo (Japón).",
-        "Tarifas en dólares estadounidenses, pagaderas al tipo de cambio vigente.",
-        "Precios por persona, sujetos a disponibilidad.",
-        "Pasaporte con una vigencia mínima de seis meses al momento del viaje.",
-        "Tarifas sujetas a cambios sin previo aviso debido a la temporada o la disponibilidad",
-        "Las actividades opcionales tienen costo adicional."
-        ],
-      },
-    ];
+const Travelinfo = [
+  {
+    id: "01",
+    title: "EL VIAJE A JAPÓN INCLUYE",
+    description: [
+      "Vuelo redondo México – Japón – México.",
+      "Traslados aeropuerto–hotel–aeropuerto.",
+      "6 noches de alojamiento en hoteles previstos en Japón.",
+      "Desayunos diarios, 4 almuerzos y 1 cena.",
+      "Viaje en tren bala Shinkansen (Kioto–Odawara) en clase turista.",
+      "Visitas y excursiones según programa (bus, minibús o privado según número de pasajeros).",
+      "Entradas a templos, santuarios y sitios destacados.",
+      "Seguro de viaje.",
+      "3 noches en Bangkok + 5 noches en circuito.",
+      "Paseo en barco por el río Kwai.",
+      "Visita de medio día “Esplendor del Palacio”.",
+      "Alojamiento y desayuno en Bangkok; media pensión en circuito.",
+      "Excursiones y visitas según itinerario.",
+      "Guías locales en español y entradas incluidas.",
+      "Seguro de viaje."
+    ],
+  }, {
+    id: "02",
+    title: "EL VIAJE A JAPÓN NO INCLUYE",
+    description: [
+      "Comidas y bebidas no mencionadas.",
+      "Actividades opcionales.",
+      "Propinas.",
+      "Gastos personales.",
+      "Seguro de cancelación.",
+      'Lo que no esté indicado en el apartado "El Viaje a … incluye".'
+    ],
+  }, {
+    id: "03",
+    title: "NOTAS IMPORTANTES",
+    description: [
+      "Para este viaje no se requiere visa estadounidense.",
+      "El traslado de salida en Japón no cuenta con asistencia en español.",
+      "No es posible habitación triple en categoría lujo (Japón).",
+      "Tarifas en dólares estadounidenses, pagaderas al tipo de cambio vigente.",
+      "Precios por persona, sujetos a disponibilidad.",
+      "Pasaporte con una vigencia mínima de seis meses al momento del viaje.",
+      "Tarifas sujetas a cambios sin previo aviso debido a la temporada o la disponibilidad",
+      "Las actividades opcionales tienen costo adicional."
+    ],
+  },
+];
 
-    const hotels = [
+const hotels = [
   {
     id: '1',
     imageUrl: Hotel1,
@@ -402,18 +422,18 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
 
 export default function JaponTailandiaLoMejor() {
 
-      useEffect(() => {
-          document.title = `Itinerario Japón & Tailandia | Japón PREMIUM®`; 
-        }, []);
+  useEffect(() => {
+    document.title = `Itinerario Japón & Tailandia | Japón PREMIUM®`;
+  }, []);
 
 
   return (
     <>
-    <FlyingButton />
-    <HeroSection data={data}/>
-    <Suspense fallback={<div className={styles.loading}>Cargando contenido...</div>}>
+      <FlyingButton />
+      <HeroSection data={data} />
+      <Suspense fallback={<div className={styles.loading}>Cargando contenido...</div>}>
         <ItinerariosTemplate data={dataSectionCard} />
-        
+
         {downloadData.map(item => (
           <DownloadSection key={item.id} title={item.title} subtitle={item.subtitle} dias={item.dias} urlDescargar={item.urlDescargar} />
         ))}
@@ -426,7 +446,7 @@ export default function JaponTailandiaLoMejor() {
           />
         ))}
         <div className={styles.stepsContainerStyle}>
-          {lista.map((l, index) => <DetallesNoContiene key={l.id} icon={l.icon} title={l.title} index={index}/>)}
+          {lista.map((l, index) => <DetallesNoContiene key={l.id} icon={l.icon} title={l.title} index={index} />)}
         </div>
 
         <TripDetails Travelinfo={Travelinfo} />

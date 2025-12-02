@@ -1,5 +1,6 @@
 // CarrucelCard.jsx
 import React, { useState, useRef } from "react";
+import Image from "next/image";
 import styles from "./carrucelCard.module.css";
 
 /**
@@ -96,13 +97,15 @@ export default function CarrucelCard({
       aria-label={`${title}, ${country}`}
     >
       <div className={styles.media}>
-        <img
-          src={image}
-          alt={title}
-          className={`${styles.img} ${loaded ? styles.imgLoaded : ""}`}
-          loading="lazy"
-          decoding="async"
-          onLoad={() => setLoaded(true)}
+        <Image
+            src={image}
+            alt={title}
+            className={`${styles.img} ${loaded ? styles.imgLoaded : ""}`}
+            loading="lazy"
+            width={400}
+            height={300}
+            onLoadingComplete={() => setLoaded(true)}
+            priority={false}
         />
         <span className={styles.gradDark} aria-hidden="true" />
         <span className={styles.gradGlass} aria-hidden="true" />

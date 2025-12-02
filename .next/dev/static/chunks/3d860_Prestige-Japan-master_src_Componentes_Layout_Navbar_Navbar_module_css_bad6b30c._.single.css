@@ -1,0 +1,134 @@
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Navbar/Navbar.module.css [app-client] (css) */
+.Navbar-module__4AnXFG__navbarDiv {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  background: #ffffff1a;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 4px 30px #0000001a;
+}
+
+.Navbar-module__4AnXFG__menuNavBar {
+  color: #fff;
+  padding: 0 10px;
+}
+
+.Navbar-module__4AnXFG__buttonMenu {
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 100px;
+  padding: 0 10px;
+}
+
+.Navbar-module__4AnXFG__redesStyleContainer, .Navbar-module__4AnXFG__redesStyle {
+  display: none;
+}
+
+@media only screen and (max-width: 550px) {
+  .Navbar-module__4AnXFG__logoLink {
+    padding: 0 30px 0 0;
+  }
+}
+
+.Navbar-module__4AnXFG__logoLink {
+  flex: none;
+  height: 40px;
+  margin-left: auto;
+  display: block;
+}
+
+.Navbar-module__4AnXFG__logoMobile {
+  object-fit: contain;
+  width: auto;
+  max-width: 100px;
+  height: 100%;
+  display: block !important;
+}
+
+.Navbar-module__4AnXFG__logoDesktop {
+  object-fit: contain;
+  width: auto;
+  max-width: 100px;
+  height: 100%;
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .Navbar-module__4AnXFG__logoMobile {
+    display: none !important;
+  }
+
+  .Navbar-module__4AnXFG__logoDesktop {
+    max-width: 220px;
+    display: block !important;
+  }
+}
+
+.Navbar-module__4AnXFG__textosRedesStyle {
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  display: none;
+}
+
+.Navbar-module__4AnXFG__redesIcons {
+  display: none;
+}
+
+@media only screen and (min-width: 550px) {
+  .Navbar-module__4AnXFG__redesStyleContainer {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    margin-right: 20px;
+    display: flex;
+  }
+
+  .Navbar-module__4AnXFG__redesStyle {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    display: flex;
+  }
+
+  .Navbar-module__4AnXFG__redesStyle > div {
+    align-items: center;
+    gap: 10px;
+    display: flex;
+  }
+
+  .Navbar-module__4AnXFG__redesIcons {
+    flex-direction: row;
+    align-items: center;
+    padding-right: 5px;
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .Navbar-module__4AnXFG__textosRedesStyle {
+    display: flex;
+  }
+
+  .Navbar-module__4AnXFG__menuNavBar {
+    width: 430px;
+  }
+
+  .Navbar-module__4AnXFG__redesIcons:nth-child(0) {
+    display: flex;
+    position: absolute;
+    right: 20%;
+  }
+}
+
+/*# sourceMappingURL=3d860_Prestige-Japan-master_src_Componentes_Layout_Navbar_Navbar_module_css_bad6b30c._.single.css.map*/

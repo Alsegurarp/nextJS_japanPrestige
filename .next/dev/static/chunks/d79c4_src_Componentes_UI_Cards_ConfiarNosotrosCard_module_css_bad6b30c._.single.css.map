@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/Cards/ConfiarNosotrosCard.module.css"],"sourcesContent":[".logoStyle {\n  width: auto;\n  height: 60px;\n  padding: 20px 40px;\n}\n\n.contenedorCard {\n  color: white;\n  font-family: \"nohemi\";\n  text-align: center;\n  padding: 30px;\n  border-radius: 8px;\n  width: 260px;\n  margin: 0 auto;\n  /* Prevent any unexpected animations or viewport interference */\n  opacity: 1 !important;\n  transform: none !important;\n  animation: none !important;\n  transition: none !important;\n}\n\n.subtituloCard {\n  font-size: 16px;\n  font-weight: bold;\n  margin: 5px 0px 25px 0px;\n}\n\n.textoStyle {\n  font-size: 14px;\n  line-height: 1.2;\n  margin: 0 auto 15px auto;\n  max-width: 260px;\n}\n"],"names":[],"mappings":"AAAA;;;;;;AAMA;;;;;;;;;;;;;;AAeA;;;;;;AAMA"}}]
+}
