@@ -5,6 +5,7 @@ import Footer from "../Componentes/Layout/Footer/Footer";
 import ResourceHints from "../utils/ResourceHints.jsx";
 import ScrollToTop from "../components/ScrollToTop.jsx";
 import RouteTracker from "../Analytics/RouteTracker.jsx";
+import GoogleAds from "../components/GoogleAds.jsx";
 
 export const metadata = {
   title: "Japón Premium",
@@ -17,6 +18,7 @@ export default function Rootlayout({ children }) {
       <body suppressHydrationWarning={true}>
         <ResourceHints />
         <ScrollToTop />
+        <GoogleAds />
         <Suspense fallback={null}>
           <RouteTracker />
         </Suspense>
