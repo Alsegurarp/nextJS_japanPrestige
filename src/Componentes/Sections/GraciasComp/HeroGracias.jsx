@@ -8,6 +8,20 @@ import Instagram from '../../../assets/icono-instagram.svg';
 import Spotify from '../../../assets/icono-spotify.svg';
 import Tiktok from '../../../assets/icono-tiktok.svg';
 
+import Tiktok from '../../../assets/icono-tiktok.svg';
+
+// Helper to extract src from imported images
+const getSrcValue = (img) => {
+  if (!img) return null;
+  if (typeof img === 'object' && img.src) {
+    return img.src;
+  }
+  if (typeof img === 'string') {
+    return img;
+  }
+  return null;
+};
+
 const HeroSection = React.memo(function HeroSection({ data }) {
 
   return (
@@ -29,17 +43,7 @@ const HeroSection = React.memo(function HeroSection({ data }) {
 
 
 function Hero({ image, altImg, title, subtitle, bgPosition = "50%", letrasDoradasResponsive, LetrasDoradasDesktop }) {
-  // Extract src from imported image object or use as-is if it's already a string
-  const getSrcValue = (img) => {
-    if (!img) return null;
-    if (typeof img === 'object' && img.src) {
-      return img.src;
-    }
-    if (typeof img === 'string') {
-      return img;
-    }
-    return null;
-  };
+
 
   const imageSrc = getSrcValue(image);
   const letrasResponsiveSrc = getSrcValue(letrasDoradasResponsive);
@@ -51,7 +55,7 @@ function Hero({ image, altImg, title, subtitle, bgPosition = "50%", letrasDorada
     <div className={styles.beneficiosContainerHero} style={{ position: 'relative' }}>
 
       {/* Next.js Image for optimized rendering */}
-      {imageSrc && <Image src={imageSrc} alt={altImg} fill className={styles.visuallyHidden} priority={true} style={{ objectPosition: bgPosition }} />}
+      {imageSrc && <Image src={imageSrc} alt={altImg} fill priority={true} style={{ objectPosition: bgPosition, objectFit: 'cover' }} />}
 
       <div className={styles.contenidoBeneficiosHero}>
         {letrasResponsiveSrc && <Image src={letrasResponsiveSrc} alt="" className={styles.letrasDoradasResponsive} width={300} height={100} priority={false} />}
@@ -126,7 +130,7 @@ function RedesSociales() {
           {redes.map((r, i) => (
             <div key={r.id} className={styles.rowStart}>
               <a href={r.link} target="_blank" rel="noopener noreferrer">
-                <img src={r.src} alt={r.alt} className={styles.iconsFooter} loading='lazy' />
+                <img src={getSrcValue(r.src)} alt={r.alt} className={styles.iconsFooter} loading='lazy' />
               </a>
             </div>
           ))}

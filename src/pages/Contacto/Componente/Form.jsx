@@ -152,6 +152,7 @@ export function Form() {
       `.trim();
 
       const html = `
+        #tags:Japon Premium Nueva
         <h2>Nuevo contacto desde formulario</h2>
         <p><strong>Nombre:</strong> ${payload.firstName} ${payload.lastName}</p>
         <p><strong>Email:</strong> ${payload.email}</p>
