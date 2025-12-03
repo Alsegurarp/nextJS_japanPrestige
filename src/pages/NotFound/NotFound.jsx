@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from './NotFound.module.css';
 
 import HeroImage from '../../assets/Itinerarios/monte-fuji-noche-cielo-estrellado-paisaje.webp';
-import Navbar from '../../Componentes/layout/Navbar/Navbar';
+import Navbar from '../../Componentes/Layout/Navbar/Navbar';
 
 
 const NotFound = React.memo(function NotFound() {

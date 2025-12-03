@@ -129,7 +129,7 @@ import SuimeikanImagen from '../../../assets/Itinerarios/buscadorImagenes/suimei
 import wakayamaImagen from '../../../assets/Itinerarios/buscadorImagenes/wakayama_japon.webp';
 
 
-import InView from '../../../Componentes/layout/InView/InView';
+import InView from '../../../Componentes/Layout/InView/InView';
 import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx';
 
 
