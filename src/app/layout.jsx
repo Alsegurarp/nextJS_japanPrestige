@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import "./globals.css";
 import Navbar from "../Componentes/Layout/Navbar/Navbar";
 import Footer from "../Componentes/Layout/Footer/Footer";
@@ -16,7 +17,9 @@ export default function Rootlayout({ children }) {
       <body suppressHydrationWarning={true}>
         <ResourceHints />
         <ScrollToTop />
-        <RouteTracker />
+        <Suspense fallback={null}>
+          <RouteTracker />
+        </Suspense>
         <Navbar />
         <main id="main">
           {children}
