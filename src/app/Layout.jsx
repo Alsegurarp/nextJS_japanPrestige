@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import "./globals.css";
-import Navbar from "../Componentes/layout/Navbar/Navbar.jsx";
-import Footer from "../Componentes/layout/Footer/Footer.jsx";
+import Navbar from "../Componentes/layout/Navbar/Navbar";
+import Footer from "../Componentes/layout/Footer/Footer";
 import ResourceHints from "../utils/ResourceHints.jsx";
 import ScrollToTop from "../components/ScrollToTop.jsx";
 import RouteTracker from "../Analytics/RouteTracker.jsx";
@@ -20,11 +20,15 @@ export default function RootLayout({ children }) {
         <Suspense fallback={null}>
           <RouteTracker />
         </Suspense>
-        <Navbar />
+        <Suspense fallback={null}>
+          <Navbar />
+        </Suspense>
         <main id="main">
           {children}
         </main>
-        <Footer />
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );
