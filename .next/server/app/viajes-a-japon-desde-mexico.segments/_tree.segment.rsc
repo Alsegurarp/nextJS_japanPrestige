@@ -3,4 +3,4 @@
 :HL["/_next/static/chunks/aaf4e841ab5e89e5.css","style"]
 :HL["/_next/static/chunks/8d592c520b0bad0a.css","style"]
 :HL["/_next/static/chunks/393dafbd5b9a074b.css","style"]
-0:{"buildId":"AhlSBdMbdf7R5L-CPc0Rd","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"viajes-a-japon-desde-mexico","paramType":null,"paramKey":"viajes-a-japon-desde-mexico","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"ALEQpUh4wR9rdGv7yKpIn","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"viajes-a-japon-desde-mexico","paramType":null,"paramKey":"viajes-a-japon-desde-mexico","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

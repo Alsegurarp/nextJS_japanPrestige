@@ -4,15 +4,6 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Youtube from '../../../assets/icono-youtube.svg';
-import Facebook from '../../../assets/icono-facebook.svg';
-import Instagram from '../../../assets/icono-instagram.svg';
-import Spotify from '../../../assets/icono-spotify.svg';
-import Tiktok from '../../../assets/icono-tiktok.svg';
-
-import CorreoIcon from '../../../assets/icono-correo.svg';
-import IconWA from '../../../assets/icono-whatsapp.svg';
-import iconoCelularBlanco from '../../../assets/iconoCelularBlanco.svg';
 
 import styles from './Footer.module.css';
 import FooterAnimation from './FooterAnimation';
@@ -70,7 +61,7 @@ function Contactos() {
     {
       id: 1,
       alt: "Ícono de teléfono para contacto vía celular",
-      src: getSrcValue(iconoCelularBlanco),
+      src: "/assets/iconoCelularBlanco.svg",
       text: "+52 55 5339 0110",
       hrefBuilder: telLink,
       ariaLabel: "Llamar al celular",
@@ -78,7 +69,7 @@ function Contactos() {
     {
       id: 2,
       alt: "Ícono de WhatsApp para contacto directo vía mensajería",
-      src: getSrcValue(IconWA),
+      src: "/assets/icono-whatsapp.svg",
       text: "+52 5572176696",
       hrefBuilder: waLink,
       ariaLabel: "Abrir chat de WhatsApp",
@@ -86,7 +77,7 @@ function Contactos() {
     {
       id: 3,
       alt: "Ícono de correo electrónico para contacto por email",
-      src: getSrcValue(CorreoIcon),
+      src: "/assets/icono-correo.svg",
       text: "reservaciones@viajespremium.com.mx",
       hrefBuilder: mailtoLink,
       ariaLabel: "Enviar correo",
@@ -99,13 +90,13 @@ function Contactos() {
         const href = r.hrefBuilder(r.text);
         return (
           <a href={href} aria-label={r.ariaLabel} key={r.id} className={styles.contactLink}>
-            {r.src && <Image
+            <Image
               src={r.src}
               alt={r.alt}
               width={40}
               height={40}
               className={styles.iconsContacto}
-            />}
+            />
             <p className={styles.textWhiteSmall}>{r.text}</p>
           </a>
         );
@@ -116,18 +107,18 @@ function Contactos() {
 
 function RedesSociales() {
   const redes = [
-    { id: 1, alt: 'Ícono de Facebook', src: getSrcValue(Facebook), link: "https://www.facebook.com/turismosantafeoficial" },
-    { id: 2, alt: 'Ícono de Tiktok', src: getSrcValue(Tiktok), link: "https://www.tiktok.com/@viajespremium?is_from_webapp=1&sender_device=pc" },
-    { id: 3, alt: 'Ícono de Instagram', src: getSrcValue(Instagram), link: "https://www.instagram.com/viajespremium.oficial/" },
-    { id: 4, alt: 'Ícono de Youtube', src: getSrcValue(Youtube), link: "https://www.youtube.com/@viajespremiumelevatuvida" },
-    { id: 5, alt: 'Ícono de Spotify', src: getSrcValue(Spotify), link: "https://open.spotify.com/show/4VmUesUcK08SIuxLxsl3dF?si=54ef4be681dd49d2&nd=1&dlsi=d3d1513495834e9a" },
+    { id: 1, alt: 'Ícono de Facebook', src: "/assets/icono-facebook.svg", link: "https://www.facebook.com/turismosantafeoficial" },
+    { id: 2, alt: 'Ícono de Tiktok', src: "/assets/icono-tiktok.svg", link: "https://www.tiktok.com/@viajespremium?is_from_webapp=1&sender_device=pc" },
+    { id: 3, alt: 'Ícono de Instagram', src: "/assets/icono-instagram.svg", link: "https://www.instagram.com/viajespremium.oficial/" },
+    { id: 4, alt: 'Ícono de Youtube', src: "/assets/icono-youtube.svg", link: "https://www.youtube.com/@viajespremiumelevatuvida" },
+    { id: 5, alt: 'Ícono de Spotify', src: "/assets/icono-spotify.svg", link: "https://open.spotify.com/show/4VmUesUcK08SIuxLxsl3dF?si=54ef4be681dd49d2&nd=1&dlsi=d3d1513495834e9a" },
   ];
 
   return (
     <div className={styles.redesSocialesContainer}>
       {redes.map((r) => (
         <a href={r.link} key={r.id} target="_blank" rel="noopener noreferrer">
-          {r.src && <Image src={r.src} alt={r.alt} width={40} height={40} className={styles.iconsFooter} />}
+          <Image src={r.src} alt={r.alt} width={40} height={40} className={styles.iconsFooter} />
         </a>
       ))}
     </div>

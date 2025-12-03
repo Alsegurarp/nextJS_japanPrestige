@@ -9,24 +9,8 @@ const LogoJaponMobile = '/mobile_logo_japon.svg';
 // Desktop logo  
 const LogoJaponDesktop = '/logo_japon.svg';
 
-import CorreoIcon from '../../../assets/icono-correo.svg'
-import iconoCelularBlanco from '../../../assets/iconoCelularBlanco.svg';
-import BurgerMenu from '../../../assets/indexImagenes/menu_logo.svg'
-
 import MenuOpen from './MenuOpen.jsx';
 import styles from './Navbar.module.css';
-
-// Helper to extract src from imported images
-const getSrcValue = (img) => {
-  if (!img) return null;
-  if (typeof img === 'object' && img.src) {
-    return img.src;
-  }
-  if (typeof img === 'string') {
-    return img;
-  }
-  return null;
-};
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,12 +32,10 @@ export default function Navbar() {
 }
 
 function Menu({ onClick }) {
-  const burgerSrc = getSrcValue(BurgerMenu);
-
   return (
     <div className={styles.menuNavBar}>
       <button onClick={onClick} className={styles.buttonMenu} >
-        {burgerSrc && <Image src={burgerSrc} alt="Menu de navegacion" width={80} height={80} />}
+        <Image src="/assets/indexImagenes/menu_logo.svg" alt="Menu de navegacion" width={80} height={80} />
       </button>
     </div>
   )
@@ -82,8 +64,6 @@ function Logo() {
 
 function Redes() {
   const MESSAGE = "Quiero conocer mas de sus promociones para viajar a japon, Contáctenme";
-  const correoDatosIcon = getSrcValue(CorreoIcon);
-  const iconoCelularSrc = getSrcValue(iconoCelularBlanco);
 
   const mailtoLink = (email) =>
     `mailto:${email}?subject=${encodeURIComponent(
@@ -93,7 +73,7 @@ function Redes() {
   const datos = [{
     id: 1,
     alt: "Ícono de correo electrónico para contacto por email",
-    src: correoDatosIcon,
+    src: "/assets/icono-correo.svg",
     text: "reservaciones@viajespremium.com.mx",
     hrefBuilder: mailtoLink,
     ariaLabel: "Enviar correo",
@@ -105,7 +85,7 @@ function Redes() {
 
       <div className={styles.redesIcons}>
         <a className={styles.redesStyle} href="tel:+5255 53390110">
-          {iconoCelularSrc && <Image src={iconoCelularSrc} alt="iconoCelularBlanco" width={25} height={25} className={styles.redesStyle} />}
+          <Image src="/assets/iconoCelularBlanco.svg" alt="iconoCelularBlanco" width={25} height={25} className={styles.redesStyle} />
         </a>
         <p className={styles.textosRedesStyle} style={{ fontFamily: "nohemi" }} >+52 55 5339 0110</p>
       </div>
@@ -116,14 +96,14 @@ function Redes() {
           return (
             <div key={r.id} className={styles.redesIcons}>
               <a href={href} aria-label={r.ariaLabel} className={styles.redesStyle} style={{ textDecoration: "none" }}>
-                {r.src && <Image
+                <Image
                   src={r.src}
                   alt={r.alt}
                   width={25}
                   height={25}
                   className={styles.redesStyle}
                   loading="lazy"
-                />}
+                />
                 <div className={styles.optionalContainer}>
                   <p className={styles.textosRedesStyle} style={{ fontFamily: "nohemi" }}>{r.text}</p>
                 </div>
