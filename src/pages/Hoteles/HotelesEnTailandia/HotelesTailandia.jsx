@@ -25,7 +25,7 @@ import imagen5 from '../../../assets/Itinerarios/buscadorImagenes/tailandia/Phit
 
 import NoNavegaSection from '../../../Componentes/Hoteles/HotelesInicio/Componente/NoNavegaSection.jsx';
 const Buscador = lazy(() => import('../../../Componentes/Hoteles/Carrucel/Buscador.jsx'));
-import InView from '../../../Componentes/layout/InView/InView.jsx';
+import InView from '../../../Componentes/layout/InView/InView';
 import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx';
 
 

@@ -13,7 +13,7 @@ import imageCorea from '../../../assets/portadas-nuevas-19-sep/hotelesPortadas/h
 import imageChina from '../../../assets/portadas-nuevas-19-sep/hotelesPortadas/hoteles_de_lujo_en_china.webp';
 import imageDubai from '../../../assets/portadas-nuevas-19-sep/hotelesPortadas/hoteles_de_lujo_en_dubai.webp';
 import imageTailandia from '../../../assets/portadas-nuevas-19-sep/hotelesPortadas/hoteles_de_lujo_en_tailandia.webp';
-import InView from '../../../Componentes/layout/InView/InView.jsx';
+import InView from '../../../Componentes/layout/InView/InView';
 import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx';
 
     const data = [
