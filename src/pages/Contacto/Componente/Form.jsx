@@ -141,13 +141,14 @@ export function Form() {
       const subject = `Contacto - Japon Premium: ${payload.firstName} ${payload.lastName}`;
       // A human readable plain text message; we also send an html version
       const text = `
-Nuevo contacto desde formulario:
-Nombre: ${payload.firstName} ${payload.lastName}
-Email: ${payload.email}
-Teléfono: ${payload.phoneFull}
-Fecha deseada: ${payload.date}
-Comentarios: ${payload.comments}
-reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
+      #tags:Japon Premium Nueva
+      Nuevo contacto desde formulario:
+      Nombre: ${payload.firstName} ${payload.lastName}
+      Email: ${payload.email}
+      Teléfono: ${payload.phoneFull}
+      Fecha deseada: ${payload.date}
+      Comentarios: ${payload.comments}
+      reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
       `.trim();
 
       const html = `

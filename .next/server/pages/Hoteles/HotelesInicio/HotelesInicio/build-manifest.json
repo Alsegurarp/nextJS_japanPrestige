@@ -7,12 +7,12 @@
   "pages": {
     "/Hoteles/HotelesInicio/HotelesInicio": [
       "static/chunks/1eb02aa6b7958e78.js",
-      "static/chunks/9d61b3c24fe60f30.js",
+      "static/chunks/df5fa8e5eed5c457.js",
+      "static/chunks/230863c34d498624.js",
+      "static/chunks/5de09488d7f762bf.js",
       "static/chunks/889dc661983502b7.js",
-      "static/chunks/f91b2af79bb88a22.js",
-      "static/chunks/8137fa7eb18ca0c9.css",
-      "static/chunks/dcb865ed185a865c.css",
-      "static/chunks/turbopack-2102111b7bc86c8a.js"
+      "static/chunks/393dafbd5b9a074b.css",
+      "static/chunks/turbopack-eca6fef54b0c5a5a.js"
     ]
   },
   "ampFirstPages": []

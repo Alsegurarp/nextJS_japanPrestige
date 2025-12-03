@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import styles from './DownloadSection.module.css';
 import ItinerarioImg from '../../../assets/ItinerarioViajeJaponPremium.webp'
 
@@ -23,7 +24,7 @@ export default function DownloadSection({ title, subtitle, dias, urlDescargar })
     <section className={styles.sectionContainer}>
 
       <div className={styles.contenedor}>
-        <img
+        <Image
           src={ItinerarioImg}
           alt="Japan Premium Travel Documentacion"
           className={styles.image}

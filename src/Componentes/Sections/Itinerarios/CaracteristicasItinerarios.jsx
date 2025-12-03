@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './CaracteristicasItinerarios.module.css';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 
 import CaminoKumano from '../../../assets/Itinerarios/PortadasItinerarios/Camino_Kumano_Portada_Templo_Asakusa_Kannon.webp';
 import ViveJapon from '../../../assets/Itinerarios/PortadasItinerarios/Japon_Express_Portada_Japon_Premium_Santuario_Meiji.webp';
@@ -69,9 +70,15 @@ function Card(props) {
         fontFamily: "nohemi"
     }
 
+    const ref = useScrollAnimation({
+        animation: 'fade-up',
+        delay: props.index * 10,
+        duration: 0.1
+    });
+
     return (
         <>
-            <div className={styles.cardStyle} data-aos="fade-up" data-aos-delay={props.index * 10} data-aos-duration="100">
+            <div ref={ref} className={styles.cardStyle}>
                 <Image src={props.image} alt={props.imageAlt} className={styles.cardImage} width={1080} height={1350} priority={false} />
                 <div className={styles.contenidoCardsTextoItinerario}>
                     <h2 style={titleEstilo}>{props.title}</h2>

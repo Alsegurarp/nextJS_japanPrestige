@@ -3,8 +3,6 @@
 import React, { useEffect } from 'react';
 import { lazy, Suspense } from 'react';
 import Image from 'next/image';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import '../../styles/home.css';
 import LoadingSpinner from '../../Componentes/UI/LoadingSpinner.jsx';
 const HeroSection = lazy(() => import('../../Componentes/Sections/HeroSection.jsx'));
@@ -84,12 +82,7 @@ function Nosotros() {
   }, []);
 
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // duración de animaciones
-      once: true      // Se anima solo una vez
-    });
-  }, []);
+
 
   return (
     <>

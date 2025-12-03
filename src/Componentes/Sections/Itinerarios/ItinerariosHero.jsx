@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './ItinerariosHero.module.css';
 import itinerariosViajeRutas from '../../../assets/icono-itinerarios-viaje-rutas.svg';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 
 // Helper to extract src from imported images
 const getSrcValue = (img) => {
@@ -51,23 +52,21 @@ function Hero(props) {
   const iconSrc = getSrcValue(itinerariosViajeRutas);
 
   return (
-    <div className={styles.beneficiosContainerHero} style={{position: 'relative'}}
+    <div className={styles.beneficiosContainerHero} style={{ position: 'relative' }}
       role="img"
       aria-label="Mujer japonesa con kimono, participando en ceremonia tradicional, ideal para viajeros que buscan inmersión cultural">
       {imageSrc && (
-        <Image 
+        <Image
           src={imageSrc}
           alt="Mujer japonesa con kimono, participando en ceremonia tradicional, ideal para viajeros que buscan inmersión cultural"
           fill
           priority
-          style={{objectFit: 'cover'}}
+          style={{ objectFit: 'cover' }}
           className={styles.heroImg}
         />
       )}
-      <div className={styles.contenidoBeneficiosItinerarios} style={{position: 'relative', zIndex: 2}}>
-        <div data-aos="fade-right">
-          {iconSrc && <Image className={styles.itinerariosImagenHero} src={iconSrc} alt="Ícono de Itinerarios de Viaje - Rutas y Experiencias Turísticas" width={80} height={80} />}
-        </div>
+      <div className={styles.contenidoBeneficiosItinerarios} style={{ position: 'relative', zIndex: 2 }}>
+        <HeroIcon iconSrc={iconSrc} />
         <div className={styles.stepsContainerStyleHero}>
           <ItinerariesCard number="+50" titulo="Diferentes Itinerarios" id={1} />
           <ItinerariesCard number="+11,700" titulo="Clientes Satisfechos" id={2} />
@@ -80,9 +79,23 @@ function Hero(props) {
 
 }
 
-function ItinerariesCard({ number, titulo, id }) {
+function HeroIcon({ iconSrc }) {
+  const ref = useScrollAnimation({ animation: 'fade-right' });
   return (
-    <div className={styles.itinerarioCardStyleContainer} style={{ fontFamily: "nohemi" }} data-aos="fade-up" data-aos-delay={`${id}0`} >
+    <div ref={ref}>
+      {iconSrc && <Image className={styles.itinerariosImagenHero} src={iconSrc} alt="Ícono de Itinerarios de Viaje - Rutas y Experiencias Turísticas" width={80} height={80} />}
+    </div>
+  );
+}
+
+function ItinerariesCard({ number, titulo, id }) {
+  const ref = useScrollAnimation({
+    animation: 'fade-up',
+    delay: id * 10
+  });
+
+  return (
+    <div ref={ref} className={styles.itinerarioCardStyleContainer} style={{ fontFamily: "nohemi" }}>
       <div className={styles.numeros}>{number}</div>
       <div className={styles.textos}>{titulo}</div>
     </div>

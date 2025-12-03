@@ -1,0 +1,8 @@
+__turbopack_load_page_chunks__("/Contacto/Componente/Form", [
+  "static/chunks/71e72d526d01d52d.js",
+  "static/chunks/889dc661983502b7.js",
+  "static/chunks/b89501a0ef279ee2.js",
+  "static/chunks/230863c34d498624.js",
+  "static/chunks/256a9e47300e398d.css",
+  "static/chunks/turbopack-304439ec82e3c832.js"
+])

@@ -6,15 +6,15 @@
   "rootMainFiles": [],
   "pages": {
     "/ContenidoItinerarios/Esenciales/TitanesDelPacifico": [
-      "static/chunks/a937b995041fefd4.js",
+      "static/chunks/9fb4cdac4720a5c4.js",
+      "static/chunks/9b8f35f87ad75996.js",
       "static/chunks/1eb02aa6b7958e78.js",
+      "static/chunks/5de09488d7f762bf.js",
       "static/chunks/889dc661983502b7.js",
-      "static/chunks/f91b2af79bb88a22.js",
-      "static/chunks/fb6d69e74d907fe4.js",
-      "static/chunks/479577e60baee72c.css",
-      "static/chunks/8137fa7eb18ca0c9.css",
-      "static/chunks/dcb865ed185a865c.css",
-      "static/chunks/turbopack-9cd904764b50f77d.js"
+      "static/chunks/230863c34d498624.js",
+      "static/chunks/8d592c520b0bad0a.css",
+      "static/chunks/393dafbd5b9a074b.css",
+      "static/chunks/turbopack-08ef60ae8e16e121.js"
     ]
   },
   "ampFirstPages": []

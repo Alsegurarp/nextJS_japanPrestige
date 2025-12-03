@@ -22,6 +22,7 @@
   "/hoteles/hoteles-japon/page": "/hoteles/hoteles-japon",
   "/hoteles/hoteles-tailandia/page": "/hoteles/hoteles-tailandia",
   "/hoteles/page": "/hoteles",
+  "/icon.svg/route": "/icon.svg",
   "/itinerarios/art-oriental/page": "/itinerarios/art-oriental",
   "/itinerarios/camino-de-kumano/page": "/itinerarios/camino-de-kumano",
   "/itinerarios/imperio-del-sol/page": "/itinerarios/imperio-del-sol",

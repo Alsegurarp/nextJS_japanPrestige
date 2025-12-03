@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 // import LogoJaponDesktop from '/FAVICON.svg';
@@ -15,8 +15,6 @@ import BurgerMenu from '../../../assets/indexImagenes/menu_logo.svg'
 
 import MenuOpen from './MenuOpen.jsx';
 import styles from './Navbar.module.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 // Helper to extract src from imported images
 const getSrcValue = (img) => {
@@ -32,20 +30,6 @@ const getSrcValue = (img) => {
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  // Initialize AOS once
-  useEffect(() => {
-    AOS.init({ once: true });
-  }, []);
-
-  // Refresh AOS when menu opens
-  useEffect(() => {
-    if (menuOpen) {
-      setTimeout(() => {
-        AOS.refresh();
-      }, 100); // small delay ensures DOM is ready
-    }
-  }, [menuOpen]);
 
   return (
     <>
@@ -65,7 +49,7 @@ export default function Navbar() {
 
 function Menu({ onClick }) {
   const burgerSrc = getSrcValue(BurgerMenu);
-  
+
   return (
     <div className={styles.menuNavBar}>
       <button onClick={onClick} className={styles.buttonMenu} >

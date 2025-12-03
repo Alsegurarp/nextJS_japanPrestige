@@ -1,10 +1,13 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import imagen from '../../../../assets/Itinerarios/PortadasItinerarios/El_Ultimo_Samurai_Portada_Cataratas_Shiraito.webp';
 import styles from './CardsComponent.module.css';
+import { useScrollAnimation } from '../../../../hooks/useScrollAnimation';
 
 
-export default function CardsComponent(){
+export default function CardsComponent() {
 
     const infoCards = [
         {
@@ -27,29 +30,34 @@ export default function CardsComponent(){
         },
     ]
 
-    return(
+    return (
         <>
-        <div className={styles.caracteristicasCardsStepsContainerStyle}>
-            {infoCards.map((card, index) => (
-                <Card key={card.id} text={card.text} image={card.image} imageAlt={card.imageAlt} index={index}/>
-            ))}
-        </div>
+            <div className={styles.caracteristicasCardsStepsContainerStyle}>
+                {infoCards.map((card, index) => (
+                    <Card key={card.id} text={card.text} image={card.image} imageAlt={card.imageAlt} index={index} />
+                ))}
+            </div>
         </>
     )
 }
 
 function Card(props) {
+    const ref = useScrollAnimation({
+        animation: 'fade-up',
+        delay: props.index * 350,
+        duration: 0.5
+    });
 
-    return(
+    return (
         <>
-            <div data-aos="fade-up" data-aos-delay={props.index * 350} data-aos-duration="500">
-                <Image 
-                  src={props.image} 
-                  alt={props.imageAlt} 
-                  className={styles.caracteristicasCardscardImage}
-                  width={1080}
-                  height={1350}
-                  priority={false}
+            <div ref={ref}>
+                <Image
+                    src={props.image}
+                    alt={props.imageAlt}
+                    className={styles.caracteristicasCardscardImage}
+                    width={1080}
+                    height={1350}
+                    priority={false}
                 />
                 <div className={styles.caracteristicasCardsTexto}>
                     <p className={styles.textoEstilo}>

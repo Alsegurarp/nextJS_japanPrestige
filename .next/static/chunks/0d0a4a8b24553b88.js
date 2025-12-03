@@ -1,0 +1,6 @@
+__turbopack_load_page_chunks__("/Home/HeroExclusivoHome/TitleSVG", [
+  "static/chunks/a2e78ba14ac4841a.js",
+  "static/chunks/230863c34d498624.js",
+  "static/chunks/889dc661983502b7.js",
+  "static/chunks/turbopack-5d3f0034a3fd4c7d.js"
+])

@@ -6,15 +6,15 @@
   "rootMainFiles": [],
   "pages": {
     "/ContenidoItinerarios/Combinados/JaponTailandia": [
-      "static/chunks/a937b995041fefd4.js",
+      "static/chunks/b7243bbf74c2caa5.js",
+      "static/chunks/27940ae1a9f202cf.js",
       "static/chunks/1eb02aa6b7958e78.js",
+      "static/chunks/5de09488d7f762bf.js",
       "static/chunks/889dc661983502b7.js",
-      "static/chunks/f91b2af79bb88a22.js",
-      "static/chunks/8319caa63d145f1a.js",
+      "static/chunks/230863c34d498624.js",
       "static/chunks/d55a18f24189abce.css",
-      "static/chunks/8137fa7eb18ca0c9.css",
-      "static/chunks/dcb865ed185a865c.css",
-      "static/chunks/turbopack-6d1aaabc20cc8ec6.js"
+      "static/chunks/393dafbd5b9a074b.css",
+      "static/chunks/turbopack-0051a3709f85225a.js"
     ]
   },
   "ampFirstPages": []

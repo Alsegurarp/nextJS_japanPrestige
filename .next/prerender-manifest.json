@@ -552,6 +552,36 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/icon.svg": {
+      "initialHeaders": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "image/svg+xml",
+        "x-next-cache-tags": "_N_T_/layout,_N_T_/icon.svg/layout,_N_T_/icon.svg/route,_N_T_/icon.svg"
+      },
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/icon.svg",
+      "dataRoute": null,
+      "prefetchDataRoute": null,
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/itinerarios/art-oriental": {
       "experimentalBypassFor": [
         {
@@ -1131,8 +1161,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "bb35776961bff958c52230593852475c",
-    "previewModeSigningKey": "926f32131f6fb704a527c4b28dbbd56d855b0cacdf654fd46c2ad6f871a261e8",
-    "previewModeEncryptionKey": "0b636814abfd7e520b73bd2ae966d05e81c98982a2f3f7e63719a31e0e6653e1"
+    "previewModeId": "170cb1589c397a77ee0b917256f41a40",
+    "previewModeSigningKey": "ea4b39eaca2d4b1727e6f76dfdd2825ec0d45e732224039a32bdce6ebe5087d3",
+    "previewModeEncryptionKey": "d769ab76312e97e3985fc225b68642a195c31c2b818ed7b5d96c7b04378a666f"
   }
 }

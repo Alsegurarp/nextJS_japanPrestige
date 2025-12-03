@@ -430,6 +430,12 @@
       "namedRegex": "^/Hoteles/HotelesInicio/HotelesInicio(?:/)?$"
     },
     {
+      "page": "/icon.svg",
+      "regex": "^/icon\\.svg(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/icon\\.svg(?:/)?$"
+    },
+    {
       "page": "/itinerarios",
       "regex": "^/itinerarios(?:/)?$",
       "routeKeys": {},

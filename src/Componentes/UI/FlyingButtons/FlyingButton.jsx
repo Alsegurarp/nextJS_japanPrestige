@@ -7,12 +7,9 @@ import IconWA from '../../../assets/icono-whatsapp.svg';
 import ViajesImg from '../../../assets/wa_chat/perfil_whatsapp.webp';
 import WaConversation from '../../../assets/wa_chat/whatsapp_conversacion.svg';
 import waAlargado from '../../../assets/wa_chat/chatea_con_nuestra_asistente_verde.svg';
-import buttonEnviar from '../../../assets/wa_chat/icono_enviar_whatsapp.svg'
-
+import buttonEnviar from '../../../assets/wa_chat/icono_enviar_whatsapp.svg';
 
 import bgWhatsapp from '../../../assets/bgWhatsapp.webp';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 // Helper to extract src from imported images
 const getSrcValue = (img) => {
@@ -45,12 +42,7 @@ export default function FlyingButton({ positionTop = '20px' }) {
     }
   }
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // duración de animaciones
-      once: false      // Se anima en loop
-    });
-  }, []);
+
 
 
   return (
@@ -119,7 +111,6 @@ function FormWhatsapp({ onClick, isClosing }) {
   return (
     <div
       className={`${styles.wa_modal} ${isClosing ? styles.fade_out : ''}`}
-      data-aos={!isClosing ? 'fade-up' : ''}
     >
       <div className={styles.wa_header}>
         {viajesSrc && <Image src={viajesSrc} alt="Soporte" width={40} height={40} className={styles.wa_avatar} />}

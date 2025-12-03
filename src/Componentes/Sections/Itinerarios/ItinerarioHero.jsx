@@ -6,6 +6,7 @@ import itinerariosViajeRutas from '../../../assets/icono-itinerarios-viaje-rutas
 
 import japanPremium from '../../../assets/templo-yasukuni-tokio-japon-atardecer.webp';
 import styles from './ItinerariosHero.module.css';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 
 // Helper to extract src from imported images
 const getSrcValue = (img) => {
@@ -20,64 +21,72 @@ const getSrcValue = (img) => {
 };
 
 const data = [
-  {title: itinerariosViajeRutas,
+  {
+    title: itinerariosViajeRutas,
     image: japanPremium,
   }]
 
 
-export default function ItinerarioHero(){
+export default function ItinerarioHero() {
 
-  return(
+  return (
     <>
       {data.map((s) => (
-            <Hero
-              image={s.image}
-              title={s.title}
-              key={s.title}/>
-        ))}
+        <Hero
+          image={s.image}
+          title={s.title}
+          key={s.title} />
+      ))}
     </>
   )
 }
 
-function Hero(props){
+function Hero(props) {
   const imageSrc = getSrcValue(props.image);
   const iconSrc = getSrcValue(itinerariosViajeRutas);
 
-  return(
+  const ref = useScrollAnimation({ animation: 'fade-right' });
+
+  return (
     <>
-      <div className={styles.beneficiosContainerHero} style={{position: 'relative'}}
+      <div className={styles.beneficiosContainerHero} style={{ position: 'relative' }}
         role="img"
         aria-label="Mujer japonesa con kimono, participando en ceremonia tradicional, ideal para viajeros que buscan inmersión cultural">
         {imageSrc && (
-          <Image 
+          <Image
             src={imageSrc}
             alt="Mujer japonesa con kimono, participando en ceremonia tradicional, ideal para viajeros que buscan inmersión cultural"
             fill
             priority
-            style={{objectFit: 'cover'}}
+            style={{ objectFit: 'cover' }}
             className={styles.heroImg}
           />
         )}
-        <div className={styles.contenidoBeneficiosItinerariosHeroItinerario} style={{position: 'relative', zIndex: 2}}>
-            <div className={styles.titlePlusSubtitleHero} data-aos="fade-right">
-              {iconSrc && <Image className={styles.itinerariosImagenHero} src={iconSrc} alt="Ícono de Itinerarios de Viaje - Rutas y Experiencias Turísticas" width={80} height={80} />}
-            </div>
+        <div className={styles.contenidoBeneficiosItinerariosHeroItinerario} style={{ position: 'relative', zIndex: 2 }}>
+          <div ref={ref} className={styles.titlePlusSubtitleHero}>
+            {iconSrc && <Image className={styles.itinerariosImagenHero} src={iconSrc} alt="Ícono de Itinerarios de Viaje - Rutas y Experiencias Turísticas" width={80} height={80} />}
+          </div>
         </div>
       </div>
-        <div className={styles.stepsContainerStyleHero}>
-          <ItinerariesCard number="+15" titulo="Diferentes Itinerarios" id={1} />
-          <ItinerariesCard number="+30,750" titulo="Clientes Satisfechos" id={2} />
-          <ItinerariesCard number="+20" titulo="Años de Alta Especialización" id={3} />
-          <ItinerariesCard number="+10,435,600" titulo="Millas Recorridas al Año" id={4} />
-        </div>
+      <div className={styles.stepsContainerStyleHero}>
+        <ItinerariesCard number="+15" titulo="Diferentes Itinerarios" id={1} />
+        <ItinerariesCard number="+30,750" titulo="Clientes Satisfechos" id={2} />
+        <ItinerariesCard number="+20" titulo="Años de Alta Especialización" id={3} />
+        <ItinerariesCard number="+10,435,600" titulo="Millas Recorridas al Año" id={4} />
+      </div>
     </>
   )
 
 }
 
-function ItinerariesCard({number, titulo, id}) {
+function ItinerariesCard({ number, titulo, id }) {
+  const ref = useScrollAnimation({
+    animation: 'fade-up',
+    delay: id * 10
+  });
+
   return (
-    <div className={styles.itinerarioCardStyleContainer} style={{fontFamily: "nohemi"}} data-aos="fade-up" data-aos-delay={`${id}0`} >
+    <div ref={ref} className={styles.itinerarioCardStyleContainer} style={{ fontFamily: "nohemi" }}>
       <div className={styles.numeros}>{number}</div>
       <div className={styles.textos}><p>{titulo}</p></div>
     </div>

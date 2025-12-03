@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image';
 import styles from "./CaracteristicasIcon.module.css";
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 
 // Helper function to extract src from imported images
 const getSrcValue = (img) => {
@@ -15,15 +16,20 @@ const getSrcValue = (img) => {
   return null;
 };
 
-export default function CaracteristicasIcon({icon, title, index}) {
-    const iconSrc = getSrcValue(icon);
+export default function CaracteristicasIcon({ icon, title, index }) {
+  const iconSrc = getSrcValue(icon);
+  const ref = useScrollAnimation({
+    animation: 'fade-up',
+    delay: index * 100,
+    duration: 0.1
+  });
 
-    return (
-        <div className={styles.containerStyle} data-aos="fade-up" data-aos-delay={index * 100} data-aos-duration="100" suppressHydrationWarning>
-            <div style={{marginBottom: "10px"}}>
-                {iconSrc && <Image src={iconSrc} alt={title} className={styles.iconStyle} width={48} height={48} priority={false} />}
-            </div>
-            <p className={styles.titleStyle}>{title}</p>
-        </div>
-    )
+  return (
+    <div ref={ref} className={styles.containerStyle}>
+      <div style={{ marginBottom: "10px" }}>
+        {iconSrc && <Image src={iconSrc} alt={title} className={styles.iconStyle} width={48} height={48} priority={false} />}
+      </div>
+      <p className={styles.titleStyle}>{title}</p>
+    </div>
+  )
 }

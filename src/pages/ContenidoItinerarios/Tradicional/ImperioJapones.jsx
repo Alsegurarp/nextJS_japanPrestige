@@ -13,14 +13,6 @@ const DetallesNoContiene = lazy(() => import('../../../Componentes/Sections/Reut
 const TripDetails = lazy(() => import('../../../Componentes/Sections/Reutilizable/TripDetails.jsx'));
 const HotelesJapon = lazy(() => import('../../../Componentes/Sections/Reutilizable/HotelesJapon.jsx'));
 
-/*
-import ItinerariosTemplate from '../../../Componentes/Sections/Reutilizable/ItinerariosTemplate.jsx';
-import DownloadSection from '../../../Componentes/Sections/Reutilizable/DownloadSection.jsx';
-import CardPrecio from '../../../Componentes/Sections/Reutilizable/CardPrecioPrueba.jsx';
-import DetallesNoContiene from '../../../Componentes/Sections/Reutilizable/DetallesNoContiene.jsx';
-import TripDetails from '../../../Componentes/Sections/Reutilizable/TripDetails.jsx';
-import HotelesJapon from '../../../Componentes/Sections/Reutilizable/HotelesJapon.jsx';
-*/
 import LetrasDoradasResponsive from '../../../assets/titulosDorados/imperiojaponesmovil.svg';
 import LetrasDoradasDesktop from '../../../assets/titulosDorados/imperiojaponesweb.svg';
 

@@ -252,10 +252,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$assets$2f$wa_chat$2f$chatea_con_nuestra_asistente_verde$2e$svg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$assets$2f$wa_chat$2f$chatea_con_nuestra_asistente_verde$2e$svg__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/Desktop/Prestige-Japan-master/src/assets/wa_chat/chatea_con_nuestra_asistente_verde.svg.mjs { IMAGE => "[project]/Desktop/Prestige-Japan-master/src/assets/wa_chat/chatea_con_nuestra_asistente_verde.svg (static in ecmascript, tag client)" } [app-ssr] (structured image object with data url, ecmascript)');
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$assets$2f$wa_chat$2f$icono_enviar_whatsapp$2e$svg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$assets$2f$wa_chat$2f$icono_enviar_whatsapp$2e$svg__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/Desktop/Prestige-Japan-master/src/assets/wa_chat/icono_enviar_whatsapp.svg.mjs { IMAGE => "[project]/Desktop/Prestige-Japan-master/src/assets/wa_chat/icono_enviar_whatsapp.svg (static in ecmascript, tag client)" } [app-ssr] (structured image object with data url, ecmascript)');
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$assets$2f$bgWhatsapp$2e$webp$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$assets$2f$bgWhatsapp$2e$webp__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/Desktop/Prestige-Japan-master/src/assets/bgWhatsapp.webp.mjs { IMAGE => "[project]/Desktop/Prestige-Japan-master/src/assets/bgWhatsapp.webp (static in ecmascript, tag client)" } [app-ssr] (structured image object with data url, ecmascript)');
-var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$aos$2f$dist$2f$aos$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/aos/dist/aos.js [app-ssr] (ecmascript)");
 'use client';
-;
-;
 ;
 ;
 ;
@@ -291,12 +288,6 @@ function FlyingButton({ positionTop = '20px' }) {
             setClicked(true); // mostrar modal directamente
         }
     }
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$aos$2f$dist$2f$aos$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].init({
-            duration: 1000,
-            once: false // Se anima en loop
-        });
-    }, []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FloatingButton, {
@@ -304,7 +295,7 @@ function FlyingButton({ positionTop = '20px' }) {
                 positionTop: positionTop
             }, void 0, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                lineNumber: 58,
+                lineNumber: 50,
                 columnNumber: 7
             }, this),
             clicked && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FormWhatsapp, {
@@ -312,7 +303,7 @@ function FlyingButton({ positionTop = '20px' }) {
                 isClosing: isClosing
             }, void 0, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                lineNumber: 59,
+                lineNumber: 51,
                 columnNumber: 19
             }, this)
         ]
@@ -344,12 +335,12 @@ function FloatingButton({ onClick, positionTop }) {
             alt: "WhatsApp Chat"
         }, void 0, false, {
             fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-            lineNumber: 85,
+            lineNumber: 77,
             columnNumber: 24
         }, this)
     }, void 0, false, {
         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-        lineNumber: 84,
+        lineNumber: 76,
         columnNumber: 5
     }, this);
 }
@@ -378,7 +369,6 @@ function FormWhatsapp({ onClick, isClosing }) {
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: `${__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$Componentes$2f$UI$2f$FlyingButtons$2f$FlyingButton$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].wa_modal} ${isClosing ? __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$Componentes$2f$UI$2f$FlyingButtons$2f$FlyingButton$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fade_out : ''}`,
-        "data-aos": !isClosing ? 'fade-up' : '',
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$Componentes$2f$UI$2f$FlyingButtons$2f$FlyingButton$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].wa_header,
@@ -391,7 +381,7 @@ function FormWhatsapp({ onClick, isClosing }) {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$Componentes$2f$UI$2f$FlyingButtons$2f$FlyingButton$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].wa_avatar
                     }, void 0, false, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                        lineNumber: 125,
+                        lineNumber: 116,
                         columnNumber: 23
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -401,20 +391,20 @@ function FormWhatsapp({ onClick, isClosing }) {
                                 children: "Japón Premium"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                                lineNumber: 127,
+                                lineNumber: 118,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 children: "Descubre Japón en un nivel superior"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                                lineNumber: 128,
+                                lineNumber: 119,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                        lineNumber: 126,
+                        lineNumber: 117,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -423,13 +413,13 @@ function FormWhatsapp({ onClick, isClosing }) {
                         children: "×"
                     }, void 0, false, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                        lineNumber: 130,
+                        lineNumber: 121,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                lineNumber: 124,
+                lineNumber: 115,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -443,7 +433,7 @@ function FormWhatsapp({ onClick, isClosing }) {
                         height: 300
                     }, void 0, false, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                        lineNumber: 134,
+                        lineNumber: 125,
                         columnNumber: 19
                     }, this),
                     conversationSrc && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -455,12 +445,12 @@ function FormWhatsapp({ onClick, isClosing }) {
                             height: 60
                         }, void 0, false, {
                             fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                            lineNumber: 145,
+                            lineNumber: 136,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                        lineNumber: 144,
+                        lineNumber: 135,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -475,7 +465,7 @@ function FormWhatsapp({ onClick, isClosing }) {
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$Componentes$2f$UI$2f$FlyingButtons$2f$FlyingButton$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].wa_input
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                                lineNumber: 151,
+                                lineNumber: 142,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -491,30 +481,30 @@ function FormWhatsapp({ onClick, isClosing }) {
                                     height: 20
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                                    lineNumber: 166,
+                                    lineNumber: 157,
                                     columnNumber: 27
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                                lineNumber: 159,
+                                lineNumber: 150,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                        lineNumber: 150,
+                        lineNumber: 141,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                lineNumber: 133,
+                lineNumber: 124,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-        lineNumber: 120,
+        lineNumber: 112,
         columnNumber: 5
     }, this);
 }

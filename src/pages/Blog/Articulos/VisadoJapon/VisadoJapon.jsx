@@ -1,7 +1,10 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import HeroSection from '../../../../Componentes/Sections/HeroSection.jsx';
 import styles from './VisadoJapon.module.css';
+import { useScrollAnimation } from '../../../../hooks/useScrollAnimation';
 
 import HeroImage from '../../../../assets/ImagenesBlogs/PortadasHero/Blog_Visado_Viajar_Japon_Premium.webp';
 
@@ -115,11 +118,15 @@ function VisadoJapon() {
 export default VisadoJapon
 
 function Card({ image, index, altText, title, subtitle, dias, text}) {
-
+  const ref = useScrollAnimation({
+    animation: index % 2 === 1 ? 'fade-left' : 'fade-right',
+    delay: index * 200,
+    duration: 1
+  });
 
   return (
     <div className={`${index % 2 === 1 ? `${styles.reverse} ${styles.card_container}` : `${styles.card_container}`}`}>
-        <div className={styles.card_text} data-aos={index % 2 === 1 ? 'fade-left' : 'fade-right'} data-aos-delay={index * 200} data-aos-duration="1000">
+        <div ref={ref} className={styles.card_text}>
           <div className={styles.cardContenidoStyle}>
             <div style={{marginBottom: "10px", display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
               <h2 className={styles.cardContainerh2} style={{fontFamily: "nohemi", textTransform: "uppercase"}}>{title}</h2>

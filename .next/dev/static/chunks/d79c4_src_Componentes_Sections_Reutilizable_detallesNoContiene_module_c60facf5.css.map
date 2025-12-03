@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/apps1/Desktop/Prestige-Japan-master/src/Componentes/Sections/Reutilizable/detallesNoContiene.module.css"],"sourcesContent":[".containerStyle{\n    text-align: center;\n    color: white;\n    padding: 20px;\n    width: 220px;\n    gap: 20px;\n}\n\n.iconStyle{\n    width: 45px;\n    height: 45px;\n}\n\n.titleStyle{\n    font-size: 18px;\n    color: #C5C5C5;\n    line-height: 1.2;\n    font-family: nohemi;\n    justify-self: center;\n}"],"names":[],"mappings":"AAAA;;;;;;;;AAQA;;;;;AAKA"}}]
-}

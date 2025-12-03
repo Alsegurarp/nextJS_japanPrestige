@@ -1,5 +1,7 @@
+'use client';
 import Image from 'next/image';
 import styles from './HotelesPremiumCard.module.css';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 
 // Helper function to extract src from imported images
 const getSrcValue = (img) => {
@@ -13,11 +15,12 @@ const getSrcValue = (img) => {
   return null;
 };
 
-export default function HotelesPremiumCard({icon, title, text, fade}) {
+export default function HotelesPremiumCard({ icon, title, text, fade = 'fade-up' }) {
   const iconSrc = getSrcValue(icon);
+  const ref = useScrollAnimation({ animation: fade });
 
   return (
-    <div className={styles.containerStyle} data-aos={fade}>
+    <div ref={ref} className={styles.containerStyle}>
       {iconSrc && <Image src={iconSrc} alt="Hotel Icon" width={48} height={48} className={styles.iconStyle} />}
 
       <div className={styles.contentStyle}>

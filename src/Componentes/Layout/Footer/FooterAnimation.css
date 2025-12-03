@@ -38,6 +38,7 @@
 .japon-container {
   opacity: 0;
   margin-bottom: 0px;
+  justify-content: flex-start;
 }
 
 .japon-letter {

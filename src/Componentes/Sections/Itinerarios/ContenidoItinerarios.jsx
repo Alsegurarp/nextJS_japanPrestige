@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './ContenidoItinerarios.module.css';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 
 import japonDubai from '../../../assets/Itinerarios/PortadasItinerarios/Japon_&_Dubai_Premium_Cerezos_Oro_Portada.webp';
 import JaponChina from '../../../assets/Itinerarios/PortadasItinerarios/Japon_&_China_Dragones_&_Cerezos_Japon_Premium_Templo_Cielo.webp';
@@ -82,11 +83,15 @@ export default ContenidoItinerarios;
 
 
 function Card({ image, index, altText, title, subtitle, dias, text, to }) {
-
+  const ref = useScrollAnimation({
+    animation: index % 2 === 1 ? 'fade-left' : 'fade-right',
+    delay: index * 10,
+    duration: 0.1
+  });
 
   return (
     <div className={`${index % 2 === 1 ? `${styles.reverse} ${styles.cardContainer}` : `${styles.cardContainer}`}`}>
-      <div className={styles.cardText} data-aos={index % 2 === 1 ? 'fade-left' : 'fade-right'} data-aos-delay={index * 10} data-aos-duration="100">
+      <div ref={ref} className={styles.cardText}>
         <div className={styles.cardContenidoStyle}>
           <div style={{ marginBottom: "10px", display: "flex", flexDirection: "column", alignItems: "center" }}>
             <h2 className={styles.cardContainerh2} style={{ fontFamily: "nohemi", textTransform: "uppercase" }}>{title}</h2>

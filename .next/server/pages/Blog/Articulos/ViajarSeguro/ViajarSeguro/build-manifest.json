@@ -7,12 +7,12 @@
   "pages": {
     "/Blog/Articulos/ViajarSeguro/ViajarSeguro": [
       "static/chunks/1eb02aa6b7958e78.js",
-      "static/chunks/bd1d36a8ebc4c3a8.js",
+      "static/chunks/178081083e891d48.js",
+      "static/chunks/5de09488d7f762bf.js",
+      "static/chunks/230863c34d498624.js",
       "static/chunks/889dc661983502b7.js",
-      "static/chunks/f91b2af79bb88a22.js",
-      "static/chunks/8137fa7eb18ca0c9.css",
-      "static/chunks/dcb865ed185a865c.css",
-      "static/chunks/turbopack-1e7bd6d251995e27.js"
+      "static/chunks/393dafbd5b9a074b.css",
+      "static/chunks/turbopack-c77621790d9cf318.js"
     ]
   },
   "ampFirstPages": []

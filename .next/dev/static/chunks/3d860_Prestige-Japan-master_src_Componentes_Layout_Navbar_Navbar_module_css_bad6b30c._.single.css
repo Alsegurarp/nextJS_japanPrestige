@@ -1,5 +1,5 @@
-/* [project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Navbar/Navbar.module.css [app-client] (css) */
-.Navbar-module__4AnXFG__navbarDiv {
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/layout/Navbar/Navbar.module.css [app-client] (css) */
+.Navbar-module__9NBl9a__navbarDiv {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   z-index: 100;
@@ -14,12 +14,12 @@
   box-shadow: 0 4px 30px #0000001a;
 }
 
-.Navbar-module__4AnXFG__menuNavBar {
+.Navbar-module__9NBl9a__menuNavBar {
   color: #fff;
   padding: 0 10px;
 }
 
-.Navbar-module__4AnXFG__buttonMenu {
+.Navbar-module__9NBl9a__buttonMenu {
   cursor: pointer;
   background: none;
   border: none;
@@ -27,24 +27,24 @@
   padding: 0 10px;
 }
 
-.Navbar-module__4AnXFG__redesStyleContainer, .Navbar-module__4AnXFG__redesStyle {
+.Navbar-module__9NBl9a__redesStyleContainer, .Navbar-module__9NBl9a__redesStyle {
   display: none;
 }
 
 @media only screen and (max-width: 550px) {
-  .Navbar-module__4AnXFG__logoLink {
+  .Navbar-module__9NBl9a__logoLink {
     padding: 0 30px 0 0;
   }
 }
 
-.Navbar-module__4AnXFG__logoLink {
+.Navbar-module__9NBl9a__logoLink {
   flex: none;
   height: 40px;
   margin-left: auto;
   display: block;
 }
 
-.Navbar-module__4AnXFG__logoMobile {
+.Navbar-module__9NBl9a__logoMobile {
   object-fit: contain;
   width: auto;
   max-width: 100px;
@@ -52,7 +52,7 @@
   display: block !important;
 }
 
-.Navbar-module__4AnXFG__logoDesktop {
+.Navbar-module__9NBl9a__logoDesktop {
   object-fit: contain;
   width: auto;
   max-width: 100px;
@@ -61,29 +61,29 @@
 }
 
 @media (min-width: 768px) {
-  .Navbar-module__4AnXFG__logoMobile {
+  .Navbar-module__9NBl9a__logoMobile {
     display: none !important;
   }
 
-  .Navbar-module__4AnXFG__logoDesktop {
+  .Navbar-module__9NBl9a__logoDesktop {
     max-width: 220px;
     display: block !important;
   }
 }
 
-.Navbar-module__4AnXFG__textosRedesStyle {
+.Navbar-module__9NBl9a__textosRedesStyle {
   color: #fff;
   font-size: 12px;
   text-decoration: none;
   display: none;
 }
 
-.Navbar-module__4AnXFG__redesIcons {
+.Navbar-module__9NBl9a__redesIcons {
   display: none;
 }
 
 @media only screen and (min-width: 550px) {
-  .Navbar-module__4AnXFG__redesStyleContainer {
+  .Navbar-module__9NBl9a__redesStyleContainer {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
@@ -93,7 +93,7 @@
     display: flex;
   }
 
-  .Navbar-module__4AnXFG__redesStyle {
+  .Navbar-module__9NBl9a__redesStyle {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
@@ -101,13 +101,13 @@
     display: flex;
   }
 
-  .Navbar-module__4AnXFG__redesStyle > div {
+  .Navbar-module__9NBl9a__redesStyle > div {
     align-items: center;
     gap: 10px;
     display: flex;
   }
 
-  .Navbar-module__4AnXFG__redesIcons {
+  .Navbar-module__9NBl9a__redesIcons {
     flex-direction: row;
     align-items: center;
     padding-right: 5px;
@@ -116,19 +116,19 @@
 }
 
 @media only screen and (min-width: 1400px) {
-  .Navbar-module__4AnXFG__textosRedesStyle {
+  .Navbar-module__9NBl9a__textosRedesStyle {
     display: flex;
   }
 
-  .Navbar-module__4AnXFG__menuNavBar {
+  .Navbar-module__9NBl9a__menuNavBar {
     width: 430px;
   }
 
-  .Navbar-module__4AnXFG__redesIcons:nth-child(0) {
+  .Navbar-module__9NBl9a__redesIcons:nth-child(0) {
     display: flex;
     position: absolute;
     right: 20%;
   }
 }
 
-/*# sourceMappingURL=3d860_Prestige-Japan-master_src_Componentes_Layout_Navbar_Navbar_module_css_bad6b30c._.single.css.map*/
+/*# sourceMappingURL=3d860_Prestige-Japan-master_src_Componentes_layout_Navbar_Navbar_module_css_bad6b30c._.single.css.map*/

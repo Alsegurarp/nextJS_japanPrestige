@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './BeneficiosItinerarios.module.css';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 
 import OrigenDelSolJapon from '../../../assets/Itinerarios/PortadasItinerarios/El_Origen_del_Sol_Japon_Premium_Portada_Parque_Nacional_Hakone.webp';
 import TurismoDelPacifico from '../../../assets/Itinerarios/PortadasItinerarios/Titanes_del_Pacifico_Portada_Japon_Premium_Cataratas_Shirato.webp';
@@ -104,19 +105,21 @@ function Contenido(props) {
     ? "" : styles.reverseClassText;
 
 
+  const ref = useScrollAnimation({ animation: 'fade-right' });
+
   return (
     <div className={containerClass}>
       <Image
-          src={props.image}
-          alt={props.altText}
-          loading="lazy"
-          className={styles.beneficioImage}
-          style={{ objectPosition: backgroundPositionValue }}
-          width={800}
-          height={600}
-          priority={false}
+        src={props.image}
+        alt={props.altText}
+        loading="lazy"
+        className={styles.beneficioImage}
+        style={{ objectPosition: backgroundPositionValue }}
+        width={800}
+        height={600}
+        priority={false}
       />
-      <div className={beneficioItinerario} data-aos="fade-right">
+      <div ref={ref} className={beneficioItinerario}>
         <div className={styles.titlePlusSubtitle}>
           <h2
             style={{

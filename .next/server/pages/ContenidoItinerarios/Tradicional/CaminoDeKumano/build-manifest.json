@@ -6,15 +6,13 @@
   "rootMainFiles": [],
   "pages": {
     "/ContenidoItinerarios/Tradicional/CaminoDeKumano": [
-      "static/chunks/73fc238338537bed.js",
-      "static/chunks/a937b995041fefd4.js",
-      "static/chunks/889dc661983502b7.js",
-      "static/chunks/f91b2af79bb88a22.js",
       "static/chunks/1eb02aa6b7958e78.js",
+      "static/chunks/203241e4b53e4467.js",
+      "static/chunks/889dc661983502b7.js",
+      "static/chunks/230863c34d498624.js",
       "static/chunks/2194af26add49977.css",
-      "static/chunks/8137fa7eb18ca0c9.css",
-      "static/chunks/dcb865ed185a865c.css",
-      "static/chunks/turbopack-9639c93c4593778e.js"
+      "static/chunks/393dafbd5b9a074b.css",
+      "static/chunks/turbopack-c56b8ecb8d855f89.js"
     ]
   },
   "ampFirstPages": []

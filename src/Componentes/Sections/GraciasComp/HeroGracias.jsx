@@ -1,8 +1,6 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import styles from './HeroGracias.module.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 import Youtube from '../../../assets/icono-youtube.svg';
 import Facebook from '../../../assets/icono-facebook.svg';
@@ -10,27 +8,27 @@ import Instagram from '../../../assets/icono-instagram.svg';
 import Spotify from '../../../assets/icono-spotify.svg';
 import Tiktok from '../../../assets/icono-tiktok.svg';
 
-const HeroSection = React.memo(function HeroSection({data}) {
+const HeroSection = React.memo(function HeroSection({ data }) {
 
-    return(
-        <div>
-            {data.map((s, i) => (
-                <Hero
-                key={i}
-                image={s.image}
-                altImg={s.altImg}
-                title={s.title}
-                bgPosition={s.bgPosition}
-                letrasDoradasResponsive={s.letrasDoradasResponsive}
-                LetrasDoradasDesktop={s.LetrasDoradasDesktop}
-                />
-            ))}
-        </div>
-    )
+  return (
+    <div>
+      {data.map((s, i) => (
+        <Hero
+          key={i}
+          image={s.image}
+          altImg={s.altImg}
+          title={s.title}
+          bgPosition={s.bgPosition}
+          letrasDoradasResponsive={s.letrasDoradasResponsive}
+          LetrasDoradasDesktop={s.LetrasDoradasDesktop}
+        />
+      ))}
+    </div>
+  )
 })
 
 
-function Hero({image, altImg, title, subtitle, bgPosition = "50%", letrasDoradasResponsive, LetrasDoradasDesktop}) {
+function Hero({ image, altImg, title, subtitle, bgPosition = "50%", letrasDoradasResponsive, LetrasDoradasDesktop }) {
   // Extract src from imported image object or use as-is if it's already a string
   const getSrcValue = (img) => {
     if (!img) return null;
@@ -47,25 +45,20 @@ function Hero({image, altImg, title, subtitle, bgPosition = "50%", letrasDoradas
   const letrasResponsiveSrc = getSrcValue(letrasDoradasResponsive);
   const letrasDesktopSrc = getSrcValue(LetrasDoradasDesktop);
 
-  useEffect(() => {
-      AOS.init({
-        duration: 1000, // duración de animaciones
-        once: true      // Se anima solo una vez
-      });
-      }, []);
 
-   return(
+
+  return (
     <div className={styles.beneficiosContainerHero} style={{ position: 'relative' }}>
-      
+
       {/* Next.js Image for optimized rendering */}
-      {imageSrc && <Image src={imageSrc} alt={altImg} fill className={styles.visuallyHidden} priority={true} style={{objectPosition: bgPosition}} />}
+      {imageSrc && <Image src={imageSrc} alt={altImg} fill className={styles.visuallyHidden} priority={true} style={{ objectPosition: bgPosition }} />}
 
       <div className={styles.contenidoBeneficiosHero}>
         {letrasResponsiveSrc && <Image src={letrasResponsiveSrc} alt="" className={styles.letrasDoradasResponsive} width={300} height={100} priority={false} />}
         {letrasDesktopSrc && <Image src={letrasDesktopSrc} alt="" className={styles.letrasDoradasDesktop} width={500} height={150} priority={false} />}
-        <div className={styles.titlePlusSubtitleHero} data-aos="fade-right">         
-            <h2 className={styles.textStyle}>{title}</h2>
-            <h2 className={styles.textStyle}>{subtitle}</h2>
+        <div className={styles.titlePlusSubtitleHero}>
+          <h2 className={styles.textStyle}>{title}</h2>
+          <h2 className={styles.textStyle}>{subtitle}</h2>
 
           <div className={styles.contenedorBotones}>
             <button className={styles.buttonStyle}>Llamar al call center 24/7</button>
@@ -115,7 +108,7 @@ function RedesSociales() {
       link: "https://www.youtube.com/@viajespremiumelevatuvida",
       text: '@viajespremiumelevatuvida',
       subtitulo: 'Youtube: ',
-    },{
+    }, {
       id: 5,
       alt: 'Ícono de Spotify, enlace al perfil ViajesPremium',
       src: Spotify,
@@ -127,18 +120,18 @@ function RedesSociales() {
 
   return (
     <section className={styles.containerSociales}>
-        <div className={styles.flexColumnGap15}>
+      <div className={styles.flexColumnGap15}>
         <span className={styles.titleWhite}>Nuestras Redes Sociales</span>
-            <div className={styles.redesSocialesContainer}>
-                {redes.map((r, i) => (
-                <div key={r.id} data-aos="fade-up" data-aos-delay={`${i}0`}  className={styles.rowStart}>
-                    <a href={r.link} target="_blank" rel="noopener noreferrer">
-                    <img src={r.src} alt={r.alt} className={styles.iconsFooter} loading='lazy' />
-                    </a>
+        <div className={styles.redesSocialesContainer}>
+          {redes.map((r, i) => (
+            <div key={r.id} className={styles.rowStart}>
+              <a href={r.link} target="_blank" rel="noopener noreferrer">
+                <img src={r.src} alt={r.alt} className={styles.iconsFooter} loading='lazy' />
+              </a>
             </div>
-            ))}
-            </div>
+          ))}
         </div>
+      </div>
     </section>
   );
 }

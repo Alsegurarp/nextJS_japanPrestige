@@ -197,13 +197,14 @@ function Form() {
             const subject = `Contacto - Japon Premium: ${payload.firstName} ${payload.lastName}`;
             // A human readable plain text message; we also send an html version
             const text = `
-Nuevo contacto desde formulario:
-Nombre: ${payload.firstName} ${payload.lastName}
-Email: ${payload.email}
-Teléfono: ${payload.phoneFull}
-Fecha deseada: ${payload.date}
-Comentarios: ${payload.comments}
-reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
+      #tags:Japon Premium Nueva
+      Nuevo contacto desde formulario:
+      Nombre: ${payload.firstName} ${payload.lastName}
+      Email: ${payload.email}
+      Teléfono: ${payload.phoneFull}
+      Fecha deseada: ${payload.date}
+      Comentarios: ${payload.comments}
+      reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
       `.trim();
             const html = `
         <h2>Nuevo contacto desde formulario</h2>
@@ -257,7 +258,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                             children: "Datos personales"
                         }, void 0, false, {
                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                            lineNumber: 200,
+                            lineNumber: 201,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -273,7 +274,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 203,
+                                    lineNumber: 204,
                                     columnNumber: 15
                                 }, this),
                                 !isFirstNameValid && firstName !== "" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
@@ -281,7 +282,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                     children: "Sólo letras y espacios."
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 213,
+                                    lineNumber: 214,
                                     columnNumber: 17
                                 }, this),
                                 firstName.length >= 35 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
@@ -293,7 +294,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 216,
+                                    lineNumber: 217,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -306,7 +307,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 219,
+                                    lineNumber: 220,
                                     columnNumber: 15
                                 }, this),
                                 !isLastNameValid && lastName !== "" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
@@ -314,7 +315,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                     children: "Sólo letras y espacios."
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 229,
+                                    lineNumber: 230,
                                     columnNumber: 17
                                 }, this),
                                 lastName.length >= 35 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
@@ -326,13 +327,13 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 232,
+                                    lineNumber: 233,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                            lineNumber: 202,
+                            lineNumber: 203,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -361,12 +362,12 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                                     ]
                                                 }, c.code + c.name, true, {
                                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                                    lineNumber: 250,
+                                                    lineNumber: 251,
                                                     columnNumber: 21
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                            lineNumber: 238,
+                                            lineNumber: 239,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -380,13 +381,13 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                             required: true
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                            lineNumber: 256,
+                                            lineNumber: 257,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 237,
+                                    lineNumber: 238,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
@@ -397,7 +398,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                             children: fullPhone
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                            lineNumber: 269,
+                                            lineNumber: 270,
                                             columnNumber: 34
                                         }, this),
                                         " — ",
@@ -406,7 +407,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 268,
+                                    lineNumber: 269,
                                     columnNumber: 15
                                 }, this),
                                 phone !== "" && !isPhoneValid && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
@@ -414,13 +415,13 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                     children: "Verifica el número: el total (código + número) debe tener entre 10 y 13 dígitos."
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 273,
+                                    lineNumber: 274,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                            lineNumber: 236,
+                            lineNumber: 237,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -437,7 +438,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 280,
+                                    lineNumber: 281,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
@@ -448,7 +449,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 290,
+                                    lineNumber: 291,
                                     columnNumber: 15
                                 }, this),
                                 email !== "" && !isEmailValid && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
@@ -456,13 +457,13 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                     children: "Debe tener formato válido y terminar en .com, .com.mx o .es"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 292,
+                                    lineNumber: 293,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                            lineNumber: 279,
+                            lineNumber: 280,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -470,7 +471,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                             children: "Sobre tu viaje"
                         }, void 0, false, {
                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                            lineNumber: 298,
+                            lineNumber: 299,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -481,7 +482,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                     children: "Fecha aproximada de viaje"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 301,
+                                    lineNumber: 302,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -502,7 +503,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                             onClick: ()=>setOpen((prev)=>!prev)
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                            lineNumber: 303,
+                                            lineNumber: 304,
                                             columnNumber: 17
                                         }, this),
                                         open && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -513,24 +514,24 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                                 maxDate: maxDate
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                                lineNumber: 314,
+                                                lineNumber: 315,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                            lineNumber: 313,
+                                            lineNumber: 314,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 302,
+                                    lineNumber: 303,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                            lineNumber: 300,
+                            lineNumber: 301,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -541,7 +542,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                     children: "Comentarios adicionales (opcional)"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 321,
+                                    lineNumber: 322,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -553,13 +554,13 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                     rows: 4
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                    lineNumber: 322,
+                                    lineNumber: 323,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                            lineNumber: 320,
+                            lineNumber: 321,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -571,12 +572,12 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                 onError: ()=>setValidCaptcha(null)
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                lineNumber: 333,
+                                lineNumber: 334,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                            lineNumber: 332,
+                            lineNumber: 333,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -588,12 +589,12 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                                 children: submitting ? "Enviando…" : "Enviar"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                                lineNumber: 342,
+                                lineNumber: 343,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                            lineNumber: 341,
+                            lineNumber: 342,
                             columnNumber: 13
                         }, this),
                         serverMsg && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -601,7 +602,7 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                             children: serverMsg
                         }, void 0, false, {
                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                            lineNumber: 351,
+                            lineNumber: 352,
                             columnNumber: 27
                         }, this),
                         serverErr && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -609,23 +610,23 @@ reCAPTCHA token: ${payload.recaptchaToken ? "(present)" : "(missing)"}
                             children: serverErr
                         }, void 0, false, {
                             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                            lineNumber: 352,
+                            lineNumber: 353,
                             columnNumber: 27
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                    lineNumber: 199,
+                    lineNumber: 200,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-                lineNumber: 198,
+                lineNumber: 199,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/Desktop/Prestige-Japan-master/src/pages/Contacto/Componente/Form.jsx",
-            lineNumber: 197,
+            lineNumber: 198,
             columnNumber: 7
         }, this)
     }, void 0, false);
@@ -801,12 +802,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$assets$2f$wa_chat$2f$chatea_con_nuestra_asistente_verde$2e$svg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$assets$2f$wa_chat$2f$chatea_con_nuestra_asistente_verde$2e$svg__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/Desktop/Prestige-Japan-master/src/assets/wa_chat/chatea_con_nuestra_asistente_verde.svg.mjs { IMAGE => "[project]/Desktop/Prestige-Japan-master/src/assets/wa_chat/chatea_con_nuestra_asistente_verde.svg (static in ecmascript, tag client)" } [app-client] (structured image object with data url, ecmascript)');
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$assets$2f$wa_chat$2f$icono_enviar_whatsapp$2e$svg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$assets$2f$wa_chat$2f$icono_enviar_whatsapp$2e$svg__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/Desktop/Prestige-Japan-master/src/assets/wa_chat/icono_enviar_whatsapp.svg.mjs { IMAGE => "[project]/Desktop/Prestige-Japan-master/src/assets/wa_chat/icono_enviar_whatsapp.svg (static in ecmascript, tag client)" } [app-client] (structured image object with data url, ecmascript)');
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$assets$2f$bgWhatsapp$2e$webp$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$assets$2f$bgWhatsapp$2e$webp__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/Desktop/Prestige-Japan-master/src/assets/bgWhatsapp.webp.mjs { IMAGE => "[project]/Desktop/Prestige-Japan-master/src/assets/bgWhatsapp.webp (static in ecmascript, tag client)" } [app-client] (structured image object with data url, ecmascript)');
-var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$aos$2f$dist$2f$aos$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/aos/dist/aos.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature(), _s2 = __turbopack_context__.k.signature();
 'use client';
-;
-;
 ;
 ;
 ;
@@ -842,14 +840,6 @@ function FlyingButton({ positionTop = '20px' }) {
             setClicked(true); // mostrar modal directamente
         }
     }
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "FlyingButton.useEffect": ()=>{
-            __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$aos$2f$dist$2f$aos$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].init({
-                duration: 1000,
-                once: false // Se anima en loop
-            });
-        }
-    }["FlyingButton.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FloatingButton, {
@@ -857,7 +847,7 @@ function FlyingButton({ positionTop = '20px' }) {
                 positionTop: positionTop
             }, void 0, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                lineNumber: 58,
+                lineNumber: 50,
                 columnNumber: 7
             }, this),
             clicked && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FormWhatsapp, {
@@ -865,13 +855,13 @@ function FlyingButton({ positionTop = '20px' }) {
                 isClosing: isClosing
             }, void 0, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                lineNumber: 59,
+                lineNumber: 51,
                 columnNumber: 19
             }, this)
         ]
     }, void 0, true);
 }
-_s(FlyingButton, "4UkLSjJ0Yt5KYdxXaAfEeIEu5hU=");
+_s(FlyingButton, "VmQQDsYxuMlQkHib37BaQvbCHbc=");
 _c = FlyingButton;
 function FloatingButton({ onClick, positionTop }) {
     _s1();
@@ -906,12 +896,12 @@ function FloatingButton({ onClick, positionTop }) {
             alt: "WhatsApp Chat"
         }, void 0, false, {
             fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-            lineNumber: 85,
+            lineNumber: 77,
             columnNumber: 24
         }, this)
     }, void 0, false, {
         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-        lineNumber: 84,
+        lineNumber: 76,
         columnNumber: 5
     }, this);
 }
@@ -943,7 +933,6 @@ function FormWhatsapp({ onClick, isClosing }) {
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: `${__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$Componentes$2f$UI$2f$FlyingButtons$2f$FlyingButton$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].wa_modal} ${isClosing ? __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$Componentes$2f$UI$2f$FlyingButtons$2f$FlyingButton$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].fade_out : ''}`,
-        "data-aos": !isClosing ? 'fade-up' : '',
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$Componentes$2f$UI$2f$FlyingButtons$2f$FlyingButton$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].wa_header,
@@ -956,7 +945,7 @@ function FormWhatsapp({ onClick, isClosing }) {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$Componentes$2f$UI$2f$FlyingButtons$2f$FlyingButton$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].wa_avatar
                     }, void 0, false, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                        lineNumber: 125,
+                        lineNumber: 116,
                         columnNumber: 23
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -966,20 +955,20 @@ function FormWhatsapp({ onClick, isClosing }) {
                                 children: "Japón Premium"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                                lineNumber: 127,
+                                lineNumber: 118,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 children: "Descubre Japón en un nivel superior"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                                lineNumber: 128,
+                                lineNumber: 119,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                        lineNumber: 126,
+                        lineNumber: 117,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -988,13 +977,13 @@ function FormWhatsapp({ onClick, isClosing }) {
                         children: "×"
                     }, void 0, false, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                        lineNumber: 130,
+                        lineNumber: 121,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                lineNumber: 124,
+                lineNumber: 115,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1008,7 +997,7 @@ function FormWhatsapp({ onClick, isClosing }) {
                         height: 300
                     }, void 0, false, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                        lineNumber: 134,
+                        lineNumber: 125,
                         columnNumber: 19
                     }, this),
                     conversationSrc && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1020,12 +1009,12 @@ function FormWhatsapp({ onClick, isClosing }) {
                             height: 60
                         }, void 0, false, {
                             fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                            lineNumber: 145,
+                            lineNumber: 136,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                        lineNumber: 144,
+                        lineNumber: 135,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1040,7 +1029,7 @@ function FormWhatsapp({ onClick, isClosing }) {
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$Componentes$2f$UI$2f$FlyingButtons$2f$FlyingButton$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].wa_input
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                                lineNumber: 151,
+                                lineNumber: 142,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1056,30 +1045,30 @@ function FormWhatsapp({ onClick, isClosing }) {
                                     height: 20
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                                    lineNumber: 166,
+                                    lineNumber: 157,
                                     columnNumber: 27
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                                lineNumber: 159,
+                                lineNumber: 150,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                        lineNumber: 150,
+                        lineNumber: 141,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-                lineNumber: 133,
+                lineNumber: 124,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/UI/FlyingButtons/FlyingButton.jsx",
-        lineNumber: 120,
+        lineNumber: 112,
         columnNumber: 5
     }, this);
 }

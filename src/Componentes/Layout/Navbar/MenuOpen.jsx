@@ -1,9 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import './MenuOpen.css';
 import Link from 'next/link';
 import { prefetchOnVisible } from '../../../utils/routePrefetching.js';
@@ -72,8 +70,6 @@ function SubmenuGroup({ title, items, isOpen, onClick, onItemClick, path }) {
             <Link
               key={title + id}
               href={isLink ? path : "/itinerarios"}
-              data-aos="fade-down"
-              data-aos-delay={10 * idx}
               onClick={() => {
                 if (isLink) {
                   onItemClick(path);
@@ -124,21 +120,13 @@ export default function MenuOpen({ onClose }) {
   };
 
 
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
 
-  // AOS - submenu abre
-  useEffect(() => {
-    AOS.refresh();
-  }, [openSubmenu]);
 
   return ReactDOM.createPortal(
     <>
       <div onClick={triggerClose} className='backgroundMenuShadow' />
       <div
         className={`menuStyle ${isClosing ? 'menu-fade-out' : ''}`}
-        data-aos={!isClosing ? 'fade-right' : ''}
       >
         <button onClick={triggerClose} className='closeMenuButton'>✕</button>
         <div style={{ display: 'flex', flex: 1 }}>
@@ -185,8 +173,6 @@ export default function MenuOpen({ onClose }) {
                   key={key}
                   title={key.charAt(0).toUpperCase() + key.slice(1)}
                   items={value}
-                  data-aos="fade-down"
-                  data-aos-delay={10 * i}
                   isOpen={openSubmenu === key}
                   onClick={() =>
                     setOpenSubmenu((prev) => (prev === key ? null : key))

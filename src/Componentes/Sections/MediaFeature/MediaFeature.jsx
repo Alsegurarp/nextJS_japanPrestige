@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./MediaFeature.module.css";
+import { useScrollAnimation } from "../../../hooks/useScrollAnimation";
 
 export default function MediaFeature(props) {
   // Extract src from imported image object or use as-is if it's already a string
@@ -32,6 +33,8 @@ export default function MediaFeature(props) {
 
   const imageSrc = getSrcValue(props.image);
 
+  const ref = useScrollAnimation({ animation: 'fade-up' });
+
   return (
     <div className={styles.beneficiosContainer}>
       {imageSrc && (
@@ -45,7 +48,7 @@ export default function MediaFeature(props) {
         />
       )}
 
-      <div className={styles.contenidoBeneficios} data-aos="fade-up" suppressHydrationWarning>
+      <div ref={ref} className={styles.contenidoBeneficios}>
         <div className={styles.titlePlusSubtitle}>
           <h2 className={styles.title}>{props.title}</h2>
           {props.subtitle && (

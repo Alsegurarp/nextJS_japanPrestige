@@ -3,8 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import { lazy, Suspense } from 'react';
 import PreguntaObjeciones from '../../Componentes/UI/Cards/PreguntaObjeciones.jsx';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import '../../styles/home.css';
 import styles from './Faqs.module.css';
 import LoadingSpinner from '../../Componentes/UI/LoadingSpinner.jsx';
@@ -33,12 +31,7 @@ function Faqs() {
     }, []);
 
 
-    useEffect(() => {
-        AOS.init({
-            duration: 1000, // duración de animaciones
-            once: true      // Se anima solo una vez
-        });
-    }, []);
+
 
     return (
         <>

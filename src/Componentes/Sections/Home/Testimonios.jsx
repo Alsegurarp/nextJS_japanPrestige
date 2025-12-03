@@ -98,12 +98,13 @@ const Testimonios = React.memo(function Testimonios() {
               <h3 id="testimonio-title" className={styles.panelName}>{selected.nombre}</h3>
               <div className={styles.testimonioEstrellas}>
                 {Array.from({ length: 5 }, (_, i) => (
-                  <img
+                  <Image
                     src={selected.estrella}
                     key={i}
                     alt="estrella"
                     className={styles.starIcon}
-                    loading="lazy"
+                    width={20}
+                    height={20}
                   />
                 ))}
               </div>

@@ -7,8 +7,6 @@ import IconWA from '../../../assets/icono-whatsapp.svg';
 import ViajesImg from '../../../assets/soporteWhatsapp.webp';
 
 import bgWhatsapp from '../../../assets/bgWhatsapp.webp';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 // Helper to extract src from imported images
 const getSrcValue = (img) => {
@@ -40,12 +38,7 @@ export default function FlyingButton() {
     }
   }
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // duración de animaciones
-      once: false      // Se anima en loop
-    });
-  }, []);
+
 
 
   return (
@@ -99,7 +92,6 @@ function FormWhatsapp({ onClick, isClosing }) {
   return (
     <div
       className={`${styles.wa_modal} ${isClosing ? styles.fade_out : ''}`}
-      data-aos={!isClosing ? 'fade-up' : ''}
     >
       <div className={styles.wa_header}>
         {viajesSrc && <Image src={viajesSrc} alt="Soporte" width={40} height={40} className={styles.wa_avatar} />}

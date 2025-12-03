@@ -1,4 +1,4 @@
-import {lazy} from 'react';
+import { lazy } from 'react';
 import Image from 'next/image';
 import styles from './Hero.module.css';
 import japanPremium from '../../../assets/portadas-nuevas-19-sep/hotelesImg/contacto_Portada_Japon_Premium_Templo.webp';
@@ -26,19 +26,19 @@ const data = [
   }]
 
 
-function Hero({image}){
+function Hero({ image }) {
   const imageSrc = getSrcValue(image);
-  
-  return(
-    <div style={{position: 'relative', top: '-60px'}}>
+
+  return (
+    <div style={{ position: 'relative', top: '-60px' }}>
       {imageSrc && (
-        <div className={styles.beneficiosContainerHero} style={{position: 'relative', height: '500px'}}>
-          <Image 
+        <div className={styles.beneficiosContainerHero} style={{ position: 'relative' }}>
+          <Image
             src={imageSrc}
             alt="Hero Background"
             fill
             priority
-            style={{objectFit: 'cover'}}
+            style={{ objectFit: 'cover' }}
             className={styles.heroImg}
           />
           <div className={styles.heroContentGrid}>
@@ -62,16 +62,16 @@ import React from 'react'
 const HeroSection = React.memo(function HeroSection() {
 
 
-    return (
+  return (
     <div>
       {data.map((s, index) => (
-            <Hero
-              image={s.image}
-              title={s.title}
-              cat1={s.cat1}
-              cat2={s.cat2}
-              key={`hero-${index}`}/>
-        ))}
+        <Hero
+          image={s.image}
+          title={s.title}
+          cat1={s.cat1}
+          cat2={s.cat2}
+          key={`hero-${index}`} />
+      ))}
     </div>
   )
 });

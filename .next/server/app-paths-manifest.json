@@ -22,6 +22,7 @@
   "/hoteles/hoteles-japon/page": "app/hoteles/hoteles-japon/page.js",
   "/hoteles/hoteles-tailandia/page": "app/hoteles/hoteles-tailandia/page.js",
   "/hoteles/page": "app/hoteles/page.js",
+  "/icon.svg/route": "app/icon.svg/route.js",
   "/itinerarios/art-oriental/page": "app/itinerarios/art-oriental/page.js",
   "/itinerarios/camino-de-kumano/page": "app/itinerarios/camino-de-kumano/page.js",
   "/itinerarios/imperio-del-sol/page": "app/itinerarios/imperio-del-sol/page.js",
