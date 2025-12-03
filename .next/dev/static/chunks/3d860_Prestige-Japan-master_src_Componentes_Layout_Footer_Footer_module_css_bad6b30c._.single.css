@@ -1,5 +1,5 @@
-/* [project]/Desktop/Prestige-Japan-master/src/Componentes/layout/Footer/Footer.module.css [app-client] (css) */
-.Footer-module__X2vESq__sectionFooter {
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/Layout/Footer/Footer.module.css [app-client] (css) */
+.Footer-module__qDQ3Iq__sectionFooter {
   flex-direction: column;
   justify-content: center;
   place-self: center;
@@ -10,28 +10,28 @@
   display: flex;
 }
 
-.Footer-module__X2vESq__flexColumnGap15 {
+.Footer-module__qDQ3Iq__flexColumnGap15 {
   flex-direction: column;
   gap: 15px;
   padding-bottom: 10px;
   display: flex;
 }
 
-.Footer-module__X2vESq__flexColumnGap20 {
+.Footer-module__qDQ3Iq__flexColumnGap20 {
   flex-direction: column;
   gap: 20px;
   padding-bottom: 10px;
   display: flex;
 }
 
-.Footer-module__X2vESq__rowStart {
+.Footer-module__qDQ3Iq__rowStart {
   justify-content: flex-start;
   align-self: center;
   align-items: center;
   display: flex;
 }
 
-.Footer-module__X2vESq__rowStartGap10 {
+.Footer-module__qDQ3Iq__rowStartGap10 {
   justify-content: flex-start;
   align-self: center;
   align-items: center;
@@ -39,27 +39,27 @@
   display: flex;
 }
 
-.Footer-module__X2vESq__titleWhite {
+.Footer-module__qDQ3Iq__titleWhite {
   color: #fff;
   align-self: center;
   font-family: nohemi;
   font-size: 16px;
 }
 
-.Footer-module__X2vESq__subtitle {
+.Footer-module__qDQ3Iq__subtitle {
   font-family: nohemi;
 }
 
-.Footer-module__X2vESq__bold {
+.Footer-module__qDQ3Iq__bold {
   font-weight: bold;
 }
 
-.Footer-module__X2vESq__PremiumJapanFooterLogo img {
+.Footer-module__qDQ3Iq__PremiumJapanFooterLogo img {
   width: 160px;
   height: 70px;
 }
 
-.Footer-module__X2vESq__subFooter {
+.Footer-module__qDQ3Iq__subFooter {
   border-top: 1px solid #fff;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -72,40 +72,40 @@
   display: flex;
 }
 
-.Footer-module__X2vESq__subFooterText {
+.Footer-module__qDQ3Iq__subFooterText {
   color: #fff;
   font-family: nohemi;
   font-size: 14px;
   text-decoration: none;
 }
 
-.Footer-module__X2vESq__textWhiteSmall {
+.Footer-module__qDQ3Iq__textWhiteSmall {
   color: #fff;
   font-family: nohemi;
   font-size: 12px;
 }
 
-.Footer-module__X2vESq__copyrightText {
+.Footer-module__qDQ3Iq__copyrightText {
   text-align: right;
   width: 60%;
   line-height: 1.6;
 }
 
-.Footer-module__X2vESq__iconsContacto {
+.Footer-module__qDQ3Iq__iconsContacto {
   object-fit: contain;
   flex-shrink: 0;
   width: 24px;
   height: 24px;
 }
 
-.Footer-module__X2vESq__iconsFooter {
+.Footer-module__qDQ3Iq__iconsFooter {
   object-fit: contain;
   flex-shrink: 0;
   width: 34px;
   height: 34px;
 }
 
-.Footer-module__X2vESq__contactAndSocialsContainer {
+.Footer-module__qDQ3Iq__contactAndSocialsContainer {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -117,7 +117,7 @@
   display: flex;
 }
 
-.Footer-module__X2vESq__contactosContainer {
+.Footer-module__qDQ3Iq__contactosContainer {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -125,7 +125,7 @@
   display: flex;
 }
 
-.Footer-module__X2vESq__contactLink {
+.Footer-module__qDQ3Iq__contactLink {
   align-items: center;
   gap: 10px;
   text-decoration: none;
@@ -133,15 +133,15 @@
   display: flex;
 }
 
-.Footer-module__X2vESq__contactLink:hover {
+.Footer-module__qDQ3Iq__contactLink:hover {
   opacity: .8;
 }
 
-.Footer-module__X2vESq__contactLink img {
+.Footer-module__qDQ3Iq__contactLink img {
   height: 40px;
 }
 
-.Footer-module__X2vESq__redesSocialesContainer {
+.Footer-module__qDQ3Iq__redesSocialesContainer {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -149,18 +149,18 @@
   display: flex;
 }
 
-.Footer-module__X2vESq__redesSocialesContainer a {
+.Footer-module__qDQ3Iq__redesSocialesContainer a {
   justify-content: center;
   align-items: center;
   transition: transform .3s;
   display: flex;
 }
 
-.Footer-module__X2vESq__redesSocialesContainer a:hover {
+.Footer-module__qDQ3Iq__redesSocialesContainer a:hover {
   transform: scale(1.1);
 }
 
-.Footer-module__X2vESq__separator {
+.Footer-module__qDQ3Iq__separator {
   background-color: #f0c051;
   width: 90%;
   max-width: 1440px;
@@ -169,23 +169,23 @@
 }
 
 @media (max-width: 1024px) {
-  .Footer-module__X2vESq__sectionFooter {
+  .Footer-module__qDQ3Iq__sectionFooter {
     padding: 60px 3% 40px;
   }
 
-  .Footer-module__X2vESq__contactosContainer {
+  .Footer-module__qDQ3Iq__contactosContainer {
     gap: 20px;
   }
 
-  .Footer-module__X2vESq__redesSocialesContainer {
+  .Footer-module__qDQ3Iq__redesSocialesContainer {
     gap: 10px;
   }
 
-  .Footer-module__X2vESq__copyrightText {
+  .Footer-module__qDQ3Iq__copyrightText {
     width: 50%;
   }
 
-  .Footer-module__X2vESq__subFooter {
+  .Footer-module__qDQ3Iq__subFooter {
     text-align: center;
     flex-direction: column;
     justify-content: center;
@@ -195,100 +195,100 @@
 }
 
 @media (max-width: 768px) {
-  .Footer-module__X2vESq__sectionFooter {
+  .Footer-module__qDQ3Iq__sectionFooter {
     padding: 40px 2% 30px;
   }
 
-  .Footer-module__X2vESq__contactAndSocialsContainer {
+  .Footer-module__qDQ3Iq__contactAndSocialsContainer {
     text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .Footer-module__X2vESq__contactosContainer {
+  .Footer-module__qDQ3Iq__contactosContainer {
     flex-direction: column;
     align-items: center;
     gap: 15px;
   }
 
-  .Footer-module__X2vESq__subFooter {
+  .Footer-module__qDQ3Iq__subFooter {
     text-align: center;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
 
-  .Footer-module__X2vESq__copyrightText {
+  .Footer-module__qDQ3Iq__copyrightText {
     text-align: center;
     width: 100%;
   }
 
-  .Footer-module__X2vESq__iconsContacto, .Footer-module__X2vESq__iconsFooter {
+  .Footer-module__qDQ3Iq__iconsContacto, .Footer-module__qDQ3Iq__iconsFooter {
     width: 28px;
     height: 28px;
   }
 }
 
 @media (max-width: 480px) {
-  .Footer-module__X2vESq__sectionFooter {
+  .Footer-module__qDQ3Iq__sectionFooter {
     padding: 30px 0 20px;
   }
 
-  .Footer-module__X2vESq__contactosContainer {
+  .Footer-module__qDQ3Iq__contactosContainer {
     gap: 15px;
   }
 
-  .Footer-module__X2vESq__subFooterText, .Footer-module__X2vESq__textWhiteSmall {
+  .Footer-module__qDQ3Iq__subFooterText, .Footer-module__qDQ3Iq__textWhiteSmall {
     font-size: 12px;
   }
 
-  .Footer-module__X2vESq__iconsContacto, .Footer-module__X2vESq__iconsFooter {
+  .Footer-module__qDQ3Iq__iconsContacto, .Footer-module__qDQ3Iq__iconsFooter {
     width: 20px;
     height: 20px;
   }
 
-  .Footer-module__X2vESq__contactLink {
+  .Footer-module__qDQ3Iq__contactLink {
     gap: 8px;
   }
 
-  .Footer-module__X2vESq__redesSocialesContainer {
+  .Footer-module__qDQ3Iq__redesSocialesContainer {
     gap: 12px;
   }
 }
 
 @media (max-width: 320px) {
-  .Footer-module__X2vESq__sectionFooter {
+  .Footer-module__qDQ3Iq__sectionFooter {
     padding: 20px 0 15px;
   }
 
-  .Footer-module__X2vESq__contactosContainer {
+  .Footer-module__qDQ3Iq__contactosContainer {
     gap: 10px;
   }
 
-  .Footer-module__X2vESq__redesSocialesContainer {
+  .Footer-module__qDQ3Iq__redesSocialesContainer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
   }
 
-  .Footer-module__X2vESq__subFooterText, .Footer-module__X2vESq__textWhiteSmall, .Footer-module__X2vESq__copyrightText {
+  .Footer-module__qDQ3Iq__subFooterText, .Footer-module__qDQ3Iq__textWhiteSmall, .Footer-module__qDQ3Iq__copyrightText {
     font-size: 11px;
   }
 
-  .Footer-module__X2vESq__iconsContacto {
+  .Footer-module__qDQ3Iq__iconsContacto {
     width: 20px;
     height: 20px;
   }
 
-  .Footer-module__X2vESq__iconsFooter {
+  .Footer-module__qDQ3Iq__iconsFooter {
     width: 30px;
     height: 30px;
   }
 
-  .Footer-module__X2vESq__subFooter, .Footer-module__X2vESq__contactAndSocialsContainer {
+  .Footer-module__qDQ3Iq__subFooter, .Footer-module__qDQ3Iq__contactAndSocialsContainer {
     justify-content: center;
   }
 }
 
-/*# sourceMappingURL=3d860_Prestige-Japan-master_src_Componentes_layout_Footer_Footer_module_css_bad6b30c._.single.css.map*/
+/*# sourceMappingURL=3d860_Prestige-Japan-master_src_Componentes_Layout_Footer_Footer_module_css_bad6b30c._.single.css.map*/

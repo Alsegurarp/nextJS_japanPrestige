@@ -35,7 +35,7 @@ function disableSmoothScrollDuringRouteTransition(fn, options = {}) {
     // Proceed with temporarily disabling smooth scrolling
     const existing = htmlElement.style.scrollBehavior;
     htmlElement.style.scrollBehavior = 'auto';
-    if (!options.dontForcelayout) {
+    if (!options.dontForceLayout) {
         // In Chrome-based browsers we need to force reflow before calling `scrollTo`.
         // Otherwise it will not pickup the change in scrollBehavior
         // More info here: https://github.com/vercel/next.js/issues/40719#issuecomment-1336248042
@@ -149,12 +149,12 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 Object.defineProperty(exports, /**
- * OuterlayoutRouter handles the current segment as well as <Offscreen> rendering of other segments.
+ * OuterLayoutRouter handles the current segment as well as <Offscreen> rendering of other segments.
  * It can be rendered next to each other with a different `parallelRouterKey`, allowing for Parallel routes.
  */ "default", {
     enumerable: true,
     get: function() {
-        return OuterlayoutRouter;
+        return OuterLayoutRouter;
     }
 });
 const _interop_require_default = __turbopack_context__.r("[project]/Desktop/Prestige-Japan-master/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [app-client] (ecmascript)");
@@ -359,7 +359,7 @@ class InnerScrollAndFocusHandler extends _react.default.Component {
                     }
                 }, {
                     // We will force layout by querying domNode position
-                    dontForcelayout: true,
+                    dontForceLayout: true,
                     onlyHashChange: focusAndScrollRef.onlyHashChange
                 });
                 // Mutate after scrolling so that it can be read by `disableSmoothScrollDuringRouteTransition`
@@ -371,7 +371,7 @@ class InnerScrollAndFocusHandler extends _react.default.Component {
     }
 }
 function ScrollAndFocusHandler({ segmentPath, children }) {
-    const context = (0, _react.useContext)(_approutercontextsharedruntime.GloballayoutRouterContext);
+    const context = (0, _react.useContext)(_approutercontextsharedruntime.GlobalLayoutRouterContext);
     if (!context) {
         throw Object.defineProperty(new Error('invariant global layout router not mounted'), "__NEXT_ERROR_CODE", {
             value: "E473",
@@ -386,9 +386,9 @@ function ScrollAndFocusHandler({ segmentPath, children }) {
     });
 }
 /**
- * InnerlayoutRouter handles rendering the provided segment based on the cache.
- */ function InnerlayoutRouter({ tree, segmentPath, debugNameContext, cacheNode, params, url, isActive }) {
-    const context = (0, _react.useContext)(_approutercontextsharedruntime.GloballayoutRouterContext);
+ * InnerLayoutRouter handles rendering the provided segment based on the cache.
+ */ function InnerLayoutRouter({ tree, segmentPath, debugNameContext, cacheNode, params, url, isActive }) {
+    const context = (0, _react.useContext)(_approutercontextsharedruntime.GlobalLayoutRouterContext);
     const parentNavPromises = (0, _react.useContext)(_hooksclientcontextsharedruntime.NavigationPromisesContext);
     if (!context) {
         throw Object.defineProperty(new Error('invariant global layout router not mounted'), "__NEXT_ERROR_CODE", {
@@ -461,12 +461,12 @@ function ScrollAndFocusHandler({ segmentPath, children }) {
     // If we get to this point, then we know we have something we can render.
     let content = resolvedRsc;
     // In dev, we create a NavigationPromisesContext containing the instrumented promises that provide
-    // `useSelectedlayoutSegment` and `useSelectedlayoutSegments`.
+    // `useSelectedLayoutSegment` and `useSelectedLayoutSegments`.
     // Promises are cached outside of render to survive suspense retries.
     let navigationPromises = null;
     if ("TURBOPACK compile-time truthy", 1) {
-        const { createNestedlayoutNavigationPromises } = __turbopack_context__.r("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/client/components/navigation-devtools.js [app-client] (ecmascript)");
-        navigationPromises = createNestedlayoutNavigationPromises(tree, parentNavPromises);
+        const { createNestedLayoutNavigationPromises } = __turbopack_context__.r("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/client/components/navigation-devtools.js [app-client] (ecmascript)");
+        navigationPromises = createNestedLayoutNavigationPromises(tree, parentNavPromises);
     }
     if (navigationPromises) {
         content = /*#__PURE__*/ (0, _jsxruntime.jsx)(_hooksclientcontextsharedruntime.NavigationPromisesContext.Provider, {
@@ -474,7 +474,7 @@ function ScrollAndFocusHandler({ segmentPath, children }) {
             children: resolvedRsc
         });
     }
-    const subtree = /*#__PURE__*/ (0, _jsxruntime.jsx)(_approutercontextsharedruntime.layoutRouterContext.Provider, {
+    const subtree = /*#__PURE__*/ (0, _jsxruntime.jsx)(_approutercontextsharedruntime.LayoutRouterContext.Provider, {
         value: {
             parentTree: tree,
             parentCacheNode: cacheNode,
@@ -529,8 +529,8 @@ function ScrollAndFocusHandler({ segmentPath, children }) {
         children: children
     });
 }
-function OuterlayoutRouter({ parallelRouterKey, error, errorStyles, errorScripts, templateStyles, templateScripts, template, notFound, forbidden, unauthorized, segmentViewBoundaries }) {
-    const context = (0, _react.useContext)(_approutercontextsharedruntime.layoutRouterContext);
+function OuterLayoutRouter({ parallelRouterKey, error, errorStyles, errorScripts, templateStyles, templateScripts, template, notFound, forbidden, unauthorized, segmentViewBoundaries }) {
+    const context = (0, _react.useContext)(_approutercontextsharedruntime.LayoutRouterContext);
     if (!context) {
         throw Object.defineProperty(new Error('invariant expected layout router to be mounted'), "__NEXT_ERROR_CODE", {
             value: "E56",
@@ -681,7 +681,7 @@ function OuterlayoutRouter({ parallelRouterKey, error, errorStyles, errorScripts
                                 unauthorized: unauthorized,
                                 children: /*#__PURE__*/ (0, _jsxruntime.jsxs)(_redirectboundary.RedirectBoundary, {
                                     children: [
-                                        /*#__PURE__*/ (0, _jsxruntime.jsx)(InnerlayoutRouter, {
+                                        /*#__PURE__*/ (0, _jsxruntime.jsx)(InnerLayoutRouter, {
                                             url: url,
                                             tree: tree,
                                             params: params,
@@ -727,7 +727,7 @@ function getBoundaryDebugNameFromSegment(segment) {
         return '/';
     }
     if (typeof segment === 'string') {
-        if (isVirtuallayout(segment)) {
+        if (isVirtualLayout(segment)) {
             return undefined;
         } else {
             return segment + '/';
@@ -736,7 +736,7 @@ function getBoundaryDebugNameFromSegment(segment) {
     const paramCacheKey = segment[1];
     return paramCacheKey + '/';
 }
-function isVirtuallayout(segment) {
+function isVirtualLayout(segment) {
     return(// in a more special way instead of checking the name, to distinguish them
     // from app-defined groups.
     segment === '(slot)');
@@ -2163,7 +2163,7 @@ function ClientPageRoot({ Component, serverProvidedParams }) {
     } else {
         // When Cache Components is enabled, the server does not pass the params as
         // props; they are parsed on the client and passed via context.
-        const layoutRouterContext = (0, _react.use)(_approutercontextsharedruntime.layoutRouterContext);
+        const layoutRouterContext = (0, _react.use)(_approutercontextsharedruntime.LayoutRouterContext);
         params = layoutRouterContext !== null ? layoutRouterContext.parentParams : {};
         // This is an intentional behavior change: when Cache Components is enabled,
         // client segments receive the "canonical" search params, not the
@@ -2236,7 +2236,7 @@ function ClientSegmentRoot({ Component, slots, serverProvidedParams }) {
     } else {
         // When Cache Components is enabled, the server does not pass the params
         // as props; they are parsed on the client and passed via context.
-        const layoutRouterContext = (0, _react.use)(_approutercontextsharedruntime.layoutRouterContext);
+        const layoutRouterContext = (0, _react.use)(_approutercontextsharedruntime.LayoutRouterContext);
         params = layoutRouterContext !== null ? layoutRouterContext.parentParams : {};
     }
     if (typeof window === 'undefined') {
@@ -2246,7 +2246,7 @@ function ClientSegmentRoot({ Component, slots, serverProvidedParams }) {
         // appropriate context. We wrap differently in prerendering vs rendering
         const store = workAsyncStorage.getStore();
         if (!store) {
-            throw Object.defineProperty(new _invarianterror.InvariantError('Expected workStore to exist when handling params in a client segment such as a layout or Template.'), "__NEXT_ERROR_CODE", {
+            throw Object.defineProperty(new _invarianterror.InvariantError('Expected workStore to exist when handling params in a client segment such as a Layout or Template.'), "__NEXT_ERROR_CODE", {
                 value: "E600",
                 enumerable: false,
                 configurable: true

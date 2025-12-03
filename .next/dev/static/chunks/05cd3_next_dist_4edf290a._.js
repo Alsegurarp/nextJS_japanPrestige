@@ -389,9 +389,9 @@ Object.defineProperty(exports, "__esModule", {
     DEFAULT_SEGMENT_KEY: null,
     PAGE_SEGMENT_KEY: null,
     addSearchParamsIfPageSegment: null,
-    computeSelectedlayoutSegment: null,
+    computeSelectedLayoutSegment: null,
     getSegmentValue: null,
-    getSelectedlayoutSegmentPath: null,
+    getSelectedLayoutSegmentPath: null,
     isGroupSegment: null,
     isParallelRouteSegment: null
 });
@@ -411,14 +411,14 @@ _export(exports, {
     addSearchParamsIfPageSegment: function() {
         return addSearchParamsIfPageSegment;
     },
-    computeSelectedlayoutSegment: function() {
-        return computeSelectedlayoutSegment;
+    computeSelectedLayoutSegment: function() {
+        return computeSelectedLayoutSegment;
     },
     getSegmentValue: function() {
         return getSegmentValue;
     },
-    getSelectedlayoutSegmentPath: function() {
-        return getSelectedlayoutSegmentPath;
+    getSelectedLayoutSegmentPath: function() {
+        return getSelectedLayoutSegmentPath;
     },
     isGroupSegment: function() {
         return isGroupSegment;
@@ -445,7 +445,7 @@ function addSearchParamsIfPageSegment(segment, searchParams) {
     }
     return segment;
 }
-function computeSelectedlayoutSegment(segments, parallelRouteKey) {
+function computeSelectedLayoutSegment(segments, parallelRouteKey) {
     if (!segments || segments.length === 0) {
         return null;
     }
@@ -455,7 +455,7 @@ function computeSelectedlayoutSegment(segments, parallelRouteKey) {
     // Returning an internal value like `__DEFAULT__` would be confusing
     return rawSegment === DEFAULT_SEGMENT_KEY ? null : rawSegment;
 }
-function getSelectedlayoutSegmentPath(tree, parallelRouteKey, first = true, segmentPath = []) {
+function getSelectedLayoutSegmentPath(tree, parallelRouteKey, first = true, segmentPath = []) {
     let node;
     if (first) {
         // Use the provided parallel route key on the first parallel route
@@ -472,7 +472,7 @@ function getSelectedlayoutSegmentPath(tree, parallelRouteKey, first = true, segm
         return segmentPath;
     }
     segmentPath.push(segmentValue);
-    return getSelectedlayoutSegmentPath(node, parallelRouteKey, false, segmentPath);
+    return getSelectedLayoutSegmentPath(node, parallelRouteKey, false, segmentPath);
 }
 const PAGE_SEGMENT_KEY = '__PAGE__';
 const DEFAULT_SEGMENT_KEY = '__DEFAULT__'; //# sourceMappingURL=segment.js.map
@@ -1020,8 +1020,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 0 && (module.exports = {
     AppRouterContext: null,
-    GloballayoutRouterContext: null,
-    layoutRouterContext: null,
+    GlobalLayoutRouterContext: null,
+    LayoutRouterContext: null,
     MissingSlotContext: null,
     TemplateContext: null
 });
@@ -1035,11 +1035,11 @@ _export(exports, {
     AppRouterContext: function() {
         return AppRouterContext;
     },
-    GloballayoutRouterContext: function() {
-        return GloballayoutRouterContext;
+    GlobalLayoutRouterContext: function() {
+        return GlobalLayoutRouterContext;
     },
-    layoutRouterContext: function() {
-        return layoutRouterContext;
+    LayoutRouterContext: function() {
+        return LayoutRouterContext;
     },
     MissingSlotContext: function() {
         return MissingSlotContext;
@@ -1051,13 +1051,13 @@ _export(exports, {
 const _interop_require_default = __turbopack_context__.r("[project]/Desktop/Prestige-Japan-master/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [app-client] (ecmascript)");
 const _react = /*#__PURE__*/ _interop_require_default._(__turbopack_context__.r("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)"));
 const AppRouterContext = _react.default.createContext(null);
-const layoutRouterContext = _react.default.createContext(null);
-const GloballayoutRouterContext = _react.default.createContext(null);
+const LayoutRouterContext = _react.default.createContext(null);
+const GlobalLayoutRouterContext = _react.default.createContext(null);
 const TemplateContext = _react.default.createContext(null);
 if ("TURBOPACK compile-time truthy", 1) {
     AppRouterContext.displayName = 'AppRouterContext';
-    layoutRouterContext.displayName = 'layoutRouterContext';
-    GloballayoutRouterContext.displayName = 'GloballayoutRouterContext';
+    LayoutRouterContext.displayName = 'LayoutRouterContext';
+    GlobalLayoutRouterContext.displayName = 'GlobalLayoutRouterContext';
     TemplateContext.displayName = 'TemplateContext';
 }
 const MissingSlotContext = _react.default.createContext(new Set()); //# sourceMappingURL=app-router-context.shared-runtime.js.map
@@ -1627,7 +1627,7 @@ Object.defineProperty(exports, "__esModule", {
 0 && (module.exports = {
     MetadataBoundary: null,
     OutletBoundary: null,
-    RootlayoutBoundary: null,
+    RootLayoutBoundary: null,
     ViewportBoundary: null
 });
 function _export(target, all) {
@@ -1643,8 +1643,8 @@ _export(exports, {
     OutletBoundary: function() {
         return OutletBoundary;
     },
-    RootlayoutBoundary: function() {
-        return RootlayoutBoundary;
+    RootLayoutBoundary: function() {
+        return RootLayoutBoundary;
     },
     ViewportBoundary: function() {
         return ViewportBoundary;
@@ -1673,7 +1673,7 @@ const ViewportBoundary = // so it retains the name inferred from the namespace o
 NameSpace[_boundaryconstants.VIEWPORT_BOUNDARY_NAME.slice(0)];
 const OutletBoundary = // so it retains the name inferred from the namespace object
 NameSpace[_boundaryconstants.OUTLET_BOUNDARY_NAME.slice(0)];
-const RootlayoutBoundary = // so it retains the name inferred from the namespace object
+const RootLayoutBoundary = // so it retains the name inferred from the namespace object
 NameSpace[_boundaryconstants.ROOT_LAYOUT_BOUNDARY_NAME.slice(0)]; //# sourceMappingURL=boundary-components.js.map
 }),
 "[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/lib/constants.js [app-client] (ecmascript)", ((__turbopack_context__, module, exports) => {
@@ -3246,9 +3246,9 @@ function SegmentTrieNode({ type, pagePath }) {
         boundaryType,
         setBoundaryType
     ]);
-    // Use `uselayoutEffect` to ensure the state is updated during suspense.
+    // Use `useLayoutEffect` to ensure the state is updated during suspense.
     // `useEffect` won't work as the state is preserved during suspense.
-    (0, _react.uselayoutEffect)(()=>{
+    (0, _react.useLayoutEffect)(()=>{
         _nextdevtools.dispatcher.segmentExplorerNodeAdd(nodeState);
         return ()=>{
             _nextdevtools.dispatcher.segmentExplorerNodeRemove(nodeState);
@@ -3274,7 +3274,7 @@ function LoadingSegmentNode() {
     return null;
 }
 function SegmentViewStateNode({ page }) {
-    (0, _react.uselayoutEffect)(()=>{
+    (0, _react.useLayoutEffect)(()=>{
         _nextdevtools.dispatcher.segmentExplorerUpdateRouteState(page);
         return ()=>{
             _nextdevtools.dispatcher.segmentExplorerUpdateRouteState('');
@@ -4786,7 +4786,7 @@ function useDynamicSearchParams(expression) {
 const hasSuspenseRegex = /\n\s+at Suspense \(<anonymous>\)/;
 // Common implicit body tags that React will treat as body when placed directly in html
 const bodyAndImplicitTags = 'body|div|main|section|article|aside|header|footer|nav|form|p|span|h1|h2|h3|h4|h5|h6';
-// Detects when RootlayoutBoundary (our framework marker component) appears
+// Detects when RootLayoutBoundary (our framework marker component) appears
 // after Suspense in the component stack, indicating the root layout is wrapped
 // within a Suspense boundary. Ensures no body/html/implicit-body components are in between.
 //
@@ -4798,7 +4798,7 @@ const bodyAndImplicitTags = 'body|div|main|section|article|aside|header|footer|n
 //   at Suspense (<anonymous>)
 //   at SomeComponent (<anonymous>)
 //   at __next_root_layout_boundary__ (<anonymous>)
-const hasSuspenseBeforeRootlayoutWithoutBodyOrImplicitBodyRegex = new RegExp(`\\n\\s+at Suspense \\(<anonymous>\\)(?:(?!\\n\\s+at (?:${bodyAndImplicitTags}) \\(<anonymous>\\))[\\s\\S])*?\\n\\s+at ${_boundaryconstants.ROOT_LAYOUT_BOUNDARY_NAME} \\([^\\n]*\\)`);
+const hasSuspenseBeforeRootLayoutWithoutBodyOrImplicitBodyRegex = new RegExp(`\\n\\s+at Suspense \\(<anonymous>\\)(?:(?!\\n\\s+at (?:${bodyAndImplicitTags}) \\(<anonymous>\\))[\\s\\S])*?\\n\\s+at ${_boundaryconstants.ROOT_LAYOUT_BOUNDARY_NAME} \\([^\\n]*\\)`);
 const hasMetadataRegex = new RegExp(`\\n\\s+at ${_boundaryconstants.METADATA_BOUNDARY_NAME}[\\n\\s]`);
 const hasViewportRegex = new RegExp(`\\n\\s+at ${_boundaryconstants.VIEWPORT_BOUNDARY_NAME}[\\n\\s]`);
 const hasOutletRegex = new RegExp(`\\n\\s+at ${_boundaryconstants.OUTLET_BOUNDARY_NAME}[\\n\\s]`);
@@ -4812,7 +4812,7 @@ function trackAllowedDynamicAccess(workStore, componentStack, dynamicValidation,
     } else if (hasViewportRegex.test(componentStack)) {
         dynamicValidation.hasDynamicViewport = true;
         return;
-    } else if (hasSuspenseBeforeRootlayoutWithoutBodyOrImplicitBodyRegex.test(componentStack)) {
+    } else if (hasSuspenseBeforeRootLayoutWithoutBodyOrImplicitBodyRegex.test(componentStack)) {
         // For Suspense within body, the prelude wouldn't be empty so it wouldn't violate the empty static shells rule.
         // But if you have Suspense above body, the prelude is empty but we allow that because having Suspense
         // is an explicit signal from the user that they acknowledge the empty shell and want dynamic rendering.

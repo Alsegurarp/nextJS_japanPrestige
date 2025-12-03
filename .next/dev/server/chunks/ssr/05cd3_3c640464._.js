@@ -48,9 +48,9 @@ Object.defineProperty(exports, "__esModule", {
     DEFAULT_SEGMENT_KEY: null,
     PAGE_SEGMENT_KEY: null,
     addSearchParamsIfPageSegment: null,
-    computeSelectedlayoutSegment: null,
+    computeSelectedLayoutSegment: null,
     getSegmentValue: null,
-    getSelectedlayoutSegmentPath: null,
+    getSelectedLayoutSegmentPath: null,
     isGroupSegment: null,
     isParallelRouteSegment: null
 });
@@ -70,14 +70,14 @@ _export(exports, {
     addSearchParamsIfPageSegment: function() {
         return addSearchParamsIfPageSegment;
     },
-    computeSelectedlayoutSegment: function() {
-        return computeSelectedlayoutSegment;
+    computeSelectedLayoutSegment: function() {
+        return computeSelectedLayoutSegment;
     },
     getSegmentValue: function() {
         return getSegmentValue;
     },
-    getSelectedlayoutSegmentPath: function() {
-        return getSelectedlayoutSegmentPath;
+    getSelectedLayoutSegmentPath: function() {
+        return getSelectedLayoutSegmentPath;
     },
     isGroupSegment: function() {
         return isGroupSegment;
@@ -104,7 +104,7 @@ function addSearchParamsIfPageSegment(segment, searchParams) {
     }
     return segment;
 }
-function computeSelectedlayoutSegment(segments, parallelRouteKey) {
+function computeSelectedLayoutSegment(segments, parallelRouteKey) {
     if (!segments || segments.length === 0) {
         return null;
     }
@@ -114,7 +114,7 @@ function computeSelectedlayoutSegment(segments, parallelRouteKey) {
     // Returning an internal value like `__DEFAULT__` would be confusing
     return rawSegment === DEFAULT_SEGMENT_KEY ? null : rawSegment;
 }
-function getSelectedlayoutSegmentPath(tree, parallelRouteKey, first = true, segmentPath = []) {
+function getSelectedLayoutSegmentPath(tree, parallelRouteKey, first = true, segmentPath = []) {
     let node;
     if (first) {
         // Use the provided parallel route key on the first parallel route
@@ -131,7 +131,7 @@ function getSelectedlayoutSegmentPath(tree, parallelRouteKey, first = true, segm
         return segmentPath;
     }
     segmentPath.push(segmentValue);
-    return getSelectedlayoutSegmentPath(node, parallelRouteKey, false, segmentPath);
+    return getSelectedLayoutSegmentPath(node, parallelRouteKey, false, segmentPath);
 }
 const PAGE_SEGMENT_KEY = '__PAGE__';
 const DEFAULT_SEGMENT_KEY = '__DEFAULT__'; //# sourceMappingURL=segment.js.map
@@ -5239,7 +5239,7 @@ function useDynamicSearchParams(expression) {
 const hasSuspenseRegex = /\n\s+at Suspense \(<anonymous>\)/;
 // Common implicit body tags that React will treat as body when placed directly in html
 const bodyAndImplicitTags = 'body|div|main|section|article|aside|header|footer|nav|form|p|span|h1|h2|h3|h4|h5|h6';
-// Detects when RootlayoutBoundary (our framework marker component) appears
+// Detects when RootLayoutBoundary (our framework marker component) appears
 // after Suspense in the component stack, indicating the root layout is wrapped
 // within a Suspense boundary. Ensures no body/html/implicit-body components are in between.
 //
@@ -5251,7 +5251,7 @@ const bodyAndImplicitTags = 'body|div|main|section|article|aside|header|footer|n
 //   at Suspense (<anonymous>)
 //   at SomeComponent (<anonymous>)
 //   at __next_root_layout_boundary__ (<anonymous>)
-const hasSuspenseBeforeRootlayoutWithoutBodyOrImplicitBodyRegex = new RegExp(`\\n\\s+at Suspense \\(<anonymous>\\)(?:(?!\\n\\s+at (?:${bodyAndImplicitTags}) \\(<anonymous>\\))[\\s\\S])*?\\n\\s+at ${__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$framework$2f$boundary$2d$constants$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ROOT_LAYOUT_BOUNDARY_NAME"]} \\([^\\n]*\\)`);
+const hasSuspenseBeforeRootLayoutWithoutBodyOrImplicitBodyRegex = new RegExp(`\\n\\s+at Suspense \\(<anonymous>\\)(?:(?!\\n\\s+at (?:${bodyAndImplicitTags}) \\(<anonymous>\\))[\\s\\S])*?\\n\\s+at ${__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$framework$2f$boundary$2d$constants$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ROOT_LAYOUT_BOUNDARY_NAME"]} \\([^\\n]*\\)`);
 const hasMetadataRegex = new RegExp(`\\n\\s+at ${__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$framework$2f$boundary$2d$constants$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["METADATA_BOUNDARY_NAME"]}[\\n\\s]`);
 const hasViewportRegex = new RegExp(`\\n\\s+at ${__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$framework$2f$boundary$2d$constants$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["VIEWPORT_BOUNDARY_NAME"]}[\\n\\s]`);
 const hasOutletRegex = new RegExp(`\\n\\s+at ${__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$framework$2f$boundary$2d$constants$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["OUTLET_BOUNDARY_NAME"]}[\\n\\s]`);
@@ -5265,7 +5265,7 @@ function trackAllowedDynamicAccess(workStore, componentStack, dynamicValidation,
     } else if (hasViewportRegex.test(componentStack)) {
         dynamicValidation.hasDynamicViewport = true;
         return;
-    } else if (hasSuspenseBeforeRootlayoutWithoutBodyOrImplicitBodyRegex.test(componentStack)) {
+    } else if (hasSuspenseBeforeRootLayoutWithoutBodyOrImplicitBodyRegex.test(componentStack)) {
         // For Suspense within body, the prelude wouldn't be empty so it wouldn't violate the empty static shells rule.
         // But if you have Suspense above body, the prelude is empty but we allow that because having Suspense
         // is an explicit signal from the user that they acknowledge the empty shell and want dynamic rendering.
@@ -6563,7 +6563,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan
 ;
 ;
 // convert viewport object to string for viewport meta tag
-function resolveViewportlayout(viewport) {
+function resolveViewportLayout(viewport) {
     let resolved = null;
     if (viewport && typeof viewport === 'object') {
         resolved = '';
@@ -6592,7 +6592,7 @@ function ViewportMeta({ viewport }) {
         }),
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$metadata$2f$generate$2f$meta$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Meta"])({
             name: 'viewport',
-            content: resolveViewportlayout(viewport)
+            content: resolveViewportLayout(viewport)
         }),
         ...viewport.themeColor ? viewport.themeColor.map((themeColor)=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$metadata$2f$generate$2f$meta$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Meta"])({
                 name: 'theme-color',
@@ -8366,12 +8366,12 @@ __turbopack_context__.s([
     ()=>PAGE_SEGMENT_KEY,
     "addSearchParamsIfPageSegment",
     ()=>addSearchParamsIfPageSegment,
-    "computeSelectedlayoutSegment",
-    ()=>computeSelectedlayoutSegment,
+    "computeSelectedLayoutSegment",
+    ()=>computeSelectedLayoutSegment,
     "getSegmentValue",
     ()=>getSegmentValue,
-    "getSelectedlayoutSegmentPath",
-    ()=>getSelectedlayoutSegmentPath,
+    "getSelectedLayoutSegmentPath",
+    ()=>getSelectedLayoutSegmentPath,
     "isGroupSegment",
     ()=>isGroupSegment,
     "isParallelRouteSegment",
@@ -8395,7 +8395,7 @@ function addSearchParamsIfPageSegment(segment, searchParams) {
     }
     return segment;
 }
-function computeSelectedlayoutSegment(segments, parallelRouteKey) {
+function computeSelectedLayoutSegment(segments, parallelRouteKey) {
     if (!segments || segments.length === 0) {
         return null;
     }
@@ -8405,7 +8405,7 @@ function computeSelectedlayoutSegment(segments, parallelRouteKey) {
     // Returning an internal value like `__DEFAULT__` would be confusing
     return rawSegment === DEFAULT_SEGMENT_KEY ? null : rawSegment;
 }
-function getSelectedlayoutSegmentPath(tree, parallelRouteKey, first = true, segmentPath = []) {
+function getSelectedLayoutSegmentPath(tree, parallelRouteKey, first = true, segmentPath = []) {
     let node;
     if (first) {
         // Use the provided parallel route key on the first parallel route
@@ -8422,7 +8422,7 @@ function getSelectedlayoutSegmentPath(tree, parallelRouteKey, first = true, segm
         return segmentPath;
     }
     segmentPath.push(segmentValue);
-    return getSelectedlayoutSegmentPath(node, parallelRouteKey, false, segmentPath);
+    return getSelectedLayoutSegmentPath(node, parallelRouteKey, false, segmentPath);
 }
 const PAGE_SEGMENT_KEY = '__PAGE__';
 const DEFAULT_SEGMENT_KEY = '__DEFAULT__'; //# sourceMappingURL=segment.js.map
@@ -8433,20 +8433,20 @@ const DEFAULT_SEGMENT_KEY = '__DEFAULT__'; //# sourceMappingURL=segment.js.map
 __turbopack_context__.s([
     "getComponentTypeModule",
     ()=>getComponentTypeModule,
-    "getlayoutOrPageModule",
-    ()=>getlayoutOrPageModule
+    "getLayoutOrPageModule",
+    ()=>getLayoutOrPageModule
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$shared$2f$lib$2f$segment$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/esm/shared/lib/segment.js [app-rsc] (ecmascript)");
 ;
-async function getlayoutOrPageModule(loaderTree) {
+async function getLayoutOrPageModule(loaderTree) {
     const { layout, page, defaultPage } = loaderTree[2];
-    const islayout = typeof layout !== 'undefined';
+    const isLayout = typeof layout !== 'undefined';
     const isPage = typeof page !== 'undefined';
     const isDefaultPage = typeof defaultPage !== 'undefined' && loaderTree[0] === __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$shared$2f$lib$2f$segment$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["DEFAULT_SEGMENT_KEY"];
     let mod = undefined;
     let modType = undefined;
     let filePath = undefined;
-    if (islayout) {
+    if (isLayout) {
         mod = await layout[0]();
         modType = 'layout';
         filePath = layout[1];
@@ -8807,7 +8807,7 @@ var NextNodeServerSpan = /*#__PURE__*/ function(NextNodeServerSpan) {
     NextNodeServerSpan["getBuildId"] = "NextNodeServer.getBuildId";
     NextNodeServerSpan["createComponentTree"] = "NextNodeServer.createComponentTree";
     NextNodeServerSpan["clientComponentLoading"] = "NextNodeServer.clientComponentLoading";
-    NextNodeServerSpan["getlayoutOrPageModule"] = "NextNodeServer.getlayoutOrPageModule";
+    NextNodeServerSpan["getLayoutOrPageModule"] = "NextNodeServer.getLayoutOrPageModule";
     NextNodeServerSpan["generateStaticRoutes"] = "NextNodeServer.generateStaticRoutes";
     NextNodeServerSpan["generateFsStaticRoutes"] = "NextNodeServer.generateFsStaticRoutes";
     NextNodeServerSpan["generatePublicRoutes"] = "NextNodeServer.generatePublicRoutes";
@@ -8890,7 +8890,7 @@ const NextVanillaSpanAllowlist = new Set([
     "ResolveMetadata.generateViewport",
     "NextNodeServer.createComponentTree",
     "NextNodeServer.findPageComponents",
-    "NextNodeServer.getlayoutOrPageModule",
+    "NextNodeServer.getLayoutOrPageModule",
     "NextNodeServer.startResponse",
     "NextNodeServer.clientComponentLoading"
 ]);
@@ -11153,7 +11153,7 @@ function getDefinedMetadata(mod, props, tracingProps) {
         $$isPage: true
     } : {
         ...props,
-        $$islayout: true
+        $$isLayout: true
     } : props;
 }
 async function collectStaticImagesFiles(metadata, props, type) {
@@ -11189,7 +11189,7 @@ async function collectMetadata({ tree, metadataItems, errorMetadataItem, props, 
         mod = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$lib$2f$app$2d$dir$2d$module$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getComponentTypeModule"])(tree, 'layout');
         modType = errorConvention;
     } else {
-        const { mod: layoutOrPageMod, modType: layoutOrPageModType } = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$lib$2f$app$2d$dir$2d$module$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getlayoutOrPageModule"])(tree);
+        const { mod: layoutOrPageMod, modType: layoutOrPageModType } = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$lib$2f$app$2d$dir$2d$module$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getLayoutOrPageModule"])(tree);
         mod = layoutOrPageMod;
         modType = layoutOrPageModType;
     }
@@ -11222,7 +11222,7 @@ async function collectViewport({ tree, viewportItems, errorViewportItemRef, prop
         mod = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$lib$2f$app$2d$dir$2d$module$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getComponentTypeModule"])(tree, 'layout');
         modType = errorConvention;
     } else {
-        const { mod: layoutOrPageMod, modType: layoutOrPageModType } = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$lib$2f$app$2d$dir$2d$module$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getlayoutOrPageModule"])(tree);
+        const { mod: layoutOrPageMod, modType: layoutOrPageModType } = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$lib$2f$app$2d$dir$2d$module$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getLayoutOrPageModule"])(tree);
         mod = layoutOrPageMod;
         modType = layoutOrPageModType;
     }
@@ -15330,8 +15330,8 @@ __turbopack_context__.s([
     ()=>createBufferedTransformStream,
     "createDocumentClosingStream",
     ()=>createDocumentClosingStream,
-    "createRootlayoutValidatorStream",
-    ()=>createRootlayoutValidatorStream,
+    "createRootLayoutValidatorStream",
+    ()=>createRootLayoutValidatorStream,
     "renderToInitialFizzStream",
     ()=>renderToInitialFizzStream,
     "streamFromBuffer",
@@ -15890,7 +15890,7 @@ function createStripDocumentClosingTagsTransform() {
         }
     });
 }
-function createRootlayoutValidatorStream() {
+function createRootLayoutValidatorStream() {
     let foundHtml = false;
     let foundBody = false;
     return new TransformStream({
@@ -15927,7 +15927,7 @@ function chainTransformers(readable, transformers) {
     }
     return stream;
 }
-async function continueFizzStream(renderStream, { suffix, inlinedDataStream, isStaticGeneration, isBuildTimePrerendering, buildId, getServerInsertedHTML, getServerInsertedMetadata, validateRootlayout }) {
+async function continueFizzStream(renderStream, { suffix, inlinedDataStream, isStaticGeneration, isBuildTimePrerendering, buildId, getServerInsertedHTML, getServerInsertedMetadata, validateRootLayout }) {
     // Suffix itself might contain close tags at the end, so we need to split it.
     const suffixUnclosed = suffix ? suffix.split(CLOSE_TAG, 1)[0] : null;
     // If we're generating static HTML we need to wait for it to resolve before continuing.
@@ -15946,7 +15946,7 @@ async function continueFizzStream(renderStream, { suffix, inlinedDataStream, isS
         // Insert the inlined data (Flight data, form state, etc.) stream into the HTML
         inlinedDataStream ? createFlightDataInjectionTransformStream(inlinedDataStream, true) : null,
         // Validate the root layout for missing html or body tags
-        validateRootlayout ? createRootlayoutValidatorStream() : null,
+        validateRootLayout ? createRootLayoutValidatorStream() : null,
         // Close tags should always be deferred to the end
         createMoveSuffixStream(),
         // Special head insertions
@@ -16127,7 +16127,7 @@ const invalidServerComponentReactHooks = [
     'useEffect',
     'useImperativeHandle',
     'useInsertionEffect',
-    'uselayoutEffect',
+    'useLayoutEffect',
     'useReducer',
     'useRef',
     'useState',
@@ -18751,7 +18751,7 @@ function collectSegmentDataImpl(isClientParamParsingEnabled, route, buildId, see
         paramKey: isClientParamParsingEnabled ? null : paramKey,
         hasRuntimePrefetch,
         slots: slotMetadata,
-        isRootlayout: route[4] === true
+        isRootLayout: route[4] === true
     };
 }
 async function renderSegmentPrefetch(buildId, rsc, loading, requestKey, clientModules) {
@@ -20642,14 +20642,14 @@ __turbopack_context__.s([
     ()=>__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"],
     "HTTPAccessFallbackBoundary",
     ()=>__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$client$2f$components$2f$http$2d$access$2d$fallback$2f$error$2d$boundary$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["HTTPAccessFallbackBoundary"],
-    "layoutRouter",
+    "LayoutRouter",
     ()=>__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$client$2f$components$2f$layout$2d$router$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"],
     "Postpone",
     ()=>__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$app$2d$render$2f$dynamic$2d$rendering$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Postpone"],
     "RenderFromTemplateContext",
     ()=>__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$client$2f$components$2f$render$2d$from$2d$template$2d$context$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"],
-    "RootlayoutBoundary",
-    ()=>__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$framework$2f$boundary$2d$components$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["RootlayoutBoundary"],
+    "RootLayoutBoundary",
+    ()=>__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$framework$2f$boundary$2d$components$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["RootLayoutBoundary"],
     "SegmentViewNode",
     ()=>__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$app$2d$render$2f$entry$2d$base$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$locals$3e$__["SegmentViewNode"],
     "SegmentViewStateNode",

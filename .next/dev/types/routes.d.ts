@@ -3,10 +3,10 @@
 
 type AppRoutes = never
 type PageRoutes = never
-type layoutRoutes = never
+type LayoutRoutes = never
 type RedirectRoutes = never
 type RewriteRoutes = never
-type Routes = AppRoutes | PageRoutes | layoutRoutes | RedirectRoutes | RewriteRoutes
+type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRoutes
 
 
 interface ParamMap {
@@ -15,11 +15,11 @@ interface ParamMap {
 
 export type ParamsOf<Route extends Routes> = ParamMap[Route]
 
-interface layoutSlotMap {
+interface LayoutSlotMap {
 }
 
 
-export type { AppRoutes, PageRoutes, layoutRoutes, RedirectRoutes, RewriteRoutes, ParamMap }
+export type { AppRoutes, PageRoutes, LayoutRoutes, RedirectRoutes, RewriteRoutes, ParamMap }
 
 declare global {
   /**
@@ -41,15 +41,15 @@ declare global {
    * Props for Next.js App Router layout components
    * @example
    * ```tsx
-   * export default function layout(props: layoutProps<'/dashboard'>) {
+   * export default function Layout(props: LayoutProps<'/dashboard'>) {
    *   return <div>{props.children}</div>
    * }
    * ```
    */
-  type layoutProps<layoutRoute extends layoutRoutes> = {
-    params: Promise<ParamMap[layoutRoute]>
+  type LayoutProps<LayoutRoute extends LayoutRoutes> = {
+    params: Promise<ParamMap[LayoutRoute]>
     children: React.ReactNode
   } & {
-    [K in layoutSlotMap[layoutRoute]]: React.ReactNode
+    [K in LayoutSlotMap[LayoutRoute]]: React.ReactNode
   }
 }
