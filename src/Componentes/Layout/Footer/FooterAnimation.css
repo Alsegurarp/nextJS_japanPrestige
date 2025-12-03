@@ -1,14 +1,19 @@
 .text-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .container {
   perspective: 800px;
   display: flex;
   gap: clamp(10px, 2vw, 30px);
-  justify-content: start;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 .letter {
@@ -51,6 +56,7 @@
     -webkit-text-stroke: 2px #f0c051;
     text-stroke: 2px #f0c051;
   }
+
   .letterr {
     font-size: clamp(5px, 2vw, 15px);
   }

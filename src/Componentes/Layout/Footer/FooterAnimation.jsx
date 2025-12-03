@@ -8,7 +8,7 @@ import './FooterAnimation.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const FooterAnimation = React.forwardRef((props, ref) => {
+const FooterAnimation = () => {
     const scopeAnimation = useRef();
     const isAnimating = useRef(false);
     const scrollTriggerRef = useRef(null);
@@ -230,7 +230,7 @@ const FooterAnimation = React.forwardRef((props, ref) => {
                     ))}
                 </div>
 
-                <div className="container" id="animated-text" ref={ref}>
+                <div className="container" id="animated-text">
                     {['P', 'R', 'E', 'M', 'I', 'U', 'M'].map((char, index) => (
                         <div className='div-letter' key={index + 20}>
                             <span className="letter" key={index}>{char}</span>
@@ -241,6 +241,6 @@ const FooterAnimation = React.forwardRef((props, ref) => {
             </div>
         </footer>
     );
-});
+};
 
 export default FooterAnimation;

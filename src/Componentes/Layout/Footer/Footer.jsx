@@ -30,48 +30,24 @@ const getSrcValue = (img) => {
 };
 
 const Footer = React.memo(function Footer() {
-  const animatedTextRef = useRef(null);
-  const contactAndSocialsRef = useRef(null);
-  const subFooterRef = useRef(null);
-  const separatorRef = useRef(null);
-
-  useEffect(() => {
-    const setWidths = () => {
-      if (animatedTextRef.current && contactAndSocialsRef.current && subFooterRef.current && separatorRef.current) {
-        const width = animatedTextRef.current.offsetWidth;
-        contactAndSocialsRef.current.style.maxWidth = `${width}px`;
-        subFooterRef.current.style.maxWidth = `${width}px`;
-        separatorRef.current.style.maxWidth = `${width}px`;
-      }
-    };
-
-    setTimeout(setWidths, 100);
-
-    window.addEventListener('resize', setWidths);
-
-    return () => {
-      window.removeEventListener('resize', setWidths);
-    };
-  }, []);
-
   return (
     <section className={styles.sectionFooter}>
-      <FooterAnimation ref={animatedTextRef} />
-      <ContactAndSocials ref={contactAndSocialsRef} />
-      <Separator ref={separatorRef} />
-      <SubFooter ref={subFooterRef} />
+      <FooterAnimation />
+      <ContactAndSocials />
+      <Separator />
+      <SubFooter />
     </section>
   );
 });
 
-const ContactAndSocials = React.forwardRef((props, ref) => {
+function ContactAndSocials() {
   return (
-    <div className={styles.contactAndSocialsContainer} ref={ref}>
+    <div className={styles.contactAndSocialsContainer}>
       <Contactos />
       <RedesSociales />
     </div>
   );
-});
+}
 
 function Contactos() {
   const MESSAGE = "Quiero conocer más de sus promociones para viajar a Japón, Contáctenme";
@@ -158,13 +134,13 @@ function RedesSociales() {
   );
 }
 
-const Separator = React.forwardRef((props, ref) => {
-  return <div className={styles.separator} ref={ref}></div>;
-});
+function Separator() {
+  return <div className={styles.separator}></div>;
+}
 
-const SubFooter = React.forwardRef((props, ref) => {
+function SubFooter() {
   return (
-    <section className={styles.subFooter} ref={ref}>
+    <section className={styles.subFooter}>
       <Link href="/aviso-de-privacidad" className={styles.subFooterText}>
         Aviso de Privacidad
       </Link>
@@ -176,6 +152,6 @@ const SubFooter = React.forwardRef((props, ref) => {
       </p>
     </section>
   );
-});
+}
 
 export default Footer;

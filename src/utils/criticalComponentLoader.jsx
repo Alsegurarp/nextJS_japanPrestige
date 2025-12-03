@@ -3,10 +3,10 @@ import { lazy, Suspense } from 'react';
 
 // Critical components loaded immediately
 const Hero = lazy(() => import('../pages/Home/HeroExclusivoHome/Hero.jsx'));
-const Navbar = lazy(() => import('../Componentes/Layout/Navbar/Navbar.jsx'));
+const Navbar = lazy(() => import('../Componentes/layout/Navbar/Navbar.jsx'));
 
 // Non-critical components loaded later
-const Footer = lazy(() => import('../Componentes/Layout/Footer/Footer.jsx'));
+const Footer = lazy(() => import('../Componentes/layout/Footer/Footer.jsx'));
 const BeneficiosHome = lazy(() => import('../Componentes/Sections/BeneficiosHome.jsx'));
 
 // Optimized loading strategy
