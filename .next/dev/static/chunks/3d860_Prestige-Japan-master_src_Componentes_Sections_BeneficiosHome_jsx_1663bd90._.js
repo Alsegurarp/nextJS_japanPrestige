@@ -1,9 +1,8 @@
 (globalThis.TURBOPACK_CHUNK_LISTS || (globalThis.TURBOPACK_CHUNK_LISTS = [])).push({
     script: typeof document === "object" ? document.currentScript : undefined,
     chunks: [
-  "static/chunks/Desktop_Prestige-Japan-master_src_d554ea93._.css",
-  "static/chunks/05cd3_7a62f77c._.js",
-  "static/chunks/Desktop_Prestige-Japan-master_src_c1de6132._.js"
+  "static/chunks/Desktop_Prestige-Japan-master_fdf6402d._.js",
+  "static/chunks/d79c4_src_Componentes_Sections_MediaFeature_MediaFeature_module_413e8dc2.css"
 ],
     source: "dynamic"
 });
