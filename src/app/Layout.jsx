@@ -1,6 +1,6 @@
 import "./globals.css";
-import Navbar from "../Componentes/layout/Navbar/Navbar";
-import Footer from "../Componentes/layout/Footer/Footer";
+import Navbar from "../Componentes/Layout/Navbar/Navbar";
+import Footer from "../Componentes/Layout/Footer/Footer";
 import ResourceHints from "../utils/ResourceHints.jsx";
 import ScrollToTop from "../components/ScrollToTop.jsx";
 import RouteTracker from "../Analytics/RouteTracker.jsx";
