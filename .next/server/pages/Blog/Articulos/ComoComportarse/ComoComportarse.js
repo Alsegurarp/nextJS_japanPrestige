@@ -1,0 +1,10 @@
+var R=require("../../../../chunks/ssr/[turbopack]_runtime.js")("server/pages/Blog/Articulos/ComoComportarse/ComoComportarse.js")
+R.c("server/chunks/ssr/[root-of-the-server]__61ce3418._.js")
+R.c("server/chunks/ssr/05cd3_next_dist_80d02910._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__5aeb1b2a._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__dd7cc552._.js")
+R.c("server/chunks/ssr/05cd3_next_eb8995d6._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__88a7031e._.js")
+R.c("server/chunks/ssr/05cd3_next_827c1b6d._.js")
+R.m(281910)
+module.exports=R.m(281910).exports

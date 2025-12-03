@@ -10,7 +10,7 @@ const Footer = lazy(() => import('../Componentes/layout/Footer/Footer.jsx'));
 const BeneficiosHome = lazy(() => import('../Componentes/Sections/BeneficiosHome.jsx'));
 
 // Optimized loading strategy
-const CriticalLayoutLoader = ({ children }) => (
+const CriticallayoutLoader = ({ children }) => (
   <Suspense fallback={
     <div className="loading-skeleton" style={{
       height: '100vh',
@@ -23,4 +23,4 @@ const CriticalLayoutLoader = ({ children }) => (
   </Suspense>
 );
 
-export { Hero, Navbar, Footer, BeneficiosHome, CriticalLayoutLoader };
+export { Hero, Navbar, Footer, BeneficiosHome, CriticallayoutLoader };

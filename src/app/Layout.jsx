@@ -10,7 +10,7 @@ export const metadata = {
   description: "Viajes de lujo a Japón",
 };
 
-export default function RootLayout({ children }) {
+export default function Rootlayout({ children }) {
   return (
     <html lang="es" suppressHydrationWarning={true}>
       <body suppressHydrationWarning={true}>

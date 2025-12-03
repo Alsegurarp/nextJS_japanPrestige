@@ -3,10 +3,10 @@
 
 type AppRoutes = never
 type PageRoutes = "/AvisoPrivacidad/AvisoPrivacidad" | "/Blog/Articulos/ComoComportarse/ComoComportarse" | "/Blog/Articulos/ComprarJapon/ComprarJapon" | "/Blog/Articulos/EpocaViajarJapon/EpocaViajarJapon" | "/Blog/Articulos/FormaPago/FormaPago" | "/Blog/Articulos/InternetJapon/InternetJapon" | "/Blog/Articulos/OnsenTatuajes/OnsenTatuajes" | "/Blog/Articulos/SaludarBlog/SaludarBlog" | "/Blog/Articulos/ViajarSeguro/ViajarSeguro" | "/Blog/Articulos/ViajeSinJapones/ViajeSinJapones" | "/Blog/Articulos/VisadoJapon/VisadoJapon" | "/Blog/Blog" | "/Contacto/Componente/Form" | "/Contacto/Componente/FormComponents/Calendar" | "/Contacto/Componente/Hero" | "/Contacto/Componente/RedesSociales" | "/Contacto/Contacto" | "/ContenidoItinerarios/Combinados/JaponCoreaDelSur" | "/ContenidoItinerarios/Combinados/JaponTailandia" | "/ContenidoItinerarios/Combinados/JaponTailandiaLoMejor" | "/ContenidoItinerarios/Combinados/JaponYChina" | "/ContenidoItinerarios/Combinados/JaponYDubaiMaravilloso" | "/ContenidoItinerarios/Combinados/JaponYDubaiTotal" | "/ContenidoItinerarios/Combinados/SamuraisYShaolines" | "/ContenidoItinerarios/Combinados/SeulATokio" | "/ContenidoItinerarios/Esenciales/ArtOriental" | "/ContenidoItinerarios/Esenciales/ElOrigenDelSol" | "/ContenidoItinerarios/Esenciales/ImperioDelSol" | "/ContenidoItinerarios/Esenciales/JaponExpress" | "/ContenidoItinerarios/Esenciales/JaponIncreible" | "/ContenidoItinerarios/Esenciales/TitanesDelPacifico" | "/ContenidoItinerarios/Esenciales/UltimoSamurai" | "/ContenidoItinerarios/Tradicional/CaminoDeKumano" | "/ContenidoItinerarios/Tradicional/ImperioJapones" | "/Faqs/Faqs" | "/Gracias/Gracias" | "/Home/HeroExclusivoHome/Hero" | "/Home/HeroExclusivoHome/TitleSVG" | "/Home/Home" | "/Hoteles/HotelesEnChina/HotelesChina" | "/Hoteles/HotelesEnCoreaSur/HotelesCorea" | "/Hoteles/HotelesEnDubai/HotelesDubai" | "/Hoteles/HotelesEnJapon/HotelesJapon" | "/Hoteles/HotelesEnTailandia/HotelesTailandia" | "/Hoteles/HotelesInicio/HotelesInicio" | "/Itinerarios/Itinerarios" | "/LandingKeyword/HomeKeywords" | "/LandingKeyword/PaquetesJapon" | "/LandingKeyword/ToursJaponKeyword" | "/Nosotros/Nosotros" | "/NotFound/NotFound"
-type LayoutRoutes = "/"
+type layoutRoutes = "/"
 type RedirectRoutes = never
 type RewriteRoutes = never
-type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRoutes
+type Routes = AppRoutes | PageRoutes | layoutRoutes | RedirectRoutes | RewriteRoutes
 
 
 interface ParamMap {
@@ -67,12 +67,12 @@ interface ParamMap {
 
 export type ParamsOf<Route extends Routes> = ParamMap[Route]
 
-interface LayoutSlotMap {
+interface layoutSlotMap {
   "/": never
 }
 
 
-export type { AppRoutes, PageRoutes, LayoutRoutes, RedirectRoutes, RewriteRoutes, ParamMap }
+export type { AppRoutes, PageRoutes, layoutRoutes, RedirectRoutes, RewriteRoutes, ParamMap }
 
 declare global {
   /**
@@ -94,15 +94,15 @@ declare global {
    * Props for Next.js App Router layout components
    * @example
    * ```tsx
-   * export default function Layout(props: LayoutProps<'/dashboard'>) {
+   * export default function layout(props: layoutProps<'/dashboard'>) {
    *   return <div>{props.children}</div>
    * }
    * ```
    */
-  type LayoutProps<LayoutRoute extends LayoutRoutes> = {
-    params: Promise<ParamMap[LayoutRoute]>
+  type layoutProps<layoutRoute extends layoutRoutes> = {
+    params: Promise<ParamMap[layoutRoute]>
     children: React.ReactNode
   } & {
-    [K in LayoutSlotMap[LayoutRoute]]: React.ReactNode
+    [K in layoutSlotMap[layoutRoute]]: React.ReactNode
   }
 }

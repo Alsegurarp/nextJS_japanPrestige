@@ -760,7 +760,7 @@ Object.defineProperty(exports, "default", {
 });
 const _react = __turbopack_context__.r("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 const isServer = ("TURBOPACK compile-time value", "undefined") === 'undefined';
-const useClientOnlyLayoutEffect = ("TURBOPACK compile-time truthy", 1) ? ()=>{} : "TURBOPACK unreachable";
+const useClientOnlylayoutEffect = ("TURBOPACK compile-time truthy", 1) ? ()=>{} : "TURBOPACK unreachable";
 const useClientOnlyEffect = ("TURBOPACK compile-time truthy", 1) ? ()=>{} : "TURBOPACK unreachable";
 function SideEffect(props) {
     const { headManager, reduceComponentsToState } = props;
@@ -774,7 +774,7 @@ function SideEffect(props) {
         headManager?.mountedInstances?.add(props.children);
         emitChange();
     }
-    useClientOnlyLayoutEffect(()=>{
+    useClientOnlylayoutEffect(()=>{
         headManager?.mountedInstances?.add(props.children);
         return ()=>{
             headManager?.mountedInstances?.delete(props.children);
@@ -785,7 +785,7 @@ function SideEffect(props) {
     // being rendered, we only trigger the method from the last one.
     // This is ensured by keeping the last unflushed `updateHead` in the `_pendingUpdate`
     // singleton in the layout effect pass, and actually trigger it in the effect pass.
-    useClientOnlyLayoutEffect(()=>{
+    useClientOnlylayoutEffect(()=>{
         if (headManager) {
             headManager._pendingUpdate = emitChange;
         }
@@ -4511,9 +4511,9 @@ Object.defineProperty(exports, "__esModule", {
     DEFAULT_SEGMENT_KEY: null,
     PAGE_SEGMENT_KEY: null,
     addSearchParamsIfPageSegment: null,
-    computeSelectedLayoutSegment: null,
+    computeSelectedlayoutSegment: null,
     getSegmentValue: null,
-    getSelectedLayoutSegmentPath: null,
+    getSelectedlayoutSegmentPath: null,
     isGroupSegment: null,
     isParallelRouteSegment: null
 });
@@ -4533,14 +4533,14 @@ _export(exports, {
     addSearchParamsIfPageSegment: function() {
         return addSearchParamsIfPageSegment;
     },
-    computeSelectedLayoutSegment: function() {
-        return computeSelectedLayoutSegment;
+    computeSelectedlayoutSegment: function() {
+        return computeSelectedlayoutSegment;
     },
     getSegmentValue: function() {
         return getSegmentValue;
     },
-    getSelectedLayoutSegmentPath: function() {
-        return getSelectedLayoutSegmentPath;
+    getSelectedlayoutSegmentPath: function() {
+        return getSelectedlayoutSegmentPath;
     },
     isGroupSegment: function() {
         return isGroupSegment;
@@ -4567,7 +4567,7 @@ function addSearchParamsIfPageSegment(segment, searchParams) {
     }
     return segment;
 }
-function computeSelectedLayoutSegment(segments, parallelRouteKey) {
+function computeSelectedlayoutSegment(segments, parallelRouteKey) {
     if (!segments || segments.length === 0) {
         return null;
     }
@@ -4577,7 +4577,7 @@ function computeSelectedLayoutSegment(segments, parallelRouteKey) {
     // Returning an internal value like `__DEFAULT__` would be confusing
     return rawSegment === DEFAULT_SEGMENT_KEY ? null : rawSegment;
 }
-function getSelectedLayoutSegmentPath(tree, parallelRouteKey, first = true, segmentPath = []) {
+function getSelectedlayoutSegmentPath(tree, parallelRouteKey, first = true, segmentPath = []) {
     let node;
     if (first) {
         // Use the provided parallel route key on the first parallel route
@@ -4594,7 +4594,7 @@ function getSelectedLayoutSegmentPath(tree, parallelRouteKey, first = true, segm
         return segmentPath;
     }
     segmentPath.push(segmentValue);
-    return getSelectedLayoutSegmentPath(node, parallelRouteKey, false, segmentPath);
+    return getSelectedlayoutSegmentPath(node, parallelRouteKey, false, segmentPath);
 }
 const PAGE_SEGMENT_KEY = '__PAGE__';
 const DEFAULT_SEGMENT_KEY = '__DEFAULT__'; //# sourceMappingURL=segment.js.map
@@ -5120,7 +5120,7 @@ function prepareFlightRouterStateForRequest(flightRouterState, isHmrRefresh) {
  * Recursively strips client-only data from FlightRouterState while preserving
  * server-needed information for proper rendering decisions.
  */ function stripClientOnlyDataFromFlightRouterState(flightRouterState) {
-    const [segment, parallelRoutes, _url, refreshMarker, isRootLayout, hasLoadingBoundary] = flightRouterState;
+    const [segment, parallelRoutes, _url, refreshMarker, isRootlayout, hasLoadingBoundary] = flightRouterState;
     // __PAGE__ segments are always fetched from the server, so there's
     // no need to send them up
     const cleanedSegment = stripSearchParamsFromPageSegment(segment);
@@ -5136,8 +5136,8 @@ function prepareFlightRouterStateForRequest(flightRouterState, isHmrRefresh) {
         shouldPreserveRefreshMarker(refreshMarker) ? refreshMarker : null
     ];
     // Append optional fields if present
-    if (isRootLayout !== undefined) {
-        result[4] = isRootLayout;
+    if (isRootlayout !== undefined) {
+        result[4] = isRootlayout;
     }
     if (hasLoadingBoundary !== undefined) {
         result[5] = hasLoadingBoundary;
@@ -6106,9 +6106,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 0 && (module.exports = {
-    appendLayoutVaryPath: null,
+    appendlayoutVaryPath: null,
     clonePageVaryPathWithNewSearchParams: null,
-    finalizeLayoutVaryPath: null,
+    finalizelayoutVaryPath: null,
     finalizeMetadataVaryPath: null,
     finalizePageVaryPath: null,
     getFulfilledRouteVaryPath: null,
@@ -6122,14 +6122,14 @@ function _export(target, all) {
     });
 }
 _export(exports, {
-    appendLayoutVaryPath: function() {
-        return appendLayoutVaryPath;
+    appendlayoutVaryPath: function() {
+        return appendlayoutVaryPath;
     },
     clonePageVaryPathWithNewSearchParams: function() {
         return clonePageVaryPathWithNewSearchParams;
     },
-    finalizeLayoutVaryPath: function() {
-        return finalizeLayoutVaryPath;
+    finalizelayoutVaryPath: function() {
+        return finalizelayoutVaryPath;
     },
     finalizeMetadataVaryPath: function() {
         return finalizeMetadataVaryPath;
@@ -6180,14 +6180,14 @@ function getFulfilledRouteVaryPath(pathname, search, nextUrl, couldBeIntercepted
     };
     return varyPath;
 }
-function appendLayoutVaryPath(parentPath, cacheKey) {
+function appendlayoutVaryPath(parentPath, cacheKey) {
     const varyPathPart = {
         value: cacheKey,
         parent: parentPath
     };
     return varyPathPart;
 }
-function finalizeLayoutVaryPath(requestKey, varyPath) {
+function finalizelayoutVaryPath(requestKey, varyPath) {
     const layoutVaryPath = {
         value: requestKey,
         parent: varyPath
@@ -6733,13 +6733,13 @@ if ((typeof exports.default === 'function' || typeof exports.default === 'object
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-Object.defineProperty(exports, "isNavigatingToNewRootLayout", {
+Object.defineProperty(exports, "isNavigatingToNewRootlayout", {
     enumerable: true,
     get: function() {
-        return isNavigatingToNewRootLayout;
+        return isNavigatingToNewRootlayout;
     }
 });
-function isNavigatingToNewRootLayout(currentTree, nextTree) {
+function isNavigatingToNewRootlayout(currentTree, nextTree) {
     // Compare segments
     const currentTreeSegment = currentTree[0];
     const nextTreeSegment = nextTree[0];
@@ -6770,7 +6770,7 @@ function isNavigatingToNewRootLayout(currentTree, nextTree) {
     const currentTreeChild = Object.values(currentTree[1])[0];
     const nextTreeChild = Object.values(nextTree[1])[0];
     if (!currentTreeChild || !nextTreeChild) return true;
-    return isNavigatingToNewRootLayout(currentTreeChild, nextTreeChild);
+    return isNavigatingToNewRootlayout(currentTreeChild, nextTreeChild);
 }
 if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
     Object.defineProperty(exports.default, '__esModule', {
@@ -6828,19 +6828,19 @@ function startPPRNavigation(navigatedAt, oldUrl, oldCacheNode, oldRouterState, n
     const segmentPath = [];
     return updateCacheNodeOnNavigation(navigatedAt, oldUrl, oldCacheNode, oldRouterState, newRouterState, false, prefetchData, prefetchHead, isPrefetchHeadPartial, isSamePageNavigation, segmentPath, scrollableSegmentsResult);
 }
-function updateCacheNodeOnNavigation(navigatedAt, oldUrl, oldCacheNode, oldRouterState, newRouterState, didFindRootLayout, prefetchData, prefetchHead, isPrefetchHeadPartial, isSamePageNavigation, segmentPath, scrollableSegmentsResult) {
+function updateCacheNodeOnNavigation(navigatedAt, oldUrl, oldCacheNode, oldRouterState, newRouterState, didFindRootlayout, prefetchData, prefetchHead, isPrefetchHeadPartial, isSamePageNavigation, segmentPath, scrollableSegmentsResult) {
     // Diff the old and new trees to reuse the shared layouts.
     const oldRouterStateChildren = oldRouterState[1];
     const newRouterStateChildren = newRouterState[1];
     const prefetchDataChildren = prefetchData !== null ? prefetchData[1] : null;
-    if (!didFindRootLayout) {
+    if (!didFindRootlayout) {
         // We're currently traversing the part of the tree that was also part of
         // the previous route. If we discover a root layout, then we don't need to
         // trigger an MPA navigation. See beginRenderingNewRouteTree for context.
-        const isRootLayout = newRouterState[4] === true;
-        if (isRootLayout) {
+        const isRootlayout = newRouterState[4] === true;
+        if (isRootlayout) {
             // Found a matching root layout.
-            didFindRootLayout = true;
+            didFindRootlayout = true;
         }
     }
     const oldParallelRoutes = oldCacheNode.parallelRoutes;
@@ -6910,7 +6910,7 @@ function updateCacheNodeOnNavigation(navigatedAt, oldUrl, oldCacheNode, oldRoute
                 taskChild = reuseActiveSegmentInDefaultSlot(oldUrl, oldRouterStateChild);
             } else {
                 // There's no currently active segment. Switch to the "create" path.
-                taskChild = beginRenderingNewRouteTree(navigatedAt, oldRouterStateChild, newRouterStateChild, oldCacheNodeChild, didFindRootLayout, prefetchDataChild !== undefined ? prefetchDataChild : null, prefetchHead, isPrefetchHeadPartial, newSegmentPathChild, scrollableSegmentsResult);
+                taskChild = beginRenderingNewRouteTree(navigatedAt, oldRouterStateChild, newRouterStateChild, oldCacheNodeChild, didFindRootlayout, prefetchDataChild !== undefined ? prefetchDataChild : null, prefetchHead, isPrefetchHeadPartial, newSegmentPathChild, scrollableSegmentsResult);
             }
         } else if (isSamePageNavigation && // Check if this is a page segment.
         // TODO: We're not consistent about how we do this check. Some places
@@ -6937,20 +6937,20 @@ function updateCacheNodeOnNavigation(navigatedAt, oldUrl, oldCacheNode, oldRoute
             // Also note that this only refreshes the dynamic data, not static/
             // cached data. If the page segment is fully static and prefetched, the
             // request is skipped. (This is also how refresh() works.)
-            taskChild = beginRenderingNewRouteTree(navigatedAt, oldRouterStateChild, newRouterStateChild, oldCacheNodeChild, didFindRootLayout, prefetchDataChild !== undefined ? prefetchDataChild : null, prefetchHead, isPrefetchHeadPartial, newSegmentPathChild, scrollableSegmentsResult);
+            taskChild = beginRenderingNewRouteTree(navigatedAt, oldRouterStateChild, newRouterStateChild, oldCacheNodeChild, didFindRootlayout, prefetchDataChild !== undefined ? prefetchDataChild : null, prefetchHead, isPrefetchHeadPartial, newSegmentPathChild, scrollableSegmentsResult);
         } else if (oldRouterStateChild !== undefined && oldSegmentChild !== undefined && (0, _matchsegments.matchSegment)(newSegmentChild, oldSegmentChild)) {
             if (oldCacheNodeChild !== undefined && oldRouterStateChild !== undefined) {
                 // This segment exists in both the old and new trees. Recursively update
                 // the children.
-                taskChild = updateCacheNodeOnNavigation(navigatedAt, oldUrl, oldCacheNodeChild, oldRouterStateChild, newRouterStateChild, didFindRootLayout, prefetchDataChild, prefetchHead, isPrefetchHeadPartial, isSamePageNavigation, newSegmentPathChild, scrollableSegmentsResult);
+                taskChild = updateCacheNodeOnNavigation(navigatedAt, oldUrl, oldCacheNodeChild, oldRouterStateChild, newRouterStateChild, didFindRootlayout, prefetchDataChild, prefetchHead, isPrefetchHeadPartial, isSamePageNavigation, newSegmentPathChild, scrollableSegmentsResult);
             } else {
                 // There's no existing Cache Node for this segment. Switch to the
                 // "create" path.
-                taskChild = beginRenderingNewRouteTree(navigatedAt, oldRouterStateChild, newRouterStateChild, oldCacheNodeChild, didFindRootLayout, prefetchDataChild !== undefined ? prefetchDataChild : null, prefetchHead, isPrefetchHeadPartial, newSegmentPathChild, scrollableSegmentsResult);
+                taskChild = beginRenderingNewRouteTree(navigatedAt, oldRouterStateChild, newRouterStateChild, oldCacheNodeChild, didFindRootlayout, prefetchDataChild !== undefined ? prefetchDataChild : null, prefetchHead, isPrefetchHeadPartial, newSegmentPathChild, scrollableSegmentsResult);
             }
         } else {
             // This is a new tree. Switch to the "create" path.
-            taskChild = beginRenderingNewRouteTree(navigatedAt, oldRouterStateChild, newRouterStateChild, oldCacheNodeChild, didFindRootLayout, prefetchDataChild !== undefined ? prefetchDataChild : null, prefetchHead, isPrefetchHeadPartial, newSegmentPathChild, scrollableSegmentsResult);
+            taskChild = beginRenderingNewRouteTree(navigatedAt, oldRouterStateChild, newRouterStateChild, oldCacheNodeChild, didFindRootlayout, prefetchDataChild !== undefined ? prefetchDataChild : null, prefetchHead, isPrefetchHeadPartial, newSegmentPathChild, scrollableSegmentsResult);
         }
         if (taskChild !== null) {
             // Recursively propagate up the child tasks.
@@ -6999,7 +6999,7 @@ function updateCacheNodeOnNavigation(navigatedAt, oldUrl, oldCacheNode, oldRoute
         // is already part of the current tree, because it would be weird for
         // prefetch data to be newer than the final data. It probably won't ever be
         // observable anyway, but it could happen if the segment is unmounted then
-        // mounted again, because LayoutRouter will momentarily switch to rendering
+        // mounted again, because layoutRouter will momentarily switch to rendering
         // prefetchRsc, via useDeferredValue.
         prefetchRsc: oldCacheNode.prefetchRsc,
         head: oldCacheNode.head,
@@ -7017,8 +7017,8 @@ function updateCacheNodeOnNavigation(navigatedAt, oldUrl, oldCacheNode, oldRoute
         children: taskChildren
     };
 }
-function beginRenderingNewRouteTree(navigatedAt, oldRouterState, newRouterState, existingCacheNode, didFindRootLayout, prefetchData, possiblyPartialPrefetchHead, isPrefetchHeadPartial, segmentPath, scrollableSegmentsResult) {
-    if (!didFindRootLayout) {
+function beginRenderingNewRouteTree(navigatedAt, oldRouterState, newRouterState, existingCacheNode, didFindRootlayout, prefetchData, possiblyPartialPrefetchHead, isPrefetchHeadPartial, segmentPath, scrollableSegmentsResult) {
+    if (!didFindRootlayout) {
         // The route tree changed before we reached a layout. (The highest-level
         // layout in a route tree is referred to as the "root" layout.) This could
         // mean that we're navigating between two different root layouts. When this
@@ -7033,12 +7033,12 @@ function beginRenderingNewRouteTree(navigatedAt, oldRouterState, newRouterState,
         // Specifically, we handle dynamic parameters differently: two segments are
         // considered the same even if their parameter values are different.
         //
-        // Refer to isNavigatingToNewRootLayout for details.
+        // Refer to isNavigatingToNewRootlayout for details.
         //
         // Note that we only have to perform this extra traversal if we didn't
         // already discover a root layout in the part of the tree that is unchanged.
         // In the common case, this branch is skipped completely.
-        if (oldRouterState === undefined || (0, _isnavigatingtonewrootlayout.isNavigatingToNewRootLayout)(oldRouterState, newRouterState)) {
+        if (oldRouterState === undefined || (0, _isnavigatingtonewrootlayout.isNavigatingToNewRootlayout)(oldRouterState, newRouterState)) {
             // The root layout changed. Perform a full-page navigation.
             return MPA_NAVIGATION_TASK;
         }
@@ -7112,7 +7112,7 @@ function createCacheNodeOnNavigation(navigatedAt, routerState, existingCacheNode
     let needsDynamicRequest = false;
     if (isLeafSegment) {
         // The segment path of every leaf segment (i.e. page) is collected into
-        // a result array. This is used by the LayoutRouter to scroll to ensure that
+        // a result array. This is used by the layoutRouter to scroll to ensure that
         // new pages are visible after a navigation.
         // TODO: We should use a string to represent the segment path instead of
         // an array. We already use a string representation for the path when
@@ -7360,7 +7360,7 @@ function createPendingCacheNode(navigatedAt, routerState, prefetchData, prefetch
     const isLeafSegment = parallelRoutes.size === 0;
     if (isLeafSegment) {
         // The segment path of every leaf segment (i.e. page) is collected into
-        // a result array. This is used by the LayoutRouter to scroll to ensure that
+        // a result array. This is used by the layoutRouter to scroll to ensure that
         // new pages are visible after a navigation.
         // TODO: We should use a string to represent the segment path instead of
         // an array. We already use a string representation for the path when
@@ -7443,7 +7443,7 @@ function finishPendingCacheNode(cacheNode, taskState, serverState, dynamicData, 
     const dynamicSegmentData = dynamicData[0];
     if (rsc === null) {
         // This is a lazy cache node. We can overwrite it. This is only safe
-        // because we know that the LayoutRouter suspends if `rsc` is `null`.
+        // because we know that the layoutRouter suspends if `rsc` is `null`.
         cacheNode.rsc = dynamicSegmentData;
     } else if (isDeferredRsc(rsc)) {
         // This is a deferred RSC promise. We can fulfill it with the data we just
@@ -7877,7 +7877,7 @@ function readRenderSnapshotFromCache(now, route, tree) {
             childRouterStates,
             null,
             null,
-            tree.isRootLayout
+            tree.isRootlayout
         ],
         seedData: [
             rsc,
@@ -8707,7 +8707,7 @@ function createOptimisticRouteTree(tree, newRenderedSearch) {
             varyPath: (0, _varypath.clonePageVaryPathWithNewSearchParams)(tree.varyPath, newRenderedSearch),
             isPage: true,
             slots: clonedSlots,
-            isRootLayout: tree.isRootLayout,
+            isRootlayout: tree.isRootlayout,
             hasLoadingBoundary: tree.hasLoadingBoundary,
             hasRuntimePrefetch: tree.hasRuntimePrefetch
         };
@@ -8718,7 +8718,7 @@ function createOptimisticRouteTree(tree, newRenderedSearch) {
         varyPath: tree.varyPath,
         isPage: false,
         slots: clonedSlots,
-        isRootLayout: tree.isRootLayout,
+        isRootlayout: tree.isRootlayout,
         hasLoadingBoundary: tree.hasLoadingBoundary,
         hasRuntimePrefetch: tree.hasRuntimePrefetch
     };
@@ -8874,7 +8874,7 @@ function fulfillRouteCacheEntry(entry, tree, metadataVaryPath, staleAt, couldBeI
         // one. If this logic ever gets more complex we can change this to an enum.
         isPage: true,
         slots: null,
-        isRootLayout: false,
+        isRootlayout: false,
         hasLoadingBoundary: _approutertypes.HasLoadingBoundary.SubtreeHasNoLoadingBoundary,
         hasRuntimePrefetch: false
     };
@@ -8941,7 +8941,7 @@ function convertTreePrefetchToRouteTree(prefetch, segment, partialVaryPath, requ
     const prefetchSlots = prefetch.slots;
     if (prefetchSlots !== null) {
         isPage = false;
-        varyPath = (0, _varypath.finalizeLayoutVaryPath)(requestKey, partialVaryPath);
+        varyPath = (0, _varypath.finalizelayoutVaryPath)(requestKey, partialVaryPath);
         slots = {};
         for(let parallelRouteKey in prefetchSlots){
             const childPrefetch = prefetchSlots[parallelRouteKey];
@@ -8965,7 +8965,7 @@ function convertTreePrefetchToRouteTree(prefetch, segment, partialVaryPath, requ
                 // doing anyway.
                 const childParamKey = // cacheComponents is enabled.
                 childServerSentParamKey !== null ? childServerSentParamKey : (0, _routeparams.getCacheKeyForDynamicParam)(childParamValue, '');
-                childPartialVaryPath = (0, _varypath.appendLayoutVaryPath)(partialVaryPath, childParamKey);
+                childPartialVaryPath = (0, _varypath.appendlayoutVaryPath)(partialVaryPath, childParamKey);
                 childSegment = [
                     childParamName,
                     childParamKey,
@@ -9003,7 +9003,7 @@ function convertTreePrefetchToRouteTree(prefetch, segment, partialVaryPath, requ
         } else {
             // This is a layout segment.
             isPage = false;
-            varyPath = (0, _varypath.finalizeLayoutVaryPath)(requestKey, partialVaryPath);
+            varyPath = (0, _varypath.finalizelayoutVaryPath)(requestKey, partialVaryPath);
         }
     }
     return {
@@ -9018,7 +9018,7 @@ function convertTreePrefetchToRouteTree(prefetch, segment, partialVaryPath, requ
         // and we'd catch it quickly, anyway.
         isPage: isPage,
         slots,
-        isRootLayout: prefetch.isRootLayout,
+        isRootlayout: prefetch.isRootlayout,
         // This field is only relevant to dynamic routes. For a PPR/static route,
         // there's always some partial loading state we can fetch.
         hasLoadingBoundary: _approutertypes.HasLoadingBoundary.SegmentHasLoadingBoundary,
@@ -9037,8 +9037,8 @@ function convertFlightRouterStateToRouteTree(flightRouterState, requestKey, pare
     if (Array.isArray(originalSegment)) {
         isPage = false;
         const paramCacheKey = originalSegment[1];
-        partialVaryPath = (0, _varypath.appendLayoutVaryPath)(parentPartialVaryPath, paramCacheKey);
-        varyPath = (0, _varypath.finalizeLayoutVaryPath)(requestKey, partialVaryPath);
+        partialVaryPath = (0, _varypath.appendlayoutVaryPath)(parentPartialVaryPath, paramCacheKey);
+        varyPath = (0, _varypath.finalizelayoutVaryPath)(requestKey, partialVaryPath);
         segment = originalSegment;
     } else {
         // This segment does not have a param. Inherit the partial vary path of
@@ -9071,7 +9071,7 @@ function convertFlightRouterStateToRouteTree(flightRouterState, requestKey, pare
             // This is a layout segment.
             isPage = false;
             segment = originalSegment;
-            varyPath = (0, _varypath.finalizeLayoutVaryPath)(requestKey, partialVaryPath);
+            varyPath = (0, _varypath.finalizelayoutVaryPath)(requestKey, partialVaryPath);
         }
     }
     let slots = null;
@@ -9105,7 +9105,7 @@ function convertFlightRouterStateToRouteTree(flightRouterState, requestKey, pare
         // and we'd catch it quickly, anyway.
         isPage: isPage,
         slots,
-        isRootLayout: flightRouterState[4] === true,
+        isRootlayout: flightRouterState[4] === true,
         hasLoadingBoundary: flightRouterState[5] !== undefined ? flightRouterState[5] : _approutertypes.HasLoadingBoundary.SubtreeHasNoLoadingBoundary,
         // Non-static tree responses are only used by apps that haven't adopted
         // Cache Components. So this is always false.
@@ -9124,7 +9124,7 @@ function convertRouteTreeToFlightRouterState(routeTree) {
         parallelRoutes,
         null,
         null,
-        routeTree.isRootLayout
+        routeTree.isRootlayout
     ];
     return flightRouterState;
 }
@@ -10384,7 +10384,7 @@ function diffRouteTreeAgainstCurrent(now, task, route, oldTree, newTree, spawned
         requestTreeChildren,
         null,
         null,
-        newTree.isRootLayout
+        newTree.isRootlayout
     ];
     return requestTree;
 }
@@ -10458,7 +10458,7 @@ function pingPPRDisabledRouteTreeUpToLoadingBoundary(now, task, route, tree, ref
         requestTreeChildren,
         null,
         refetchMarker,
-        tree.isRootLayout
+        tree.isRootlayout
     ];
     return requestTree;
 }
@@ -10528,7 +10528,7 @@ function pingRouteTreeAndIncludeDynamicData(now, task, route, tree, isInsideRefe
         requestTreeChildren,
         null,
         refetchMarker,
-        tree.isRootLayout
+        tree.isRootlayout
     ];
     return requestTree;
 }
@@ -15183,7 +15183,7 @@ _removeProperty = function _removeProperty(target, property) {
     deg: 1,
     rad: 1,
     turn: 1
-}, _nonStandardLayouts = {
+}, _nonStandardlayouts = {
     grid: 1,
     flex: 1
 }, //takes a single value like 20px and converts it to the unit specified, like "%", returning only the numeric amount.
@@ -15218,7 +15218,7 @@ _convertToUnit = function _convertToUnit(target, property, value, unit) {
             px = target[measureProperty];
             v ? target.style[property] = v : _removeProperty(target, property);
         } else {
-            (toPercent || curUnit === "%") && !_nonStandardLayouts[_getComputedProperty(parent, "display")] && (style.position = _getComputedProperty(target, "position"));
+            (toPercent || curUnit === "%") && !_nonStandardlayouts[_getComputedProperty(parent, "display")] && (style.position = _getComputedProperty(target, "position"));
             parent === target && (style.position = "static"); // like for borderRadius, if it's a % we must have it relative to the target itself but that may not have position: relative or position: absolute in which case it'd go up the chain until it finds its offsetParent (bad). position: static protects against that.
             parent.appendChild(_tempDiv);
             px = _tempDiv[measureProperty];
@@ -16056,7 +16056,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/gsap/index.js [app-ssr] (ecmascript) <locals>");
 ;
 ;
-let useIsomorphicLayoutEffect = typeof document !== "undefined" ? __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useLayoutEffect"] : __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"], isConfig = (value)=>value && !Array.isArray(value) && typeof value === "object", emptyArray = [], defaultConfig = {}, _gsap = __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"]; // accommodates situations where different versions of GSAP may be loaded, so a user can gsap.registerPlugin(useGSAP);
+let useIsomorphiclayoutEffect = typeof document !== "undefined" ? __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["uselayoutEffect"] : __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"], isConfig = (value)=>value && !Array.isArray(value) && typeof value === "object", emptyArray = [], defaultConfig = {}, _gsap = __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"]; // accommodates situations where different versions of GSAP may be loaded, so a user can gsap.registerPlugin(useGSAP);
 const useGSAP = (callback, dependencies = emptyArray)=>{
     let config = defaultConfig;
     if (isConfig(callback)) {
@@ -16069,11 +16069,11 @@ const useGSAP = (callback, dependencies = emptyArray)=>{
     }
     callback && typeof callback !== "function" && console.warn("First parameter must be a function or config object");
     const { scope, revertOnUpdate } = config, mounted = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(false), context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(_gsap.context(()=>{}, scope)), contextSafe = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])((func)=>context.current.add(null, func)), deferCleanup = dependencies && dependencies.length && !revertOnUpdate;
-    deferCleanup && useIsomorphicLayoutEffect(()=>{
+    deferCleanup && useIsomorphiclayoutEffect(()=>{
         mounted.current = true;
         return ()=>context.current.revert();
     }, emptyArray);
-    useIsomorphicLayoutEffect(()=>{
+    useIsomorphiclayoutEffect(()=>{
         callback && context.current.add(callback, scope);
         if (!deferCleanup || !mounted.current) {
             return ()=>context.current.revert();
@@ -20098,7 +20098,7 @@ function useDynamicSearchParams(expression) {
 const hasSuspenseRegex = /\n\s+at Suspense \(<anonymous>\)/;
 // Common implicit body tags that React will treat as body when placed directly in html
 const bodyAndImplicitTags = 'body|div|main|section|article|aside|header|footer|nav|form|p|span|h1|h2|h3|h4|h5|h6';
-// Detects when RootLayoutBoundary (our framework marker component) appears
+// Detects when RootlayoutBoundary (our framework marker component) appears
 // after Suspense in the component stack, indicating the root layout is wrapped
 // within a Suspense boundary. Ensures no body/html/implicit-body components are in between.
 //
@@ -20110,7 +20110,7 @@ const bodyAndImplicitTags = 'body|div|main|section|article|aside|header|footer|n
 //   at Suspense (<anonymous>)
 //   at SomeComponent (<anonymous>)
 //   at __next_root_layout_boundary__ (<anonymous>)
-const hasSuspenseBeforeRootLayoutWithoutBodyOrImplicitBodyRegex = new RegExp(`\\n\\s+at Suspense \\(<anonymous>\\)(?:(?!\\n\\s+at (?:${bodyAndImplicitTags}) \\(<anonymous>\\))[\\s\\S])*?\\n\\s+at ${_boundaryconstants.ROOT_LAYOUT_BOUNDARY_NAME} \\([^\\n]*\\)`);
+const hasSuspenseBeforeRootlayoutWithoutBodyOrImplicitBodyRegex = new RegExp(`\\n\\s+at Suspense \\(<anonymous>\\)(?:(?!\\n\\s+at (?:${bodyAndImplicitTags}) \\(<anonymous>\\))[\\s\\S])*?\\n\\s+at ${_boundaryconstants.ROOT_LAYOUT_BOUNDARY_NAME} \\([^\\n]*\\)`);
 const hasMetadataRegex = new RegExp(`\\n\\s+at ${_boundaryconstants.METADATA_BOUNDARY_NAME}[\\n\\s]`);
 const hasViewportRegex = new RegExp(`\\n\\s+at ${_boundaryconstants.VIEWPORT_BOUNDARY_NAME}[\\n\\s]`);
 const hasOutletRegex = new RegExp(`\\n\\s+at ${_boundaryconstants.OUTLET_BOUNDARY_NAME}[\\n\\s]`);
@@ -20124,7 +20124,7 @@ function trackAllowedDynamicAccess(workStore, componentStack, dynamicValidation,
     } else if (hasViewportRegex.test(componentStack)) {
         dynamicValidation.hasDynamicViewport = true;
         return;
-    } else if (hasSuspenseBeforeRootLayoutWithoutBodyOrImplicitBodyRegex.test(componentStack)) {
+    } else if (hasSuspenseBeforeRootlayoutWithoutBodyOrImplicitBodyRegex.test(componentStack)) {
         // For Suspense within body, the prelude wouldn't be empty so it wouldn't violate the empty static shells rule.
         // But if you have Suspense above body, the prelude is empty but we allow that because having Suspense
         // is an explicit signal from the user that they acknowledge the empty shell and want dynamic rendering.
@@ -20385,8 +20385,8 @@ Object.defineProperty(exports, "__esModule", {
     usePathname: null,
     useRouter: null,
     useSearchParams: null,
-    useSelectedLayoutSegment: null,
-    useSelectedLayoutSegments: null,
+    useSelectedlayoutSegment: null,
+    useSelectedlayoutSegments: null,
     useServerInsertedHTML: null
 });
 function _export(target, all) {
@@ -20438,11 +20438,11 @@ _export(exports, {
     useSearchParams: function() {
         return useSearchParams;
     },
-    useSelectedLayoutSegment: function() {
-        return useSelectedLayoutSegment;
+    useSelectedlayoutSegment: function() {
+        return useSelectedlayoutSegment;
     },
-    useSelectedLayoutSegments: function() {
-        return useSelectedLayoutSegments;
+    useSelectedlayoutSegments: function() {
+        return useSelectedlayoutSegments;
     },
     useServerInsertedHTML: function() {
         return _serverinsertedhtmlsharedruntime.useServerInsertedHTML;
@@ -20521,16 +20521,16 @@ function useParams() {
     }
     return params;
 }
-function useSelectedLayoutSegments(parallelRouteKey = 'children') {
-    useDynamicRouteParams?.('useSelectedLayoutSegments()');
-    const context = (0, _react.useContext)(_approutercontextsharedruntime.LayoutRouterContext);
+function useSelectedlayoutSegments(parallelRouteKey = 'children') {
+    useDynamicRouteParams?.('useSelectedlayoutSegments()');
+    const context = (0, _react.useContext)(_approutercontextsharedruntime.layoutRouterContext);
     // @ts-expect-error This only happens in `pages`. Type is overwritten in navigation.d.ts
     if (!context) return null;
     // Instrument with Suspense DevTools (dev-only)
     if (("TURBOPACK compile-time value", "development") !== 'production' && 'use' in _react.default) {
         const navigationPromises = (0, _react.use)(_hooksclientcontextsharedruntime.NavigationPromisesContext);
         if (navigationPromises) {
-            const promise = navigationPromises.selectedLayoutSegmentsPromises?.get(parallelRouteKey);
+            const promise = navigationPromises.selectedlayoutSegmentsPromises?.get(parallelRouteKey);
             if (promise) {
                 // We should always have a promise here, but if we don't, it's not worth erroring over.
                 // We just won't be able to instrument it, but can still provide the value.
@@ -20538,22 +20538,22 @@ function useSelectedLayoutSegments(parallelRouteKey = 'children') {
             }
         }
     }
-    return (0, _segment.getSelectedLayoutSegmentPath)(context.parentTree, parallelRouteKey);
+    return (0, _segment.getSelectedlayoutSegmentPath)(context.parentTree, parallelRouteKey);
 }
-function useSelectedLayoutSegment(parallelRouteKey = 'children') {
-    useDynamicRouteParams?.('useSelectedLayoutSegment()');
+function useSelectedlayoutSegment(parallelRouteKey = 'children') {
+    useDynamicRouteParams?.('useSelectedlayoutSegment()');
     const navigationPromises = (0, _react.useContext)(_hooksclientcontextsharedruntime.NavigationPromisesContext);
-    const selectedLayoutSegments = useSelectedLayoutSegments(parallelRouteKey);
+    const selectedlayoutSegments = useSelectedlayoutSegments(parallelRouteKey);
     // Instrument with Suspense DevTools (dev-only)
     if (("TURBOPACK compile-time value", "development") !== 'production' && navigationPromises && 'use' in _react.default) {
-        const promise = navigationPromises.selectedLayoutSegmentPromises?.get(parallelRouteKey);
+        const promise = navigationPromises.selectedlayoutSegmentPromises?.get(parallelRouteKey);
         if (promise) {
             // We should always have a promise here, but if we don't, it's not worth erroring over.
             // We just won't be able to instrument it, but can still provide the value.
             return (0, _react.use)(promise);
         }
     }
-    return (0, _segment.computeSelectedLayoutSegment)(selectedLayoutSegments, parallelRouteKey);
+    return (0, _segment.computeSelectedlayoutSegment)(selectedlayoutSegments, parallelRouteKey);
 }
 if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
     Object.defineProperty(exports.default, '__esModule', {

@@ -1734,9 +1734,9 @@ self.$RefreshInterceptModuleExecution$ = function(webpackModuleId) {
         null == create && console.warn("React Hook useInsertionEffect requires an effect callback. Did you forget to pass a callback to the hook?");
         return resolveDispatcher().useInsertionEffect(create, deps);
     };
-    exports.useLayoutEffect = function(create, deps) {
-        null == create && console.warn("React Hook useLayoutEffect requires an effect callback. Did you forget to pass a callback to the hook?");
-        return resolveDispatcher().useLayoutEffect(create, deps);
+    exports.uselayoutEffect = function(create, deps) {
+        null == create && console.warn("React Hook uselayoutEffect requires an effect callback. Did you forget to pass a callback to the hook?");
+        return resolveDispatcher().uselayoutEffect(create, deps);
     };
     exports.useMemo = function(create, deps) {
         return resolveDispatcher().useMemo(create, deps);

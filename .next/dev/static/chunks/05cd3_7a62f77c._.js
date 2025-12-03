@@ -913,7 +913,7 @@ Object.defineProperty(exports, "default", {
 });
 const _react = __turbopack_context__.r("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 const isServer = typeof window === 'undefined';
-const useClientOnlyLayoutEffect = isServer ? ()=>{} : _react.useLayoutEffect;
+const useClientOnlylayoutEffect = isServer ? ()=>{} : _react.uselayoutEffect;
 const useClientOnlyEffect = isServer ? ()=>{} : _react.useEffect;
 function SideEffect(props) {
     const { headManager, reduceComponentsToState } = props;
@@ -927,35 +927,35 @@ function SideEffect(props) {
         headManager?.mountedInstances?.add(props.children);
         emitChange();
     }
-    useClientOnlyLayoutEffect({
-        "SideEffect.useClientOnlyLayoutEffect": ()=>{
+    useClientOnlylayoutEffect({
+        "SideEffect.useClientOnlylayoutEffect": ()=>{
             headManager?.mountedInstances?.add(props.children);
             return ({
-                "SideEffect.useClientOnlyLayoutEffect": ()=>{
+                "SideEffect.useClientOnlylayoutEffect": ()=>{
                     headManager?.mountedInstances?.delete(props.children);
                 }
-            })["SideEffect.useClientOnlyLayoutEffect"];
+            })["SideEffect.useClientOnlylayoutEffect"];
         }
-    }["SideEffect.useClientOnlyLayoutEffect"]);
+    }["SideEffect.useClientOnlylayoutEffect"]);
     // We need to call `updateHead` method whenever the `SideEffect` is trigger in all
     // life-cycles: mount, update, unmount. However, if there are multiple `SideEffect`s
     // being rendered, we only trigger the method from the last one.
     // This is ensured by keeping the last unflushed `updateHead` in the `_pendingUpdate`
     // singleton in the layout effect pass, and actually trigger it in the effect pass.
-    useClientOnlyLayoutEffect({
-        "SideEffect.useClientOnlyLayoutEffect": ()=>{
+    useClientOnlylayoutEffect({
+        "SideEffect.useClientOnlylayoutEffect": ()=>{
             if (headManager) {
                 headManager._pendingUpdate = emitChange;
             }
             return ({
-                "SideEffect.useClientOnlyLayoutEffect": ()=>{
+                "SideEffect.useClientOnlylayoutEffect": ()=>{
                     if (headManager) {
                         headManager._pendingUpdate = emitChange;
                     }
                 }
-            })["SideEffect.useClientOnlyLayoutEffect"];
+            })["SideEffect.useClientOnlylayoutEffect"];
         }
-    }["SideEffect.useClientOnlyLayoutEffect"]);
+    }["SideEffect.useClientOnlylayoutEffect"]);
     useClientOnlyEffect({
         "SideEffect.useClientOnlyEffect": ()=>{
             if (headManager && headManager._pendingUpdate) {
@@ -8024,7 +8024,7 @@ _removeProperty = function _removeProperty(target, property) {
     deg: 1,
     rad: 1,
     turn: 1
-}, _nonStandardLayouts = {
+}, _nonStandardlayouts = {
     grid: 1,
     flex: 1
 }, //takes a single value like 20px and converts it to the unit specified, like "%", returning only the numeric amount.
@@ -8059,7 +8059,7 @@ _convertToUnit = function _convertToUnit(target, property, value, unit) {
             px = target[measureProperty];
             v ? target.style[property] = v : _removeProperty(target, property);
         } else {
-            (toPercent || curUnit === "%") && !_nonStandardLayouts[_getComputedProperty(parent, "display")] && (style.position = _getComputedProperty(target, "position"));
+            (toPercent || curUnit === "%") && !_nonStandardlayouts[_getComputedProperty(parent, "display")] && (style.position = _getComputedProperty(target, "position"));
             parent === target && (style.position = "static"); // like for borderRadius, if it's a % we must have it relative to the target itself but that may not have position: relative or position: absolute in which case it'd go up the chain until it finds its offsetParent (bad). position: static protects against that.
             parent.appendChild(_tempDiv);
             px = _tempDiv[measureProperty];
@@ -8897,7 +8897,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/gsap/index.js [app-client] (ecmascript) <locals>");
 ;
 ;
-let useIsomorphicLayoutEffect = typeof document !== "undefined" ? __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLayoutEffect"] : __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"], isConfig = (value)=>value && !Array.isArray(value) && typeof value === "object", emptyArray = [], defaultConfig = {}, _gsap = __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"]; // accommodates situations where different versions of GSAP may be loaded, so a user can gsap.registerPlugin(useGSAP);
+let useIsomorphiclayoutEffect = typeof document !== "undefined" ? __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["uselayoutEffect"] : __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"], isConfig = (value)=>value && !Array.isArray(value) && typeof value === "object", emptyArray = [], defaultConfig = {}, _gsap = __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"]; // accommodates situations where different versions of GSAP may be loaded, so a user can gsap.registerPlugin(useGSAP);
 const useGSAP = (callback, dependencies = emptyArray)=>{
     let config = defaultConfig;
     if (isConfig(callback)) {
@@ -8914,24 +8914,24 @@ const useGSAP = (callback, dependencies = emptyArray)=>{
     }["useGSAP.useRef[context]"], scope)), contextSafe = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])({
         "useGSAP.useRef[contextSafe]": (func)=>context.current.add(null, func)
     }["useGSAP.useRef[contextSafe]"]), deferCleanup = dependencies && dependencies.length && !revertOnUpdate;
-    deferCleanup && useIsomorphicLayoutEffect({
-        "useGSAP.useIsomorphicLayoutEffect": ()=>{
+    deferCleanup && useIsomorphiclayoutEffect({
+        "useGSAP.useIsomorphiclayoutEffect": ()=>{
             mounted.current = true;
             return ({
-                "useGSAP.useIsomorphicLayoutEffect": ()=>context.current.revert()
-            })["useGSAP.useIsomorphicLayoutEffect"];
+                "useGSAP.useIsomorphiclayoutEffect": ()=>context.current.revert()
+            })["useGSAP.useIsomorphiclayoutEffect"];
         }
-    }["useGSAP.useIsomorphicLayoutEffect"], emptyArray);
-    useIsomorphicLayoutEffect({
-        "useGSAP.useIsomorphicLayoutEffect": ()=>{
+    }["useGSAP.useIsomorphiclayoutEffect"], emptyArray);
+    useIsomorphiclayoutEffect({
+        "useGSAP.useIsomorphiclayoutEffect": ()=>{
             callback && context.current.add(callback, scope);
             if (!deferCleanup || !mounted.current) {
                 return ({
-                    "useGSAP.useIsomorphicLayoutEffect": ()=>context.current.revert()
-                })["useGSAP.useIsomorphicLayoutEffect"];
+                    "useGSAP.useIsomorphiclayoutEffect": ()=>context.current.revert()
+                })["useGSAP.useIsomorphiclayoutEffect"];
             }
         }
-    }["useGSAP.useIsomorphicLayoutEffect"], dependencies);
+    }["useGSAP.useIsomorphiclayoutEffect"], dependencies);
     return {
         context: context.current,
         contextSafe: contextSafe.current

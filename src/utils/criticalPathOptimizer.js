@@ -14,7 +14,7 @@ const preloadCriticalComponents = () => {
   preloadWithPriority(() => import("../pages/Home/Home.jsx"), 'high');
   
   // Lower priority preloads
-  preloadWithPriority(() => import("../Componentes/Layout/Navbar/Navbar.jsx"));
+  preloadWithPriority(() => import("../Componentes/layout/Navbar/Navbar.jsx"));
 };
 
 // Component prefetch utility

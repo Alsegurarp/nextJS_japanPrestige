@@ -89,7 +89,7 @@ This configuration allows images to be served unoptimized, which is appropriate 
 1. **Automatic Image Optimization** - Serves images in modern WebP format when supported
 2. **Responsive Images** - Automatically generates srcset for different screen sizes
 3. **Lazy Loading** - Images load only when they enter the viewport (default behavior)
-4. **Automatic Layout Shift Prevention** - Width and height props prevent CLS (Cumulative Layout Shift)
+4. **Automatic layout Shift Prevention** - Width and height props prevent CLS (Cumulative layout Shift)
 5. **Priority Loading** - Use `priority` prop for above-the-fold images
 6. **Size Reduction** - Optimized images can reduce bundle size by up to 80%
 
@@ -161,7 +161,7 @@ This configuration allows images to be served unoptimized, which is appropriate 
 
 4. **Performance Metrics** - Monitor:
    - Largest Contentful Paint (LCP)
-   - Cumulative Layout Shift (CLS)
+   - Cumulative layout Shift (CLS)
    - Image file sizes before/after optimization
 
 ## Resources

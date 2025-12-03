@@ -171,7 +171,7 @@ section.FormularioYContenido{
   }
 }
 
-/* Desktop - Row Layout at 1200px+ */
+/* Desktop - Row layout at 1200px+ */
 @media (min-width: 1200px){
   .beneficiosContainerHero{
     padding: 0;

@@ -1,0 +1,10 @@
+var R=require("../../../chunks/ssr/[turbopack]_runtime.js")("server/pages/Home/HeroExclusivoHome/TitleSVG.js")
+R.c("server/chunks/ssr/[root-of-the-server]__e430d616._.js")
+R.c("server/chunks/ssr/05cd3_next_dist_80d02910._.js")
+R.c("server/chunks/ssr/3d860_Prestige-Japan-master_src_pages_Home_HeroExclusivoHome_TitleSVG_jsx_44e3ae7b._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__dd7cc552._.js")
+R.c("server/chunks/ssr/05cd3_next_eb8995d6._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__88a7031e._.js")
+R.c("server/chunks/ssr/05cd3_next_827c1b6d._.js")
+R.m(871426)
+module.exports=R.m(871426).exports

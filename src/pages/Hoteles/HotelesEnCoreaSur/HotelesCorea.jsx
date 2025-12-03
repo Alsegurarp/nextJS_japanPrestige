@@ -18,7 +18,7 @@ import hotel7 from '../../../assets/Itinerarios/HotelesItinerariosNuevos/CoreaDe
 //import Buscador from '../../../Componentes/Hoteles/Carrucel/Buscador.jsx';
 const Buscador = lazy(() => import('../../../Componentes/Hoteles/Carrucel/Buscador.jsx'));
 import NoNavegaSection from '../../../Componentes/Hoteles/HotelesInicio/Componente/NoNavegaSection.jsx';
-import InView from '../../../Componentes/Layout/InView/InView.jsx';
+import InView from '../../../Componentes/layout/InView/InView.jsx';
 
 import imagenCheonju from '../../../assets/Itinerarios/buscadorImagenes/corea/cheonju_corea.webp';
 import imagenGyeongju from '../../../assets/Itinerarios/buscadorImagenes/corea/gyeongju_corea.webp';

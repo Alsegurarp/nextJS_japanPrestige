@@ -393,12 +393,12 @@ __turbopack_context__.s([
     ()=>PAGE_SEGMENT_KEY,
     "addSearchParamsIfPageSegment",
     ()=>addSearchParamsIfPageSegment,
-    "computeSelectedLayoutSegment",
-    ()=>computeSelectedLayoutSegment,
+    "computeSelectedlayoutSegment",
+    ()=>computeSelectedlayoutSegment,
     "getSegmentValue",
     ()=>getSegmentValue,
-    "getSelectedLayoutSegmentPath",
-    ()=>getSelectedLayoutSegmentPath,
+    "getSelectedlayoutSegmentPath",
+    ()=>getSelectedlayoutSegmentPath,
     "isGroupSegment",
     ()=>isGroupSegment,
     "isParallelRouteSegment",
@@ -422,7 +422,7 @@ function addSearchParamsIfPageSegment(segment, searchParams) {
     }
     return segment;
 }
-function computeSelectedLayoutSegment(segments, parallelRouteKey) {
+function computeSelectedlayoutSegment(segments, parallelRouteKey) {
     if (!segments || segments.length === 0) {
         return null;
     }
@@ -432,7 +432,7 @@ function computeSelectedLayoutSegment(segments, parallelRouteKey) {
     // Returning an internal value like `__DEFAULT__` would be confusing
     return rawSegment === DEFAULT_SEGMENT_KEY ? null : rawSegment;
 }
-function getSelectedLayoutSegmentPath(tree, parallelRouteKey, first = true, segmentPath = []) {
+function getSelectedlayoutSegmentPath(tree, parallelRouteKey, first = true, segmentPath = []) {
     let node;
     if (first) {
         // Use the provided parallel route key on the first parallel route
@@ -449,7 +449,7 @@ function getSelectedLayoutSegmentPath(tree, parallelRouteKey, first = true, segm
         return segmentPath;
     }
     segmentPath.push(segmentValue);
-    return getSelectedLayoutSegmentPath(node, parallelRouteKey, false, segmentPath);
+    return getSelectedlayoutSegmentPath(node, parallelRouteKey, false, segmentPath);
 }
 const PAGE_SEGMENT_KEY = '__PAGE__';
 const DEFAULT_SEGMENT_KEY = '__DEFAULT__'; //# sourceMappingURL=segment.js.map
@@ -894,7 +894,7 @@ function prepareFlightRouterStateForRequest(flightRouterState, isHmrRefresh) {
  * Recursively strips client-only data from FlightRouterState while preserving
  * server-needed information for proper rendering decisions.
  */ function stripClientOnlyDataFromFlightRouterState(flightRouterState) {
-    const [segment, parallelRoutes, _url, refreshMarker, isRootLayout, hasLoadingBoundary] = flightRouterState;
+    const [segment, parallelRoutes, _url, refreshMarker, isRootlayout, hasLoadingBoundary] = flightRouterState;
     // __PAGE__ segments are always fetched from the server, so there's
     // no need to send them up
     const cleanedSegment = stripSearchParamsFromPageSegment(segment);
@@ -910,8 +910,8 @@ function prepareFlightRouterStateForRequest(flightRouterState, isHmrRefresh) {
         shouldPreserveRefreshMarker(refreshMarker) ? refreshMarker : null
     ];
     // Append optional fields if present
-    if (isRootLayout !== undefined) {
-        result[4] = isRootLayout;
+    if (isRootlayout !== undefined) {
+        result[4] = isRootlayout;
     }
     if (hasLoadingBoundary !== undefined) {
         result[5] = hasLoadingBoundary;
@@ -1802,7 +1802,7 @@ function disableSmoothScrollDuringRouteTransition(fn, options = {}) {
     // Proceed with temporarily disabling smooth scrolling
     const existing = htmlElement.style.scrollBehavior;
     htmlElement.style.scrollBehavior = 'auto';
-    if (!options.dontForceLayout) {
+    if (!options.dontForcelayout) {
         // In Chrome-based browsers we need to force reflow before calling `scrollTo`.
         // Otherwise it will not pickup the change in scrollBehavior
         // More info here: https://github.com/vercel/next.js/issues/40719#issuecomment-1336248042
@@ -2942,7 +2942,7 @@ function useDynamicSearchParams(expression) {
 const hasSuspenseRegex = /\n\s+at Suspense \(<anonymous>\)/;
 // Common implicit body tags that React will treat as body when placed directly in html
 const bodyAndImplicitTags = 'body|div|main|section|article|aside|header|footer|nav|form|p|span|h1|h2|h3|h4|h5|h6';
-// Detects when RootLayoutBoundary (our framework marker component) appears
+// Detects when RootlayoutBoundary (our framework marker component) appears
 // after Suspense in the component stack, indicating the root layout is wrapped
 // within a Suspense boundary. Ensures no body/html/implicit-body components are in between.
 //
@@ -2954,7 +2954,7 @@ const bodyAndImplicitTags = 'body|div|main|section|article|aside|header|footer|n
 //   at Suspense (<anonymous>)
 //   at SomeComponent (<anonymous>)
 //   at __next_root_layout_boundary__ (<anonymous>)
-const hasSuspenseBeforeRootLayoutWithoutBodyOrImplicitBodyRegex = new RegExp(`\\n\\s+at Suspense \\(<anonymous>\\)(?:(?!\\n\\s+at (?:${bodyAndImplicitTags}) \\(<anonymous>\\))[\\s\\S])*?\\n\\s+at ${__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$framework$2f$boundary$2d$constants$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ROOT_LAYOUT_BOUNDARY_NAME"]} \\([^\\n]*\\)`);
+const hasSuspenseBeforeRootlayoutWithoutBodyOrImplicitBodyRegex = new RegExp(`\\n\\s+at Suspense \\(<anonymous>\\)(?:(?!\\n\\s+at (?:${bodyAndImplicitTags}) \\(<anonymous>\\))[\\s\\S])*?\\n\\s+at ${__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$framework$2f$boundary$2d$constants$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ROOT_LAYOUT_BOUNDARY_NAME"]} \\([^\\n]*\\)`);
 const hasMetadataRegex = new RegExp(`\\n\\s+at ${__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$framework$2f$boundary$2d$constants$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["METADATA_BOUNDARY_NAME"]}[\\n\\s]`);
 const hasViewportRegex = new RegExp(`\\n\\s+at ${__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$framework$2f$boundary$2d$constants$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["VIEWPORT_BOUNDARY_NAME"]}[\\n\\s]`);
 const hasOutletRegex = new RegExp(`\\n\\s+at ${__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$framework$2f$boundary$2d$constants$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["OUTLET_BOUNDARY_NAME"]}[\\n\\s]`);
@@ -2968,7 +2968,7 @@ function trackAllowedDynamicAccess(workStore, componentStack, dynamicValidation,
     } else if (hasViewportRegex.test(componentStack)) {
         dynamicValidation.hasDynamicViewport = true;
         return;
-    } else if (hasSuspenseBeforeRootLayoutWithoutBodyOrImplicitBodyRegex.test(componentStack)) {
+    } else if (hasSuspenseBeforeRootlayoutWithoutBodyOrImplicitBodyRegex.test(componentStack)) {
         // For Suspense within body, the prelude wouldn't be empty so it wouldn't violate the empty static shells rule.
         // But if you have Suspense above body, the prelude is empty but we allow that because having Suspense
         // is an explicit signal from the user that they acknowledge the empty shell and want dynamic rendering.
@@ -3159,10 +3159,10 @@ __turbopack_context__.s([
     ()=>useRouter,
     "useSearchParams",
     ()=>useSearchParams,
-    "useSelectedLayoutSegment",
-    ()=>useSelectedLayoutSegment,
-    "useSelectedLayoutSegments",
-    ()=>useSelectedLayoutSegments
+    "useSelectedlayoutSegment",
+    ()=>useSelectedlayoutSegment,
+    "useSelectedlayoutSegments",
+    ()=>useSelectedlayoutSegments
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$app$2d$router$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/server/route-modules/app-page/vendored/contexts/app-router-context.js [app-ssr] (ecmascript)");
@@ -3244,16 +3244,16 @@ function useParams() {
     }
     return params;
 }
-function useSelectedLayoutSegments(parallelRouteKey = 'children') {
-    useDynamicRouteParams?.('useSelectedLayoutSegments()');
-    const context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$app$2d$router$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LayoutRouterContext"]);
+function useSelectedlayoutSegments(parallelRouteKey = 'children') {
+    useDynamicRouteParams?.('useSelectedlayoutSegments()');
+    const context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$app$2d$router$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["layoutRouterContext"]);
     // @ts-expect-error This only happens in `pages`. Type is overwritten in navigation.d.ts
     if (!context) return null;
     // Instrument with Suspense DevTools (dev-only)
     if (("TURBOPACK compile-time value", "development") !== 'production' && 'use' in __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"]) {
         const navigationPromises = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["use"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$hooks$2d$client$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["NavigationPromisesContext"]);
         if (navigationPromises) {
-            const promise = navigationPromises.selectedLayoutSegmentsPromises?.get(parallelRouteKey);
+            const promise = navigationPromises.selectedlayoutSegmentsPromises?.get(parallelRouteKey);
             if (promise) {
                 // We should always have a promise here, but if we don't, it's not worth erroring over.
                 // We just won't be able to instrument it, but can still provide the value.
@@ -3261,22 +3261,22 @@ function useSelectedLayoutSegments(parallelRouteKey = 'children') {
             }
         }
     }
-    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$shared$2f$lib$2f$segment$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getSelectedLayoutSegmentPath"])(context.parentTree, parallelRouteKey);
+    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$shared$2f$lib$2f$segment$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getSelectedlayoutSegmentPath"])(context.parentTree, parallelRouteKey);
 }
-function useSelectedLayoutSegment(parallelRouteKey = 'children') {
-    useDynamicRouteParams?.('useSelectedLayoutSegment()');
+function useSelectedlayoutSegment(parallelRouteKey = 'children') {
+    useDynamicRouteParams?.('useSelectedlayoutSegment()');
     const navigationPromises = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$hooks$2d$client$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["NavigationPromisesContext"]);
-    const selectedLayoutSegments = useSelectedLayoutSegments(parallelRouteKey);
+    const selectedlayoutSegments = useSelectedlayoutSegments(parallelRouteKey);
     // Instrument with Suspense DevTools (dev-only)
     if (("TURBOPACK compile-time value", "development") !== 'production' && navigationPromises && 'use' in __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"]) {
-        const promise = navigationPromises.selectedLayoutSegmentPromises?.get(parallelRouteKey);
+        const promise = navigationPromises.selectedlayoutSegmentPromises?.get(parallelRouteKey);
         if (promise) {
             // We should always have a promise here, but if we don't, it's not worth erroring over.
             // We just won't be able to instrument it, but can still provide the value.
             return (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["use"])(promise);
         }
     }
-    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$shared$2f$lib$2f$segment$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["computeSelectedLayoutSegment"])(selectedLayoutSegments, parallelRouteKey);
+    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$shared$2f$lib$2f$segment$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["computeSelectedlayoutSegment"])(selectedlayoutSegments, parallelRouteKey);
 }
 ;
 ;
@@ -3783,10 +3783,10 @@ function useRouterBFCache(activeTree, activeStateKey) {
 "use strict";
 
 __turbopack_context__.s([
-    "createLayoutSegmentPromises",
-    ()=>createLayoutSegmentPromises,
-    "createNestedLayoutNavigationPromises",
-    ()=>createNestedLayoutNavigationPromises,
+    "createlayoutSegmentPromises",
+    ()=>createlayoutSegmentPromises,
+    "createNestedlayoutNavigationPromises",
+    ()=>createNestedlayoutNavigationPromises,
     "createRootNavigationPromises",
     ()=>createRootNavigationPromises
 ]);
@@ -3797,7 +3797,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan
 ;
 ;
 const layoutSegmentPromisesCache = new WeakMap();
-function createLayoutSegmentPromises(tree) {
+function createlayoutSegmentPromises(tree) {
     if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
     ;
     // Check if we already have cached promises for this tree
@@ -3810,15 +3810,15 @@ function createLayoutSegmentPromises(tree) {
     const segmentsPromises = new Map();
     const parallelRoutes = tree[1];
     for (const parallelRouteKey of Object.keys(parallelRoutes)){
-        const segments = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$shared$2f$lib$2f$segment$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getSelectedLayoutSegmentPath"])(tree, parallelRouteKey);
+        const segments = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$shared$2f$lib$2f$segment$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getSelectedlayoutSegmentPath"])(tree, parallelRouteKey);
         // Use the shared logic to compute the segment value
-        const segment = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$shared$2f$lib$2f$segment$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["computeSelectedLayoutSegment"])(segments, parallelRouteKey);
-        segmentPromises.set(parallelRouteKey, (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$hooks$2d$client$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createDevToolsInstrumentedPromise"])('useSelectedLayoutSegment', segment));
-        segmentsPromises.set(parallelRouteKey, (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$hooks$2d$client$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createDevToolsInstrumentedPromise"])('useSelectedLayoutSegments', segments));
+        const segment = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$shared$2f$lib$2f$segment$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["computeSelectedlayoutSegment"])(segments, parallelRouteKey);
+        segmentPromises.set(parallelRouteKey, (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$hooks$2d$client$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createDevToolsInstrumentedPromise"])('useSelectedlayoutSegment', segment));
+        segmentsPromises.set(parallelRouteKey, (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$hooks$2d$client$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createDevToolsInstrumentedPromise"])('useSelectedlayoutSegments', segments));
     }
     const result = {
-        selectedLayoutSegmentPromises: segmentPromises,
-        selectedLayoutSegmentsPromises: segmentsPromises
+        selectedlayoutSegmentPromises: segmentPromises,
+        selectedlayoutSegmentsPromises: segmentsPromises
     };
     // Cache the result for future renders
     layoutSegmentPromisesCache.set(tree, result);
@@ -3844,7 +3844,7 @@ function createRootNavigationPromises(tree, pathname, searchParams, pathParams) 
         return cached;
     }
     const readonlySearchParams = new __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$client$2f$components$2f$readonly$2d$url$2d$search$2d$params$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ReadonlyURLSearchParams"](searchParams);
-    const layoutSegmentPromises = createLayoutSegmentPromises(tree);
+    const layoutSegmentPromises = createlayoutSegmentPromises(tree);
     const promises = {
         pathname: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$hooks$2d$client$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createDevToolsInstrumentedPromise"])('usePathname', pathname),
         searchParams: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$hooks$2d$client$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createDevToolsInstrumentedPromise"])('useSearchParams', readonlySearchParams),
@@ -3854,8 +3854,8 @@ function createRootNavigationPromises(tree, pathname, searchParams, pathParams) 
     treeCache.set(cacheKey, promises);
     return promises;
 }
-const nestedLayoutPromisesCache = new WeakMap();
-function createNestedLayoutNavigationPromises(tree, parentNavPromises) {
+const nestedlayoutPromisesCache = new WeakMap();
+function createNestedlayoutNavigationPromises(tree, parentNavPromises) {
     if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
     ;
     const parallelRoutes = tree[1];
@@ -3865,10 +3865,10 @@ function createNestedLayoutNavigationPromises(tree, parentNavPromises) {
         return null;
     }
     // Get or create the cache for this tree
-    let treeCache = nestedLayoutPromisesCache.get(tree);
+    let treeCache = nestedlayoutPromisesCache.get(tree);
     if (!treeCache) {
         treeCache = new Map();
-        nestedLayoutPromisesCache.set(tree, treeCache);
+        nestedlayoutPromisesCache.set(tree, treeCache);
     }
     // Check if we have cached promises for this parent combination
     const cached = treeCache.get(parentNavPromises);
@@ -3876,7 +3876,7 @@ function createNestedLayoutNavigationPromises(tree, parentNavPromises) {
         return cached;
     }
     // Create merged promises
-    const layoutSegmentPromises = createLayoutSegmentPromises(tree);
+    const layoutSegmentPromises = createlayoutSegmentPromises(tree);
     const promises = {
         ...parentNavPromises,
         ...layoutSegmentPromises
@@ -3928,9 +3928,9 @@ function SegmentTrieNode({ type, pagePath }) {
         boundaryType,
         setBoundaryType
     ]);
-    // Use `useLayoutEffect` to ensure the state is updated during suspense.
+    // Use `uselayoutEffect` to ensure the state is updated during suspense.
     // `useEffect` won't work as the state is preserved during suspense.
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useLayoutEffect"])(()=>{
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["uselayoutEffect"])(()=>{
         __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$next$2d$devtools$2f$dev$2d$overlay$2e$shim$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["dispatcher"].segmentExplorerNodeAdd(nodeState);
         return ()=>{
             __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$next$2d$devtools$2f$dev$2d$overlay$2e$shim$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["dispatcher"].segmentExplorerNodeRemove(nodeState);
@@ -3956,7 +3956,7 @@ function LoadingSegmentNode() {
     return null;
 }
 function SegmentViewStateNode({ page }) {
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useLayoutEffect"])(()=>{
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["uselayoutEffect"])(()=>{
         __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$next$2d$devtools$2f$dev$2d$overlay$2e$shim$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["dispatcher"].segmentExplorerUpdateRouteState(page);
         return ()=>{
             __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$next$2d$devtools$2f$dev$2d$overlay$2e$shim$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["dispatcher"].segmentExplorerUpdateRouteState('');
@@ -4023,7 +4023,7 @@ function useSegmentState() {
 
 __turbopack_context__.s([
     "default",
-    ()=>OuterLayoutRouter
+    ()=>OuterlayoutRouter
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$client$2f$components$2f$router$2d$reducer$2f$router$2d$reducer$2d$types$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/esm/client/components/router-reducer/router-reducer-types.js [app-ssr] (ecmascript)");
@@ -4246,7 +4246,7 @@ class InnerScrollAndFocusHandler extends __TURBOPACK__imported__module__$5b$proj
                     }
                 }, {
                     // We will force layout by querying domNode position
-                    dontForceLayout: true,
+                    dontForcelayout: true,
                     onlyHashChange: focusAndScrollRef.onlyHashChange
                 });
                 // Mutate after scrolling so that it can be read by `disableSmoothScrollDuringRouteTransition`
@@ -4258,7 +4258,7 @@ class InnerScrollAndFocusHandler extends __TURBOPACK__imported__module__$5b$proj
     }
 }
 function ScrollAndFocusHandler({ segmentPath, children }) {
-    const context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$app$2d$router$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["GlobalLayoutRouterContext"]);
+    const context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$app$2d$router$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["GloballayoutRouterContext"]);
     if (!context) {
         throw Object.defineProperty(new Error('invariant global layout router not mounted'), "__NEXT_ERROR_CODE", {
             value: "E473",
@@ -4273,9 +4273,9 @@ function ScrollAndFocusHandler({ segmentPath, children }) {
     });
 }
 /**
- * InnerLayoutRouter handles rendering the provided segment based on the cache.
- */ function InnerLayoutRouter({ tree, segmentPath, debugNameContext, cacheNode, params, url, isActive }) {
-    const context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$app$2d$router$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["GlobalLayoutRouterContext"]);
+ * InnerlayoutRouter handles rendering the provided segment based on the cache.
+ */ function InnerlayoutRouter({ tree, segmentPath, debugNameContext, cacheNode, params, url, isActive }) {
+    const context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$app$2d$router$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["GloballayoutRouterContext"]);
     const parentNavPromises = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$hooks$2d$client$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["NavigationPromisesContext"]);
     if (!context) {
         throw Object.defineProperty(new Error('invariant global layout router not mounted'), "__NEXT_ERROR_CODE", {
@@ -4348,12 +4348,12 @@ function ScrollAndFocusHandler({ segmentPath, children }) {
     // If we get to this point, then we know we have something we can render.
     let content = resolvedRsc;
     // In dev, we create a NavigationPromisesContext containing the instrumented promises that provide
-    // `useSelectedLayoutSegment` and `useSelectedLayoutSegments`.
+    // `useSelectedlayoutSegment` and `useSelectedlayoutSegments`.
     // Promises are cached outside of render to survive suspense retries.
     let navigationPromises = null;
     if ("TURBOPACK compile-time truthy", 1) {
-        const { createNestedLayoutNavigationPromises } = __turbopack_context__.r("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/esm/client/components/navigation-devtools.js [app-ssr] (ecmascript)");
-        navigationPromises = createNestedLayoutNavigationPromises(tree, parentNavPromises);
+        const { createNestedlayoutNavigationPromises } = __turbopack_context__.r("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/esm/client/components/navigation-devtools.js [app-ssr] (ecmascript)");
+        navigationPromises = createNestedlayoutNavigationPromises(tree, parentNavPromises);
     }
     if (navigationPromises) {
         content = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$hooks$2d$client$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["NavigationPromisesContext"].Provider, {
@@ -4361,7 +4361,7 @@ function ScrollAndFocusHandler({ segmentPath, children }) {
             children: resolvedRsc
         });
     }
-    const subtree = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$app$2d$router$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LayoutRouterContext"].Provider, {
+    const subtree = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$app$2d$router$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["layoutRouterContext"].Provider, {
         value: {
             parentTree: tree,
             parentCacheNode: cacheNode,
@@ -4416,8 +4416,8 @@ function ScrollAndFocusHandler({ segmentPath, children }) {
         children: children
     });
 }
-function OuterLayoutRouter({ parallelRouterKey, error, errorStyles, errorScripts, templateStyles, templateScripts, template, notFound, forbidden, unauthorized, segmentViewBoundaries }) {
-    const context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$app$2d$router$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LayoutRouterContext"]);
+function OuterlayoutRouter({ parallelRouterKey, error, errorStyles, errorScripts, templateStyles, templateScripts, template, notFound, forbidden, unauthorized, segmentViewBoundaries }) {
+    const context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$app$2d$router$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["layoutRouterContext"]);
     if (!context) {
         throw Object.defineProperty(new Error('invariant expected layout router to be mounted'), "__NEXT_ERROR_CODE", {
             value: "E56",
@@ -4568,7 +4568,7 @@ function OuterLayoutRouter({ parallelRouterKey, error, errorStyles, errorScripts
                                 unauthorized: unauthorized,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$client$2f$components$2f$redirect$2d$boundary$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["RedirectBoundary"], {
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsx"])(InnerLayoutRouter, {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsx"])(InnerlayoutRouter, {
                                             url: url,
                                             tree: tree,
                                             params: params,
@@ -4614,7 +4614,7 @@ function getBoundaryDebugNameFromSegment(segment) {
         return '/';
     }
     if (typeof segment === 'string') {
-        if (isVirtualLayout(segment)) {
+        if (isVirtuallayout(segment)) {
             return undefined;
         } else {
             return segment + '/';
@@ -4623,7 +4623,7 @@ function getBoundaryDebugNameFromSegment(segment) {
     const paramCacheKey = segment[1];
     return paramCacheKey + '/';
 }
-function isVirtualLayout(segment) {
+function isVirtuallayout(segment) {
     return(// in a more special way instead of checking the name, to distinguish them
     // from app-defined groups.
     segment === '(slot)');
@@ -5663,7 +5663,7 @@ function ClientPageRoot({ Component, serverProvidedParams }) {
     } else {
         // When Cache Components is enabled, the server does not pass the params as
         // props; they are parsed on the client and passed via context.
-        const layoutRouterContext = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["use"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$app$2d$router$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LayoutRouterContext"]);
+        const layoutRouterContext = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["use"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$app$2d$router$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["layoutRouterContext"]);
         params = layoutRouterContext !== null ? layoutRouterContext.parentParams : {};
         // This is an intentional behavior change: when Cache Components is enabled,
         // client segments receive the "canonical" search params, not the
@@ -5721,7 +5721,7 @@ function ClientSegmentRoot({ Component, slots, serverProvidedParams }) {
     } else {
         // When Cache Components is enabled, the server does not pass the params
         // as props; they are parsed on the client and passed via context.
-        const layoutRouterContext = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["use"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$app$2d$router$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LayoutRouterContext"]);
+        const layoutRouterContext = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["use"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$contexts$2f$app$2d$router$2d$context$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["layoutRouterContext"]);
         params = layoutRouterContext !== null ? layoutRouterContext.parentParams : {};
     }
     if ("TURBOPACK compile-time truthy", 1) {
@@ -5731,7 +5731,7 @@ function ClientSegmentRoot({ Component, slots, serverProvidedParams }) {
         // appropriate context. We wrap differently in prerendering vs rendering
         const store = workAsyncStorage.getStore();
         if (!store) {
-            throw Object.defineProperty(new __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$shared$2f$lib$2f$invariant$2d$error$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["InvariantError"]('Expected workStore to exist when handling params in a client segment such as a Layout or Template.'), "__NEXT_ERROR_CODE", {
+            throw Object.defineProperty(new __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$shared$2f$lib$2f$invariant$2d$error$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["InvariantError"]('Expected workStore to exist when handling params in a client segment such as a layout or Template.'), "__NEXT_ERROR_CODE", {
                 value: "E600",
                 enumerable: false,
                 configurable: true
@@ -5773,8 +5773,8 @@ __turbopack_context__.s([
     ()=>MetadataBoundary,
     "OutletBoundary",
     ()=>OutletBoundary,
-    "RootLayoutBoundary",
-    ()=>RootLayoutBoundary,
+    "RootlayoutBoundary",
+    ()=>RootlayoutBoundary,
     "ViewportBoundary",
     ()=>ViewportBoundary
 ]);
@@ -5803,7 +5803,7 @@ const ViewportBoundary = // so it retains the name inferred from the namespace o
 NameSpace[__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$framework$2f$boundary$2d$constants$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["VIEWPORT_BOUNDARY_NAME"].slice(0)];
 const OutletBoundary = // so it retains the name inferred from the namespace object
 NameSpace[__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$framework$2f$boundary$2d$constants$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["OUTLET_BOUNDARY_NAME"].slice(0)];
-const RootLayoutBoundary = // so it retains the name inferred from the namespace object
+const RootlayoutBoundary = // so it retains the name inferred from the namespace object
 NameSpace[__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$esm$2f$lib$2f$framework$2f$boundary$2d$constants$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ROOT_LAYOUT_BOUNDARY_NAME"].slice(0)]; //# sourceMappingURL=boundary-components.js.map
 }),
 ];
