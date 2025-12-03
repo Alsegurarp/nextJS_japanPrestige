@@ -3,7 +3,7 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import HeroSection from '../../../Componentes/Sections/HeroSection.jsx';
 import HeroImage from '../../../assets/portadas-nuevas-19-sep/hotelesPortadas/portada_hoteles_en_china.webp';
-import InView from '../../../Componentes/Layout/InView/InView';
+import InView from '../../../Componentes/layout/InView/InView';
 const Buscador = lazy(() => import('../../../Componentes/Hoteles/Carrucel/Buscador.jsx'));
 
 import LetrasDoradasResponsive from '../../../assets/titulosDorados/hotelesSection/hoteleschinamovil.svg';

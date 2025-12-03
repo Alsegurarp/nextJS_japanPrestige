@@ -13,19 +13,19 @@ import imageCorea from '../../../assets/portadas-nuevas-19-sep/hotelesPortadas/h
 import imageChina from '../../../assets/portadas-nuevas-19-sep/hotelesPortadas/hoteles_de_lujo_en_china.webp';
 import imageDubai from '../../../assets/portadas-nuevas-19-sep/hotelesPortadas/hoteles_de_lujo_en_dubai.webp';
 import imageTailandia from '../../../assets/portadas-nuevas-19-sep/hotelesPortadas/hoteles_de_lujo_en_tailandia.webp';
-import InView from '../../../Componentes/Layout/InView/InView';
+import InView from '../../../Componentes/layout/InView/InView';
 import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx';
 
-    const data = [
-      {
-        text: "Explora nuestra selección exclusiva de alojamientos en ciudades emblemáticas como Tokio, Dubái, Pekín, Bangkok y más. Estos hoteles no solo ofrecen comodidad superior y diseño elegante, sino que también se encuentran ubicados en puntos estratégicos para que vivas cada ciudad en su máxima expresión.",
-        image: HeroImage,
-        altImg:"Vista frontal del Templo Yasukuni en Tokio, Japón, con cielo nublado al atardecer.",
-        letrasDoradasResponsive: LetrasDoradasResponsive,
-        LetrasDoradasDesktop: LetrasDoradasDesktop, 
-    }];
+const data = [
+  {
+    text: "Explora nuestra selección exclusiva de alojamientos en ciudades emblemáticas como Tokio, Dubái, Pekín, Bangkok y más. Estos hoteles no solo ofrecen comodidad superior y diseño elegante, sino que también se encuentran ubicados en puntos estratégicos para que vivas cada ciudad en su máxima expresión.",
+    image: HeroImage,
+    altImg: "Vista frontal del Templo Yasukuni en Tokio, Japón, con cielo nublado al atardecer.",
+    letrasDoradasResponsive: LetrasDoradasResponsive,
+    LetrasDoradasDesktop: LetrasDoradasDesktop,
+  }];
 
-    const destinations = [
+const destinations = [
   {
     title: "JAPÓN",
     image: imageJapon,
@@ -61,11 +61,11 @@ import FlyingButton from '../../../Componentes/UI/FlyingButtons/FlyingButton.jsx
 function HotelesInicio() {
   return (
     <>
-    <FlyingButton />
-    <HeroSection data={data}/>
-    <InView>
-      <Prueba destinations={destinations} />
-    </InView>
+      <FlyingButton />
+      <HeroSection data={data} />
+      <InView>
+        <Prueba destinations={destinations} />
+      </InView>
     </>
   )
 }
