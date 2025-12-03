@@ -8,7 +8,7 @@ import Instagram from '../../../assets/icono-instagram.svg';
 import Spotify from '../../../assets/icono-spotify.svg';
 import Tiktok from '../../../assets/icono-tiktok.svg';
 
-import Tiktok from '../../../assets/icono-tiktok.svg';
+
 
 // Helper to extract src from imported images
 const getSrcValue = (img) => {
