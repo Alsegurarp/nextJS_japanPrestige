@@ -1,4 +1,4 @@
-.containerTestimonios{
+.containerTestimonios {
     padding-bottom: 60px;
     width: 100%;
     display: flex;
@@ -9,7 +9,7 @@
     flex-direction: column;
 }
 
-.testimoniosTitle{
+.testimoniosTitle {
     font-size: 24px;
     padding: 20px;
     color: white;
@@ -18,7 +18,7 @@
     text-align: center;
 }
 
-.testimoniosDescription{
+.testimoniosDescription {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -44,7 +44,7 @@
 }
 
 
-.logoJapon{
+.logoJapon {
     width: 80px;
     height: 35px;
 }
@@ -52,6 +52,8 @@
 .panelContent {
     display: flex;
     flex-direction: column;
+    width: 280px;
+    max-width: 300px;
     /* Smooth transition without viewport interference */
     opacity: 0;
     transform: translateY(10px);
@@ -64,6 +66,7 @@
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -71,34 +74,34 @@
 }
 
 .panelImage {
-  object-fit: cover;
-  border-radius: 20px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
-.panelText { 
+.panelText {
     color: white;
     margin-top: -60px;
     border: 1px solid #fef0ad;
     border-radius: 10px;
-    background-color: rgb(17,17,17);
+    background-color: rgb(17, 17, 17);
     text-align: center;
 }
 
-.panelName { 
-    margin: 10px; 
+.panelName {
+    margin: 10px;
     font-size: 14px;
     font-family: nohemi;
 }
 
-.panelQuote { 
-    margin: 0; 
+.panelQuote {
+    margin: 0;
     line-height: 1.2;
     font-family: nohemi;
     font-size: 14px;
     padding: 10px;
 }
 
-.testimonioEstrellas { 
+.testimonioEstrellas {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,13 +109,14 @@
     gap: 6px;
 }
 
-.starIcon { 
-    width: 26px; 
-    height: 26px; 
+.starIcon {
+    width: 26px;
+    height: 26px;
 }
-@media(max-width: 330px){
-    .panelText{
-    grid-area: 7 / 1 / 12 / 11;
+
+@media(max-width: 330px) {
+    .panelText {
+        grid-area: 7 / 1 / 12 / 11;
     }
 
     .panelImage {
@@ -126,30 +130,31 @@
         height: 330px;
     }
 
-    
+
 }
 
 .selected {
-  outline: 2px solid #ffd166;
-  border-radius: 10px;
+    outline: 2px solid #ffd166;
+    border-radius: 10px;
 }
 
 
-.columnas{
+.columnas {
     display: grid;
     grid-template-columns: 1fr;
 }
 
 @media (min-width: 768px) {
-  .columnas {
-    grid-template-columns: 1fr 1fr; /* 2 columns */
-  }
+    .columnas {
+        grid-template-columns: 1fr 1fr;
+        /* 2 columns */
+    }
 }
 
 @media (min-width: 768px) {
-  .testimoniosDescription {
-    display: flex;
-    flex-direction: column;
+    .testimoniosDescription {
+        display: flex;
+        flex-direction: column;
 
-  }
+    }
 }
