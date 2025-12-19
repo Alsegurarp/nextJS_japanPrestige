@@ -1,0 +1,321 @@
+/* [project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/Reutilizable/ItinerariosTemplate.module.css [app-client] (css) */
+.ItinerariosTemplate-module__PueU3G__sectionContenedor {
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  display: flex;
+}
+
+.ItinerariosTemplate-module__PueU3G__diaStyle {
+  text-transform: uppercase;
+  font-family: nohemi;
+}
+
+.ItinerariosTemplate-module__PueU3G__mainContainer {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+  display: flex;
+}
+
+.ItinerariosTemplate-module__PueU3G__textoDivider {
+  color: #fff;
+  font-family: nohemi;
+  font-size: 24px;
+}
+
+.ItinerariosTemplate-module__PueU3G__contenidoDividerCard {
+  background-color: #fef0ad;
+  width: 70%;
+  height: 2px;
+  display: flex;
+}
+
+.ItinerariosTemplate-module__PueU3G__titleContenidoDividerDos {
+  background-color: #fff;
+  width: 70%;
+  height: 1px;
+  display: flex;
+}
+
+.ItinerariosTemplate-module__PueU3G__cardContainer {
+  box-sizing: border-box;
+  align-items: stretch;
+  width: 100%;
+  min-height: 140vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.ItinerariosTemplate-module__PueU3G__buttonCATcaracteristicas {
+  color: #290f04;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  min-width: 160px;
+  box-shadow: 0 4px 15px rgba(72 34 21, .3);
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #d8aa3e 0%, #e8ca6e 12%, #f9e7a0 28%, #ecd37c 50%, #dfb44e 63%, #d9ab3e 100%);
+  border: 1px solid #290f04;
+  border-radius: 5px;
+  place-self: center;
+  margin-top: 15px;
+  padding: 12px 20px;
+  font-family: nohemi;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.ItinerariosTemplate-module__PueU3G__buttonCATcaracteristicas:hover {
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ad882d 0%, #c1a65a 12%, #d9c382 28%, #c8af62 50%, #b39038 63%, #aa862e 100%);
+  transform: translateY(-2px);
+}
+
+.ItinerariosTemplate-module__PueU3G__contendorAdicional {
+  display: flex;
+}
+
+.ItinerariosTemplate-module__PueU3G__cardContainer.ItinerariosTemplate-module__PueU3G__reverse {
+  flex-direction: row-reverse;
+}
+
+.ItinerariosTemplate-module__PueU3G__diaPlusImage {
+  flex-direction: column;
+  align-items: self-start;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.ItinerariosTemplate-module__PueU3G__numerosImg {
+  height: 50px;
+  padding-left: 5px;
+}
+
+.ItinerariosTemplate-module__PueU3G__cardText {
+  color: #fff;
+  text-align: left;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  display: flex;
+}
+
+.ItinerariosTemplate-module__PueU3G__floatingButton {
+  display: none;
+}
+
+.ItinerariosTemplate-module__PueU3G__floatingText {
+  color: #fef0ad;
+  text-transform: uppercase;
+  font-family: nohemi;
+  font-size: 14px;
+}
+
+.ItinerariosTemplate-module__PueU3G__cardContenidoStyle {
+  border: 2px solid #fef0ad;
+  border-radius: 20px;
+  align-self: center;
+  width: 80%;
+  padding: 20px;
+}
+
+.ItinerariosTemplate-module__PueU3G__cardContainerh2 {
+  text-align: left;
+  margin: 0;
+  font-family: nohemi;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.ItinerariosTemplate-module__PueU3G__cardContainerP {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-family: nohemi;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.ItinerariosTemplate-module__PueU3G__cardText button {
+  color: #fff;
+  cursor: pointer;
+  background: #482215;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 1em;
+  transition: background-color .3s;
+}
+
+.ItinerariosTemplate-module__PueU3G__cardText button:hover {
+  background-color: #f40612;
+}
+
+.ItinerariosTemplate-module__PueU3G__cardImage {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.ItinerariosTemplate-module__PueU3G__cardImage img {
+  object-fit: cover;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (min-width: 440px) {
+  .ItinerariosTemplate-module__PueU3G__numerosImg {
+    height: 70px;
+  }
+
+  .ItinerariosTemplate-module__PueU3G__diaStyle {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 640px) {
+  .ItinerariosTemplate-module__PueU3G__mainContainer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    display: flex;
+  }
+
+  .ItinerariosTemplate-module__PueU3G__titleContenidoDividerUno, .ItinerariosTemplate-module__PueU3G__titleContenidoDividerDos {
+    background-color: #fff;
+    width: 20%;
+    height: 1px;
+    display: flex;
+  }
+
+  .ItinerariosTemplate-module__PueU3G__mainContainer h2 {
+    padding: 10px;
+  }
+
+  .ItinerariosTemplate-module__PueU3G__numerosImg {
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ItinerariosTemplate-module__PueU3G__cardContainer, .ItinerariosTemplate-module__PueU3G__cardContainer.ItinerariosTemplate-module__PueU3G__reverse {
+    flex-direction: column-reverse;
+    justify-self: center;
+    align-items: center;
+    width: 90%;
+    min-height: 65vh;
+  }
+
+  .ItinerariosTemplate-module__PueU3G__cardText {
+    text-align: center;
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  .ItinerariosTemplate-module__PueU3G__cardText p {
+    font-size: 1em;
+  }
+
+  .ItinerariosTemplate-module__PueU3G__cardImage {
+    height: 300px;
+    padding: 5px;
+  }
+}
+
+@media (min-width: 769px) {
+  .ItinerariosTemplate-module__PueU3G__cardContenidoStyle {
+    align-self: center;
+    width: 80%;
+  }
+
+  .ItinerariosTemplate-module__PueU3G__cardContainer {
+    justify-self: center;
+    gap: 60px;
+    width: 90%;
+    min-height: 45vh;
+    margin-bottom: 20px;
+  }
+
+  .ItinerariosTemplate-module__PueU3G__floatingButton {
+    background-color: #0000008c;
+    border-radius: 10px 10px 20px 0;
+    align-content: center;
+    align-items: center;
+    width: auto;
+    min-width: 90px;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .ItinerariosTemplate-module__PueU3G__floatingText {
+    color: #fef0ad;
+    text-transform: uppercase;
+    font-family: nohemi;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1020px) {
+  .ItinerariosTemplate-module__PueU3G__cardContenidoStyle {
+    width: 60%;
+  }
+
+  .ItinerariosTemplate-module__PueU3G__diaStyle {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ItinerariosTemplate-module__PueU3G__cardContainer {
+    gap: 80px;
+    width: 90%;
+    max-width: 1120px;
+    margin-bottom: 0;
+  }
+
+  .ItinerariosTemplate-module__PueU3G__cardText {
+    padding: 0;
+  }
+
+  .ItinerariosTemplate-module__PueU3G__cardContenidoStyle {
+    width: 420px;
+  }
+
+  .ItinerariosTemplate-module__PueU3G__mainContainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .ItinerariosTemplate-module__PueU3G__titleContenidoDivider {
+    background-color: #fff;
+    width: 300px;
+    height: 1px;
+    margin: 0 20px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .ItinerariosTemplate-module__PueU3G__cardContainer {
+    gap: 80px;
+    width: 90%;
+    max-width: 2000px;
+    margin-bottom: 0;
+  }
+}
+
+/*# sourceMappingURL=d79c4_src_Componentes_Sections_Reutilizable_ItinerariosTemplate_module_css_bad6b30c._.single.css.map*/

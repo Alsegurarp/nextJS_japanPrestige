@@ -10,14 +10,14 @@
 .container {
   perspective: 800px;
   display: flex;
-  gap: clamp(10px, 2vw, 30px);
+  gap: clamp(5px, 1.5vw, 30px);
   justify-content: center;
   width: 100%;
   max-width: 100%;
 }
 
 .letter {
-  font-size: clamp(36px, 14vw, 300px);
+  font-size: clamp(36px, 10vw, 300px);
   font-family: "Nohemi", Arial, sans-serif;
   font-weight: bold;
   color: transparent;

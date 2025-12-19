@@ -1,5 +1,4 @@
 {
-  "/hoteles/page": "app/hoteles/page.js",
-  "/paquetes-a-japon/page": "app/paquetes-a-japon/page.js",
-  "/viajes-a-japon-desde-mexico/page": "app/viajes-a-japon-desde-mexico/page.js"
+  "/itinerarios/art-oriental/page": "app/itinerarios/art-oriental/page.js",
+  "/page": "app/page.js"
 }

@@ -20,6 +20,10 @@ const RespuestaObjeciones = lazy(() => import('../../Componentes/Sections/Home/R
 const svgPremium = lazy(() => import('./HeroExclusivoHome/TitleSVG.jsx'));
 import FlyingButton from "../../Componentes/UI/FlyingButtons/FlyingButton.jsx";
 
+// grid filter
+const GridFilter = lazy(() => import('../../Componentes/Sections/GridFilter.tsx'));
+
+
 import Hero from './HeroExclusivoHome/Hero.jsx';
 
 // import Premium from '../../assets/indexImagenes/premium_logo.svg';
@@ -102,6 +106,10 @@ function Home() {
         <CaracteristicasHome />
       </Suspense>
 
+      {/* implementacion debe de hacerse aqui*/}
+      <Suspense fallback={fallbackComponents.gridFilter}>
+        <GridFilter />
+      </Suspense>
 
       {/* BeneficiosHome */}
       <Suspense fallback={fallbackComponents.beneficios}>

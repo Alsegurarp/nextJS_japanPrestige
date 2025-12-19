@@ -11,7 +11,7 @@
 .container {
   perspective: 800px;
   justify-content: center;
-  gap: clamp(10px, 2vw, 30px);
+  gap: clamp(5px, 1.5vw, 30px);
   width: 100%;
   max-width: 100%;
   display: flex;
@@ -24,7 +24,7 @@
   transform-style: preserve-3d;
   cursor: default;
   font-family: Nohemi, Arial, sans-serif;
-  font-size: clamp(36px, 14vw, 300px);
+  font-size: clamp(36px, 10vw, 300px);
   font-weight: bold;
   display: inline-block;
 }
