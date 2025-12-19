@@ -8,7 +8,7 @@ import RouteTracker from "../Analytics/RouteTracker.jsx";
 import GoogleAds from "../components/GoogleAds.jsx";
 
 export const metadata = {
-  title: "Japón Premium",
+  title: "Viaja a Japón | Viajes a Japón desde México | Japón Premium",
   description: "Viajes de lujo a Japón",
 };
 

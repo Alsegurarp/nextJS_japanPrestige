@@ -242,7 +242,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan
 ;
 ;
 const metadata = {
-    title: "Japón Premium",
+    title: "Viaja a Japón | Viajes a Japón desde México | Japón Premium",
     description: "Viajes de lujo a Japón"
 };
 function Rootlayout({ children }) {
