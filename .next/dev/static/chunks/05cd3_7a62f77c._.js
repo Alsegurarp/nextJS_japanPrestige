@@ -2,6 +2,7 @@
 "[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/compiled/react/cjs/react-jsx-dev-runtime.development.js [app-client] (ecmascript)", ((__turbopack_context__, module, exports) => {
 "use strict";
 
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 /**
  * @license React
  * react-jsx-dev-runtime.development.js
@@ -10,8 +11,7 @@
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
-"use strict";
+ */ "use strict";
 "production" !== ("TURBOPACK compile-time value", "development") && function() {
     function getComponentNameFromType(type) {
         if (null == type) return null;
@@ -339,6 +339,7 @@ Object.defineProperty(exports, "getImgProps", {
     }
 });
 const _warnonce = __turbopack_context__.r("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/shared/lib/utils/warn-once.js [app-client] (ecmascript)");
+const _deploymentid = __turbopack_context__.r("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/shared/lib/deployment-id.js [app-client] (ecmascript)");
 const _imageblursvg = __turbopack_context__.r("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/shared/lib/image-blur-svg.js [app-client] (ecmascript)");
 const _imageconfig = __turbopack_context__.r("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/shared/lib/image-config.js [app-client] (ecmascript)");
 const VALID_LOADING_VALUES = [
@@ -423,6 +424,11 @@ function getWidths({ deviceSizes, allSizes }, width, sizes) {
 }
 function generateImgAttrs({ config, src, unoptimized, width, quality, sizes, loader }) {
     if (unoptimized) {
+        const deploymentId = (0, _deploymentid.getDeploymentId)();
+        if (src.startsWith('/') && !src.startsWith('//') && deploymentId) {
+            const sep = src.includes('?') ? '&' : '?';
+            src = `${src}${sep}dpl=${deploymentId}`;
+        }
         return {
             src,
             srcSet: undefined,
@@ -2927,6 +2933,7 @@ Object.defineProperty(exports, "default", {
     }
 });
 const _findclosestquality = __turbopack_context__.r("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/shared/lib/find-closest-quality.js [app-client] (ecmascript)");
+const _deploymentid = __turbopack_context__.r("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/shared/lib/deployment-id.js [app-client] (ecmascript)");
 function defaultLoader({ config, src, width, quality }) {
     if (src.startsWith('/') && src.includes('?') && config.localPatterns?.length === 1 && config.localPatterns[0].pathname === '**' && config.localPatterns[0].search === '') {
         throw Object.defineProperty(new Error(`Image with src "${src}" is using a query string which is not configured in images.localPatterns.` + `\nRead more: https://nextjs.org/docs/messages/next-image-unconfigured-localpatterns`), "__NEXT_ERROR_CODE", {
@@ -2997,7 +3004,8 @@ function defaultLoader({ config, src, width, quality }) {
         }
     }
     const q = (0, _findclosestquality.findClosestQuality)(quality, config);
-    return `${config.path}?url=${encodeURIComponent(src)}&w=${width}&q=${q}${src.startsWith('/_next/static/media/') && ("TURBOPACK compile-time value", false) ? "TURBOPACK unreachable" : ''}`;
+    let deploymentId = (0, _deploymentid.getDeploymentId)();
+    return `${config.path}?url=${encodeURIComponent(src)}&w=${width}&q=${q}${src.startsWith('/') && deploymentId ? `&dpl=${deploymentId}` : ''}`;
 }
 // We use this to determine if the import is the default loader
 // or a custom loader defined by the user in next.config.js
@@ -3597,6 +3605,7 @@ function assign(target, ...searchParamsList) {
 "[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/shared/lib/router/utils/format-url.js [app-client] (ecmascript)", ((__turbopack_context__, module, exports) => {
 "use strict";
 
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 // Format function modified from nodejs
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -3618,7 +3627,6 @@ function assign(target, ...searchParamsList) {
 // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
-var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -7786,14 +7794,7 @@ var Power0 = _easeMap.Power0, Power1 = _easeMap.Power1, Power2 = _easeMap.Power2
 "[project]/Desktop/Prestige-Japan-master/node_modules/gsap/CSSPlugin.js [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/*!
- * CSSPlugin 3.13.0
- * https://gsap.com
- *
- * Copyright 2008-2025, GreenSock. All rights reserved.
- * Subject to the terms at https://gsap.com/standard-license
- * @author: Jack Doyle, jack@greensock.com
-*/ /* eslint-disable */ __turbopack_context__.s([
+__turbopack_context__.s([
     "CSSPlugin",
     ()=>CSSPlugin,
     "_createElement",
@@ -7805,7 +7806,14 @@ var Power0 = _easeMap.Power0, Power1 = _easeMap.Power1, Power2 = _easeMap.Power2
     "default",
     ()=>CSSPlugin
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$gsap$2f$gsap$2d$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/gsap/gsap-core.js [app-client] (ecmascript)");
+/*!
+ * CSSPlugin 3.13.0
+ * https://gsap.com
+ *
+ * Copyright 2008-2025, GreenSock. All rights reserved.
+ * Subject to the terms at https://gsap.com/standard-license
+ * @author: Jack Doyle, jack@greensock.com
+*/ /* eslint-disable */ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$gsap$2f$gsap$2d$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/gsap/gsap-core.js [app-client] (ecmascript)");
 ;
 var _win, _doc, _docElement, _pluginInitted, _tempDiv, _tempDivStyler, _recentSetterPlugin, _reverting, _windowExists = function _windowExists() {
     return typeof window !== "undefined";
@@ -8881,6 +8889,10 @@ TweenMaxWithCSS = gsapWithCSS.core.Tween;
 "[project]/Desktop/Prestige-Japan-master/node_modules/@gsap/react/src/index.js [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+__turbopack_context__.s([
+    "useGSAP",
+    ()=>useGSAP
+]);
 /*!
  * @gsap/react 2.1.2
  * https://gsap.com
@@ -8889,11 +8901,7 @@ TweenMaxWithCSS = gsapWithCSS.core.Tween;
  * Subject to the terms at https://gsap.com/standard-license or for
  * Club GSAP members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
-*/ /* eslint-disable */ __turbopack_context__.s([
-    "useGSAP",
-    ()=>useGSAP
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+*/ /* eslint-disable */ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/gsap/index.js [app-client] (ecmascript) <locals>");
 ;
 ;
@@ -9448,6 +9456,12 @@ _getGSAP() && gsap.registerPlugin(Observer);
 "[project]/Desktop/Prestige-Japan-master/node_modules/gsap/ScrollTrigger.js [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+__turbopack_context__.s([
+    "ScrollTrigger",
+    ()=>ScrollTrigger,
+    "default",
+    ()=>ScrollTrigger
+]);
 /*!
  * ScrollTrigger 3.13.0
  * https://gsap.com
@@ -9455,13 +9469,7 @@ _getGSAP() && gsap.registerPlugin(Observer);
  * @license Copyright 2008-2025, GreenSock. All rights reserved.
  * Subject to the terms at https://gsap.com/standard-license
  * @author: Jack Doyle, jack@greensock.com
-*/ /* eslint-disable */ __turbopack_context__.s([
-    "ScrollTrigger",
-    ()=>ScrollTrigger,
-    "default",
-    ()=>ScrollTrigger
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$gsap$2f$Observer$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/gsap/Observer.js [app-client] (ecmascript)");
+*/ /* eslint-disable */ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$gsap$2f$Observer$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/Prestige-Japan-master/node_modules/gsap/Observer.js [app-client] (ecmascript)");
 ;
 var gsap, _coreInitted, _win, _doc, _docEl, _body, _root, _resizeDelay, _toArray, _clamp, _time2, _syncInterval, _refreshing, _pointerIsDown, _transformProp, _i, _prevWidth, _prevHeight, _autoRefresh, _sort, _suppressOverwrites, _ignoreResize, _normalizer, _ignoreMobileResize, _baseScreenHeight, _baseScreenWidth, _fixIOSBug, _context, _scrollRestoration, _div100vh, _100vh, _isReverted, _clampingMax, _limitCallbacks, // if true, we'll only trigger callbacks if the active state toggles, so if you scroll immediately past both the start and end positions of a ScrollTrigger (thus inactive to inactive), neither its onEnter nor onLeave will be called. This is useful during startup.
 _startup = 1, _getTime = Date.now, _time1 = _getTime(), _lastScrollTime = 0, _enabled = 0, _parseClamp = function _parseClamp(value, type, self) {
