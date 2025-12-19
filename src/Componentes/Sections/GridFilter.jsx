@@ -181,7 +181,7 @@ function GridFilter({
   cards = defaultCards
 }) {
   const router = useRouter();
-  const [activeFilter, setActiveFilter] = useState<string | null>(null);
+  const [activeFilter, setActiveFilter] = useState(null);
 
   // Filter cards based on active filter
   const filteredCards = activeFilter

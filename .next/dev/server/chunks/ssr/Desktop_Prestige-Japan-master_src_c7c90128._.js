@@ -603,7 +603,7 @@ function GridFilter({ title = 'Top Destination', subtitle = 'Explora los mejores
                                 children: title
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                                lineNumber: 213,
+                                lineNumber: 196,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -611,13 +611,13 @@ function GridFilter({ title = 'Top Destination', subtitle = 'Explora los mejores
                                 children: subtitle
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                                lineNumber: 216,
+                                lineNumber: 199,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                        lineNumber: 212,
+                        lineNumber: 195,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -637,7 +637,7 @@ function GridFilter({ title = 'Top Destination', subtitle = 'Explora los mejores
                                     children: "Ver todos"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                                    lineNumber: 225,
+                                    lineNumber: 208,
                                     columnNumber: 13
                                 }, this),
                                 categories.map((category)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
@@ -652,24 +652,24 @@ function GridFilter({ title = 'Top Destination', subtitle = 'Explora los mejores
                                         children: category
                                     }, category, false, {
                                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                                        lineNumber: 239,
+                                        lineNumber: 222,
                                         columnNumber: 15
                                     }, this))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                            lineNumber: 223,
+                            lineNumber: 206,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                        lineNumber: 222,
+                        lineNumber: 205,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                lineNumber: 210,
+                lineNumber: 193,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -705,14 +705,14 @@ function GridFilter({ title = 'Top Destination', subtitle = 'Explora los mejores
                                     className: `${__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$Componentes$2f$Sections$2f$GridFilter$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].cardImage} group-hover:scale-110`
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                                    lineNumber: 274,
+                                    lineNumber: 257,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$src$2f$Componentes$2f$Sections$2f$GridFilter$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].overlay
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                                    lineNumber: 282,
+                                    lineNumber: 265,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -722,12 +722,12 @@ function GridFilter({ title = 'Top Destination', subtitle = 'Explora los mejores
                                         children: card.category
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                                        lineNumber: 286,
+                                        lineNumber: 269,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                                    lineNumber: 285,
+                                    lineNumber: 268,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -738,7 +738,7 @@ function GridFilter({ title = 'Top Destination', subtitle = 'Explora los mejores
                                             children: card.title
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                                            lineNumber: 293,
+                                            lineNumber: 276,
                                             columnNumber: 17
                                         }, this),
                                         card.description && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -746,29 +746,29 @@ function GridFilter({ title = 'Top Destination', subtitle = 'Explora los mejores
                                             children: card.description
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                                            lineNumber: 297,
+                                            lineNumber: 280,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                                    lineNumber: 292,
+                                    lineNumber: 275,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, card.id, true, {
                             fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                            lineNumber: 263,
+                            lineNumber: 246,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                    lineNumber: 258,
+                    lineNumber: 241,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                lineNumber: 257,
+                lineNumber: 240,
                 columnNumber: 7
             }, this),
             filteredCards.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Prestige$2d$Japan$2d$master$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -784,18 +784,18 @@ function GridFilter({ title = 'Top Destination', subtitle = 'Explora los mejores
                     children: "No hay experiencias en esta categoría"
                 }, void 0, false, {
                     fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                    lineNumber: 314,
+                    lineNumber: 297,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-                lineNumber: 309,
+                lineNumber: 292,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Desktop/Prestige-Japan-master/src/Componentes/Sections/GridFilter.tsx",
-        lineNumber: 209,
+        lineNumber: 192,
         columnNumber: 5
     }, this);
 }
