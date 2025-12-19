@@ -54,7 +54,7 @@
 
 .title {
     text-align: center;
-    color: #000;
+    color: #fff;
     font-weight: 600;
     font-size: 1.5rem;
     /* 2xl */
@@ -100,7 +100,7 @@
 }
 
 .subtitle {
-    color: #000;
+    color: #fff;
     font-family: inherit;
     /* Assuming font-copyright maps to something, defaulting to inherit for now */
     font-size: 0.75rem;
@@ -226,20 +226,20 @@
     .buttonActive {
         background-color: #f3f4f6;
         /* gray-100 */
-        color: #450a0a;
+        color: #000;
         /* primary-950 estimate */
     }
 }
 
 .buttonInactive {
-    border: 2px solid #1e40af;
+    border: 2px solid #fff;
     /* primary-800 */
-    color: #1e40af;
+    color: #fff;
     /* primary-800 */
 }
 
 .buttonInactive:hover {
-    background-color: rgba(30, 64, 175, 0.1);
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 @media (prefers-color-scheme: dark) {

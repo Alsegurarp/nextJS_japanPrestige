@@ -176,7 +176,7 @@ const defaultCards = [
 const categories = ['8 días - 10 días', '11 días - 13 días', '14 días - 15 días', '16 días - 18 días'];
 
 function GridFilter({
-  title = 'Top Destination',
+  title = 'Nuestros itinerarios',
   subtitle = 'Explora los mejores destinos y experiencias',
   cards = defaultCards
 }) {
